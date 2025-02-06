@@ -3,23 +3,27 @@ from streamlit_ace import st_ace
 import io
 import sys
 import json
-from Gen_Process.Practice_Coding_Problem_Recommendations import write_recommendation_data_to_Practice_Coding_Problem
+from Gen_Process.Practice_Coding_Problem_Recommendations import (
+    write_recommendation_data_to_Practice_Coding_Problem,
+)
 from Gen_Process.UI_Chats.Assistant_Chat import Help_Chat
 
+
 def update_problem_status(file_path, problem_id, completed_status):
-    with open(file_path, 'r') as file:
+    with open(file_path, "r") as file:
         data = json.load(file)
 
     if problem_id in data:
-        data[problem_id]['Completed'] = completed_status
+        data[problem_id]["Completed"] = completed_status
         print(f"Updated {problem_id} to Completed = {completed_status}")
     else:
         return f"Problem ID {problem_id} not found in the data"
 
-    with open(file_path, 'w') as file:
+    with open(file_path, "w") as file:
         json.dump(data, file, indent=4)
 
     return "JSON file updated successfully."
+
 
 def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
     st.sidebar.markdown(
@@ -47,9 +51,9 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
         </style>
         <h1 class="mentor-title">✨ Mentor Chat</h1>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
-    
+
     st.sidebar.markdown(
         """
         <style>
@@ -63,12 +67,12 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
         </style>
         <div class="gradient-divider-sidebar"></div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     with st.sidebar:
         Help_Chat()
-        
+
     st.markdown(
         f"""
         <style>
@@ -90,7 +94,11 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
     col_question1, col_question2 = st.columns([5, 5])
 
     with col_question1:
-        theme_choice = st.selectbox("Reading Theme", ["Dark", "Light"], help="Adjust the reading mode according to your comfort.")
+        theme_choice = st.selectbox(
+            "Reading Theme",
+            ["Dark", "Light"],
+            help="Adjust the reading mode according to your comfort.",
+        )
 
         if theme_choice == "Light":
             container_css = """
@@ -155,11 +163,10 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
                 {markdown_content}
                 </div>
                 """,
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
         except FileNotFoundError:
             st.error(f"File not found: {markdown_file}")
-
 
     with col_question2:
         themes_options = [
@@ -174,12 +181,10 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
             "solarized_dark",
             "solarized_light",
             "github",
-            "zenburn"
+            "zenburn",
         ]
 
-        language_options = [
-            "python"
-        ]
+        language_options = ["python"]
 
         col_editor1, col_editor2, col_editor3 = st.columns([3, 2, 5])
         with col_editor1:
@@ -194,23 +199,24 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
                 value=18,
                 step=1,
                 format="%d",
-                key="font_size_slider"
+                key="font_size_slider",
             )
 
         code = st_ace(
             placeholder="Write your Python code here...",
             language=user_language,
             theme=user_theme,
-            height=560, 
-            font_size=user_font_size, 
-            show_gutter=True, 
-            keybinding="vscode", )
+            height=560,
+            font_size=user_font_size,
+            show_gutter=True,
+            keybinding="vscode",
+        )
 
     def execute_code(code, inputs):
         output_buffer = io.StringIO()
         error_buffer = io.StringIO()
 
-        input_lines = iter(inputs.split('\n'))
+        input_lines = iter(inputs.split("\n"))
 
         def mock_input(prompt=None):
             try:
@@ -233,7 +239,11 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
             if error:
                 return f"Error:\n{error}"
             else:
-                return output.strip() if output else "Code executed successfully, but no output was produced."
+                return (
+                    output.strip()
+                    if output
+                    else "Code executed successfully, but no output was produced."
+                )
 
         except Exception as e:
             sys.stdout = sys.__stdout__
@@ -242,7 +252,9 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
 
     st.subheader("Test Cases")
     for i, (input_data, expected_output) in enumerate(test_cases):
-        st.markdown(f"**Test Case {i+1}:** Input: `{input_data}`, Expected Output: `{expected_output}`")
+        st.markdown(
+            f"**Test Case {i+1}:** Input: `{input_data}`, Expected Output: `{expected_output}`"
+        )
 
     if st.button("Run Code", use_container_width=True):
         if code:
@@ -253,22 +265,26 @@ def Coding_Problems_page(markdown_file, Problem_title, test_cases, problem_ID):
                 result = output
 
                 if output == expected_output:
-                    st.success(f"""
+                    st.success(
+                        f"""
                         **✅ Test Case {i+1} Passed!**
                         - **Your Output:** {result}
-                    """)
+                    """
+                    )
 
                 else:
-                    st.error(f"""
+                    st.error(
+                        f"""
                         **⚠️ Test Case {i+1} Failed!**  
                         - **Your Output:** {result}  
                         - **Expected Output:** `{expected_output}`
-                    """)
+                    """
+                    )
                     all_passed = False
 
             if all_passed:
                 st.balloons()
-                file_path = r'dynamic files/Main_pages/Practice_Coding_Problems.json'
+                file_path = r"dynamic files/Main_pages/Practice_Coding_Problems.json"
                 completed_status = True
                 print(update_problem_status(file_path, problem_ID, completed_status))
                 write_recommendation_data_to_Practice_Coding_Problem()

@@ -6,17 +6,24 @@ import google.auth.transport.requests
 from UI_Components.navbar import navbar
 from UI_Components.Ed_AI_tittle import Ed_AI_tittle
 from Pre_Pages.SignUp_page import SignUp
+
 load_dotenv()
-client_secrets_file = 'Login_Secret.json'
+client_secrets_file = "Login_Secret.json"
+
 
 def login():
     flow = Flow.from_client_secrets_file(
         client_secrets_file,
-        scopes=["openid", "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"],
-        redirect_uri="http://localhost:8501"
+        scopes=[
+            "openid",
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/userinfo.profile",
+        ],
+        redirect_uri="http://localhost:8501",
     )
 
-    st.markdown("""
+    st.markdown(
+        """
         <style>
         body {
             background-color: #121212;
@@ -55,15 +62,17 @@ def login():
         }
 
         </style>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
 
-    if 'login_status' not in st.session_state:
-      st.session_state['login_status'] = False
+    if "login_status" not in st.session_state:
+        st.session_state["login_status"] = False
 
-    if not st.session_state['login_status']:
+    if not st.session_state["login_status"]:
         col1, col2 = st.columns([3, 2])
         with col1:
-          Ed_AI_tittle()
+            Ed_AI_tittle()
         with col2:
             auth_url, _ = flow.authorization_url()
 
@@ -75,13 +84,14 @@ def login():
             if st.button("Login", use_container_width=True):
                 if username == "1" and password == "1":
                     st.success("Login successful!")
-                    st.session_state['login_status'] = True
+                    st.session_state["login_status"] = True
                     st.rerun()
                 else:
                     st.error("Incorrect username or password.")
 
             st.markdown("</div>", unsafe_allow_html=True)
-            st.markdown(f'''
+            st.markdown(
+                f"""
                 <div class="button-container">
                     <a href="{auth_url}" style="
                         display: inline-block;
@@ -100,12 +110,13 @@ def login():
                     ">Continue with Google</a>
                     <br><br>
                 </div>
-            ''', unsafe_allow_html=True)
+            """,
+                unsafe_allow_html=True,
+            )
 
-            
             query_params = st.query_params
-            if 'code' in query_params:
-                code = query_params['code']
+            if "code" in query_params:
+                code = query_params["code"]
                 try:
                     flow.fetch_token(code=code)
                     credentials = flow.credentials
@@ -113,13 +124,20 @@ def login():
                     id_info = credentials.id_token
 
                     if id_info:
-                        st.session_state['login_status'] = True
+                        st.session_state["login_status"] = True
                         st.rerun()
                 except Exception as e:
                     st.error(f"Error during login: {e}")
-                    st.write("Ensure that the redirect URI matches the one configured in Google Cloud Console and that the authorization code is valid.")
+                    st.write(
+                        "Ensure that the redirect URI matches the one configured in Google Cloud Console and that the authorization code is valid."
+                    )
 
-            if st.button("Don't Have Account, Create New Account?", key='create_account', use_container_width=True, help='Click to create a new account'):
+            if st.button(
+                "Don't Have Account, Create New Account?",
+                key="create_account",
+                use_container_width=True,
+                help="Click to create a new account",
+            ):
                 SignUp()
     else:
         navbar()

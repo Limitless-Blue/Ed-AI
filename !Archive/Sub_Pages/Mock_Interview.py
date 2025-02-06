@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from Gen_Process.UI_Chats.Assistant_Chat import Help_Chat
 
+
 def Mock_Interview():
     st.markdown(
         """
@@ -28,7 +29,7 @@ def Mock_Interview():
         </style>
         <h1 class="mentor-title">✨ Mock Interview</h1>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
     st.markdown(
         """
@@ -43,7 +44,7 @@ def Mock_Interview():
         </style>
         <div class="gradient-divider-sidebar"></div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     with st.sidebar:
@@ -199,5 +200,6 @@ def Mock_Interview():
     """
 
     components.html(html_code, height=600)
+
 
 Mock_Interview()

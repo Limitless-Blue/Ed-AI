@@ -4,20 +4,22 @@ from Sub_Pages.Course_MCQ import Course_MCQ
 from Gen_Process.Learn_Recommendations import write_recommendation_data_to_Learn_file
 import json
 
+
 def update_problem_status(file_path, problem_id, completed_status):
-    with open(file_path, 'r') as file:
+    with open(file_path, "r") as file:
         data = json.load(file)
 
     if problem_id in data:
-        data[problem_id]['Completed'] = completed_status
+        data[problem_id]["Completed"] = completed_status
         print(f"Updated {problem_id} to Completed = {completed_status}")
     else:
         return f"Problem ID {problem_id} not found in the data"
 
-    with open(file_path, 'w') as file:
+    with open(file_path, "w") as file:
         json.dump(data, file, indent=4)
 
     return "JSON file updated successfully."
+
 
 def display_content(Course_list, MCQ_list, current_index, Tittle):
     st.sidebar.markdown(
@@ -45,9 +47,9 @@ def display_content(Course_list, MCQ_list, current_index, Tittle):
         </style>
         <h1 class="mentor-title">✨ Mentor Chat</h1>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
-    
+
     st.sidebar.markdown(
         """
         <style>
@@ -61,7 +63,7 @@ def display_content(Course_list, MCQ_list, current_index, Tittle):
         </style>
         <div class="gradient-divider-sidebar"></div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     with st.sidebar:
@@ -75,7 +77,7 @@ def display_content(Course_list, MCQ_list, current_index, Tittle):
         }
         </style>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     if current_index % 2 == 0:
@@ -94,7 +96,7 @@ def display_content(Course_list, MCQ_list, current_index, Tittle):
             </style>
             <div class="gradient-divider-sidebar"></div>
             """,
-            unsafe_allow_html=True
+            unsafe_allow_html=True,
         )
         try:
             with open(course_file, "r") as file:
@@ -104,27 +106,31 @@ def display_content(Course_list, MCQ_list, current_index, Tittle):
             st.error(f"File not found: {course_file}")
     else:
         mcq_file = MCQ_list[current_index // 2]
-        st.markdown(f'<h1 class="centered-title">MCQ {current_index // 2 + 1}</h1>', unsafe_allow_html=True)
+        st.markdown(
+            f'<h1 class="centered-title">MCQ {current_index // 2 + 1}</h1>',
+            unsafe_allow_html=True,
+        )
         Course_MCQ(mcq_file)
 
+
 def course_page(Course_list, MCQ_list, Tittle, Course_ID):
-    if 'current_index' not in st.session_state:
-        st.session_state['current_index'] = 0
+    if "current_index" not in st.session_state:
+        st.session_state["current_index"] = 0
 
     total_content = len(Course_list) + len(MCQ_list)
-    if st.session_state['current_index'] >= total_content:
-        st.session_state['current_index'] = total_content - 1
+    if st.session_state["current_index"] >= total_content:
+        st.session_state["current_index"] = total_content - 1
 
-    display_content(Course_list, MCQ_list, st.session_state['current_index'], Tittle)
+    display_content(Course_list, MCQ_list, st.session_state["current_index"], Tittle)
 
-    if st.button('Next Chapter', use_container_width=True):
-        if st.session_state['current_index'] < total_content - 1:
-            st.session_state['current_index'] += 1
+    if st.button("Next Chapter", use_container_width=True):
+        if st.session_state["current_index"] < total_content - 1:
+            st.session_state["current_index"] += 1
             st.rerun()
         else:
             st.success("You have Completed the Course!")
             st.balloons()
-            file_path = r'dynamic files\Main_pages\Learn.json'
+            file_path = r"dynamic files\Main_pages\Learn.json"
             completed_status = True
             print(update_problem_status(file_path, Course_ID, completed_status))
             write_recommendation_data_to_Learn_file()

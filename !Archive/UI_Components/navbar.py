@@ -7,11 +7,13 @@ from Pages.Chat import chat
 from Pages.Learn_page import Learn_page
 from streamlit_option_menu import option_menu
 from Pages.Mock_Interview_page_tr import Mock_Interview_page_tr
+
 # from Pages.Mock_Assessment import Mock_Assessment
 from Pages.Practice_MCQ_page import Practice_MCQ_page
 from UI_Components.profile_pic import get_base64_image
 from Pages.Practice_Coding_page import Practice_Coding_page
 from Pages.Mock_Interview_page_hr import Mock_Interview_page_hr
+
 
 def delete_all_files_in_directory(directory_path):
     try:
@@ -25,11 +27,12 @@ def delete_all_files_in_directory(directory_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+
 def copy_imagesto_folder_from_list(Image_list_json_path, Images_path, destination_path):
     delete_all_files_in_directory(destination_path)
     os.makedirs(destination_path, exist_ok=True)
 
-    with open(Image_list_json_path, 'r') as file:
+    with open(Image_list_json_path, "r") as file:
         Image_list = json.load(file)
 
     for image_name in Image_list:
@@ -40,29 +43,33 @@ def copy_imagesto_folder_from_list(Image_list_json_path, Images_path, destinatio
         else:
             print(f"File does not exist: {source_file}")
 
+
 def clear_and_rewrite_memory_of_navbar(file_path, new_content):
-    with open(file_path, 'w') as file:
+    with open(file_path, "w") as file:
         file.write(new_content)
+
 
 def read_memory_of_navbar(file_path):
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, "r") as file:
             content = file.read()
         return content
     except FileNotFoundError:
         return f"File '{file_path}' not found."
     except Exception as e:
         return f"An error occurred: {e}"
-    
+
+
 def load_image_as_base64(image_path):
     with open(image_path, "rb") as img_file:
-        base64_string = base64.b64encode(img_file.read()).decode('utf-8')
+        base64_string = base64.b64encode(img_file.read()).decode("utf-8")
     return f"data:image/png;base64,{base64_string}"
 
+
 def navbar():
-    memory_of_navbar = r'EXP\memory.txt'
-    memory_of_selected_round = r'EXP\memory_1.txt'
-    memory_of_select_button = r'EXP\memory select problem.txt'
+    memory_of_navbar = r"EXP\memory.txt"
+    memory_of_selected_round = r"EXP\memory_1.txt"
+    memory_of_select_button = r"EXP\memory select problem.txt"
 
     image_path = r"Static_Files\NavBar\Ed AI logo.png"
     profile_pic_url = r"Static_Files\NavBar\profile pic.png"
@@ -72,45 +79,71 @@ def navbar():
     query_params = st.query_params
 
     # SINGLE_Execution
-    if 'memory_cleared' not in st.session_state:
-        learn_Image_list_json_path = r"dynamic files\Main_pages\Recommendations\Learn_Recommendation.json"
+    if "memory_cleared" not in st.session_state:
+        learn_Image_list_json_path = (
+            r"dynamic files\Main_pages\Recommendations\Learn_Recommendation.json"
+        )
         learn_Images_path = r"Static_Files\Learn_Page\All_Courses"
-        learn_destination_path = r"dynamic files\Main_pages\Recommendations\Learn_page_recommendation"
-        copy_imagesto_folder_from_list(learn_Image_list_json_path, learn_Images_path, learn_destination_path)
+        learn_destination_path = (
+            r"dynamic files\Main_pages\Recommendations\Learn_page_recommendation"
+        )
+        copy_imagesto_folder_from_list(
+            learn_Image_list_json_path, learn_Images_path, learn_destination_path
+        )
 
-        Practice_MCQ_page_Image_list_json_path = r"dynamic files\Main_pages\Recommendations\Practice_MCQ_Recommendation.json"
+        Practice_MCQ_page_Image_list_json_path = (
+            r"dynamic files\Main_pages\Recommendations\Practice_MCQ_Recommendation.json"
+        )
         Practice_MCQ_page_Images_path = r"Static_Files\Practice_Page\All_Courses"
-        Practice_MCQ_page_destination_path = r"dynamic files\Main_pages\Recommendations\Practice_MCQ_page_recommendation"
-        copy_imagesto_folder_from_list(Practice_MCQ_page_Image_list_json_path, Practice_MCQ_page_Images_path, Practice_MCQ_page_destination_path)
+        Practice_MCQ_page_destination_path = (
+            r"dynamic files\Main_pages\Recommendations\Practice_MCQ_page_recommendation"
+        )
+        copy_imagesto_folder_from_list(
+            Practice_MCQ_page_Image_list_json_path,
+            Practice_MCQ_page_Images_path,
+            Practice_MCQ_page_destination_path,
+        )
 
         Practice_Coding_page_Image_list_json_path = r"dynamic files\Main_pages\Recommendations\Practice_Coding_Problems_Recommendation.json"
-        Practice_Coding_page_Images_path = r"Static_Files\Practice_Page_Problems\All_Coding_Problems"
+        Practice_Coding_page_Images_path = (
+            r"Static_Files\Practice_Page_Problems\All_Coding_Problems"
+        )
         Practice_Coding_page_destination_path = r"dynamic files\Main_pages\Recommendations\Practice_Coding_page_recommendation"
-        copy_imagesto_folder_from_list(Practice_Coding_page_Image_list_json_path, Practice_Coding_page_Images_path, Practice_Coding_page_destination_path)
-
+        copy_imagesto_folder_from_list(
+            Practice_Coding_page_Image_list_json_path,
+            Practice_Coding_page_Images_path,
+            Practice_Coding_page_destination_path,
+        )
 
         clear_and_rewrite_memory_of_navbar(memory_of_select_button, "None")
-        st.session_state['memory_cleared'] = True
+        st.session_state["memory_cleared"] = True
 
-    if ("selected_image" not in query_params) and (read_memory_of_navbar(memory_of_select_button) == "None"):
+    if ("selected_image" not in query_params) and (
+        read_memory_of_navbar(memory_of_select_button) == "None"
+    ):
         col1, col2, col3, col4 = st.columns([0.9, 7, 3, 0.6])
 
         with col1:
-            st.markdown(f'<a href="{link_url}" target="_blank"><img src="{encoded_image}" style="max-width: 200%; height: auto; display: block; transform: translateY(15px);" width="100"></a>', unsafe_allow_html=True)
+            st.markdown(
+                f'<a href="{link_url}" target="_blank"><img src="{encoded_image}" style="max-width: 200%; height: auto; display: block; transform: translateY(15px);" width="100"></a>',
+                unsafe_allow_html=True,
+            )
 
         with col2:
             selected = option_menu(
-                menu_title=None, 
-                options=["Learn", "Practice", "Mock Interview", "Chat"], 
-                icons=["book", "pencil-square", "briefcase", "chat-dots"], 
+                menu_title=None,
+                options=["Learn", "Practice", "Mock Interview", "Chat"],
+                icons=["book", "pencil-square", "briefcase", "chat-dots"],
                 menu_icon="cast",
                 default_index=0,
                 orientation="horizontal",
             )
             clear_and_rewrite_memory_of_navbar(memory_of_navbar, selected)
-            
+
         with col3:
-            search_query = st.text_input("Search", placeholder="🔎 Search...", label_visibility="collapsed")
+            search_query = st.text_input(
+                "Search", placeholder="🔎 Search...", label_visibility="collapsed"
+            )
             st.markdown(
                 """
                 <style>
@@ -119,7 +152,7 @@ def navbar():
                     }
                 </style>
                 """,
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
 
         with col4:
@@ -169,7 +202,7 @@ def navbar():
                     <div class="hover-text">{User_Display_Name}</div>
                 </div>
                 """,
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
 
         st.markdown(
@@ -199,7 +232,7 @@ def navbar():
             </style>
             <div class="gradient-divider"></div>
             """,
-            unsafe_allow_html=True
+            unsafe_allow_html=True,
         )
 
         if selected == "Learn":
@@ -212,13 +245,15 @@ def navbar():
                     "📄 MCQs Practice",
                     "🧑‍💻 Coding Practice",
                 ],
-                label_visibility="collapsed"
+                label_visibility="collapsed",
             )
             if selected_round == "📄 MCQs Practice":
                 temp_selected_round = "MCQs Practice"
             elif selected_round == "🧑‍💻 Coding Practice":
                 temp_selected_round = "Coding Practice"
-            clear_and_rewrite_memory_of_navbar(memory_of_selected_round, temp_selected_round)
+            clear_and_rewrite_memory_of_navbar(
+                memory_of_selected_round, temp_selected_round
+            )
 
             if selected_round == "📄 MCQs Practice":
                 Practice_MCQ_page()
@@ -232,8 +267,8 @@ def navbar():
                     # "📃 MCQ Assessment Round",
                     # "📃 Coding Assessment Round",
                     "💻 Technical Interview Round",
-                    "🧑‍💻 HR Interview Round"
-                ]
+                    "🧑‍💻 HR Interview Round",
+                ],
             )
             # if selected_round == "📃 MCQ Assessment Round":
             #     Mock_Assessment()
@@ -246,7 +281,7 @@ def navbar():
 
         elif selected == "Chat":
             chat()
-            
+
         if search_query:
             # st.write(f"Search results for: {search_query}")
             print(f"Search results for: {search_query}")

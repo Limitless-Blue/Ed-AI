@@ -11,6 +11,7 @@ def two_sum(nums, target):
         # Otherwise, store the number with its index
         num_map[num] = i
 
+
 # Input parsing
 nums = list(map(int, input().split()))
 target = int(input())

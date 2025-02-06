@@ -14,5 +14,6 @@ def single_number(nums):
 
     return ones
 
+
 input_data = list(map(int, input().strip().split()))
 print(single_number(input_data))

@@ -5,5 +5,6 @@ def single_number(nums):
         result ^= num  # XOR with each element
     return result
 
+
 input_data = list(map(int, input().strip().split()))
 print(single_number(input_data))

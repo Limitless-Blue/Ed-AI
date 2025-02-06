@@ -6,18 +6,23 @@ import streamlit as st
 from urllib.parse import urlencode
 from Sub_Pages.Course_page import course_page
 
+
 def load_image_as_base64(image_path):
     with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode('utf-8')
+        return base64.b64encode(img_file.read()).decode("utf-8")
+
 
 def get_mime_type(filename):
     mime_type, _ = mimetypes.guess_type(filename)
-    return mime_type or 'application/octet-stream'
+    return mime_type or "application/octet-stream"
+
 
 def show_details(selected_image):
-    Redirecting_json_file_path = f"Static_Files\\Learn_Page\\{selected_image}\\{selected_image}.json"
+    Redirecting_json_file_path = (
+        f"Static_Files\\Learn_Page\\{selected_image}\\{selected_image}.json"
+    )
 
-    with open(Redirecting_json_file_path, 'r') as f:
+    with open(Redirecting_json_file_path, "r") as f:
         data = json.load(f)
 
     Course_Course_title = data["title"]
@@ -27,10 +32,13 @@ def show_details(selected_image):
     course_page(Course_list, MCQ_list, Course_Course_title, selected_image)
     return
 
+
 def Learn_page():
     directory_Featured = r"Static_Files\Learn_Page\Featured"
     directory_All_Courses = r"Static_Files\Learn_Page\All_Courses"
-    directory_Recommendation = r"dynamic files\Main_pages\Recommendations\Learn_page_recommendation"
+    directory_Recommendation = (
+        r"dynamic files\Main_pages\Recommendations\Learn_page_recommendation"
+    )
 
     query_params = st.query_params
     if "selected_image" in query_params:
@@ -53,8 +61,10 @@ def Learn_page():
                 N += 1
                 encoded_image = load_image_as_base64(file_path)
                 mime_type = get_mime_type(filename)
-                margin_style = f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
-                
+                margin_style = (
+                    f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                )
+
                 image_url = f"?{urlencode({'selected_image': filename})}"
                 image_tags += f'<a href="{image_url}"><img src="data:{mime_type};base64,{encoded_image}" alt="{filename}" style="{margin_style} cursor: pointer;"></a>'
 
@@ -62,7 +72,8 @@ def Learn_page():
 
         full_image_tags = image_tags + image_tags
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <style>
         .scroll-container {{
             overflow: hidden;
@@ -104,22 +115,27 @@ def Learn_page():
             }}
         }}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="scroll-container">
             <div class="scroll-content">
                 {full_image_tags}
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
     else:
         st.error(f"Directory not found: {directory_Featured}")
 
     st.title("Recommendations")
 
     if os.path.exists(directory_Recommendation):
-        image_width = 480 
+        image_width = 480
         image_height = 230
         margin_right = 10
 
@@ -130,12 +146,15 @@ def Learn_page():
             if os.path.isfile(file_path):
                 encoded_image = load_image_as_base64(file_path)
                 mime_type = get_mime_type(filename)
-                margin_style = f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                margin_style = (
+                    f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                )
 
                 image_url = f"?{urlencode({'selected_image': filename})}"
                 image_tags += f'<a href="{image_url}"><img src="data:{mime_type};base64,{encoded_image}" alt="{filename}" style="border-radius: 3px; {margin_style} width: {image_width}px; height: {image_height}px; object-fit: cover; vertical-align: middle;"></a>'
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <style>
         .scroll-container-static {{
             overflow-x: auto;
@@ -189,24 +208,29 @@ def Learn_page():
             border-radius: 10px;
         }}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="scroll-container-static">
             <div class="scroll-content-static">
                 {image_tags}
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
     else:
         st.error(f"Directory not found: {directory_Recommendation}")
 
     st.title("All Courses")
 
     if os.path.exists(directory_All_Courses):
-        image_width = 480 
+        image_width = 480
         image_height = 230
-        margin_right = 10  
+        margin_right = 10
 
         image_tags = ""
         filenames = sorted(os.listdir(directory_All_Courses))
@@ -215,12 +239,15 @@ def Learn_page():
             if os.path.isfile(file_path):
                 encoded_image = load_image_as_base64(file_path)
                 mime_type = get_mime_type(filename)
-                margin_style = f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                margin_style = (
+                    f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                )
 
                 image_url = f"?{urlencode({'selected_image': filename})}"
                 image_tags += f'<a href="{image_url}"><img src="data:{mime_type};base64,{encoded_image}" alt="{filename}" style="border-radius: 3px; {margin_style} width: {image_width}px; height: {image_height}px; object-fit: cover; vertical-align: middle;"></a>'
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <style>
         .scroll-container-static {{
             overflow-x: auto;
@@ -275,14 +302,19 @@ def Learn_page():
             border-radius: 10px;
         }}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="scroll-container-static">
             <div class="scroll-content-static">
                 {image_tags}
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
     else:
         st.error(f"Directory not found: {directory_All_Courses}")

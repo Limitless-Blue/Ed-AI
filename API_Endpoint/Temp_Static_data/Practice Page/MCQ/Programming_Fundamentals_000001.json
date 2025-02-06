@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "What is the time complexity of accessing an element in a hash table?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Accessing an element in a hash table is typically O(1) time complexity due to direct indexing.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply a linear search, which is not the case for hash tables.",
+          "O(log n)": "O(log n) is typical for balanced binary search trees, not hash tables.",
+          "O(n log n)": "O(n log n) is usually associated with efficient sorting algorithms."
+        }
+      },
+      {
+        "question": "Which of the following data structures uses LIFO (Last In, First Out) principle?",
+        "options": [
+          "Queue",
+          "Stack",
+          "Heap",
+          "Graph"
+        ],
+        "answer": "Stack",
+        "explanation": "A stack operates on the Last In, First Out (LIFO) principle.",
+        "incorrect_explanation": {
+          "Queue": "Queues use the First In, First Out (FIFO) principle.",
+          "Heap": "Heaps are typically used to implement priority queues, not LIFO.",
+          "Graph": "Graphs are abstract data structures used to represent networks."
+        }
+      },
+      {
+        "question": "What is the best-case time complexity of Quick Sort?",
+        "options": [
+          "O(n log n)",
+          "O(n^2)",
+          "O(n)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "In the best case, Quick Sort has a time complexity of O(n log n) when the pivot divides the array into two equal halves.",
+        "incorrect_explanation": {
+          "O(n^2)": "O(n^2) is the worst-case time complexity for Quick Sort.",
+          "O(n)": "O(n) time complexity is not achievable by Quick Sort.",
+          "O(log n)": "O(log n) is too low for sorting algorithms like Quick Sort."
+        }
+      },
+      {
+        "question": "Which sorting algorithm is not comparison-based?",
+        "options": [
+          "Merge Sort",
+          "Quick Sort",
+          "Heap Sort",
+          "Radix Sort"
+        ],
+        "answer": "Radix Sort",
+        "explanation": "Radix Sort is not a comparison-based sorting algorithm; it sorts data by processing individual digits.",
+        "incorrect_explanation": {
+          "Merge Sort": "Merge Sort is a comparison-based sorting algorithm.",
+          "Quick Sort": "Quick Sort relies on comparing elements to sort.",
+          "Heap Sort": "Heap Sort uses comparisons to maintain the heap property."
+        }
+      },
+      {
+        "question": "In Big O notation, which of the following represents the growth rate of binary search?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary search has a time complexity of O(log n) because it divides the search interval in half each step.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) represents linear search, not binary search.",
+          "O(n log n)": "O(n log n) is typical for efficient sorting algorithms.",
+          "O(1)": "O(1) implies constant time, which is not the case for binary search."
+        }
+      },
+      {
+        "question": "Which of the following is not a stable sorting algorithm?",
+        "options": [
+          "Bubble Sort",
+          "Insertion Sort",
+          "Selection Sort",
+          "Merge Sort"
+        ],
+        "answer": "Selection Sort",
+        "explanation": "Selection Sort is not a stable sorting algorithm as it may change the relative order of equal elements.",
+        "incorrect_explanation": {
+          "Bubble Sort": "Bubble Sort is a stable sorting algorithm.",
+          "Insertion Sort": "Insertion Sort maintains the relative order of equal elements.",
+          "Merge Sort": "Merge Sort is inherently stable."
+        }
+      },
+      {
+        "question": "What is the space complexity of the recursive implementation of the Fibonacci sequence?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(n^2)",
+          "O(2^n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The space complexity is O(n) due to the recursion stack.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) would imply constant space, which is not true for recursion.",
+          "O(n^2)": "O(n^2) is higher than the actual space used.",
+          "O(2^n)": "O(2^n) is the time complexity, not space."
+        }
+      },
+      {
+        "question": "Which of the following data structures is best suited for implementing a priority queue?",
+        "options": [
+          "Array",
+          "Linked List",
+          "Binary Heap",
+          "Stack"
+        ],
+        "answer": "Binary Heap",
+        "explanation": "A Binary Heap allows efficient retrieval and update of the highest (or lowest) priority element.",
+        "incorrect_explanation": {
+          "Array": "Arrays do not provide efficient priority operations.",
+          "Linked List": "Linked Lists require linear time for priority operations.",
+          "Stack": "Stacks follow LIFO and are not suited for priority queues."
+        }
+      },
+      {
+        "question": "What is the primary purpose of the 'hash function' in a hash table?",
+        "options": [
+          "To sort the elements",
+          "To map keys to indices",
+          "To handle collisions",
+          "To delete elements efficiently"
+        ],
+        "answer": "To map keys to indices",
+        "explanation": "A hash function maps keys to specific indices in the hash table for efficient access.",
+        "incorrect_explanation": {
+          "To sort the elements": "Hash functions do not sort elements.",
+          "To handle collisions": "Handling collisions is managed separately, not by the hash function itself.",
+          "To delete elements efficiently": "Deletion relies on accessing the correct index, which is done via the hash function."
+        }
+      },
+      {
+        "question": "Which traversal method of a binary tree visits nodes in the order: left child, root, right child?",
+        "options": [
+          "Pre-order",
+          "In-order",
+          "Post-order",
+          "Level-order"
+        ],
+        "answer": "In-order",
+        "explanation": "In-order traversal visits the left child, then the root, and finally the right child.",
+        "incorrect_explanation": {
+          "Pre-order": "Pre-order traversal visits the root before its children.",
+          "Post-order": "Post-order traversal visits the children before the root.",
+          "Level-order": "Level-order traversal visits nodes level by level from top to bottom."
+        }
+      },
+      {
+        "question": "Which of the following algorithms is used to find the shortest path in a weighted graph?",
+        "options": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Dijkstra's Algorithm",
+          "Kruskal's Algorithm"
+        ],
+        "answer": "Dijkstra's Algorithm",
+        "explanation": "Dijkstra's Algorithm efficiently finds the shortest path in a weighted graph with non-negative weights.",
+        "incorrect_explanation": {
+          "Depth-First Search": "DFS is not specifically designed for shortest path calculations.",
+          "Breadth-First Search": "BFS works for unweighted graphs but not efficiently for weighted graphs.",
+          "Kruskal's Algorithm": "Kruskal's is used for finding minimum spanning trees, not shortest paths."
+        }
+      },
+      {
+        "question": "Which of the following is a non-linear data structure?",
+        "options": [
+          "Array",
+          "Linked List",
+          "Stack",
+          "Graph"
+        ],
+        "answer": "Graph",
+        "explanation": "Graphs are non-linear data structures as they can represent complex relationships between elements.",
+        "incorrect_explanation": {
+          "Array": "Arrays are linear data structures.",
+          "Linked List": "Linked Lists are linear data structures.",
+          "Stack": "Stacks are linear data structures."
+        }
+      },
+      {
+        "question": "Which of the following is not a feature of Object-Oriented Programming?",
+        "options": [
+          "Encapsulation",
+          "Inheritance",
+          "Polymorphism",
+          "Compilation"
+        ],
+        "answer": "Compilation",
+        "explanation": "Compilation is a process in programming languages, not a feature of Object-Oriented Programming (OOP).",
+        "incorrect_explanation": {
+          "Encapsulation": "Encapsulation is a core principle of OOP.",
+          "Inheritance": "Inheritance allows classes to inherit properties from other classes in OOP.",
+          "Polymorphism": "Polymorphism allows objects to be treated as instances of their parent class in OOP."
+        }
+      },
+      {
+        "question": "Which of the following best describes a binary search tree (BST)?",
+        "options": [
+          "Each node has at most two children, and left child < parent < right child.",
+          "Each node has exactly two children, and left child < parent < right child.",
+          "Each node has at most three children, sorted in ascending order.",
+          "A tree where all levels are fully filled except possibly the last."
+        ],
+        "answer": "Each node has at most two children, and left child < parent < right child.",
+        "explanation": "In a BST, each node has at most two children with the left child less than the parent and the right child greater than the parent.",
+        "incorrect_explanation": {
+          "Each node has exactly two children, and left child < parent < right child.": "BST nodes can have at most two children, not necessarily exactly two.",
+          "Each node has at most three children, sorted in ascending order.": "BST nodes have at most two children.",
+          "A tree where all levels are fully filled except possibly the last.": "This describes a complete binary tree, not specifically a BST."
+        }
+      },
+      {
+        "question": "Which principle states that objects should be open for extension but closed for modification?",
+        "options": [
+          "Encapsulation",
+          "Single Responsibility",
+          "Open-Closed Principle",
+          "Liskov Substitution Principle"
+        ],
+        "answer": "Open-Closed Principle",
+        "explanation": "The Open-Closed Principle states that software entities should be open for extension but closed for modification.",
+        "incorrect_explanation": {
+          "Encapsulation": "Encapsulation is about bundling data with methods that operate on that data.",
+          "Single Responsibility": "This principle states that a class should have only one reason to change.",
+          "Liskov Substitution Principle": "This principle ensures that objects of a superclass can be replaced with objects of a subclass without affecting the program."
+        }
+      },
+      {
+        "question": "What is the main advantage of using a linked list over an array?",
+        "options": [
+          "Constant time access to elements",
+          "Dynamic size and efficient insertions/deletions",
+          "Better cache performance",
+          "Less memory usage"
+        ],
+        "answer": "Dynamic size and efficient insertions/deletions",
+        "explanation": "Linked lists can easily grow and shrink in size, and insertions/deletions can be done efficiently without shifting elements.",
+        "incorrect_explanation": {
+          "Constant time access to elements": "Arrays provide constant time access, not linked lists.",
+          "Better cache performance": "Arrays generally have better cache performance due to contiguous memory allocation.",
+          "Less memory usage": "Linked lists typically use more memory due to storage of pointers."
+        }
+      },
+      {
+        "question": "Which of the following is used to detect a cycle in a linked list?",
+        "options": [
+          "Hashing",
+          "Two-pointer technique (Floyd’s Cycle-Finding)",
+          "Recursion",
+          "Binary search"
+        ],
+        "answer": "Two-pointer technique (Floyd’s Cycle-Finding)",
+        "explanation": "Floyd’s Cycle-Finding algorithm uses two pointers moving at different speeds to detect a cycle in a linked list.",
+        "incorrect_explanation": {
+          "Hashing": "While hashing can be used, it requires additional space.",
+          "Recursion": "Recursion is not typically used for cycle detection in linked lists.",
+          "Binary search": "Binary search is unrelated to cycle detection."
+        }
+      },
+      {
+        "question": "Which concept ensures that a derived class can be treated as its base class?",
+        "options": [
+          "Encapsulation",
+          "Abstraction",
+          "Polymorphism",
+          "Inheritance"
+        ],
+        "answer": "Polymorphism",
+        "explanation": "Polymorphism allows objects of a derived class to be treated as objects of a base class.",
+        "incorrect_explanation": {
+          "Encapsulation": "Encapsulation is about hiding the internal state and requiring all interaction to be performed through an object's methods.",
+          "Abstraction": "Abstraction involves hiding complex implementation details and showing only the necessary features.",
+          "Inheritance": "Inheritance allows a class to inherit properties from another class but doesn't by itself ensure substitutability."
+        }
+      },
+      {
+        "question": "What is the primary purpose of a constructor in a class?",
+        "options": [
+          "To destroy an object",
+          "To initialize an object",
+          "To define class methods",
+          "To inherit properties from another class"
+        ],
+        "answer": "To initialize an object",
+        "explanation": "A constructor is a special method used to initialize a newly created object.",
+        "incorrect_explanation": {
+          "To destroy an object": "Destructors are used to destroy objects.",
+          "To define class methods": "Methods are defined separately from constructors.",
+          "To inherit properties from another class": "Inheritance is handled through class definitions, not constructors."
+        }
+      },
+      {
+        "question": "Which algorithmic paradigm is primarily used by the Merge Sort algorithm?",
+        "options": [
+          "Dynamic Programming",
+          "Greedy",
+          "Divide and Conquer",
+          "Backtracking"
+        ],
+        "answer": "Divide and Conquer",
+        "explanation": "Merge Sort uses the Divide and Conquer paradigm by dividing the array into halves, sorting them, and then merging.",
+        "incorrect_explanation": {
+          "Dynamic Programming": "Dynamic Programming solves problems by combining solutions to subproblems, which is not the primary approach in Merge Sort.",
+          "Greedy": "Greedy algorithms make locally optimal choices, which is not applicable to Merge Sort.",
+          "Backtracking": "Backtracking is used for constraint satisfaction problems, not for sorting."
+        }
+      }
+    ]
+  }
+  

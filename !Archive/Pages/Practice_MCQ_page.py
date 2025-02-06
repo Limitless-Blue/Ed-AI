@@ -7,22 +7,28 @@ from urllib.parse import urlencode
 from Sub_Pages.Practice_MCQ import Practice_MCQ
 from Gen_Process.UI_Chats.Assistant_Chat import Help_Chat
 
+
 def load_image_as_base64(image_path):
     with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode('utf-8')
+        return base64.b64encode(img_file.read()).decode("utf-8")
+
 
 def get_mime_type(filename):
     mime_type, _ = mimetypes.guess_type(filename)
-    return mime_type or 'application/octet-stream'
+    return mime_type or "application/octet-stream"
+
 
 def show_details(selected_image):
-    Tests_Question_json_file_path = r"Static_Files\Practice_Page\Redirecting_MCQ_test.json"
-    with open(Tests_Question_json_file_path, 'r') as file:
+    Tests_Question_json_file_path = (
+        r"Static_Files\Practice_Page\Redirecting_MCQ_test.json"
+    )
+    with open(Tests_Question_json_file_path, "r") as file:
         data = json.load(file)
-    
-    MCQ_test_file_value = data[selected_image]['Test_file']
+
+    MCQ_test_file_value = data[selected_image]["Test_file"]
     Practice_MCQ(rf"{MCQ_test_file_value}", selected_image)
     return
+
 
 def Practice_MCQ_page():
     st.sidebar.markdown(
@@ -50,9 +56,9 @@ def Practice_MCQ_page():
         </style>
         <h1 class="mentor-title">✨ Mentor Chat</h1>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
-    
+
     st.sidebar.markdown(
         """
         <style>
@@ -66,21 +72,23 @@ def Practice_MCQ_page():
         </style>
         <div class="gradient-divider-sidebar"></div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     with st.sidebar:
         Help_Chat()
     directory_Featured = r"Static_Files\Practice_Page\Featured"
     directory_All_Courses = r"Static_Files\Practice_Page\All_Courses"
-    directory_Recommendation = r"dynamic files\Main_pages\Recommendations\Practice_MCQ_page_recommendation"
+    directory_Recommendation = (
+        r"dynamic files\Main_pages\Recommendations\Practice_MCQ_page_recommendation"
+    )
 
     query_params = st.query_params
     if "selected_image" in query_params:
         selected_image = query_params["selected_image"]
         base_name, extension = os.path.splitext(selected_image)
         show_details(base_name)
-        return  
+        return
 
     if os.path.exists(directory_Featured):
         image_width = 550
@@ -96,8 +104,10 @@ def Practice_MCQ_page():
                 N += 1
                 encoded_image = load_image_as_base64(file_path)
                 mime_type = get_mime_type(filename)
-                margin_style = f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
-                
+                margin_style = (
+                    f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                )
+
                 image_url = f"?{urlencode({'selected_image': filename})}"
                 image_tags += f'<a href="{image_url}"><img src="data:{mime_type};base64,{encoded_image}" alt="{filename}" style="{margin_style} cursor: pointer;"></a>'
 
@@ -105,7 +115,8 @@ def Practice_MCQ_page():
 
         full_image_tags = image_tags + image_tags
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <style>
         .scroll-container {{
             overflow: hidden;
@@ -147,22 +158,27 @@ def Practice_MCQ_page():
             }}
         }}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="scroll-container">
             <div class="scroll-content">
                 {full_image_tags}
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
     else:
         st.error(f"Directory not found: {directory_Featured}")
 
     st.title("Recommendations")
 
     if os.path.exists(directory_Recommendation):
-        image_width = 480 
+        image_width = 480
         image_height = 230
         margin_right = 10
 
@@ -173,12 +189,15 @@ def Practice_MCQ_page():
             if os.path.isfile(file_path):
                 encoded_image = load_image_as_base64(file_path)
                 mime_type = get_mime_type(filename)
-                margin_style = f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                margin_style = (
+                    f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                )
 
                 image_url = f"?{urlencode({'selected_image': filename})}"
                 image_tags += f'<a href="{image_url}"><img src="data:{mime_type};base64,{encoded_image}" alt="{filename}" style="border-radius: 3px; {margin_style} width: {image_width}px; height: {image_height}px; object-fit: cover; vertical-align: middle;"></a>'
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <style>
         .scroll-container-static {{
             overflow-x: auto;
@@ -232,24 +251,29 @@ def Practice_MCQ_page():
             border-radius: 10px;
         }}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="scroll-container-static">
             <div class="scroll-content-static">
                 {image_tags}
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
     else:
         st.error(f"Directory not found: {directory_Recommendation}")
 
     st.title("All Courses")
 
     if os.path.exists(directory_All_Courses):
-        image_width = 480 
+        image_width = 480
         image_height = 230
-        margin_right = 10  
+        margin_right = 10
 
         image_tags = ""
         filenames = sorted(os.listdir(directory_All_Courses))
@@ -258,12 +282,15 @@ def Practice_MCQ_page():
             if os.path.isfile(file_path):
                 encoded_image = load_image_as_base64(file_path)
                 mime_type = get_mime_type(filename)
-                margin_style = f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                margin_style = (
+                    f"margin-right: {margin_right}px;" if i < len(filenames) - 1 else ""
+                )
 
                 image_url = f"?{urlencode({'selected_image': filename})}"
                 image_tags += f'<a href="{image_url}"><img src="data:{mime_type};base64,{encoded_image}" alt="{filename}" style="border-radius: 3px; {margin_style} width: {image_width}px; height: {image_height}px; object-fit: cover; vertical-align: middle;"></a>'
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <style>
         .scroll-container-static {{
             overflow-x: auto;
@@ -318,14 +345,19 @@ def Practice_MCQ_page():
             border-radius: 10px;
         }}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="scroll-container-static">
             <div class="scroll-content-static">
                 {image_tags}
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
     else:
         st.error(f"Directory not found: {directory_All_Courses}")

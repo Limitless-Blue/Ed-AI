@@ -26,6 +26,7 @@ def length_of_longest_substring_k_distinct(s: str, k: int) -> int:
 
     return max_len
 
+
 input_data = input().strip().split()
 s = input_data[0]
 k = int(input_data[1])

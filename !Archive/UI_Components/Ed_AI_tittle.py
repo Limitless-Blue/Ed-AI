@@ -1,7 +1,8 @@
 import streamlit as st
 
+
 def Ed_AI_tittle():
-  css = """
+    css = """
   <style>
   @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
@@ -61,9 +62,10 @@ def Ed_AI_tittle():
   </style>
   """
 
-  st.markdown(css, unsafe_allow_html=True)
+    st.markdown(css, unsafe_allow_html=True)
 
-  st.markdown("""
+    st.markdown(
+        """
   <div style="position: relative; width: 100%; height: 60vh; display: flex; align-items: center; justify-content: center;">
       <div class="ring-container">
           <div class="ring"></div>
@@ -72,5 +74,6 @@ def Ed_AI_tittle():
       </div>
       <div class="fancy-text">✨ Ed AI</div>
   </div>
-  """, unsafe_allow_html=True)
-
+  """,
+        unsafe_allow_html=True,
+    )
