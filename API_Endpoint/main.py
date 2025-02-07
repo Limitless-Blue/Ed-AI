@@ -30,7 +30,7 @@ async def get_streak_data():
 @common_router.get("/greeting-audio")
 async def get_greeting_audio():
     return {
-        "audioFilePath": r"API_Endpoint\Temp_Static_data\Profile\greeting_audio.mp3"
+        "audioFilePath": r"API_Endpoint\Temp_Static_data\Profile\greeting_audio.opus"
     }
 
 
@@ -68,7 +68,7 @@ class VoiceChatLandingRequest(BaseModel):
 @landing_router.post("/voice-chat")
 async def landing_voice_chat(data: VoiceChatLandingRequest):
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
+        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
         "conversationHistory": [
             {"speaker": "user", "text": "Transcribed user speech"},
             {"speaker": "AI", "" "text": "AI's text response"},
@@ -452,7 +452,7 @@ class VoiceChatInterviewRequest(BaseModel):
 @interview_router.post("/voice-chat")
 async def interview_voice_chat(data: VoiceChatInterviewRequest):
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
+        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
         "user": "Transcribed user speech",
         "AI": "AI's text response",
         "conversationHistory": [
@@ -504,7 +504,7 @@ class VoiceChatRequest(BaseModel):
 @chat_router.post("/voice")
 async def chat_voice(data: VoiceChatRequest):
     return {
-        "user": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
+        "user": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
         "AI": "AI's text response",
         "conversationHistory": [
             {"speaker": "user", "text": "Transcribed user speech"},
