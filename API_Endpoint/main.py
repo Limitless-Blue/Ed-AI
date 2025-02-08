@@ -1,10 +1,18 @@
-# TODO: Remove unccesry commas
-
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="💻Placeholder API Application")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # ======================================================
 # 1. Common API
@@ -87,11 +95,11 @@ learn_router = APIRouter(prefix="/api/learn", tags=["Learn"])
 async def get_learn_recommendations():
     return {
         "recommendations": [
-            {"id": "1", "courseName": "DSA Intro"},
-            {"id": "2", "courseName": "Trees"},
-            {"id": "3", "courseName": "Linked Lists"},
-            {"id": "4", "courseName": "Arrays"},
-            {"id": "5", "courseName": "Stacks"},
+            {"id": "LEPA_1", "courseName": "DSA Intro"},
+            {"id": "LEPA_2", "courseName": "Trees"},
+            {"id": "LEPA_3", "courseName": "Linked Lists"},
+            {"id": "LEPA_4", "courseName": "Arrays"},
+            {"id": "LEPA_5", "courseName": "Stacks"},
         ],
         "filters": {
             "level": ["Easy", "Medium", "Hard"],
@@ -108,11 +116,16 @@ async def get_all_courses(
     topic: Optional[str] = Query(None),
 ):
     return [
-        {"id": "1", "courseName": "DSA Intro"},
-        {"id": "2", "courseName": "Trees"},
-        {"id": "3", "courseName": "Linked Lists"},
-        {"id": "4", "courseName": "Arrays"},
-        {"id": "5", "courseName": "Stacks"},
+        {"id": "LEPA_1", "courseName": "DSA Intro"},
+        {"id": "LEPA_2", "courseName": "Trees"},
+        {"id": "LEPA_3", "courseName": "Linked Lists"},
+        {"id": "LEPA_4", "courseName": "Arrays"},
+        {"id": "LEPA_5", "courseName": "Stacks"},
+        {"id": "LEPA_6", "courseName": "DSA Intro"},
+        {"id": "LEPA_7", "courseName": "Trees"},
+        {"id": "LEPA_8", "courseName": "Linked Lists"},
+        {"id": "LEPA_9", "courseName": "Arrays"},
+        {"id": "LEPA_10", "courseName": "Stacks"},
     ]
 
 
@@ -229,18 +242,18 @@ practice_router = APIRouter(prefix="/api/practice", tags=["Practice"])
 async def get_practice_recommendations():
     return {
         "mcqRecommendations": [
-            {"id": "1", "practiceName": "Queues"},
-            {"id": "2", "practiceName": "Trees"},
-            {"id": "3", "practiceName": "Linked Lists"},
-            {"id": "4", "practiceName": "Arrays"},
-            {"id": "5", "practiceName": "Stacks"},
+            {"id": "MCPA_1", "practiceName": "Queues"},
+            {"id": "MCPA_2", "practiceName": "Trees"},
+            {"id": "MCPA_3", "practiceName": "Linked Lists"},
+            {"id": "MCPA_4", "practiceName": "Arrays"},
+            {"id": "MCPA_5", "practiceName": "Stacks"},
         ],
         "codingRecommendations": [
-            {"id": "1", "practiceName": "Queues"},
-            {"id": "2", "practiceName": "Trees"},
-            {"id": "3", "practiceName": "Linked Lists"},
-            {"id": "4", "practiceName": "Arrays"},
-            {"id": "5", "practiceName": "Stacks"},
+            {"id": "COPA_1", "practiceName": "Queues"},
+            {"id": "COPA_2", "practiceName": "Trees"},
+            {"id": "COPA_3", "practiceName": "Linked Lists"},
+            {"id": "COPA_4", "practiceName": "Arrays"},
+            {"id": "COPA_5", "practiceName": "Stacks"},
         ],
         "filters": {
             "mcqs": {
@@ -265,16 +278,66 @@ async def get_practice_items(
     topic: Optional[str] = Query(None),
 ):
     return [
-        {"id": "1", "practiceName": "Queues", "status": True, "difficulty": "easy"},
-        {"id": "2", "practiceName": "Trees", "status": True, "difficulty": "easy"},
         {
-            "id": "3",
+            "id": "MCPA_1",
+            "practiceName": "Queues",
+            "status": True,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_2",
+            "practiceName": "Trees",
+            "status": True,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_3",
             "practiceName": "Linked Lists",
             "status": True,
             "difficulty": "easy",
         },
-        {"id": "4", "practiceName": "Arrays", "status": False, "difficulty": "easy"},
-        {"id": "5", "practiceName": "Stacks", "status": False, "difficulty": "easy"},
+        {
+            "id": "MCPA_4",
+            "practiceName": "Arrays",
+            "status": False,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_5",
+            "practiceName": "Stacks",
+            "status": False,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_6",
+            "practiceName": "Queues",
+            "status": True,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_7",
+            "practiceName": "Trees",
+            "status": True,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_8",
+            "practiceName": "Linked Lists",
+            "status": True,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_9",
+            "practiceName": "Arrays",
+            "status": False,
+            "difficulty": "easy",
+        },
+        {
+            "id": "MCPA_10",
+            "practiceName": "Stacks",
+            "status": False,
+            "difficulty": "easy",
+        },
     ]
 
 
