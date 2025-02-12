@@ -1,46 +1,46 @@
 {
   "MCPA_1": {
     "Title": "Programming_Fundamentals",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Programming_Fundamentals_000001.json"
+    "Test_file": "static_data\\MCQs_page\\All_Courses_Test"
   },
   "MCPA_2": {
     "Title": "Array",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Array_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Array_000001.json"
   },
   "MCPA_3": {
     "Title": "Linked_List",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Linked_List_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Linked_List_000001.json"
   },
   "MCPA_4": {
     "Title": "Stack",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Stack_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Stack_000001.json"
   },
   "MCPA_5": {
     "Title": "Queue",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Queue_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Queue_000001.json"
   },
   "MCPA_6": {
     "Title": "Trees",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Trees_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Trees_000001.json"
   },
   "MCPA_7": {
     "Title": "Graph",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Graph_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Graph_000001.json"
   },
   "MCPA_8": {
     "Title": "Hashing",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Hashing_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Hashing_000001.json"
   },
   "MCPA_9": {
     "Title": "Heap",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Heap_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Heap_000001.json"
   },
   "MCPA_10": {
     "Title": "Sort",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Sort_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Sort_000001.json"
   },
   "MCPA_11": {
     "Title": "Search",
-    "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Search_000001.json"
+    "Test_file": "static_data\\MCQs_page\\Search_000001.json"
   }
 }
