@@ -567,7 +567,7 @@ class VoiceChatRequest(BaseModel):
 @chat_router.post("/voice")
 async def chat_voice(data: VoiceChatRequest):
     return {
-        "user": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
+        "user": "Transcribed user speech",
         "AI": "AI's text response",
         "conversationHistory": [
             {"speaker": "user", "text": "Transcribed user speech"},
