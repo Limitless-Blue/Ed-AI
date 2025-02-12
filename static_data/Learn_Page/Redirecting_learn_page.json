@@ -37,7 +37,7 @@
   },
   {
     "ID": "LEPA_4",
-    "title": "Programming Fundamentals",
+    "title": "Problem Solving Techniques - I",
     "Course": [
       "Static_Files/Learn_Page/LEPA_4/Course_Markdown_File/Programming_Fundamentals01.md",
       "Static_Files/Learn_Page/LEPA_4/Course_Markdown_File/Programming_Fundamentals02.md"
@@ -49,7 +49,7 @@
   },
   {
     "ID": "LEPA_5",
-    "title": "Programming Fundamentals",
+    "title": "Time Complexity",
     "Course": [
       "Static_Files/Learn_Page/LEPA_5/Course_Markdown_File/Programming_Fundamentals01.md"
     ],
@@ -59,7 +59,7 @@
   },
   {
     "ID": "LEPA_6",
-    "title": "Programming Fundamentals",
+    "title": "Space Complexity",
     "Course": [
       "Static_Files/Learn_Page/LEPA_6/Course_Markdown_File/Programming_Fundamentals01.md"
     ],
@@ -69,7 +69,7 @@
   },
   {
     "ID": "LEPA_7",
-    "title": "Array",
+    "title": "Problem Solving Techniques - II",
     "Course": [
       "Static_Files/Learn_Page/LEPA_7/Course_Markdown_File/DS_Array.md"
     ],

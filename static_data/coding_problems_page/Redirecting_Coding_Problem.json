@@ -44,7 +44,7 @@
             "Difficulty": "Medium",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Maximum_Subarray_Sum.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Maximum_Subarray_Sum_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["8\n-2 -3 4 -1 -2 1 5 -3", "7"],
                 ["5\n1 2 3 4 5", "15"],
@@ -59,7 +59,7 @@
             "Difficulty": "Hard",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Smallest_Subarray_with_Sum_K.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Smallest_Subarray_with_Sum_K_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["10 15\n1 2 3 4 5 6 7 8 9 10", "2"],
                 ["5 100\n1 2 3 4 5", "0"],
@@ -74,7 +74,7 @@
             "Difficulty": "Easy",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Array_Sum.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Array_Sum_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["5\n1 2 3 4 5", "15"],
                 ["3\n-1 2 3", "4"]
@@ -86,7 +86,7 @@
             "Difficulty": "Hard",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Sum_of_Non-Adjacent_Elements.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Sum_of_Non-Adjacent_Elements_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["4\n3 2 7 10", "13"],
                 ["5\n3 2 5 10 7", "15"],
@@ -101,7 +101,7 @@
             "Difficulty": "Medium",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Longest_Palindromic_Substring.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Longest_Palindromic_Substring_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["babad", "bab"],
                 ["cbbd", "bb"],
@@ -115,7 +115,7 @@
             "Difficulty": "Hard",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Longest_Substring_with_At_Most_K_Distinct_Characters.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Longest_Substring_with_At_Most_K_Distinct_Characters_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["eceba 2", "3"],
                 ["aa 1", "2"],
@@ -132,7 +132,7 @@
             "Difficulty": "Medium",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Single_Number_II.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Single_Number_II_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["2 2 3 2", "3"],
                 ["0 1 0 1 0 1 99", "99"],
@@ -147,7 +147,7 @@
             "Difficulty": "Medium",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Missing_Number.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Missing_Number_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["3 0 1", "2"],
                 ["0 1", "2"],
@@ -162,7 +162,7 @@
             "Difficulty": "Hard",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Maximum_XOR_of_Two_Numbers_in_an_Array.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Maximum_XOR_of_Two_Numbers_in_an_Array_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["3 10 5 25 2 8", "28"],
                 ["14 70 53 83 49 91 36 80 92 51 66 70", "127"],
@@ -177,7 +177,7 @@
             "Difficulty": "Medium",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Counting_Bits.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Counting_Bits_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["2", "[0, 1, 1]"],
                 ["5", "[0, 1, 1, 2, 1, 2]"],
@@ -192,7 +192,7 @@
             "Difficulty": "Easy",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Single_Number.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Single_Number_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["2 2 1", "1"],
                 ["4 1 2 1 2", "4"],
@@ -207,7 +207,7 @@
             "Difficulty": "Easy",
             "Problem_Description": "static_data/coding_problems_page/problem_description/Valid_Anagram.md",
             "Problem_Solution": "static_data/coding_problems_page/Problem_solutions/Valid_Anagram_solution.py",
-            "Link": "GPT GENERATED",
+            "Link": "AI GENERATED",
             "Test_Cases": [
                 ["anagram nagaram", "True"],
                 ["rat car", "False"],

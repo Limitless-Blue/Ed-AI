@@ -1,7 +1,7 @@
 {
   "MCPA_1": {
     "Title": "Programming_Fundamentals",
-    "Test_file": "static_data/MCQs_page/All_Courses_Test"
+    "Test_file": "static_data/MCQs_page/All_Courses_Test.json"
   },
   "MCPA_2": {
     "Title": "Array",
