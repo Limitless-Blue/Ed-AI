@@ -1,0 +1,261 @@
+{
+    "questions": [
+      {
+        "question": "What is linear search?",
+        "options": [
+          "A method to sort data",
+          "A simple search algorithm that checks elements sequentially",
+          "A recursive search algorithm",
+          "An algorithm that requires sorted data"
+        ],
+        "answer": "A simple search algorithm that checks elements sequentially",
+        "explanation": "Linear search checks each element in a list or array sequentially until it finds the desired element.",
+        "incorrect_explanation": {
+          "A method to sort data": "Linear search is not a sorting method; it is used for searching.",
+          "A recursive search algorithm": "Linear search is not recursive; it iterates through the list sequentially.",
+          "An algorithm that requires sorted data": "Linear search does not require the data to be sorted."
+        }
+      },
+      {
+        "question": "How does linear search compare the current element?",
+        "options": [
+          "It uses a binary search method.",
+          "It compares it with the target value.",
+          "It sorts the elements before searching.",
+          "It uses hashing for fast lookups."
+        ],
+        "answer": "It compares it with the target value.",
+        "explanation": "Linear search checks if the current element matches the target value.",
+        "incorrect_explanation": {
+          "It uses a binary search method.": "Linear search does not use binary search; it checks elements one by one.",
+          "It sorts the elements before searching.": "Sorting is not a part of the linear search process.",
+          "It uses hashing for fast lookups.": "Linear search does not utilize hashing; it searches sequentially."
+        }
+      },
+      {
+        "question": "What is the best-case time complexity of linear search?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "The best case occurs when the target element is the first element in the list.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) represents the worst-case or average-case scenario, not the best case.",
+          "O(log n)": "Linear search does not have logarithmic time complexity; it checks each element sequentially.",
+          "O(n log n)": "O(n log n) is typically associated with sorting algorithms, not linear search."
+        }
+      },
+      {
+        "question": "What is the average-case time complexity of linear search?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n log n)",
+          "O(log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "On average, linear search checks about half of the elements.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) represents the best-case scenario, not the average-case.",
+          "O(n log n)": "O(n log n) is associated with more complex algorithms like merge sort.",
+          "O(log n)": "Linear search does not achieve logarithmic time complexity."
+        }
+      },
+      {
+        "question": "What is the worst-case time complexity of linear search?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The worst-case occurs when the target element is the last one or not present at all.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) is the best-case time complexity, not the worst-case.",
+          "O(log n)": "Linear search does not achieve logarithmic time complexity.",
+          "O(n log n)": "O(n log n) is associated with sorting algorithms."
+        }
+      },
+      {
+        "question": "What is the primary advantage of linear search?",
+        "options": [
+          "It is the fastest search algorithm.",
+          "It is simple to implement and understand.",
+          "It requires sorted data.",
+          "It is recursive."
+        ],
+        "answer": "It is simple to implement and understand.",
+        "explanation": "Linear search is straightforward to implement, making it easy to understand for beginners.",
+        "incorrect_explanation": {
+          "It is the fastest search algorithm.": "Linear search is not fast; it is inefficient for large datasets.",
+          "It requires sorted data.": "Linear search does not require the data to be sorted.",
+          "It is recursive.": "Linear search is an iterative algorithm, not recursive."
+        }
+      },
+      {
+        "question": "In what scenario is linear search most efficient?",
+        "options": [
+          "When searching in large sorted arrays.",
+          "When the dataset is small.",
+          "When the data is organized in a binary tree.",
+          "When using hash tables."
+        ],
+        "answer": "When the dataset is small.",
+        "explanation": "Linear search is practical for small datasets where the overhead of more complex algorithms isn't justified.",
+        "incorrect_explanation": {
+          "When searching in large sorted arrays.": "Linear search is not efficient in large sorted arrays; binary search is better.",
+          "When the data is organized in a binary tree.": "Linear search does not apply to binary trees effectively; tree traversal methods are used.",
+          "When using hash tables.": "Hash tables are designed for faster search methods, making linear search unnecessary."
+        }
+      },
+      {
+        "question": "What does the linear search algorithm return if the target is not found?",
+        "options": [
+          "The last index checked.",
+          "0",
+          "-1",
+          "An error message."
+        ],
+        "answer": "-1",
+        "explanation": "Linear search returns -1 to indicate that the target is not present in the list.",
+        "incorrect_explanation": {
+          "The last index checked.": "-1 is returned instead of the last index when the target is not found.",
+          "0": "0 indicates the first index, not an absence of the target.",
+          "An error message.": "Linear search does not return an error message; it returns -1 instead."
+        }
+      },
+      {
+        "question": "Which of the following is true about linear search?",
+        "options": [
+          "It is faster than binary search.",
+          "It is less efficient for large datasets.",
+          "It requires a sorted array.",
+          "It can only find the first occurrence of a value."
+        ],
+        "answer": "It is less efficient for large datasets.",
+        "explanation": "Linear search checks each element sequentially, making it inefficient for large datasets compared to other algorithms.",
+        "incorrect_explanation": {
+          "It is faster than binary search.": "Binary search is much faster for sorted data, with O(log n) complexity.",
+          "It requires a sorted array.": "Linear search does not require the array to be sorted.",
+          "It can only find the first occurrence of a value.": "Linear search can find all occurrences, but it's not designed for that purpose."
+        }
+      },
+      {
+        "question": "Which type of data structure can linear search be applied to?",
+        "options": [
+          "Only sorted arrays",
+          "Any linear data structure like lists or arrays",
+          "Binary trees only",
+          "Graphs only"
+        ],
+        "answer": "Any linear data structure like lists or arrays",
+        "explanation": "Linear search can be applied to any linear data structure where elements can be accessed sequentially.",
+        "incorrect_explanation": {
+          "Only sorted arrays": "Linear search can work on unsorted arrays as well.",
+          "Binary trees only": "Binary trees require traversal methods, not linear search.",
+          "Graphs only": "Graphs need graph traversal algorithms like BFS or DFS, not linear search."
+        }
+      },
+      {
+        "question": "How does linear search handle duplicate values?",
+        "options": [
+          "It skips duplicates.",
+          "It stops at the first duplicate.",
+          "It finds all duplicates.",
+          "It doesn't handle duplicates."
+        ],
+        "answer": "It stops at the first duplicate.",
+        "explanation": "Linear search returns the index of the first occurrence of the target value, regardless of duplicates.",
+        "incorrect_explanation": {
+          "It skips duplicates.": "Linear search checks each element and stops when it finds the target.",
+          "It finds all duplicates.": "Linear search is not designed to find all duplicates; it stops at the first one.",
+          "It doesn't handle duplicates.": "Linear search can work with duplicates; it just returns the first found index."
+        }
+      },
+      {
+        "question": "Which of the following scenarios would benefit from using linear search?",
+        "options": [
+          "Searching a large dataset for an exact match.",
+          "Checking if a number exists in a small array.",
+          "Sorting an array before searching.",
+          "Searching a binary tree."
+        ],
+        "answer": "Checking if a number exists in a small array.",
+        "explanation": "Linear search is effective in small datasets where complexity is not a concern.",
+        "incorrect_explanation": {
+          "Searching a large dataset for an exact match.": "Linear search is inefficient for large datasets compared to faster algorithms.",
+          "Sorting an array before searching.": "Linear search does not require sorting; it searches directly.",
+          "Searching a binary tree.": "Binary trees require tree-specific traversal methods, not linear search."
+        }
+      },
+      {
+        "question": "What is the main disadvantage of linear search?",
+        "options": [
+          "It is easy to implement.",
+          "It is inefficient for large datasets.",
+          "It works only on sorted data.",
+          "It can be used in parallel."
+        ],
+        "answer": "It is inefficient for large datasets.",
+        "explanation": "The primary disadvantage of linear search is its O(n) time complexity, which makes it impractical for large datasets.",
+        "incorrect_explanation": {
+          "It is easy to implement.": "Ease of implementation is an advantage, not a disadvantage.",
+          "It works only on sorted data.": "Linear search does not require the data to be sorted.",
+          "It can be used in parallel.": "Linear search is inherently sequential and not designed for parallel execution."
+        }
+      },
+      {
+        "question": "In which situation would linear search be a preferred method?",
+        "options": [
+          "When searching in a massive dataset.",
+          "When a simple implementation is needed for small data.",
+          "When searching requires sorted input.",
+          "When the search needs to be highly optimized."
+        ],
+        "answer": "When a simple implementation is needed for small data.",
+        "explanation": "Linear search is straightforward and works well for small datasets.",
+        "incorrect_explanation": {
+          "When searching in a massive dataset.": "For massive datasets, more efficient algorithms are preferred.",
+          "When searching requires sorted input.": "Linear search does not require sorting.",
+          "When the search needs to be highly optimized.": "Linear search is not optimized for performance."
+        }
+      },
+      {
+        "question": "Which search algorithm is better for sorted datasets?",
+        "options": [
+          "Linear search",
+          "Binary search",
+          "Depth-first search",
+          "Breadth-first search"
+        ],
+        "answer": "Binary search",
+        "explanation": "Binary search is much faster for sorted datasets, with a time complexity of O(log n).",
+        "incorrect_explanation": {
+          "Linear search": "Linear search is inefficient for sorted datasets, taking O(n) time.",
+          "Depth-first search": "Depth-first search is used for traversing tree and graph structures, not for searching arrays.",
+          "Breadth-first search": "Breadth-first search is also for trees and graphs, not arrays."
+        }
+      },
+      {
+        "question": "Which of the following statements about linear search is false?",
+        "options": [
+          "It can find an element in unsorted lists.",
+          "It requires the data to be sorted.",
+          "It is simple to implement.",
+          "It has O(n) time complexity in the worst case."
+        ],
+        "answer": "It requires the data to be sorted.",
+        "explanation": "Linear search can be performed on unsorted lists; it does not require sorted data.",
+        "incorrect_explanation": {
+          "It can find an element in unsorted lists.": "Linear search can search through both sorted and unsorted lists.",
+          "It is simple to implement.": "Linear search is indeed simple and straightforward to implement.",
+          "It has O(n) time complexity in the worst case.": "This statement is true; linear search has O(n) time complexity in the worst case."
+        }
+      }
+    ]
+  }
+  

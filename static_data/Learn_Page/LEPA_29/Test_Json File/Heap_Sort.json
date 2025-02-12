@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "question": "What type of binary tree satisfies the heap property?",
+      "options": [
+        "Complete Binary Tree",
+        "Perfect Binary Tree",
+        "Skewed Binary Tree",
+        "Full Binary Tree"
+      ],
+      "answer": "Complete Binary Tree",
+      "explanation": "A heap is a complete binary tree where all levels are filled except possibly the last one, which is filled from left to right.",
+      "incorrect_explanation": {
+        "Perfect Binary Tree": "A perfect binary tree has all levels completely filled.",
+        "Skewed Binary Tree": "A skewed binary tree is not balanced and does not satisfy the heap property.",
+        "Full Binary Tree": "A full binary tree has all nodes either having 0 or 2 children but does not guarantee heap properties."
+      }
+    },
+    {
+      "question": "Which of the following is true for a Max-Heap?",
+      "options": [
+        "The key at the root is smaller than its children.",
+        "The key at the root is greater than or equal to the keys of its children.",
+        "All levels must be fully filled.",
+        "Heapify process is only applied to the leaves."
+      ],
+      "answer": "The key at the root is greater than or equal to the keys of its children.",
+      "explanation": "In a Max-Heap, the key at the root is the largest and must be greater than or equal to its children.",
+      "incorrect_explanation": {
+        "The key at the root is smaller than its children.": "This statement is true for a Min-Heap, not a Max-Heap.",
+        "All levels must be fully filled.": "Heaps only need to be complete binary trees, meaning that the last level may not be fully filled.",
+        "Heapify process is only applied to the leaves.": "Heapify is applied to all nodes, not just the leaves."
+      }
+    },
+    {
+      "question": "What is the time complexity of building a heap?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": "O(n)",
+      "explanation": "Building a heap can be done in O(n) time, as the number of nodes decreases geometrically as we move down the tree.",
+      "incorrect_explanation": {
+        "O(n log n)": "This is the time complexity of Heap Sort, but not for building the heap.",
+        "O(log n)": "Heapifying a single node takes O(log n), but building the heap requires O(n) time overall.",
+        "O(n^2)": "This would be inefficient and is not the correct time complexity for heap construction."
+      }
+    },
+    {
+      "question": "Which of the following is an application of heaps?",
+      "options": [
+        "Binary Search Trees",
+        "Dijkstra’s Algorithm",
+        "Priority Queues",
+        "Breadth-First Search"
+      ],
+      "answer": "Priority Queues",
+      "explanation": "Heaps are commonly used in priority queues for efficient insertion and extraction of the minimum or maximum element.",
+      "incorrect_explanation": {
+        "Binary Search Trees": "BSTs are not implemented with heaps.",
+        "Dijkstra’s Algorithm": "Dijkstra's Algorithm uses a priority queue but is not a direct application of heaps.",
+        "Breadth-First Search": "BFS is a graph traversal technique, unrelated to heaps."
+      }
+    },
+    {
+      "question": "Which process ensures that the heap property is maintained for each node?",
+      "options": [
+        "Insertion",
+        "Heapify",
+        "Deletion",
+        "Traversal"
+      ],
+      "answer": "Heapify",
+      "explanation": "The heapify process ensures that each node satisfies the heap property, and any violation is corrected.",
+      "incorrect_explanation": {
+        "Insertion": "Insertion adds an element to the heap but doesn't guarantee heap property by itself.",
+        "Deletion": "Deletion removes elements but doesn't directly enforce the heap property.",
+        "Traversal": "Traversal is simply visiting nodes and doesn’t affect the heap property."
+      }
+    },
+    {
+      "question": "In the array representation of a heap, what is the index of the left child of a node at index i?",
+      "options": [
+        "2 * i",
+        "i / 2",
+        "2 * i + 1",
+        "2 * i + 2"
+      ],
+      "answer": "2 * i + 1",
+      "explanation": "In a heap represented by an array, the left child of a node at index i is located at 2 * i + 1.",
+      "incorrect_explanation": {
+        "2 * i": "This gives the index of a left child in a 1-based array.",
+        "i / 2": "This gives the index of the parent, not the child.",
+        "2 * i + 2": "This formula gives the index of the right child, not the left."
+      }
+    },
+    {
+      "question": "What is the overall time complexity of Heap Sort?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "answer": "O(n log n)",
+      "explanation": "Heap Sort has an overall time complexity of O(n log n), as each element extraction and heapify operation takes O(log n).",
+      "incorrect_explanation": {
+        "O(n)": "This is the time complexity for building a heap, not sorting.",
+        "O(log n)": "Heap Sort involves multiple log n operations, but the overall complexity is O(n log n).",
+        "O(n^2)": "Heap Sort is more efficient than O(n^2) algorithms like Bubble Sort."
+      }
+    },
+    {
+      "question": "In which scenario would you use Heap Sort?",
+      "options": [
+        "When you need in-place sorting.",
+        "When you need the fastest average-case sorting algorithm.",
+        "When sorting stability is critical.",
+        "When you want to minimize comparisons."
+      ],
+      "answer": "When you need in-place sorting.",
+      "explanation": "Heap Sort is an in-place sorting algorithm, meaning it sorts the elements in the original array without requiring additional space.",
+      "incorrect_explanation": {
+        "When you need the fastest average-case sorting algorithm.": "Quick Sort usually performs better in the average case.",
+        "When sorting stability is critical.": "Heap Sort is not a stable sorting algorithm.",
+        "When you want to minimize comparisons.": "Other algorithms like Merge Sort may perform fewer comparisons."
+      }
+    },
+    {
+      "question": "Which of the following best describes the space complexity of Heap Sort?",
+      "options": [
+        "O(1) auxiliary space",
+        "O(n) auxiliary space",
+        "O(log n) auxiliary space",
+        "O(n^2) auxiliary space"
+      ],
+      "answer": "O(1) auxiliary space",
+      "explanation": "Heap Sort operates in-place, requiring only a constant amount of extra space, i.e., O(1) auxiliary space.",
+      "incorrect_explanation": {
+        "O(n) auxiliary space": "Heap Sort does not require additional space proportional to the input size.",
+        "O(log n) auxiliary space": "Logarithmic space is not needed since the sorting is done in-place.",
+        "O(n^2) auxiliary space": "This would be too inefficient and unnecessary for Heap Sort."
+      }
+    },
+    {
+      "question": "How many children does a node in a binary heap have at most?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "answer": "Two",
+      "explanation": "In a binary heap, each node can have at most two children, one on the left and one on the right.",
+      "incorrect_explanation": {
+        "One": "Some nodes can have two children.",
+        "Three": "In a binary heap, a node cannot have more than two children.",
+        "Four": "Binary heaps are restricted to a maximum of two children per node."
+      }
+    }
+  ]
+}

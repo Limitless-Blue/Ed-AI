@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "What type of sorting algorithm is Radix Sort?",
+        "options": [
+          "Comparative",
+          "Non-comparative",
+          "Recursive",
+          "Iterative"
+        ],
+        "answer": "Non-comparative",
+        "explanation": "Radix Sort does not compare elements directly but sorts numbers by their digits.",
+        "incorrect_explanation": {
+          "Comparative": "Radix Sort is non-comparative as it sorts based on digits.",
+          "Recursive": "Radix Sort is not a recursive algorithm; it uses iterative steps.",
+          "Iterative": "While Radix Sort can be iterative, its defining feature is being non-comparative."
+        }
+      },
+      {
+        "question": "What is the time complexity of Radix Sort?",
+        "options": [
+          "O(n^2)",
+          "O(n log n)",
+          "O(nk)",
+          "O(log n)"
+        ],
+        "answer": "O(nk)",
+        "explanation": "Radix Sort has a time complexity of O(nk), where n is the number of elements and k is the number of digits.",
+        "incorrect_explanation": {
+          "O(n^2)": "This is the time complexity of algorithms like Bubble Sort, not Radix Sort.",
+          "O(n log n)": "This is the time complexity of algorithms like Merge Sort and Heap Sort.",
+          "O(log n)": "This is not the correct complexity for Radix Sort."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a characteristic of Radix Sort?",
+        "options": [
+          "Stable Sorting",
+          "Non-comparative",
+          "In-place Sorting",
+          "Efficient for sorting integers"
+        ],
+        "answer": "In-place Sorting",
+        "explanation": "Radix Sort is not an in-place algorithm as it requires additional space for sorting.",
+        "incorrect_explanation": {
+          "Stable Sorting": "Radix Sort is stable as it preserves the relative order of equal elements.",
+          "Non-comparative": "Radix Sort is non-comparative as it sorts based on digits, not element comparisons.",
+          "Efficient for sorting integers": "Radix Sort is efficient for sorting integers, especially when the number of digits is small."
+        }
+      },
+      {
+        "question": "What stable sorting algorithm is often used in Radix Sort to sort based on digits?",
+        "options": [
+          "Merge Sort",
+          "Counting Sort",
+          "Quick Sort",
+          "Selection Sort"
+        ],
+        "answer": "Counting Sort",
+        "explanation": "Counting Sort is used as it is stable and can efficiently sort based on digits.",
+        "incorrect_explanation": {
+          "Merge Sort": "While Merge Sort is stable, Counting Sort is more suited for sorting digits in Radix Sort.",
+          "Quick Sort": "Quick Sort is not stable and not used in Radix Sort.",
+          "Selection Sort": "Selection Sort is not stable and not used in Radix Sort."
+        }
+      },
+      {
+        "question": "In Radix Sort, which digit is typically sorted first?",
+        "options": [
+          "Most Significant Digit (MSD)",
+          "Least Significant Digit (LSD)",
+          "Middle Digit",
+          "Any digit can be sorted first"
+        ],
+        "answer": "Least Significant Digit (LSD)",
+        "explanation": "In the most common variant of Radix Sort, the sorting starts from the least significant digit.",
+        "incorrect_explanation": {
+          "Most Significant Digit (MSD)": "Sorting from the MSD is another variant of Radix Sort but is less common.",
+          "Middle Digit": "Radix Sort processes digits starting from either LSD or MSD, not the middle digit.",
+          "Any digit can be sorted first": "The order of digit processing is fixed in Radix Sort, typically starting from LSD."
+        }
+      },
+      {
+        "question": "What is the space complexity of Radix Sort?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n + k)",
+          "O(k)"
+        ],
+        "answer": "O(n + k)",
+        "explanation": "Radix Sort uses O(n) space for the output array and O(k) space for counting digits.",
+        "incorrect_explanation": {
+          "O(1)": "Radix Sort requires extra space for the output array and counting, so it’s not O(1).",
+          "O(n)": "While Radix Sort requires O(n) space for the output array, it also requires O(k) for digit counting.",
+          "O(k)": "While counting digits takes O(k) space, the output array requires O(n) space."
+        }
+      },
+      {
+        "question": "Which of the following best describes the stability of Radix Sort?",
+        "options": [
+          "Radix Sort is not stable",
+          "Radix Sort is stable",
+          "Stability depends on the implementation",
+          "Radix Sort only maintains stability for integers"
+        ],
+        "answer": "Radix Sort is stable",
+        "explanation": "Radix Sort is inherently stable since it preserves the relative order of elements with the same key.",
+        "incorrect_explanation": {
+          "Radix Sort is not stable": "This is incorrect; Radix Sort is designed to be stable.",
+          "Stability depends on the implementation": "The stability of Radix Sort is guaranteed by design, not by implementation.",
+          "Radix Sort only maintains stability for integers": "Radix Sort maintains stability for any type of data, not just integers."
+        }
+      },
+      {
+        "question": "For which type of data is Radix Sort most suited?",
+        "options": [
+          "Floating point numbers",
+          "Integers with a small range of digits",
+          "Strings of variable length",
+          "Data with mixed types"
+        ],
+        "answer": "Integers with a small range of digits",
+        "explanation": "Radix Sort is most efficient when the number of digits is small compared to the number of elements.",
+        "incorrect_explanation": {
+          "Floating point numbers": "Radix Sort is not typically used for floating point numbers.",
+          "Strings of variable length": "Radix Sort works best on fixed-length data such as integers or fixed-length strings.",
+          "Data with mixed types": "Radix Sort is not suitable for sorting mixed-type data."
+        }
+      },
+      {
+        "question": "How does Radix Sort handle negative numbers?",
+        "options": [
+          "It can sort negative numbers directly",
+          "Negative numbers must be handled separately",
+          "It uses a modified Counting Sort for negative numbers",
+          "Radix Sort does not support negative numbers"
+        ],
+        "answer": "Negative numbers must be handled separately",
+        "explanation": "Radix Sort, as commonly implemented, does not directly support negative numbers. A separate process is needed for handling them.",
+        "incorrect_explanation": {
+          "It can sort negative numbers directly": "Radix Sort does not directly sort negative numbers without modification.",
+          "It uses a modified Counting Sort for negative numbers": "Radix Sort uses Counting Sort for digit sorting but does not modify it for negative numbers.",
+          "Radix Sort does not support negative numbers": "While not directly supported, negative numbers can be handled separately."
+        }
+      },
+      {
+        "question": "What is the first step in Radix Sort?",
+        "options": [
+          "Sorting based on the most significant digit",
+          "Counting the occurrences of each digit",
+          "Finding the maximum number",
+          "Dividing the elements into buckets"
+        ],
+        "answer": "Finding the maximum number",
+        "explanation": "Radix Sort first determines the number of digits by finding the maximum number in the array.",
+        "incorrect_explanation": {
+          "Sorting based on the most significant digit": "Radix Sort usually starts with the least significant digit, not the most.",
+          "Counting the occurrences of each digit": "This is part of the sorting process but not the first step.",
+          "Dividing the elements into buckets": "This happens during the sorting of digits, not as the first step."
+        }
+      },
+      {
+        "question": "What is the primary sorting technique used within Radix Sort?",
+        "options": [
+          "Merge Sort",
+          "Counting Sort",
+          "Heap Sort",
+          "Bubble Sort"
+        ],
+        "answer": "Counting Sort",
+        "explanation": "Radix Sort leverages Counting Sort to maintain stability while sorting individual digits.",
+        "incorrect_explanation": {
+          "Merge Sort": "While Merge Sort is stable, Radix Sort uses Counting Sort for digit-based sorting.",
+          "Heap Sort": "Heap Sort is not stable and not suitable for use in Radix Sort.",
+          "Bubble Sort": "Bubble Sort is inefficient and is not used in Radix Sort."
+        }
+      },
+      {
+        "question": "Which of the following best explains the term 'Stable Sorting'?",
+        "options": [
+          "The algorithm sorts in O(n log n) time",
+          "The algorithm doesn’t change the relative order of equal elements",
+          "The algorithm uses constant extra space",
+          "The algorithm works for both integers and strings"
+        ],
+        "answer": "The algorithm doesn’t change the relative order of equal elements",
+        "explanation": "Stable sorting algorithms, like Radix Sort, preserve the relative order of elements with equal keys.",
+        "incorrect_explanation": {
+          "The algorithm sorts in O(n log n) time": "This describes time complexity, not stability.",
+          "The algorithm uses constant extra space": "Stability refers to maintaining order, not space complexity.",
+          "The algorithm works for both integers and strings": "This is about data type compatibility, not stability."
+        }
+      },
+      {
+        "question": "What is the worst-case time complexity of Radix Sort?",
+        "options": [
+          "O(n^2)",
+          "O(n log n)",
+          "O(nk)",
+          "O(n)"
+        ],
+        "answer": "O(nk)",
+        "explanation": "In the worst case, Radix Sort runs in O(nk) time, where n is the number of elements and k is the number of digits.",
+        "incorrect_explanation": {
+          "O(n^2)": "This is the time complexity of quadratic sorting algorithms like Bubble Sort.",
+          "O(n log n)": "This is the time complexity of comparison-based algorithms like Merge Sort.",
+          "O(n)": "O(n) is the time complexity for best-case linear algorithms, but not for Radix Sort."
+        }
+      },
+      {
+        "question": "Radix Sort processes digits in which order in the LSD-first variant?",
+        "options": [
+          "From least significant to most significant",
+          "From most significant to least significant",
+          "From middle digit outwards",
+          "Random digit order"
+        ],
+        "answer": "From least significant to most significant",
+        "explanation": "In LSD-first Radix Sort, digits are processed starting from the least significant digit (LSD).",
+        "incorrect_explanation": {
+          "From most significant to least significant": "This describes MSD-first Radix Sort, not the LSD variant.",
+          "From middle digit outwards": "Radix Sort doesn't work from the middle digit but processes digits sequentially.",
+          "Random digit order": "Digits must be processed in a specific order, not randomly."
+        }
+      },
+      {
+        "question": "Radix Sort is generally faster than comparison-based algorithms when:",
+        "options": [
+          "The number of digits is small",
+          "The data contains floating-point numbers",
+          "The range of the numbers is very large",
+          "The input size is very small"
+        ],
+        "answer": "The number of digits is small",
+        "explanation": "Radix Sort is efficient when the number of digits (k) is much smaller than the number of elements (n), giving it an edge over comparison-based algorithms.",
+        "incorrect_explanation": {
+          "The data contains floating-point numbers": "Radix Sort is not designed for floating-point numbers.",
+          "The range of the numbers is very large": "A large range of numbers can result in a larger number of digits, making Radix Sort less efficient.",
+          "The input size is very small": "For small input sizes, simpler algorithms like Insertion Sort may be faster."
+        }
+      },
+      {
+        "question": "What type of data is Radix Sort not well-suited for?",
+        "options": [
+          "Large integers",
+          "Floating-point numbers",
+          "Fixed-length strings",
+          "Unsigned integers"
+        ],
+        "answer": "Floating-point numbers",
+        "explanation": "Radix Sort is not generally used for floating-point numbers as it operates on fixed-width digit representations like integers.",
+        "incorrect_explanation": {
+          "Large integers": "Radix Sort handles large integers well, as long as they have a manageable number of digits.",
+          "Fixed-length strings": "Radix Sort can be used on fixed-length strings because it treats them as sequences of characters (or digits).",
+          "Unsigned integers": "Radix Sort is effective for sorting unsigned integers."
+        }
+      },
+      {
+        "question": "Which of the following cases will NOT benefit from using Radix Sort?",
+        "options": [
+          "Sorting a list of small positive integers",
+          "Sorting a list of floating-point numbers",
+          "Sorting a list of fixed-length strings",
+          "Sorting a large list of integers with a few digits"
+        ],
+        "answer": "Sorting a list of floating-point numbers",
+        "explanation": "Radix Sort is not effective for sorting floating-point numbers because they do not have a fixed digit representation.",
+        "incorrect_explanation": {
+          "Sorting a list of small positive integers": "Radix Sort can efficiently sort small positive integers.",
+          "Sorting a list of fixed-length strings": "Radix Sort is useful for sorting fixed-length strings.",
+          "Sorting a large list of integers with a few digits": "Radix Sort excels at sorting large lists of integers when the number of digits is small."
+        }
+      },
+      {
+        "question": "Which sorting algorithm is often used to assist Radix Sort for sorting individual digits?",
+        "options": [
+          "Quick Sort",
+          "Heap Sort",
+          "Counting Sort",
+          "Selection Sort"
+        ],
+        "answer": "Counting Sort",
+        "explanation": "Counting Sort is used because it is stable and works efficiently when sorting individual digits.",
+        "incorrect_explanation": {
+          "Quick Sort": "Quick Sort is not stable and is not used for sorting individual digits in Radix Sort.",
+          "Heap Sort": "Heap Sort is not used in Radix Sort as it is not stable.",
+          "Selection Sort": "Selection Sort is inefficient and not used in Radix Sort."
+        }
+      },
+      {
+        "question": "Which of the following is a key advantage of Radix Sort over comparison-based sorting algorithms?",
+        "options": [
+          "It is in-place",
+          "It has a lower time complexity for large data sets with small digit size",
+          "It uses less memory",
+          "It is recursive"
+        ],
+        "answer": "It has a lower time complexity for large data sets with small digit size",
+        "explanation": "Radix Sort can outperform comparison-based sorting algorithms when the number of digits is small relative to the number of elements.",
+        "incorrect_explanation": {
+          "It is in-place": "Radix Sort is not an in-place algorithm, as it requires additional space for storing intermediate results.",
+          "It uses less memory": "Radix Sort generally uses more memory than in-place sorting algorithms.",
+          "It is recursive": "Radix Sort is not a recursive algorithm."
+        }
+      },
+      {
+        "question": "Which of the following scenarios would make Radix Sort inefficient?",
+        "options": [
+          "Sorting large integers with a few digits",
+          "Sorting a list of integers with varying lengths",
+          "Sorting fixed-length strings",
+          "Sorting unsigned integers"
+        ],
+        "answer": "Sorting a list of integers with varying lengths",
+        "explanation": "Radix Sort works best on data with uniform digit or length sizes. Varying lengths introduce complications.",
+        "incorrect_explanation": {
+          "Sorting large integers with a few digits": "Radix Sort is efficient when sorting large integers with a few digits.",
+          "Sorting fixed-length strings": "Radix Sort is suitable for sorting fixed-length strings.",
+          "Sorting unsigned integers": "Radix Sort performs well on unsigned integers."
+        }
+      }
+    ]
+  }
+  

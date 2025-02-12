@@ -1,0 +1,261 @@
+{
+    "questions": [
+      {
+        "question": "What is Selection Sort?",
+        "options": [
+          "A comparison-based sorting algorithm",
+          "A non-comparison-based sorting algorithm",
+          "An adaptive sorting algorithm",
+          "A stable sorting algorithm"
+        ],
+        "answer": "A comparison-based sorting algorithm",
+        "explanation": "Selection Sort is a straightforward comparison-based sorting algorithm.",
+        "incorrect_explanation": {
+          "A non-comparison-based sorting algorithm": "This is incorrect; Selection Sort relies on comparing elements.",
+          "An adaptive sorting algorithm": "This is incorrect; Selection Sort does not adapt to the order of elements.",
+          "A stable sorting algorithm": "This is incorrect; Selection Sort is unstable."
+        }
+      },
+      {
+        "question": "What is the time complexity of Selection Sort in the worst case?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n^2)",
+          "O(1)"
+        ],
+        "answer": "O(n^2)",
+        "explanation": "The worst-case time complexity of Selection Sort is O(n^2), regardless of the initial order of elements.",
+        "incorrect_explanation": {
+          "O(n)": "This is incorrect; Selection Sort does not operate in linear time.",
+          "O(n log n)": "This is incorrect; Selection Sort does not achieve logarithmic time complexity.",
+          "O(1)": "This is incorrect; O(1) implies constant time, which is not applicable for sorting algorithms."
+        }
+      },
+      {
+        "question": "How does Selection Sort determine the next element to place in the sorted section?",
+        "options": [
+          "By finding the maximum element",
+          "By finding the smallest element in the unsorted section",
+          "By dividing the list into two parts",
+          "By sorting the entire list at once"
+        ],
+        "answer": "By finding the smallest element in the unsorted section",
+        "explanation": "Selection Sort repeatedly finds the smallest element in the unsorted section and swaps it with the first unsorted element.",
+        "incorrect_explanation": {
+          "By finding the maximum element": "This is incorrect; Selection Sort finds the minimum element for sorting.",
+          "By dividing the list into two parts": "This is partially true; however, it specifically finds the smallest element in the unsorted part.",
+          "By sorting the entire list at once": "This is incorrect; Selection Sort sorts the list incrementally."
+        }
+      },
+      {
+        "question": "What is the space complexity of Selection Sort?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Selection Sort is an in-place sorting algorithm and requires only a constant amount of additional space.",
+        "incorrect_explanation": {
+          "O(n)": "This is incorrect; Selection Sort does not require additional space proportional to the input size.",
+          "O(log n)": "This is incorrect; Selection Sort does not achieve logarithmic space complexity.",
+          "O(n^2)": "This is incorrect; O(n^2) would imply a quadratic space requirement."
+        }
+      },
+      {
+        "question": "What characteristic of Selection Sort makes it easy to implement?",
+        "options": [
+          "Complex logic",
+          "Recursive calls",
+          "Simple iterative process",
+          "Usage of extra data structures"
+        ],
+        "answer": "Simple iterative process",
+        "explanation": "Selection Sort follows a simple iterative process, making it easy to understand and implement.",
+        "incorrect_explanation": {
+          "Complex logic": "This is incorrect; the algorithm's logic is quite simple.",
+          "Recursive calls": "This is incorrect; Selection Sort is not a recursive algorithm.",
+          "Usage of extra data structures": "This is incorrect; Selection Sort does not require extra data structures."
+        }
+      },
+      {
+        "question": "Which of the following is a property of Selection Sort?",
+        "options": [
+          "It is a stable sort.",
+          "It is a non-comparison sort.",
+          "It can be adapted to work with linked lists efficiently.",
+          "It has a fixed number of comparisons."
+        ],
+        "answer": "It has a fixed number of comparisons.",
+        "explanation": "Selection Sort has a fixed number of comparisons (n^2/2), regardless of the input.",
+        "incorrect_explanation": {
+          "It is a stable sort.": "This is incorrect; Selection Sort is not stable.",
+          "It is a non-comparison sort.": "This is incorrect; Selection Sort relies on comparisons.",
+          "It can be adapted to work with linked lists efficiently.": "This is incorrect; while possible, it's not efficient."
+        }
+      },
+      {
+        "question": "In which scenario is Selection Sort particularly useful?",
+        "options": [
+          "When sorting large datasets",
+          "When sorting nearly sorted datasets",
+          "When memory usage is constrained",
+          "When sorting datasets with many duplicate values"
+        ],
+        "answer": "When memory usage is constrained",
+        "explanation": "Selection Sort is useful in scenarios with memory constraints due to its O(1) space complexity.",
+        "incorrect_explanation": {
+          "When sorting large datasets": "This is incorrect; Selection Sort is inefficient for large datasets.",
+          "When sorting nearly sorted datasets": "This is incorrect; while it can work, there are better algorithms for this case.",
+          "When sorting datasets with many duplicate values": "This is incorrect; Selection Sort does not perform particularly well in this scenario."
+        }
+      },
+      {
+        "question": "What happens to the original order of equal elements in Selection Sort?",
+        "options": [
+          "It remains unchanged.",
+          "It may change.",
+          "It is not guaranteed.",
+          "It is sorted first."
+        ],
+        "answer": "It may change.",
+        "explanation": "Selection Sort is an unstable sorting algorithm, so the original order of equal elements may change.",
+        "incorrect_explanation": {
+          "It remains unchanged.": "This is incorrect; Selection Sort may change the relative order of equal elements.",
+          "It is not guaranteed.": "This is misleading; it is known that it can change the order.",
+          "It is sorted first.": "This is incorrect; equal elements are treated the same way as others."
+        }
+      },
+      {
+        "question": "What is the first step in the Selection Sort algorithm?",
+        "options": [
+          "Finding the maximum element",
+          "Finding the minimum element",
+          "Swapping elements",
+          "Dividing the list"
+        ],
+        "answer": "Finding the minimum element",
+        "explanation": "The first step in Selection Sort is to find the minimum element from the unsorted part of the list.",
+        "incorrect_explanation": {
+          "Finding the maximum element": "This is incorrect; Selection Sort specifically looks for the minimum element.",
+          "Swapping elements": "This is incorrect; swapping occurs after finding the minimum.",
+          "Dividing the list": "This is incorrect; Selection Sort does not explicitly divide the list."
+        }
+      },
+      {
+        "question": "How does Selection Sort perform in the best case?",
+        "options": [
+          "Better than O(n^2)",
+          "Worse than O(n^2)",
+          "O(n)",
+          "Still O(n^2)"
+        ],
+        "answer": "Still O(n^2)",
+        "explanation": "The best-case time complexity for Selection Sort remains O(n^2), as it still examines all elements.",
+        "incorrect_explanation": {
+          "Better than O(n^2)": "This is incorrect; Selection Sort does not improve in the best case.",
+          "Worse than O(n^2)": "This is incorrect; O(n^2) is the maximum time complexity.",
+          "O(n)": "This is incorrect; O(n) would imply linear performance, which is not the case."
+        }
+      },
+      {
+        "question": "Which algorithm is more efficient for large datasets than Selection Sort?",
+        "options": [
+          "Bubble Sort",
+          "Merge Sort",
+          "Insertion Sort",
+          "Heap Sort"
+        ],
+        "answer": "Merge Sort",
+        "explanation": "Merge Sort is generally more efficient than Selection Sort for large datasets due to its O(n log n) time complexity.",
+        "incorrect_explanation": {
+          "Bubble Sort": "This is incorrect; Bubble Sort has a worse average case than Selection Sort.",
+          "Insertion Sort": "This is incorrect; Insertion Sort performs better on small datasets but not necessarily on large ones.",
+          "Heap Sort": "This is partially correct; Heap Sort is also efficient, but Merge Sort is generally favored."
+        }
+      },
+      {
+        "question": "What is the main disadvantage of Selection Sort?",
+        "options": [
+          "It requires extra space.",
+          "It is inefficient on large lists.",
+          "It is complex to implement.",
+          "It cannot sort numbers."
+        ],
+        "answer": "It is inefficient on large lists.",
+        "explanation": "Selection Sort is inefficient for large datasets due to its O(n^2) time complexity.",
+        "incorrect_explanation": {
+          "It requires extra space.": "This is incorrect; Selection Sort is an in-place algorithm.",
+          "It is complex to implement.": "This is incorrect; Selection Sort is easy to implement.",
+          "It cannot sort numbers.": "This is incorrect; Selection Sort can sort numbers and other comparable elements."
+        }
+      },
+      {
+        "question": "Which of the following sorting algorithms is stable?",
+        "options": [
+          "Selection Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "answer": "Merge Sort",
+        "explanation": "Merge Sort is a stable sorting algorithm, while Selection Sort is not stable.",
+        "incorrect_explanation": {
+          "Selection Sort": "This is incorrect; Selection Sort may change the order of equal elements.",
+          "Bubble Sort": "This is partially true; Bubble Sort can be stable but is not guaranteed in all implementations.",
+          "Insertion Sort": "This is partially true; Insertion Sort can be stable, depending on implementation."
+        }
+      },
+      {
+        "question": "What does 'in-place' mean in the context of sorting algorithms?",
+        "options": [
+          "Sorting is done without using any extra space.",
+          "Sorting requires extra space proportional to the input size.",
+          "Sorting modifies the input array directly.",
+          "Sorting creates a new array."
+        ],
+        "answer": "Sorting modifies the input array directly.",
+        "explanation": "'In-place' sorting means that the algorithm modifies the input array directly without creating a copy.",
+        "incorrect_explanation": {
+          "Sorting is done without using any extra space.": "This is incorrect; 'in-place' does not mean no space is used, just that it is minimal.",
+          "Sorting requires extra space proportional to the input size.": "This is incorrect; in-place sorting minimizes additional space usage.",
+          "Sorting creates a new array.": "This is incorrect; in-place algorithms work directly on the original array."
+        }
+      },
+      {
+        "question": "What is the primary purpose of the outer loop in the Selection Sort algorithm?",
+        "options": [
+          "To iterate through the entire list",
+          "To find the minimum element",
+          "To swap elements",
+          "To create a new sorted list"
+        ],
+        "answer": "To iterate through the entire list",
+        "explanation": "The outer loop iterates through each element, defining the boundary between sorted and unsorted sections.",
+        "incorrect_explanation": {
+          "To find the minimum element": "This is incorrect; finding the minimum is the role of the inner loop.",
+          "To swap elements": "This is incorrect; swapping occurs after finding the minimum.",
+          "To create a new sorted list": "This is incorrect; Selection Sort modifies the existing list."
+        }
+      },
+      {
+        "question": "After how many iterations of the outer loop is the first element of the array sorted?",
+        "options": [
+          "After one iteration",
+          "After two iterations",
+          "After n iterations",
+          "After n-1 iterations"
+        ],
+        "answer": "After one iteration",
+        "explanation": "After the first iteration, the smallest element is placed in the first position, making it sorted.",
+        "incorrect_explanation": {
+          "After two iterations": "This is incorrect; only one iteration is needed to place the smallest element.",
+          "After n iterations": "This is incorrect; n iterations would sort the entire array, not just the first element.",
+          "After n-1 iterations": "This is incorrect; n-1 iterations sort the array completely."
+        }
+      }
+    ]
+  }
+  

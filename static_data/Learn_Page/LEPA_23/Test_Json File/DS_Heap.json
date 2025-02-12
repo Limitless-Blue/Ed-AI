@@ -1,0 +1,293 @@
+{
+    "questions": [
+      {
+        "question": "What is a Max Heap?",
+        "options": [
+          "A tree where each parent node is less than its children.",
+          "A tree where each parent node is greater than its children.",
+          "A tree with random values.",
+          "A linear structure."
+        ],
+        "answer": "A tree where each parent node is greater than its children.",
+        "explanation": "In a Max Heap, the value of each parent node is greater than or equal to the values of its children.",
+        "incorrect_explanation": {
+          "A tree where each parent node is less than its children.": "This describes a Min Heap, not a Max Heap.",
+          "A tree with random values.": "Heaps have a specific structure and properties; they are not random.",
+          "A linear structure.": "Heaps are tree-based structures, not linear."
+        }
+      },
+      {
+        "question": "How do you insert an element into a heap?",
+        "options": [
+          "Add it to the root.",
+          "Add it at the end and bubble up.",
+          "Replace the smallest element.",
+          "Insert it anywhere."
+        ],
+        "answer": "Add it at the end and bubble up.",
+        "explanation": "You add the new element at the end of the heap and then compare it with its parent, swapping if necessary to maintain the heap property.",
+        "incorrect_explanation": {
+          "Add it to the root.": "You cannot directly add it to the root; it must go at the end first.",
+          "Replace the smallest element.": "This does not describe the insertion process in heaps.",
+          "Insert it anywhere.": "Heaps must maintain a specific structure."
+        }
+      },
+      {
+        "question": "What operation removes the maximum element from a Max Heap?",
+        "options": [
+          "Peek",
+          "Bubble Down",
+          "Extract Max",
+          "Insert"
+        ],
+        "answer": "Extract Max",
+        "explanation": "The operation that removes the maximum element (root) from a Max Heap is called Extract Max.",
+        "incorrect_explanation": {
+          "Peek": "Peek retrieves the maximum without removing it.",
+          "Bubble Down": "This is part of the extraction process but not an operation itself.",
+          "Insert": "This adds an element, not removes one."
+        }
+      },
+      {
+        "question": "In a Min Heap, where is the minimum element located?",
+        "options": [
+          "At the root",
+          "At the last node",
+          "At a leaf",
+          "Anywhere in the heap"
+        ],
+        "answer": "At the root",
+        "explanation": "In a Min Heap, the minimum element is always located at the root.",
+        "incorrect_explanation": {
+          "At the last node": "The last node can be any value and is not necessarily the minimum.",
+          "At a leaf": "The minimum is not guaranteed to be a leaf in a Min Heap.",
+          "Anywhere in the heap": "The minimum must be at the root to satisfy the heap property."
+        }
+      },
+      {
+        "question": "What is the primary use of heaps?",
+        "options": [
+          "Data retrieval",
+          "Sorting and priority queues",
+          "Memory management",
+          "String manipulation"
+        ],
+        "answer": "Sorting and priority queues",
+        "explanation": "Heaps are commonly used in algorithms like heapsort and in implementing priority queues.",
+        "incorrect_explanation": {
+          "Data retrieval": "While heaps can facilitate data retrieval, their primary use is not this.",
+          "Memory management": "Heaps are not primarily used for memory management.",
+          "String manipulation": "Heaps do not have a specific role in string manipulation."
+        }
+      },
+      {
+        "question": "Which of the following statements is true about the array representation of a heap?",
+        "options": [
+          "The left child index is `2i + 1`.",
+          "The right child index is `i - 1`.",
+          "The parent index is `2i`.",
+          "All nodes must be at the same level."
+        ],
+        "answer": "The left child index is `2i + 1`.",
+        "explanation": "In the array representation of a heap, the left child of a node at index `i` is found at `2i + 1`.",
+        "incorrect_explanation": {
+          "The right child index is `i - 1`.": "This is incorrect; the right child is at `2i + 2`.",
+          "The parent index is `2i`.": "The parent index is `(i - 1) / 2`.",
+          "All nodes must be at the same level.": "Heaps are complete binary trees but nodes can be at different levels."
+        }
+      },
+      {
+        "question": "What does the Peek operation do in a heap?",
+        "options": [
+          "Removes the top element",
+          "Retrieves the top element without removing it",
+          "Inserts a new element",
+          "Changes the value of the root"
+        ],
+        "answer": "Retrieves the top element without removing it",
+        "explanation": "The Peek operation allows you to see the maximum (or minimum) value in the heap without modifying the heap.",
+        "incorrect_explanation": {
+          "Removes the top element": "Peek does not remove the element; it just retrieves it.",
+          "Inserts a new element": "This is not part of the Peek operation.",
+          "Changes the value of the root": "Peek does not change any values in the heap."
+        }
+      },
+      {
+        "question": "Which process converts a binary tree into a heap?",
+        "options": [
+          "Heapify",
+          "Sort",
+          "Balance",
+          "Insert"
+        ],
+        "answer": "Heapify",
+        "explanation": "The heapify process is used to convert an arbitrary binary tree into a heap.",
+        "incorrect_explanation": {
+          "Sort": "Sorting does not convert a tree into a heap.",
+          "Balance": "Balancing a tree is different from heapifying.",
+          "Insert": "Insertion adds elements; it does not convert a tree into a heap."
+        }
+      },
+      {
+        "question": "What is the structure of a heap?",
+        "options": [
+          "Linear",
+          "Tree-based",
+          "Graph-based",
+          "Hash table"
+        ],
+        "answer": "Tree-based",
+        "explanation": "Heaps are tree-based data structures that follow specific properties.",
+        "incorrect_explanation": {
+          "Linear": "Heaps are not linear structures; they are tree-based.",
+          "Graph-based": "Heaps do not have the properties of graph structures.",
+          "Hash table": "Heaps do not utilize hash functions or key-value pairs."
+        }
+      },
+      {
+        "question": "When performing bubble down in a heap, which nodes are compared?",
+        "options": [
+          "Only the root and its parent",
+          "The root and its children",
+          "All nodes in the heap",
+          "Only leaf nodes"
+        ],
+        "answer": "The root and its children",
+        "explanation": "Bubble down compares the root with its children to maintain the heap property.",
+        "incorrect_explanation": {
+          "Only the root and its parent": "Only the root is considered, not its parent during bubble down.",
+          "All nodes in the heap": "Only the relevant subtree is considered during bubble down.",
+          "Only leaf nodes": "Leaf nodes are not involved in bubble down."
+        }
+      },
+      {
+        "question": "How is a heap generally represented in memory?",
+        "options": [
+          "Linked list",
+          "Array",
+          "Matrix",
+          "Tree structure"
+        ],
+        "answer": "Array",
+        "explanation": "Heaps are typically represented using arrays for efficient storage and access.",
+        "incorrect_explanation": {
+          "Linked list": "Linked lists do not efficiently represent heaps.",
+          "Matrix": "Heaps are not commonly represented as matrices.",
+          "Tree structure": "Heaps are tree-based, but in memory, they are often stored in arrays."
+        }
+      },
+      {
+        "question": "Which of the following best describes the Heapify process?",
+        "options": [
+          "Rearranging the heap into a complete tree",
+          "Converting a tree into a heap",
+          "Balancing the tree",
+          "Sorting the elements"
+        ],
+        "answer": "Converting a tree into a heap",
+        "explanation": "Heapify converts an arbitrary binary tree into a valid heap structure.",
+        "incorrect_explanation": {
+          "Rearranging the heap into a complete tree": "Heapify ensures the heap property, not just complete tree structure.",
+          "Balancing the tree": "Heapifying does not necessarily balance the tree.",
+          "Sorting the elements": "Heapify does not sort elements; it structures them into a heap."
+        }
+      },
+      {
+        "question": "What happens during the deletion of an element from a heap?",
+        "options": [
+          "The last element is moved to the root and then bubble up is performed.",
+          "The root is replaced by the last element and bubble down is performed.",
+          "The root is simply removed.",
+          "The entire heap is rebuilt."
+        ],
+        "answer": "The root is replaced by the last element and bubble down is performed.",
+        "explanation": "During deletion, the root is replaced with the last element, and bubble down is used to restore the heap property.",
+        "incorrect_explanation": {
+          "The last element is moved to the root and then bubble up is performed.": "This describes insertion, not deletion.",
+          "The root is simply removed.": "The root cannot be removed without replacement in a heap.",
+          "The entire heap is rebuilt.": "This is not necessary; only the affected subtree is adjusted."
+        }
+      },
+      {
+        "question": "In the array representation of a heap, how do you find the parent of a node at index `i`?",
+        "options": [
+          "2i + 1",
+          "2i",
+          "(i - 1) / 2",
+          "i / 2"
+        ],
+        "answer": "(i - 1) / 2",
+        "explanation": "The parent of a node at index `i` is located at `(i - 1) / 2` in the array representation.",
+        "incorrect_explanation": {
+          "2i + 1": "This represents the left child, not the parent.",
+          "2i": "This is incorrect for both left and right children.",
+          "i / 2": "This is not a valid calculation for the parent index."
+        }
+      },
+      {
+        "question": "What is the worst-case time complexity for inserting an element into a heap?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Inserting an element requires at most log(n) comparisons, making the time complexity O(log n).",
+        "incorrect_explanation": {
+          "O(1)": "This would imply insertion is constant time, which is not true.",
+          "O(n)": "Inserting does not require visiting all nodes.",
+          "O(n log n)": "This is the complexity for sorting, not for a single insertion."
+        }
+      },
+      {
+        "question": "Which operation is part of maintaining the heap property during deletion?",
+        "options": [
+          "Bubble Down",
+          "Bubble Up",
+          "Reheapify",
+          "Restructure"
+        ],
+        "answer": "Bubble Down",
+        "explanation": "Bubble Down is used to maintain the heap property after the root is replaced during deletion.",
+        "incorrect_explanation": {
+          "Bubble Up": "Bubble Up is used during insertion, not deletion.",
+          "Reheapify": "Reheapify is a more general term and not specific to this operation.",
+          "Restructure": "Restructure is not a defined operation in heap management."
+        }
+      },
+      {
+        "question": "What is the main characteristic of a complete binary tree used in heaps?",
+        "options": [
+          "All nodes are filled from left to right.",
+          "All nodes are filled from top to bottom.",
+          "All leaves are at the same level.",
+          "All levels are fully filled."
+        ],
+        "answer": "All nodes are filled from left to right.",
+        "explanation": "Heaps are represented as complete binary trees, meaning they fill nodes from left to right.",
+        "incorrect_explanation": {
+          "All nodes are filled from top to bottom.": "This is not the primary characteristic of a complete binary tree.",
+          "All leaves are at the same level.": "Not all heaps have leaves at the same level.",
+          "All levels are fully filled.": "Only the last level may not be fully filled."
+        }
+      },
+      {
+        "question": "Which algorithm commonly uses heaps?",
+        "options": [
+          "Merge Sort",
+          "Quick Sort",
+          "Heapsort",
+          "Bubble Sort"
+        ],
+        "answer": "Heapsort",
+        "explanation": "Heapsort is a sorting algorithm that utilizes the heap data structure to sort elements.",
+        "incorrect_explanation": {
+          "Merge Sort": "Merge Sort does not use heaps.",
+          "Quick Sort": "Quick Sort uses different partitioning techniques.",
+          "Bubble Sort": "Bubble Sort is a comparison-based sorting method that does not involve heaps."
+        }
+      }
+    ]
+  }
+  

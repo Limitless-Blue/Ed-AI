@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "What is the primary principle followed by a stack?",
+        "options": [
+          "First In First Out (FIFO)",
+          "Last In First Out (LIFO)",
+          "Random Access",
+          "Sequential Access"
+        ],
+        "answer": "Last In First Out (LIFO)",
+        "explanation": "A stack follows the LIFO (Last In First Out) principle, meaning the last element added is the first one to be removed.",
+        "incorrect_explanation": {
+          "First In First Out (FIFO)": "FIFO is followed by queues, not stacks.",
+          "Random Access": "Stacks do not allow random access to elements.",
+          "Sequential Access": "Sequential access applies to structures like arrays or lists, but does not define the stack's core principle."
+        }
+      },
+      {
+        "question": "Which operation in a stack is used to add an element?",
+        "options": [
+          "Push",
+          "Pop",
+          "Insert",
+          "Append"
+        ],
+        "answer": "Push",
+        "explanation": "The 'Push' operation is used to add an element to the top of the stack.",
+        "incorrect_explanation": {
+          "Pop": "The 'Pop' operation removes the topmost element from the stack.",
+          "Insert": "'Insert' is not the correct terminology for adding elements to a stack.",
+          "Append": "'Append' is used in lists, not stacks."
+        }
+      },
+      {
+        "question": "Which of the following applications use stacks?",
+        "options": [
+          "Expression evaluation",
+          "Depth-first search",
+          "Undo mechanism",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "Stacks are used in various applications, including expression evaluation, depth-first search, and undo mechanisms.",
+        "incorrect_explanation": {
+          "Expression evaluation": "This is correct, but stacks are also used in other applications.",
+          "Depth-first search": "This is correct, but stacks are also used in other applications.",
+          "Undo mechanism": "This is correct, but stacks are also used in other applications."
+        }
+      },
+      {
+        "question": "In an array-based stack, what happens if the stack grows beyond the array's capacity?",
+        "options": [
+          "Stack overflow",
+          "Stack underflow",
+          "Automatic resizing",
+          "Stack remains static"
+        ],
+        "answer": "Stack overflow",
+        "explanation": "In a fixed-size array implementation, exceeding the stack's capacity leads to a stack overflow error.",
+        "incorrect_explanation": {
+          "Stack underflow": "Stack underflow occurs when attempting to pop an element from an empty stack.",
+          "Automatic resizing": "Resizing does not happen automatically in a fixed-size array stack.",
+          "Stack remains static": "The stack overflows and cannot accept new elements unless resized."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a property of a stack?",
+        "options": [
+          "Last In First Out (LIFO)",
+          "First In First Out (FIFO)",
+          "Top Element",
+          "Finite Capacity"
+        ],
+        "answer": "First In First Out (FIFO)",
+        "explanation": "FIFO is a property of queues, not stacks.",
+        "incorrect_explanation": {
+          "Last In First Out (LIFO)": "This is the core principle of stacks.",
+          "Top Element": "Stacks allow access to only the top element.",
+          "Finite Capacity": "Stacks can have a finite capacity depending on implementation."
+        }
+      },
+      {
+        "question": "What does the 'Pop' operation do in a stack?",
+        "options": [
+          "Removes the topmost element",
+          "Adds a new element to the top",
+          "Removes an element from the bottom",
+          "Reverses the stack"
+        ],
+        "answer": "Removes the topmost element",
+        "explanation": "The 'Pop' operation removes the topmost element from the stack.",
+        "incorrect_explanation": {
+          "Adds a new element to the top": "The 'Push' operation adds an element to the top, not 'Pop'.",
+          "Removes an element from the bottom": "Stacks do not allow direct removal from the bottom.",
+          "Reverses the stack": "No operation in the stack directly reverses its contents."
+        }
+      },
+      {
+        "question": "Which operation checks the value at the top of the stack without removing it?",
+        "options": [
+          "Peek",
+          "Push",
+          "Pop",
+          "Check"
+        ],
+        "answer": "Peek",
+        "explanation": "The 'Peek' operation allows access to the value at the top of the stack without removing it.",
+        "incorrect_explanation": {
+          "Push": "Push is used to add an element to the stack.",
+          "Pop": "Pop removes the top element, unlike Peek.",
+          "Check": "'Check' is not an operation in the standard stack terminology."
+        }
+      },
+      {
+        "question": "In a linked-list-based stack, what points to the top of the stack?",
+        "options": [
+          "Top pointer",
+          "Head pointer",
+          "Tail pointer",
+          "Next pointer"
+        ],
+        "answer": "Top pointer",
+        "explanation": "In a linked list implementation, a top pointer keeps track of the current top node in the stack.",
+        "incorrect_explanation": {
+          "Head pointer": "While it could be called a head pointer, 'top' is the more stack-specific term.",
+          "Tail pointer": "Stacks do not use a tail pointer, which is more common in queues or linked lists.",
+          "Next pointer": "The next pointer is part of the node but does not point to the top of the stack."
+        }
+      },
+      {
+        "question": "What is an advantage of using a linked list to implement a stack?",
+        "options": [
+          "Dynamic size",
+          "Fixed memory allocation",
+          "Random access to elements",
+          "Efficient resizing"
+        ],
+        "answer": "Dynamic size",
+        "explanation": "Linked list implementations allow the stack to grow and shrink dynamically without predefining the size.",
+        "incorrect_explanation": {
+          "Fixed memory allocation": "Linked lists do not require fixed memory allocation; they grow dynamically.",
+          "Random access to elements": "Stacks do not allow random access, regardless of implementation.",
+          "Efficient resizing": "Resizing is not needed in linked lists as they grow dynamically."
+        }
+      },
+      {
+        "question": "Which of the following operations has a time complexity of O(1) in both array-based and linked-list-based stacks?",
+        "options": [
+          "Push",
+          "Pop",
+          "Peek",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "All basic stack operations (Push, Pop, and Peek) have a time complexity of O(1) regardless of the implementation.",
+        "incorrect_explanation": {
+          "Push": "Push is O(1), but so are Pop and Peek.",
+          "Pop": "Pop is O(1), but so are Push and Peek.",
+          "Peek": "Peek is O(1), but so are Push and Pop."
+        }
+      },
+      {
+        "question": "Which data structure is commonly used in implementing recursion in programming languages?",
+        "options": [
+          "Queue",
+          "Stack",
+          "Linked List",
+          "Array"
+        ],
+        "answer": "Stack",
+        "explanation": "Stacks are used in recursion to store function calls and manage the return addresses.",
+        "incorrect_explanation": {
+          "Queue": "Queues are not used in recursion; stacks are.",
+          "Linked List": "A linked list can be used to implement a stack but is not used directly for recursion management.",
+          "Array": "Arrays are not the underlying data structure for recursion, though they may be used to implement stacks."
+        }
+      },
+      {
+        "question": "What happens during a stack underflow?",
+        "options": [
+          "An element is popped from an empty stack",
+          "An element is pushed to a full stack",
+          "The stack resizes dynamically",
+          "The stack becomes sorted"
+        ],
+        "answer": "An element is popped from an empty stack",
+        "explanation": "A stack underflow occurs when trying to pop an element from an empty stack.",
+        "incorrect_explanation": {
+          "An element is pushed to a full stack": "This would cause a stack overflow, not underflow.",
+          "The stack resizes dynamically": "Resizing is not related to underflow.",
+          "The stack becomes sorted": "Stacks do not involve sorting directly."
+        }
+      },
+      {
+        "question": "What is the time complexity of resizing a stack implemented using arrays?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Resizing an array-based stack requires copying elements to a new array, which takes O(n) time.",
+        "incorrect_explanation": {
+          "O(1)": "Resizing is not constant time; it requires copying elements.",
+          "O(log n)": "This does not apply to array resizing.",
+          "O(n^2)": "Resizing is linear, not quadratic."
+        }
+      },
+      {
+        "question": "In an array-based stack, which operation is required to avoid stack overflow?",
+        "options": [
+          "Resizing",
+          "Shifting",
+          "Sorting",
+          "Inserting"
+        ],
+        "answer": "Resizing",
+        "explanation": "Resizing the array increases the capacity, avoiding stack overflow when more elements are added.",
+        "incorrect_explanation": {
+          "Shifting": "Shifting elements is not related to avoiding overflow in stacks.",
+          "Sorting": "Sorting is not needed for stack overflow prevention.",
+          "Inserting": "Inserting elements does not avoid overflow."
+        }
+      },
+      {
+        "question": "In a linked list-based stack, each node contains which of the following?",
+        "options": [
+          "A value and a pointer to the next node",
+          "A value and an index",
+          "A pointer to the previous node",
+          "An index and a value"
+        ],
+        "answer": "A value and a pointer to the next node",
+        "explanation": "In a linked list, each node contains a value and a pointer to the next node.",
+        "incorrect_explanation": {
+          "A value and an index": "Nodes in linked lists do not have indexes.",
+          "A pointer to the previous node": "This would apply to doubly linked lists, not stacks.",
+          "An index and a value": "Stacks do not use indices."
+        }
+      },
+      {
+        "question": "Which of the following operations is NOT supported in a standard stack?",
+        "options": [
+          "Pop from the bottom",
+          "Push to the top",
+          "Peek at the top",
+          "Pop from the top"
+        ],
+        "answer": "Pop from the bottom",
+        "explanation": "Standard stacks only allow removal from the top, not from the bottom.",
+        "incorrect_explanation": {
+          "Push to the top": "This is a supported operation in stacks.",
+          "Peek at the top": "This is a supported operation in stacks.",
+          "Pop from the top": "This is a supported operation in stacks."
+        }
+      },
+      {
+        "question": "In a linked list-based stack, what happens when an element is popped?",
+        "options": [
+          "The top pointer moves to the next node",
+          "The stack is reversed",
+          "The last node is deleted",
+          "The entire stack is traversed"
+        ],
+        "answer": "The top pointer moves to the next node",
+        "explanation": "When an element is popped from a linked list stack, the top pointer is updated to the next node in the list.",
+        "incorrect_explanation": {
+          "The stack is reversed": "The stack is not reversed during a pop operation.",
+          "The last node is deleted": "The last node is not directly involved in a pop operation.",
+          "The entire stack is traversed": "Pop only affects the top element, not the entire stack."
+        }
+      },
+      {
+        "question": "Which of the following operations will cause a stack overflow in a fixed-size array-based stack?",
+        "options": [
+          "Pushing an element when the stack is full",
+          "Popping an element when the stack is empty",
+          "Peeking at the top element",
+          "Checking if the stack is empty"
+        ],
+        "answer": "Pushing an element when the stack is full",
+        "explanation": "In a fixed-size array-based stack, pushing an element when the stack is full causes a stack overflow.",
+        "incorrect_explanation": {
+          "Popping an element when the stack is empty": "This will cause a stack underflow, not overflow.",
+          "Peeking at the top element": "Peeking does not modify the stack's size.",
+          "Checking if the stack is empty": "This operation does not cause overflow or modify the stack."
+        }
+      },
+      {
+        "question": "What is the initial value of the top pointer in an empty array-based stack?",
+        "options": [
+          "-1",
+          "0",
+          "1",
+          "None"
+        ],
+        "answer": "-1",
+        "explanation": "The top pointer in an array-based stack is initialized to -1, indicating that the stack is empty.",
+        "incorrect_explanation": {
+          "0": "A top pointer of 0 would indicate that the first element has been pushed.",
+          "1": "This value is incorrect as the top pointer starts from -1 in an empty stack.",
+          "None": "The top pointer is not initialized to None."
+        }
+      },
+      {
+        "question": "What is a disadvantage of using an array to implement a stack?",
+        "options": [
+          "Fixed size",
+          "Fast access",
+          "Efficient memory usage",
+          "Simple implementation"
+        ],
+        "answer": "Fixed size",
+        "explanation": "The main disadvantage of using an array for a stack is its fixed size, which can lead to stack overflow if not resized.",
+        "incorrect_explanation": {
+          "Fast access": "Fast access is an advantage of arrays.",
+          "Efficient memory usage": "Arrays use memory efficiently up to their capacity.",
+          "Simple implementation": "Array-based stacks are relatively simple to implement."
+        }
+      }
+    ]
+  }
+  

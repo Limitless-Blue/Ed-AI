@@ -1,0 +1,276 @@
+{
+  "questions": [
+    {
+      "question": "What is binary search?",
+      "options": [
+        "A search algorithm that finds a target value in a sorted array",
+        "A search algorithm that finds a target value in an unsorted array",
+        "A sorting algorithm",
+        "A type of linear search"
+      ],
+      "answer": "A search algorithm that finds a target value in a sorted array",
+      "explanation": "Binary search is an efficient algorithm that finds a target value in a sorted array by repeatedly dividing the search interval in half.",
+      "incorrect_explanation": {
+        "A search algorithm that finds a target value in an unsorted array": "Binary search requires a sorted array to function properly.",
+        "A sorting algorithm": "Binary search is not a sorting algorithm; it is used to search for elements in a sorted list.",
+        "A type of linear search": "Binary search is distinct from linear search; it divides the search space, while linear search checks each element sequentially."
+      }
+    },
+    {
+      "question": "What is the time complexity of binary search in the worst case?",
+      "options": [
+        "O(n)",
+        "O(n^2)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "The worst-case time complexity of binary search is O(log n) as the search space is halved with each iteration.",
+      "incorrect_explanation": {
+        "O(n)": "O(n) represents linear time complexity, which is not applicable for binary search.",
+        "O(n^2)": "O(n^2) is a time complexity associated with algorithms like bubble sort, not binary search.",
+        "O(1)": "O(1) indicates constant time complexity, which does not apply to binary search."
+      }
+    },
+    {
+      "question": "What is a necessary precondition for using binary search?",
+      "options": [
+        "The array must be sorted",
+        "The array must be unsorted",
+        "The target must be the first element",
+        "The array must contain duplicates"
+      ],
+      "answer": "The array must be sorted",
+      "explanation": "Binary search requires the array or list to be sorted in order to function correctly.",
+      "incorrect_explanation": {
+        "The array must be unsorted": "Binary search cannot be applied to unsorted arrays.",
+        "The target must be the first element": "Binary search can search for any element in a sorted array, not just the first.",
+        "The array must contain duplicates": "While binary search can handle duplicates, it does not require them."
+      }
+    },
+    {
+      "question": "In a binary search, what does the mid index represent?",
+      "options": [
+        "The first element in the array",
+        "The last element in the array",
+        "The middle element of the current search interval",
+        "The target element"
+      ],
+      "answer": "The middle element of the current search interval",
+      "explanation": "The mid index is calculated as the average of the low and high pointers, representing the middle element of the current search interval.",
+      "incorrect_explanation": {
+        "The first element in the array": "The first element is not the mid index; it is represented by the low pointer.",
+        "The last element in the array": "The last element is represented by the high pointer, not the mid index.",
+        "The target element": "The mid index is not necessarily the target element; it is simply a point of comparison."
+      }
+    },
+    {
+      "question": "What happens if the target value is not found in the binary search?",
+      "options": [
+        "An exception is raised",
+        "The algorithm returns -1",
+        "The algorithm returns 0",
+        "The search continues indefinitely"
+      ],
+      "answer": "The algorithm returns -1",
+      "explanation": "If the target value is not found in the array, binary search returns -1 to indicate that the value is absent.",
+      "incorrect_explanation": {
+        "An exception is raised": "Binary search does not raise an exception; it returns a specific value when the target is not found.",
+        "The algorithm returns 0": "Returning 0 would imply that the target is found at the first index, which is not correct.",
+        "The search continues indefinitely": "Binary search will terminate once the search bounds are invalid (low > high)."
+      }
+    },
+    {
+      "question": "Which data structure is best suited for binary search?",
+      "options": [
+        "Linked List",
+        "Sorted Array",
+        "Unsorted Array",
+        "Stack"
+      ],
+      "answer": "Sorted Array",
+      "explanation": "Binary search is designed to operate on sorted arrays to efficiently locate elements.",
+      "incorrect_explanation": {
+        "Linked List": "Binary search is not efficient on linked lists due to their non-contiguous memory allocation.",
+        "Unsorted Array": "Binary search requires the array to be sorted; it cannot be used on unsorted data.",
+        "Stack": "Stacks are not suitable for binary search as they do not provide random access to elements."
+      }
+    },
+    {
+      "question": "How does binary search compare to linear search in terms of efficiency?",
+      "options": [
+        "Binary search is slower than linear search",
+        "Binary search is faster than linear search for large datasets",
+        "They are equally efficient",
+        "Linear search is always faster"
+      ],
+      "answer": "Binary search is faster than linear search for large datasets",
+      "explanation": "Binary search significantly reduces the number of comparisons needed to find a target in sorted data, making it faster than linear search as dataset size increases.",
+      "incorrect_explanation": {
+        "Binary search is slower than linear search": "This is incorrect; binary search is generally more efficient than linear search for large sorted datasets.",
+        "They are equally efficient": "Binary search has a better time complexity (O(log n)) compared to linear search (O(n)).",
+        "Linear search is always faster": "Linear search can be faster for small datasets, but binary search outperforms it for larger sorted datasets."
+      }
+    },
+    {
+      "question": "What is the best-case time complexity of binary search?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n^2)"
+      ],
+      "answer": "O(1)",
+      "explanation": "In the best case, the target value is found at the mid index during the first comparison, resulting in O(1) time complexity.",
+      "incorrect_explanation": {
+        "O(n)": "O(n) is the time complexity for linear search, not binary search.",
+        "O(log n)": "O(log n) is the average and worst-case time complexity, not the best case.",
+        "O(n^2)": "O(n^2) is a time complexity for algorithms like bubble sort, not applicable here."
+      }
+    },
+    {
+      "question": "Which of the following statements is true regarding binary search?",
+      "options": [
+        "It works on unsorted arrays",
+        "It can be implemented iteratively or recursively",
+        "It always finds the element at the first index",
+        "It requires more comparisons than linear search"
+      ],
+      "answer": "It can be implemented iteratively or recursively",
+      "explanation": "Binary search can be implemented using both iterative and recursive methods, making it versatile.",
+      "incorrect_explanation": {
+        "It works on unsorted arrays": "Binary search requires sorted data; it cannot be applied to unsorted arrays.",
+        "It always finds the element at the first index": "Binary search does not guarantee that the target will be found at the first index.",
+        "It requires more comparisons than linear search": "Binary search is generally more efficient, requiring fewer comparisons in sorted datasets."
+      }
+    },
+    {
+      "question": "How does the binary search algorithm adjust its search bounds?",
+      "options": [
+        "By adding to both low and high pointers",
+        "By setting low to mid when the target is less than mid",
+        "By setting high to mid when the target is greater than mid",
+        "By adjusting only the low pointer"
+      ],
+      "answer": "By setting high to mid when the target is greater than mid",
+      "explanation": "Binary search adjusts the search bounds based on comparisons: if the target is less than the mid element, it narrows the search to the lower half; if greater, it narrows to the upper half.",
+      "incorrect_explanation": {
+        "By adding to both low and high pointers": "This would incorrectly expand the search range, rather than narrowing it down.",
+        "By setting low to mid when the target is less than mid": "The correct adjustment involves setting high to mid - 1, not low.",
+        "By adjusting only the low pointer": "Both pointers can be adjusted depending on the comparison; not only one."
+      }
+    },
+    {
+      "question": "What is the primary advantage of using binary search over linear search?",
+      "options": [
+        "Binary search is easier to implement",
+        "Binary search requires less memory",
+        "Binary search has a lower time complexity for sorted data",
+        "Binary search can be used on unsorted data"
+      ],
+      "answer": "Binary search has a lower time complexity for sorted data",
+      "explanation": "The primary advantage of binary search is its O(log n) time complexity for sorted arrays, making it much faster than linear search, which has O(n).",
+      "incorrect_explanation": {
+        "Binary search is easier to implement": "Linear search is often simpler to implement due to its straightforward approach.",
+        "Binary search requires less memory": "Both algorithms typically require similar amounts of memory; memory usage is not a key differentiator.",
+        "Binary search can be used on unsorted data": "This is false; binary search only works on sorted datasets."
+      }
+    },
+    {
+      "question": "What is the purpose of the mid index in binary search?",
+      "options": [
+        "To represent the lowest element in the search range",
+        "To divide the array into two halves for comparison",
+        "To find the smallest element in the array",
+        "To mark the end of the search"
+      ],
+      "answer": "To divide the array into two halves for comparison",
+      "explanation": "The mid index is crucial as it helps to split the search range in half, allowing for efficient narrowing down of where the target may be located.",
+      "incorrect_explanation": {
+        "To represent the lowest element in the search range": "The lowest element is represented by the low pointer, not the mid index.",
+        "To find the smallest element in the array": "The mid index is not used for finding the smallest element; it helps in the search process.",
+        "To mark the end of the search": "The mid index is not an indicator of the search's end; it is used for comparing the target."
+      }
+    },
+    {
+      "question": "When is it appropriate to use binary search?",
+      "options": [
+        "When searching through a sorted dataset",
+        "When searching through an unsorted dataset",
+        "When searching through a linked list",
+        "When looking for a maximum element in a dataset"
+      ],
+      "answer": "When searching through a sorted dataset",
+      "explanation": "Binary search is appropriate when the data is sorted, as it relies on this order to effectively locate the target value.",
+      "incorrect_explanation": {
+        "When searching through an unsorted dataset": "Binary search cannot be applied to unsorted data.",
+        "When searching through a linked list": "Binary search is not suitable for linked lists due to their non-contiguous nature.",
+        "When looking for a maximum element in a dataset": "Binary search is for locating specific values, not for finding maximum or minimum elements."
+      }
+    },
+    {
+      "question": "What will the binary search return if the target value is found?",
+      "options": [
+        "The value of the target",
+        "The index of the target in the array",
+        "The number of comparisons made",
+        "The original array"
+      ],
+      "answer": "The index of the target in the array",
+      "explanation": "When the target value is found, binary search returns the index at which the target resides in the sorted array.",
+      "incorrect_explanation": {
+        "The value of the target": "Binary search returns the index, not the value itself.",
+        "The number of comparisons made": "Binary search does not track the number of comparisons; it simply returns the index.",
+        "The original array": "The original array is not returned; only the index of the found target is provided."
+      }
+    },
+    {
+      "question": "What could cause binary search to fail?",
+      "options": [
+        "The array is sorted",
+        "The target is in the array",
+        "The array is unsorted",
+        "The target is not needed"
+      ],
+      "answer": "The array is unsorted",
+      "explanation": "Binary search will fail if applied to an unsorted array, as it relies on the order of elements to function correctly.",
+      "incorrect_explanation": {
+        "The array is sorted": "Binary search functions correctly only on sorted arrays.",
+        "The target is in the array": "Binary search will succeed if the target is in the array and the array is sorted.",
+        "The target is not needed": "Binary search is irrelevant to whether the target is needed; it only affects the search outcome."
+      }
+    },
+    {
+      "question": "What type of access does binary search require for its operation?",
+      "options": [
+        "Sequential access",
+        "Random access",
+        "Continuous access",
+        "No access required"
+      ],
+      "answer": "Random access",
+      "explanation": "Binary search requires random access to elements, allowing it to jump directly to the mid index and compare values efficiently.",
+      "incorrect_explanation": {
+        "Sequential access": "Binary search is designed for random access; sequential access would hinder its efficiency.",
+        "Continuous access": "Continuous access is not a term relevant to binary search; random access is what it requires.",
+        "No access required": "Binary search needs to access elements to compare them, hence access is essential."
+      }
+    },
+    {
+      "question": "In which scenario is linear search more efficient than binary search?",
+      "options": [
+        "Searching a large sorted array",
+        "Searching a small unsorted array",
+        "Searching through a linked list",
+        "Searching for an element not in the array"
+      ],
+      "answer": "Searching a small unsorted array",
+      "explanation": "Linear search can be more efficient for small datasets, particularly if the data is unsorted and the overhead of sorting or maintaining sorted order is not justified.",
+      "incorrect_explanation": {
+        "Searching a large sorted array": "Binary search is significantly more efficient for large sorted datasets.",
+        "Searching through a linked list": "Binary search is not efficient on linked lists; linear search is more appropriate.",
+        "Searching for an element not in the array": "Both searches would have the same outcome, but binary search is not inherently better in this scenario."
+      }
+    }
+  ]
+}

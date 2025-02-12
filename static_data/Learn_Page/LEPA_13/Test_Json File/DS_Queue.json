@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "What is the principle behind queue operations?",
+        "options": [
+          "LIFO",
+          "FIFO",
+          "LILO",
+          "FILO"
+        ],
+        "answer": "FIFO",
+        "explanation": "FIFO stands for First In First Out, which means the first element added to the queue will be the first to be removed.",
+        "incorrect_explanation": {
+          "LIFO": "LIFO stands for Last In First Out, which is the principle of a stack, not a queue.",
+          "LILO": "LILO is not a recognized principle for queues.",
+          "FILO": "FILO is the principle of stacks, not queues."
+        }
+      },
+      {
+        "question": "Which operation is used to add an element to the back of a queue?",
+        "options": [
+          "Push",
+          "Pop",
+          "Enqueue",
+          "Dequeue"
+        ],
+        "answer": "Enqueue",
+        "explanation": "The enqueue operation adds an element to the back of the queue.",
+        "incorrect_explanation": {
+          "Push": "Push is the term used for adding elements to a stack, not a queue.",
+          "Pop": "Pop is the term used for removing elements from a stack, not a queue.",
+          "Dequeue": "Dequeue is the operation to remove an element from the front of the queue."
+        }
+      },
+      {
+        "question": "What is the term used for removing an element from the front of the queue?",
+        "options": [
+          "Push",
+          "Enqueue",
+          "Dequeue",
+          "Shift"
+        ],
+        "answer": "Dequeue",
+        "explanation": "Dequeue is the term used to remove an element from the front of a queue.",
+        "incorrect_explanation": {
+          "Push": "Push is used for stacks, not queues.",
+          "Enqueue": "Enqueue is used to add an element to the queue, not remove.",
+          "Shift": "Shift is not a common term used in queue operations."
+        }
+      },
+      {
+        "question": "In which type of queue does the end of the queue wrap around to the front?",
+        "options": [
+          "Simple Queue",
+          "Priority Queue",
+          "Circular Queue",
+          "Double-ended Queue"
+        ],
+        "answer": "Circular Queue",
+        "explanation": "In a circular queue, the end of the queue wraps around to the front when there is available space.",
+        "incorrect_explanation": {
+          "Simple Queue": "A simple queue does not wrap around; it follows a linear structure.",
+          "Priority Queue": "A priority queue processes elements based on priority, not wrapping.",
+          "Double-ended Queue": "A double-ended queue allows insertion/removal from both ends, but it does not wrap around."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a valid property of a queue?",
+        "options": [
+          "FIFO",
+          "Enqueue",
+          "Pop",
+          "Dequeue"
+        ],
+        "answer": "Pop",
+        "explanation": "Pop is used in stacks to remove elements, not in queues.",
+        "incorrect_explanation": {
+          "FIFO": "FIFO (First In First Out) is a core property of queues.",
+          "Enqueue": "Enqueue is the operation to add an element to a queue.",
+          "Dequeue": "Dequeue is the operation to remove an element from a queue."
+        }
+      },
+      {
+        "question": "Which of these is an example of a queue in real life?",
+        "options": [
+          "A stack of books",
+          "A printer job queue",
+          "A browser history",
+          "A stack of plates"
+        ],
+        "answer": "A printer job queue",
+        "explanation": "A printer job queue processes jobs in the order they are received, following FIFO.",
+        "incorrect_explanation": {
+          "A stack of books": "A stack follows LIFO, where the last book placed on top is removed first.",
+          "A browser history": "A browser history can behave more like a list, not necessarily a queue.",
+          "A stack of plates": "A stack follows LIFO, not FIFO."
+        }
+      },
+      {
+        "question": "What does the tail represent in a queue?",
+        "options": [
+          "The last element added",
+          "The first element added",
+          "The next element to be removed",
+          "The middle element"
+        ],
+        "answer": "The last element added",
+        "explanation": "The tail represents the last element added to the queue, or the most recently enqueued item.",
+        "incorrect_explanation": {
+          "The first element added": "The first element added is referred to as the front of the queue.",
+          "The next element to be removed": "The front of the queue is the next element to be removed.",
+          "The middle element": "There is no special name for the middle element in a queue."
+        }
+      },
+      {
+        "question": "What happens when a queue is full and you try to enqueue an element in a circular queue?",
+        "options": [
+          "The new element is added at the start of the queue.",
+          "The oldest element is removed to make space.",
+          "An overflow error is raised.",
+          "The queue expands automatically."
+        ],
+        "answer": "An overflow error is raised.",
+        "explanation": "If a circular queue is full and an enqueue operation is attempted, an overflow error is raised because there is no more space available.",
+        "incorrect_explanation": {
+          "The new element is added at the start of the queue": "The new element cannot be added when the queue is full.",
+          "The oldest element is removed to make space": "A circular queue does not remove the oldest element unless explicitly dequeued.",
+          "The queue expands automatically": "Most circular queues have a fixed size and do not expand."
+        }
+      },
+      {
+        "question": "What is a key benefit of using a circular queue?",
+        "options": [
+          "It supports priority-based removal of elements.",
+          "It uses memory more efficiently by reusing space.",
+          "It allows removal from both ends of the queue.",
+          "It can dynamically grow in size."
+        ],
+        "answer": "It uses memory more efficiently by reusing space.",
+        "explanation": "A circular queue efficiently reuses space left by dequeued elements by wrapping around to the front.",
+        "incorrect_explanation": {
+          "It supports priority-based removal of elements": "Priority-based removal is a feature of a priority queue, not a circular queue.",
+          "It allows removal from both ends of the queue": "Double-ended queues (deque) support this feature, not circular queues.",
+          "It can dynamically grow in size": "Most circular queues have a fixed size and do not grow dynamically."
+        }
+      },
+      {
+        "question": "In a priority queue, elements are removed based on:",
+        "options": [
+          "Their order of insertion",
+          "Their size",
+          "Their priority",
+          "Their position in the memory"
+        ],
+        "answer": "Their priority",
+        "explanation": "A priority queue removes elements based on their priority, not just the order of insertion.",
+        "incorrect_explanation": {
+          "Their order of insertion": "Order of insertion is a property of a simple queue, not a priority queue.",
+          "Their size": "Size does not determine removal in a priority queue, unless tied to priority.",
+          "Their position in the memory": "Position in memory is irrelevant for the removal process in a priority queue."
+        }
+      },
+      {
+        "question": "In a simple queue, where is the next element removed from?",
+        "options": [
+          "The rear of the queue",
+          "The middle of the queue",
+          "The front of the queue",
+          "Any random position"
+        ],
+        "answer": "The front of the queue",
+        "explanation": "In a simple queue, elements are removed from the front following the FIFO principle.",
+        "incorrect_explanation": {
+          "The rear of the queue": "Elements are added at the rear, not removed from it.",
+          "The middle of the queue": "There is no operation in a queue that allows removal from the middle.",
+          "Any random position": "Queue removal is based on order, not random positions."
+        }
+      },
+      {
+        "question": "Which of the following data structures is based on the LIFO principle?",
+        "options": [
+          "Stack",
+          "Simple Queue",
+          "Circular Queue",
+          "Priority Queue"
+        ],
+        "answer": "Stack",
+        "explanation": "A stack follows the Last In, First Out (LIFO) principle, unlike queues which follow FIFO.",
+        "incorrect_explanation": {
+          "Simple Queue": "A simple queue follows the FIFO principle, not LIFO.",
+          "Circular Queue": "A circular queue also follows FIFO.",
+          "Priority Queue": "A priority queue removes elements based on their priority, not LIFO or FIFO."
+        }
+      },
+      {
+        "question": "What will happen if you try to dequeue an empty queue?",
+        "options": [
+          "It returns None",
+          "It raises an Underflow error",
+          "It removes a random element",
+          "It waits for an element to be added"
+        ],
+        "answer": "It raises an Underflow error",
+        "explanation": "Attempting to dequeue an empty queue raises an Underflow error as there are no elements to remove.",
+        "incorrect_explanation": {
+          "It returns None": "A queue typically raises an error, not returns None, when attempting to dequeue from an empty state.",
+          "It removes a random element": "Queues only remove the front element in a FIFO manner, not random elements.",
+          "It waits for an element to be added": "Queue operations are immediate; they do not wait for future elements."
+        }
+      },
+      {
+        "question": "In a circular queue with a size of 5, what will be the position of the next element added when the tail is at index 4?",
+        "options": [
+          "0",
+          "1",
+          "5",
+          "4"
+        ],
+        "answer": "0",
+        "explanation": "In a circular queue, when the tail reaches the end of the array (index 4 in this case), the next element will be added at index 0.",
+        "incorrect_explanation": {
+          "1": "Index 1 would be next if the queue were linear and not full.",
+          "5": "Index 5 does not exist in a zero-indexed queue of size 5.",
+          "4": "Index 4 is the current tail, so the next available position is 0."
+        }
+      },
+      {
+        "question": "Which operation is the inverse of enqueue in a queue?",
+        "options": [
+          "Dequeue",
+          "Pop",
+          "Insert",
+          "Push"
+        ],
+        "answer": "Dequeue",
+        "explanation": "Dequeue is the inverse operation of enqueue, where an element is removed from the front.",
+        "incorrect_explanation": {
+          "Pop": "Pop is used in stacks, not queues.",
+          "Insert": "Insert is a generic operation and is not specific to queue management.",
+          "Push": "Push is used to add elements to a stack, not to remove elements from a queue."
+        }
+      },
+      {
+        "question": "Which of the following queues allows insertion and removal from both ends?",
+        "options": [
+          "Simple Queue",
+          "Circular Queue",
+          "Priority Queue",
+          "Double-ended Queue (Deque)"
+        ],
+        "answer": "Double-ended Queue (Deque)",
+        "explanation": "A double-ended queue (Deque) allows insertion and removal of elements from both ends of the queue.",
+        "incorrect_explanation": {
+          "Simple Queue": "In a simple queue, insertion happens at the rear and removal happens at the front.",
+          "Circular Queue": "In a circular queue, elements are added to the rear and removed from the front.",
+          "Priority Queue": "In a priority queue, elements are removed based on priority, not their position."
+        }
+      },
+      {
+        "question": "What happens if you try to enqueue an element into a full queue?",
+        "options": [
+          "It raises an Overflow error",
+          "It automatically resizes the queue",
+          "It removes the front element",
+          "It overwrites the last element"
+        ],
+        "answer": "It raises an Overflow error",
+        "explanation": "When trying to enqueue into a full queue, it raises an Overflow error, as no more elements can be added.",
+        "incorrect_explanation": {
+          "It automatically resizes the queue": "Queues do not resize automatically unless specifically programmed to do so.",
+          "It removes the front element": "Queues do not remove elements unless a dequeue operation is performed.",
+          "It overwrites the last element": "A queue will not overwrite existing elements unless explicitly handled that way."
+        }
+      },
+      {
+        "question": "Which of the following real-life scenarios best represents a priority queue?",
+        "options": [
+          "People waiting in line at a movie theater",
+          "Emergency room patients being treated based on severity",
+          "Cars at a toll booth",
+          "Items in a to-do list processed one by one"
+        ],
+        "answer": "Emergency room patients being treated based on severity",
+        "explanation": "In an emergency room, patients are treated based on the severity of their condition, which is an example of a priority queue.",
+        "incorrect_explanation": {
+          "People waiting in line at a movie theater": "This is a simple queue where people are served based on their order of arrival.",
+          "Cars at a toll booth": "This is another example of a simple queue, where cars are processed in the order they arrive.",
+          "Items in a to-do list processed one by one": "This resembles a simple queue where items are processed in the order they were added."
+        }
+      },
+      {
+        "question": "Which method is used in Python to remove an element from the front of a simple queue?",
+        "options": [
+          "queue.pop(0)",
+          "queue.dequeue()",
+          "queue.remove()",
+          "queue.shift()"
+        ],
+        "answer": "queue.pop(0)",
+        "explanation": "In Python, `queue.pop(0)` removes the first element from the list, which simulates a dequeue operation in a simple queue.",
+        "incorrect_explanation": {
+          "queue.dequeue()": "Python's built-in list does not have a `dequeue()` method.",
+          "queue.remove()": "The `remove()` method removes a specific element, not necessarily the front one.",
+          "queue.shift()": "`shift()` is not a method in Python for queue operations."
+        }
+      },
+      {
+        "question": "In a priority queue, what structure is typically used to efficiently manage the elements?",
+        "options": [
+          "List",
+          "Hashmap",
+          "Heap",
+          "Linked List"
+        ],
+        "answer": "Heap",
+        "explanation": "A heap data structure is commonly used to manage priority queues efficiently, ensuring that the element with the highest priority is dequeued first.",
+        "incorrect_explanation": {
+          "List": "A list can be used, but it is not the most efficient for managing priorities.",
+          "Hashmap": "Hashmaps are used for key-value pairs, not queues.",
+          "Linked List": "Linked lists can be used for simple queues, but heaps are better suited for priority queues."
+        }
+      }
+    ]
+  }
+  

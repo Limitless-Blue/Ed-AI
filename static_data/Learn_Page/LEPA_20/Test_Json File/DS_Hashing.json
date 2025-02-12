@@ -1,0 +1,341 @@
+{
+    "questions": [
+      {
+        "question": "What is the primary purpose of hashing?",
+        "options": [
+          "To encrypt data",
+          "To map data of arbitrary size to fixed-size values",
+          "To compress data",
+          "To sort data"
+        ],
+        "answer": "To map data of arbitrary size to fixed-size values",
+        "explanation": "Hashing maps input data of arbitrary size to fixed-size values using a hash function.",
+        "incorrect_explanation": {
+          "To encrypt data": "Encryption is about securing data, whereas hashing is about mapping data for quick lookups.",
+          "To compress data": "Compression reduces the size of data, but hashing focuses on creating fixed-size values for efficient data retrieval.",
+          "To sort data": "Hashing does not sort data; it maps data to unique indices."
+        }
+      },
+      {
+        "question": "Which data structure commonly uses hashing?",
+        "options": [
+          "Array",
+          "Linked List",
+          "Hash Table",
+          "Binary Search Tree"
+        ],
+        "answer": "Hash Table",
+        "explanation": "Hash tables use hash functions to store key-value pairs, allowing fast retrieval.",
+        "incorrect_explanation": {
+          "Array": "Arrays do not use hashing for storage.",
+          "Linked List": "Linked lists do not use hashing for their structure.",
+          "Binary Search Tree": "Binary Search Trees use a different method for organizing and searching data."
+        }
+      },
+      {
+        "question": "What is a common advantage of hash tables?",
+        "options": [
+          "Fast data retrieval",
+          "Minimal memory usage",
+          "Sorted data storage",
+          "Slow data deletion"
+        ],
+        "answer": "Fast data retrieval",
+        "explanation": "Hash tables offer constant O(1) time complexity for search, insertion, and deletion.",
+        "incorrect_explanation": {
+          "Minimal memory usage": "Hash tables can be memory-efficient but that is not always their primary advantage.",
+          "Sorted data storage": "Hash tables do not store data in sorted order.",
+          "Slow data deletion": "Hash tables provide fast deletion, not slow."
+        }
+      },
+      {
+        "question": "What is a hash function?",
+        "options": [
+          "A function that compresses data",
+          "A function that encrypts data",
+          "A function that converts input data into fixed-size values",
+          "A function that sorts data"
+        ],
+        "answer": "A function that converts input data into fixed-size values",
+        "explanation": "A hash function takes input data and converts it into a fixed-size hash code for efficient storage.",
+        "incorrect_explanation": {
+          "A function that compresses data": "Hashing does not reduce data size; it creates fixed-size codes.",
+          "A function that encrypts data": "Hash functions are not primarily used for encryption.",
+          "A function that sorts data": "Hashing does not involve sorting."
+        }
+      },
+      {
+        "question": "What does the modulo hash function do?",
+        "options": [
+          "It returns the largest integer less than or equal to the key.",
+          "It returns the division remainder of the key when divided by the table size.",
+          "It returns a random value for each key.",
+          "It sorts the keys in the table."
+        ],
+        "answer": "It returns the division remainder of the key when divided by the table size.",
+        "explanation": "The modulo operation returns the remainder after dividing the key by the table size, which is used as the hash value.",
+        "incorrect_explanation": {
+          "It returns the largest integer less than or equal to the key": "That would be floor division, not a modulo hash function.",
+          "It returns a random value for each key": "Hashing with the modulo function produces a predictable result, not random values.",
+          "It sorts the keys in the table": "The modulo function does not sort keys."
+        }
+      },
+      {
+        "question": "What happens during a hash collision?",
+        "options": [
+          "Two different keys produce the same hash value",
+          "Two hash values are combined",
+          "The hash table expands in size",
+          "The keys are rehashed"
+        ],
+        "answer": "Two different keys produce the same hash value",
+        "explanation": "A hash collision occurs when two different keys produce the same hash value, leading to a conflict.",
+        "incorrect_explanation": {
+          "Two hash values are combined": "Collisions do not involve combining hash values.",
+          "The hash table expands in size": "The table does not expand in response to a collision.",
+          "The keys are rehashed": "Rehashing is a separate process and does not happen immediately during a collision."
+        }
+      },
+      {
+        "question": "Which technique is used to handle hash collisions?",
+        "options": [
+          "Sorting",
+          "Chaining",
+          "Encryption",
+          "Reordering"
+        ],
+        "answer": "Chaining",
+        "explanation": "Chaining handles collisions by storing multiple elements in a linked list at the same index.",
+        "incorrect_explanation": {
+          "Sorting": "Sorting is unrelated to handling hash collisions.",
+          "Encryption": "Encryption is used for securing data, not handling hash collisions.",
+          "Reordering": "Reordering is not a method for handling hash collisions."
+        }
+      },
+      {
+        "question": "In open addressing, which probing method checks the next available slot?",
+        "options": [
+          "Linear probing",
+          "Chaining",
+          "Encryption",
+          "Modular hashing"
+        ],
+        "answer": "Linear probing",
+        "explanation": "Linear probing checks the next slot in sequence if a collision occurs.",
+        "incorrect_explanation": {
+          "Chaining": "Chaining stores collisions in a linked list, not by probing.",
+          "Encryption": "Encryption does not resolve hash collisions.",
+          "Modular hashing": "Modular hashing is a type of hash function, not a probing method."
+        }
+      },
+      {
+        "question": "What is the ASCII value of the character 'h'?",
+        "options": [
+          "108",
+          "111",
+          "101",
+          "104"
+        ],
+        "answer": "104",
+        "explanation": "The ASCII value of the character 'h' is 104.",
+        "incorrect_explanation": {
+          "108": "108 is the ASCII value for 'l'.",
+          "111": "111 is the ASCII value for 'o'.",
+          "101": "101 is the ASCII value for 'e'."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a benefit of using hash tables?",
+        "options": [
+          "Fast lookup time",
+          "Efficient memory use",
+          "Sorted data storage",
+          "Widely used in databases"
+        ],
+        "answer": "Sorted data storage",
+        "explanation": "Hash tables do not store data in a sorted manner; they focus on fast lookups.",
+        "incorrect_explanation": {
+          "Fast lookup time": "Hash tables are known for their O(1) time complexity for search.",
+          "Efficient memory use": "Hash tables can be more memory-efficient for certain datasets.",
+          "Widely used in databases": "Hash tables are widely used for database indexing."
+        }
+      },
+      {
+        "question": "What does the function `ord()` in Python return?",
+        "options": [
+          "The character length",
+          "The binary value of a number",
+          "The ASCII value of a character",
+          "The hexadecimal representation of a number"
+        ],
+        "answer": "The ASCII value of a character",
+        "explanation": "The `ord()` function in Python returns the ASCII value of a given character.",
+        "incorrect_explanation": {
+          "The character length": "`ord()` returns a number, not the length of a character.",
+          "The binary value of a number": "`ord()` does not return binary values.",
+          "The hexadecimal representation of a number": "`ord()` does not return hexadecimal values."
+        }
+      },
+      {
+        "question": "What is the time complexity of searching in a hash table, on average?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "On average, searching in a hash table takes constant time, O(1), assuming minimal collisions.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is the worst-case time complexity if there are many collisions.",
+          "O(log n)": "O(log n) applies to binary search trees, not hash tables.",
+          "O(n^2)": "O(n^2) is not relevant to hash table operations."
+        }
+      },
+      {
+        "question": "Which of the following best describes a 'perfect' hash function?",
+        "options": [
+          "A hash function that minimizes collisions",
+          "A hash function that compresses data efficiently",
+          "A hash function that maps every possible input to a unique output",
+          "A hash function that can encrypt data"
+        ],
+        "answer": "A hash function that maps every possible input to a unique output",
+        "explanation": "A perfect hash function maps each input to a unique hash value, with no collisions.",
+        "incorrect_explanation": {
+          "A hash function that minimizes collisions": "Minimizing collisions is important but does not define a perfect hash function.",
+          "A hash function that compresses data efficiently": "Hash functions do not aim to compress data.",
+          "A hash function that can encrypt data": "Hash functions are not used for encryption."
+        }
+      },
+      {
+        "question": "Which method of handling hash collisions involves using a probing sequence?",
+        "options": [
+          "Chaining",
+          "Linear Probing",
+          "Encryption",
+          "Hash Expansion"
+        ],
+        "answer": "Linear Probing",
+        "explanation": "Linear probing checks subsequent slots using a probing sequence when a collision occurs.",
+        "incorrect_explanation": {
+          "Chaining": "Chaining uses linked lists to handle collisions, not probing sequences.",
+          "Encryption": "Encryption is not a method for handling collisions.",
+          "Hash Expansion": "Hash expansion is not related to probing."
+        }
+      },
+      {
+        "question": "What does a hash table store?",
+        "options": [
+          "Only values",
+          "Only keys",
+          "Key-value pairs",
+          "Hashes only"
+        ],
+        "answer": "Key-value pairs",
+        "explanation": "A hash table stores key-value pairs, where keys are hashed to determine their storage location.",
+        "incorrect_explanation": {
+          "Only values": "Hash tables store both keys and values, not just values.",
+          "Only keys": "Keys are hashed, but values are stored alongside the keys.",
+          "Hashes only": "Hashes determine the location, but the table holds the original key-value pairs."
+        }
+      },
+      {
+        "question": "In the context of hash functions, what does the term 'load factor' refer to?",
+        "options": [
+          "The ratio of keys to table size",
+          "The average number of keys per slot",
+          "The total size of the hash table",
+          "The percentage of unused space in the table"
+        ],
+        "answer": "The ratio of keys to table size",
+        "explanation": "The load factor represents the ratio of the number of stored keys to the total size of the hash table.",
+        "incorrect_explanation": {
+          "The average number of keys per slot": "This is not a correct definition of load factor.",
+          "The total size of the hash table": "The size of the table is part of the calculation, but it is not the load factor itself.",
+          "The percentage of unused space in the table": "Load factor focuses on the relationship between keys and table size, not unused space."
+        }
+      },
+      {
+        "question": "What is 'quadratic probing'?",
+        "options": [
+          "A method of handling collisions by increasing the probe index quadratically",
+          "A method of hashing data using quadratic functions",
+          "A way to encrypt hashed data",
+          "A method of chaining elements in a hash table"
+        ],
+        "answer": "A method of handling collisions by increasing the probe index quadratically",
+        "explanation": "Quadratic probing resolves collisions by increasing the probe index by quadratic values (e.g., 1^2, 2^2, etc.).",
+        "incorrect_explanation": {
+          "A method of hashing data using quadratic functions": "Hash functions are typically not quadratic in nature.",
+          "A way to encrypt hashed data": "Hashing and encryption are different concepts.",
+          "A method of chaining elements in a hash table": "Quadratic probing is unrelated to chaining."
+        }
+      },
+      {
+        "question": "How does a hash table improve retrieval time compared to linear search?",
+        "options": [
+          "By using a binary search algorithm",
+          "By organizing data in a linked list",
+          "By using hash functions to compute storage indices",
+          "By sorting data in ascending order"
+        ],
+        "answer": "By using hash functions to compute storage indices",
+        "explanation": "Hash tables use hash functions to compute indices, allowing direct access to data and bypassing linear search.",
+        "incorrect_explanation": {
+          "By using a binary search algorithm": "Binary search applies to sorted data structures, not hash tables.",
+          "By organizing data in a linked list": "Linked lists don't provide the constant-time access that hash tables do.",
+          "By sorting data in ascending order": "Hash tables do not require sorting."
+        }
+      },
+      {
+        "question": "What is one disadvantage of using hash tables?",
+        "options": [
+          "They require sorting of keys",
+          "They cannot handle dynamic resizing",
+          "They can suffer from hash collisions",
+          "They are slower than binary search trees"
+        ],
+        "answer": "They can suffer from hash collisions",
+        "explanation": "Hash tables can experience collisions when two keys hash to the same index, which is a common issue.",
+        "incorrect_explanation": {
+          "They require sorting of keys": "Hash tables do not sort keys.",
+          "They cannot handle dynamic resizing": "Many hash table implementations can resize dynamically.",
+          "They are slower than binary search trees": "Hash tables generally have faster average access times (O(1)) compared to binary search trees."
+        }
+      },
+      {
+        "question": "In which case might a hash table have a time complexity of O(n)?",
+        "options": [
+          "When the table is full",
+          "When all keys hash to the same index",
+          "When the load factor is less than 1",
+          "When the table uses linear probing"
+        ],
+        "answer": "When all keys hash to the same index",
+        "explanation": "If all keys hash to the same index, causing a collision at a single point, lookup operations could degenerate to O(n) in the worst case.",
+        "incorrect_explanation": {
+          "When the table is full": "Even a full table can have O(1) access times if there are no collisions.",
+          "When the load factor is less than 1": "A lower load factor typically improves performance.",
+          "When the table uses linear probing": "Linear probing can still achieve O(1) complexity unless many collisions occur."
+        }
+      },
+      {
+        "question": "What is 'chaining' in the context of hash tables?",
+        "options": [
+          "A method for securing hash values",
+          "A method to store multiple elements in the same hash table index",
+          "A way to sort keys in the hash table",
+          "A way to double the size of a hash table"
+        ],
+        "answer": "A method to store multiple elements in the same hash table index",
+        "explanation": "Chaining allows multiple elements to be stored at the same index by using a linked list to handle collisions.",
+        "incorrect_explanation": {
+          "A method for securing hash values": "Chaining is not related to security.",
+          "A way to sort keys in the hash table": "Chaining does not involve sorting keys.",
+          "A way to double the size of a hash table": "Chaining does not resize the hash table."
+        }
+      }
+    ]
+  }
+  

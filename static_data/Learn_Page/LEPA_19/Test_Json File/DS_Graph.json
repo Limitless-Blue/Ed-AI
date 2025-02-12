@@ -1,0 +1,236 @@
+{
+    "questions": [
+      {
+        "question": "What data structure is primarily used in the Depth-First Search (DFS) algorithm?",
+        "options": ["Queue", "Stack", "Heap", "Array"],
+        "answer": "Stack",
+        "explanation": "DFS uses a stack to keep track of the nodes to visit. This can be explicitly managed or through recursion.",
+        "incorrect_explanation": {
+          "Queue": "Queue is used in BFS, not DFS.",
+          "Heap": "Heap is not used in DFS traversal.",
+          "Array": "An array isn't directly used in DFS; it's used to store nodes or their visited status."
+        }
+      },
+      {
+        "question": "In the BFS algorithm, what data structure is used to manage nodes to be visited?",
+        "options": ["Stack", "Queue", "Priority Queue", "Hash Table"],
+        "answer": "Queue",
+        "explanation": "BFS explores nodes level by level, so it uses a queue to manage the order of node visits.",
+        "incorrect_explanation": {
+          "Stack": "Stack is used in DFS, not BFS.",
+          "Priority Queue": "Priority queues are used in Dijkstra’s algorithm, not BFS.",
+          "Hash Table": "Hash tables aren't used to manage the traversal order in BFS."
+        }
+      },
+      {
+        "question": "Which graph traversal algorithm explores all neighbors of a node before moving on to deeper nodes?",
+        "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Bellman-Ford Algorithm"],
+        "answer": "BFS",
+        "explanation": "BFS explores all neighbor nodes at the current depth before moving on to nodes at the next depth level.",
+        "incorrect_explanation": {
+          "DFS": "DFS explores deeper nodes before neighbors.",
+          "Dijkstra's Algorithm": "Dijkstra’s algorithm is used for finding shortest paths, not general traversal.",
+          "Bellman-Ford Algorithm": "Bellman-Ford is for shortest paths and doesn't follow BFS-style traversal."
+        }
+      },
+      {
+        "question": "Which of the following graphs cannot have a topological sort?",
+        "options": ["Undirected Graph", "Directed Acyclic Graph (DAG)", "Tree", "Directed Graph"],
+        "answer": "Undirected Graph",
+        "explanation": "Topological sorting is only defined for directed graphs, particularly Directed Acyclic Graphs (DAGs).",
+        "incorrect_explanation": {
+          "Directed Acyclic Graph (DAG)": "A topological sort is defined specifically for DAGs.",
+          "Tree": "A tree can be seen as a DAG, so it can have a topological sort.",
+          "Directed Graph": "Directed graphs can have a topological sort, provided they are acyclic."
+        }
+      },
+      {
+        "question": "What is the time complexity of DFS when applied to a graph with V vertices and E edges?",
+        "options": ["O(V)", "O(E)", "O(V + E)", "O(V * E)"],
+        "answer": "O(V + E)",
+        "explanation": "In DFS, each vertex and edge is explored once, leading to a time complexity of O(V + E).",
+        "incorrect_explanation": {
+          "O(V)": "This only considers vertices, not edges.",
+          "O(E)": "This only considers edges, not vertices.",
+          "O(V * E)": "This would be the case in an inefficient or brute-force algorithm."
+        }
+      },
+      {
+        "question": "What kind of edge in a DFS traversal indicates a cycle in a directed graph?",
+        "options": ["Tree Edge", "Forward Edge", "Cross Edge", "Back Edge"],
+        "answer": "Back Edge",
+        "explanation": "A back edge points from a vertex to one of its ancestors, indicating a cycle.",
+        "incorrect_explanation": {
+          "Tree Edge": "A tree edge leads to an unvisited node and does not indicate a cycle.",
+          "Forward Edge": "A forward edge points to a descendant but does not indicate a cycle.",
+          "Cross Edge": "A cross edge points between nodes in different branches and does not indicate a cycle."
+        }
+      },
+      {
+        "question": "What is the primary goal of Dijkstra’s algorithm?",
+        "options": ["Cycle detection", "Topological Sorting", "Shortest path", "Traversal"],
+        "answer": "Shortest path",
+        "explanation": "Dijkstra's algorithm is used to find the shortest path from a source vertex to all other vertices in a graph with non-negative edge weights.",
+        "incorrect_explanation": {
+          "Cycle detection": "Cycle detection is not the focus of Dijkstra's algorithm.",
+          "Topological Sorting": "Topological sorting is unrelated to Dijkstra's algorithm.",
+          "Traversal": "While Dijkstra’s algorithm involves traversal, its goal is to compute shortest paths, not general traversal."
+        }
+      },
+      {
+        "question": "Which algorithm is most suitable for detecting cycles in an undirected graph?",
+        "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Bellman-Ford Algorithm"],
+        "answer": "DFS",
+        "explanation": "DFS is commonly used for detecting cycles by checking if a back edge exists to a previously visited node.",
+        "incorrect_explanation": {
+          "BFS": "While BFS can be used to detect cycles, DFS is more straightforward for this task.",
+          "Dijkstra's Algorithm": "Dijkstra's algorithm is for finding shortest paths, not for cycle detection.",
+          "Bellman-Ford Algorithm": "Bellman-Ford is designed for shortest paths, not cycle detection."
+        }
+      },
+      {
+        "question": "In Dijkstra's algorithm, which data structure is typically used to pick the node with the smallest tentative distance?",
+        "options": ["Queue", "Priority Queue", "Stack", "Array"],
+        "answer": "Priority Queue",
+        "explanation": "A priority queue allows Dijkstra’s algorithm to efficiently pick the next node with the smallest tentative distance.",
+        "incorrect_explanation": {
+          "Queue": "A queue would not prioritize nodes based on distance.",
+          "Stack": "A stack is used in DFS, not Dijkstra's algorithm.",
+          "Array": "An array does not allow efficient extraction of the minimum distance node."
+        }
+      },
+      {
+        "question": "Which of the following is the output of a topological sort?",
+        "options": ["An ordered list of vertices", "A spanning tree", "A distance table", "A set of cycles"],
+        "answer": "An ordered list of vertices",
+        "explanation": "Topological sorting results in an ordered list of vertices, ensuring that for each directed edge u -> v, u comes before v in the list.",
+        "incorrect_explanation": {
+          "A spanning tree": "Topological sorting does not result in a spanning tree.",
+          "A distance table": "A distance table is produced by shortest path algorithms like Dijkstra’s.",
+          "A set of cycles": "Topological sorting is only applicable to acyclic graphs."
+        }
+      },
+      {
+        "question": "Which of the following conditions must be true for a graph to have a valid topological sort?",
+        "options": ["The graph must be undirected", "The graph must be directed and cyclic", "The graph must be directed and acyclic", "The graph must be weighted"],
+        "answer": "The graph must be directed and acyclic",
+        "explanation": "Topological sorting is only possible for directed acyclic graphs (DAGs).",
+        "incorrect_explanation": {
+          "The graph must be undirected": "Topological sorting is only for directed graphs.",
+          "The graph must be directed and cyclic": "A cyclic graph cannot have a valid topological sort.",
+          "The graph must be weighted": "Topological sorting applies regardless of weights."
+        }
+      },
+      {
+        "question": "Which traversal algorithm explores nodes based on layers or levels?",
+        "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Topological Sort"],
+        "answer": "BFS",
+        "explanation": "BFS explores all nodes at the current level before moving to the next level.",
+        "incorrect_explanation": {
+          "DFS": "DFS explores deeper nodes first, not by level.",
+          "Dijkstra's Algorithm": "Dijkstra’s algorithm is for finding shortest paths, not general traversal by level.",
+          "Topological Sort": "Topological sort orders vertices, but not by layer."
+        }
+      },
+      {
+        "question": "What type of graph does Dijkstra's algorithm require to function correctly?",
+        "options": ["Acyclic graph", "Graph with non-negative weights", "Graph with negative weights", "Undirected graph"],
+        "answer": "Graph with non-negative weights",
+        "explanation": "Dijkstra’s algorithm assumes non-negative edge weights to function properly. Negative weights require a different algorithm like Bellman-Ford.",
+        "incorrect_explanation": {
+          "Acyclic graph": "Dijkstra’s algorithm works on cyclic graphs as well, as long as there are no negative weights.",
+          "Graph with negative weights": "Dijkstra's algorithm does not handle negative edge weights correctly.",
+          "Undirected graph": "Dijkstra's algorithm can work on both directed and undirected graphs."
+        }
+      },
+      {
+        "question": "In a BFS traversal, what is the first node visited after the root node?",
+        "options": ["The deepest node", "The nearest neighbor", "The farthest neighbor", "The last visited node"],
+        "answer": "The nearest neighbor",
+        "explanation": "BFS explores the nearest neighbors (nodes connected by the smallest number of edges) before moving to deeper nodes.",
+        "incorrect_explanation": {
+          "The deepest node": "BFS explores by level, not depth, so deeper nodes are visited later.",
+          "The farthest neighbor": "BFS does not visit the farthest neighbor immediately.",
+          "The last visited node": "BFS visits nodes in the order of their distance from the starting node, not based on previous visitation."
+        }
+      },
+      {
+        "question": "Which algorithm can be used to detect cycles in a directed graph?",
+        "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Prim's Algorithm"],
+        "answer": "DFS",
+        "explanation": "DFS is often used for cycle detection in directed graphs by looking for back edges.",
+        "incorrect_explanation": {
+          "BFS": "BFS can be used but is less commonly used for cycle detection.",
+          "Dijkstra's Algorithm": "Dijkstra’s algorithm is for shortest paths, not for detecting cycles.",
+          "Prim's Algorithm": "Prim’s algorithm is used for finding minimum spanning trees, not for cycle detection."
+        }
+      },
+      {
+        "question": "What is the space complexity of BFS?",
+        "options": ["O(V + E)", "O(V)", "O(E)", "O(V * E)"],
+        "answer": "O(V)",
+        "explanation": "In BFS, the maximum number of nodes in the queue at any time is proportional to the number of vertices (V).",
+        "incorrect_explanation": {
+          "O(V + E)": "The time complexity is O(V + E), but space complexity is O(V).",
+          "O(E)": "Edges affect time complexity but not space complexity directly.",
+          "O(V * E)": "This would be too high for BFS space complexity."
+        }
+      },
+      {
+        "question": "What type of graphs is Dijkstra's algorithm best suited for?",
+        "options": ["Weighted graphs with non-negative weights", "Unweighted graphs", "Weighted graphs with negative weights", "Undirected graphs"],
+        "answer": "Weighted graphs with non-negative weights",
+        "explanation": "Dijkstra's algorithm finds shortest paths in weighted graphs as long as all weights are non-negative.",
+        "incorrect_explanation": {
+          "Unweighted graphs": "While Dijkstra can work on unweighted graphs, BFS is typically more efficient.",
+          "Weighted graphs with negative weights": "Dijkstra's algorithm cannot handle negative weights correctly.",
+          "Undirected graphs": "Dijkstra's algorithm works on both directed and undirected graphs, but the key requirement is non-negative weights."
+        }
+      },
+      {
+        "question": "Which graph traversal algorithm guarantees the shortest path in an unweighted graph?",
+        "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Topological Sort"],
+        "answer": "BFS",
+        "explanation": "In unweighted graphs, BFS guarantees the shortest path because it explores all vertices at the current distance from the source before moving deeper.",
+        "incorrect_explanation": {
+          "DFS": "DFS does not guarantee the shortest path.",
+          "Dijkstra's Algorithm": "Dijkstra is used for weighted graphs, but BFS is more efficient for unweighted graphs.",
+          "Topological Sort": "Topological sort is used for ordering vertices, not finding paths."
+        }
+      },
+      {
+        "question": "What does a back edge in a DFS traversal indicate in a directed graph?",
+        "options": ["A cycle", "A tree edge", "A forward edge", "A cross edge"],
+        "answer": "A cycle",
+        "explanation": "A back edge in DFS indicates a cycle because it points to an ancestor in the DFS tree.",
+        "incorrect_explanation": {
+          "A tree edge": "A tree edge connects a parent to a child node, not indicating a cycle.",
+          "A forward edge": "A forward edge goes from a node to its descendant, but does not indicate a cycle.",
+          "A cross edge": "A cross edge connects nodes in different branches of the DFS tree but does not indicate a cycle."
+        }
+      },
+      {
+        "question": "What is the primary data structure used to implement Dijkstra's algorithm efficiently?",
+        "options": ["Priority Queue", "Queue", "Stack", "Array"],
+        "answer": "Priority Queue",
+        "explanation": "A priority queue is used to efficiently select the node with the smallest distance in Dijkstra’s algorithm.",
+        "incorrect_explanation": {
+          "Queue": "A queue does not provide the priority needed to select the smallest distance node.",
+          "Stack": "Stacks are used in DFS, not Dijkstra's algorithm.",
+          "Array": "Arrays do not allow efficient extraction of the minimum distance node."
+        }
+      },
+      {
+        "question": "Which of the following algorithms is most appropriate for finding the shortest path in a graph with negative weights?",
+        "options": ["BFS", "Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Prim's Algorithm"],
+        "answer": "Bellman-Ford Algorithm",
+        "explanation": "Bellman-Ford can handle graphs with negative weights, unlike Dijkstra’s algorithm, which only works for non-negative weights.",
+        "incorrect_explanation": {
+          "BFS": "BFS is only suitable for unweighted graphs.",
+          "Dijkstra's Algorithm": "Dijkstra's algorithm does not handle negative weights correctly.",
+          "Prim's Algorithm": "Prim's algorithm is used for minimum spanning trees, not shortest path."
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "question": "What does DSA stand for in computer science?",
+      "options": [
+        "Data Storage Architecture",
+        "Digital Systems Analysis",
+        "Data Structures and Algorithms",
+        "Distributed Systems Application"
+      ],
+      "answer": "Data Structures and Algorithms",
+      "explanation": "DSA stands for Data Structures and Algorithms, which are fundamental concepts in computer science for efficient data management and problem-solving.",
+      "incorrect_explanation": {
+        "Data Storage Architecture": "Incorrect because DSA specifically refers to Data Structures and Algorithms, not storage architecture.",
+        "Digital Systems Analysis": "Incorrect as DSA is not related to system analysis.",
+        "Distributed Systems Application": "Incorrect since DSA does not pertain to distributed systems."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a primary benefit of using DSA?",
+      "options": [
+        "Efficiency",
+        "Performance",
+        "Scalability",
+        "Aesthetic Design"
+      ],
+      "answer": "Aesthetic Design",
+      "explanation": "Aesthetic Design is not a primary benefit of DSA. The main benefits include efficiency, performance, scalability, and problem-solving.",
+      "incorrect_explanation": {
+        "Efficiency": "Incorrect because efficiency is a key benefit of using DSA.",
+        "Performance": "Incorrect as performance is enhanced by DSA.",
+        "Scalability": "Incorrect since scalability is a significant advantage provided by DSA."
+      }
+    },
+    {
+      "question": "Which data structure is typically used to implement a LIFO (Last-In-First-Out) system?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Linked List",
+        "Hash Table"
+      ],
+      "answer": "Stack",
+      "explanation": "A stack is used to implement LIFO systems where the last element added is the first to be removed.",
+      "incorrect_explanation": {
+        "Queue": "Incorrect because queues implement FIFO (First-In-First-Out) systems.",
+        "Linked List": "Incorrect as linked lists are general-purpose data structures and do not inherently follow LIFO.",
+        "Hash Table": "Incorrect since hash tables are used for fast data retrieval based on keys, not for LIFO operations."
+      }
+    },
+    {
+      "question": "What is the time complexity of the optimal hash-based approach for the two-sum problem?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(n log n)",
+        "O(n²)"
+      ],
+      "answer": "O(n)",
+      "explanation": "The optimal hash-based approach for the two-sum problem has a time complexity of O(n), as it involves a single pass through the array with constant-time lookups.",
+      "incorrect_explanation": {
+        "O(1)": "Incorrect because O(1) time complexity is not achievable for this problem.",
+        "O(n log n)": "Incorrect as this is the time complexity for sorting-based approaches, not the optimal hash-based method.",
+        "O(n²)": "Incorrect since O(n²) represents the brute-force approach, not the optimal solution."
+      }
+    },
+    {
+      "question": "Which of the following is a key concept in DSA that involves understanding the time and space requirements of algorithms?",
+      "options": [
+        "Complexity Analysis",
+        "Abstract Data Types",
+        "Algorithm Paradigms",
+        "Recursion"
+      ],
+      "answer": "Complexity Analysis",
+      "explanation": "Complexity Analysis involves evaluating the time and space requirements of algorithms to determine their efficiency.",
+      "incorrect_explanation": {
+        "Abstract Data Types": "Incorrect because ADTs focus on high-level descriptions of data structures.",
+        "Algorithm Paradigms": "Incorrect as algorithm paradigms refer to fundamental approaches to designing algorithms.",
+        "Recursion": "Incorrect since recursion is a programming technique, not directly related to analyzing complexity."
+      }
+    },
+    {
+      "question": "Which algorithm paradigm is characterized by breaking a problem into smaller subproblems, solving them independently, and combining their results?",
+      "options": [
+        "Greedy Algorithms",
+        "Dynamic Programming",
+        "Divide and Conquer",
+        "Backtracking"
+      ],
+      "answer": "Divide and Conquer",
+      "explanation": "Divide and Conquer involves breaking a problem into smaller subproblems, solving them independently, and combining their results.",
+      "incorrect_explanation": {
+        "Greedy Algorithms": "Incorrect because greedy algorithms make locally optimal choices at each step.",
+        "Dynamic Programming": "Incorrect as dynamic programming solves problems by combining solutions to overlapping subproblems.",
+        "Backtracking": "Incorrect since backtracking involves exploring all possible solutions and abandoning those that fail to satisfy constraints."
+      }
+    },
+    {
+      "question": "Which real-world application of DSA involves using graph algorithms and data structures like inverted indexes?",
+      "options": [
+        "Social Networks",
+        "Search Engines",
+        "E-commerce Platforms",
+        "Operating Systems"
+      ],
+      "answer": "Search Engines",
+      "explanation": "Search engines utilize graph algorithms and data structures like inverted indexes to efficiently retrieve and rank web pages based on queries.",
+      "incorrect_explanation": {
+        "Social Networks": "Incorrect as social networks primarily use graph data structures to represent user relationships.",
+        "E-commerce Platforms": "Incorrect because e-commerce platforms focus on inventory management and recommendation systems.",
+        "Operating Systems": "Incorrect since operating systems use data structures for memory management and process scheduling."
+      }
+    },
+    {
+      "question": "In the context of problem-solving with DSA, what should you identify first?",
+      "options": [
+        "Algorithm Selection",
+        "Edge Cases",
+        "Constraints and Limitations",
+        "Inputs and Outputs"
+      ],
+      "answer": "Inputs and Outputs",
+      "explanation": "Identifying inputs and outputs is the first step in understanding a problem statement, as it clarifies what data is provided and what needs to be returned.",
+      "incorrect_explanation": {
+        "Algorithm Selection": "Incorrect because algorithm selection comes after understanding the problem's requirements.",
+        "Edge Cases": "Incorrect as edge cases are considered after identifying inputs and outputs.",
+        "Constraints and Limitations": "Incorrect since constraints are analyzed after knowing the inputs and outputs."
+      }
+    },
+    {
+      "question": "Which of the following is an example of an Abstract Data Type (ADT)?",
+      "options": [
+        "Array",
+        "Linked List",
+        "Stack",
+        "Queue"
+      ],
+      "answer": "Stack",
+      "explanation": "A stack is an example of an Abstract Data Type (ADT) that defines operations like push and pop without specifying the underlying implementation.",
+      "incorrect_explanation": {
+        "Array": "Incorrect because an array is a concrete data structure with a specific implementation.",
+        "Linked List": "Incorrect as a linked list is also a concrete data structure.",
+        "Queue": "Incorrect because a queue is similar to a stack but represents a different ADT."
+      }
+    },
+    {
+      "question": "Which real-world application of DSA is crucial for managing game states and rendering graphics?",
+      "options": [
+        "Artificial Intelligence",
+        "Gaming",
+        "Finance",
+        "Database Management"
+      ],
+      "answer": "Gaming",
+      "explanation": "In gaming, efficient data structures and real-time algorithms are essential for managing game states and rendering graphics smoothly.",
+      "incorrect_explanation": {
+        "Artificial Intelligence": "Incorrect because AI focuses more on data processing and machine learning algorithms.",
+        "Finance": "Incorrect as finance applications involve trading systems and risk assessments.",
+        "Database Management": "Incorrect since it deals with data retrieval and storage."
+      }
+    },
+    {
+      "question": "What is the main advantage of using a hash table in the two-sum problem?",
+      "options": [
+        "It sorts the array efficiently.",
+        "It allows for constant-time lookups.",
+        "It reduces space complexity.",
+        "It handles duplicate elements automatically."
+      ],
+      "answer": "It allows for constant-time lookups.",
+      "explanation": "Hash tables provide constant-time lookups, which enables efficiently finding complements in the two-sum problem.",
+      "incorrect_explanation": {
+        "It sorts the array efficiently.": "Incorrect because hash tables do not sort arrays.",
+        "It reduces space complexity.": "Incorrect as hash tables may use additional space for storing keys and values.",
+        "It handles duplicate elements automatically.": "Incorrect because handling duplicates depends on the specific implementation."
+      }
+    },
+    {
+      "question": "Which of the following best describes an algorithm?",
+      "options": [
+        "A data storage method",
+        "A step-by-step procedure for solving a problem",
+        "A programming language",
+        "A type of database"
+      ],
+      "answer": "A step-by-step procedure for solving a problem",
+      "explanation": "An algorithm is a step-by-step procedure or formula for solving a problem.",
+      "incorrect_explanation": {
+        "A data storage method": "Incorrect because algorithms are about procedures, not storage methods.",
+        "A programming language": "Incorrect as algorithms are language-agnostic.",
+        "A type of database": "Incorrect because algorithms are not databases."
+      }
+    },
+    {
+      "question": "Which DSA concept abstracts away the implementation details of data structures and their operations?",
+      "options": [
+        "Complexity Analysis",
+        "Algorithm Paradigms",
+        "Abstract Data Types (ADTs)",
+        "Recursion"
+      ],
+      "answer": "Abstract Data Types (ADTs)",
+      "explanation": "Abstract Data Types provide high-level descriptions of data structures and their operations, abstracting away the implementation details.",
+      "incorrect_explanation": {
+        "Complexity Analysis": "Incorrect because complexity analysis deals with evaluating algorithm efficiency.",
+        "Algorithm Paradigms": "Incorrect as algorithm paradigms are approaches to designing algorithms.",
+        "Recursion": "Incorrect since recursion is a programming technique."
+      }
+    },
+    {
+      "question": "Which real-world application of DSA is essential for ensuring reliable and fast data transmission across networks?",
+      "options": [
+        "Gaming",
+        "Networking",
+        "Finance",
+        "E-commerce Platforms"
+      ],
+      "answer": "Networking",
+      "explanation": "In networking, routing algorithms use DSA to determine the most efficient paths for data packets, ensuring reliable and fast data transmission.",
+      "incorrect_explanation": {
+        "Gaming": "Incorrect because gaming focuses on game state management and rendering.",
+        "Finance": "Incorrect as finance applications involve trading and risk assessment.",
+        "E-commerce Platforms": "Incorrect since e-commerce deals with inventory and recommendations."
+      }
+    },
+    {
+      "question": "What should you consider when identifying the constraints of a problem?",
+      "options": [
+        "The programming language used",
+        "The size and range of input data",
+        "The color scheme of the application",
+        "The user interface design"
+      ],
+      "answer": "The size and range of input data",
+      "explanation": "Constraints involve understanding the size and range of input data, which affects the choice of algorithms based on time and space complexity.",
+      "incorrect_explanation": {
+        "The programming language used": "Incorrect because constraints are related to problem requirements, not implementation specifics.",
+        "The color scheme of the application": "Incorrect as aesthetic aspects are not part of problem constraints.",
+        "The user interface design": "Incorrect because UI design is unrelated to algorithmic constraints."
+      }
+    },
+    {
+      "question": "Which key concept in DSA involves high-level descriptions of data structures without specifying implementation details?",
+      "options": [
+        "Complexity Analysis",
+        "Abstract Data Types (ADTs)",
+        "Algorithm Paradigms",
+        "Data Encapsulation"
+      ],
+      "answer": "Abstract Data Types (ADTs)",
+      "explanation": "Abstract Data Types provide high-level descriptions of data structures and their operations, abstracting away the implementation details.",
+      "incorrect_explanation": {
+        "Complexity Analysis": "Incorrect because it focuses on evaluating algorithm efficiency.",
+        "Algorithm Paradigms": "Incorrect as they refer to approaches for designing algorithms.",
+        "Data Encapsulation": "Incorrect since it's a concept from object-oriented programming, not specifically DSA."
+      }
+    },
+    {
+      "question": "In the two-sum problem example, what is the role of the 'complement'?",
+      "options": [
+        "It is the current number in the iteration.",
+        "It is the target number.",
+        "It is the difference between the target and the current number.",
+        "It is the sum of all numbers in the array."
+      ],
+      "answer": "It is the difference between the target and the current number.",
+      "explanation": "The complement is calculated as the difference between the target and the current number to find the pair that adds up to the target.",
+      "incorrect_explanation": {
+        "It is the current number in the iteration.": "Incorrect because the complement is derived from the current number.",
+        "It is the target number.": "Incorrect as the target is a separate value provided in the problem.",
+        "It is the sum of all numbers in the array.": "Incorrect because the complement is specifically the difference needed to reach the target."
+      }
+    },
+    {
+      "question": "Which of the following is a step in understanding a problem statement using DSA?",
+      "options": [
+        "Choosing the programming language",
+        "Identifying Inputs and Outputs",
+        "Designing the user interface",
+        "Writing documentation"
+      ],
+      "answer": "Identifying Inputs and Outputs",
+      "explanation": "Identifying inputs and outputs is a crucial step in understanding a problem statement to clarify the data provided and the expected results.",
+      "incorrect_explanation": {
+        "Choosing the programming language": "Incorrect as it is related to implementation, not problem understanding.",
+        "Designing the user interface": "Incorrect because UI design is not part of understanding the problem statement.",
+        "Writing documentation": "Incorrect as documentation comes after solving the problem."
+      }
+    },
+    {
+      "question": "Which real-world application of DSA involves using B-trees and hash tables for efficient data retrieval?",
+      "options": [
+        "Operating Systems",
+        "Database Management",
+        "Gaming",
+        "Finance"
+      ],
+      "answer": "Database Management",
+      "explanation": "Database management systems use data structures like B-trees and hash tables to enable efficient data retrieval, storage, and manipulation.",
+      "incorrect_explanation": {
+        "Operating Systems": "Incorrect because operating systems use data structures for memory management and process scheduling.",
+        "Gaming": "Incorrect as gaming focuses on game state management and rendering.",
+        "Finance": "Incorrect since finance applications involve trading and risk assessment."
+      }
+    },
+    {
+      "question": "What is the primary purpose of complexity analysis in DSA?",
+      "options": [
+        "To design user-friendly interfaces",
+        "To evaluate the efficiency of algorithms",
+        "To implement data structures",
+        "To debug code"
+      ],
+      "answer": "To evaluate the efficiency of algorithms",
+      "explanation": "Complexity analysis is used to evaluate the time and space efficiency of algorithms, helping to determine their suitability for a given problem.",
+      "incorrect_explanation": {
+        "To design user-friendly interfaces": "Incorrect because complexity analysis is unrelated to UI design.",
+        "To implement data structures": "Incorrect as it focuses on evaluating algorithms, not implementing data structures.",
+        "To debug code": "Incorrect since complexity analysis is about efficiency, not debugging."
+      }
+    },
+    {
+      "question": "Which of the following best describes a real-world application of DSA in finance?",
+      "options": [
+        "Rendering graphics in video games",
+        "Routing data packets in networks",
+        "Fraud detection mechanisms",
+        "Managing inventory in stores"
+      ],
+      "answer": "Fraud detection mechanisms",
+      "explanation": "In finance, DSA is used in fraud detection mechanisms to process and analyze financial data swiftly and accurately.",
+      "incorrect_explanation": {
+        "Rendering graphics in video games": "Incorrect because this application pertains to gaming.",
+        "Routing data packets in networks": "Incorrect as it relates to networking.",
+        "Managing inventory in stores": "Incorrect since it is more relevant to e-commerce platforms."
+      }
+    },
+    {
+      "question": "Which step comes last in the process of understanding a problem statement using DSA?",
+      "options": [
+        "Identify Inputs and Outputs",
+        "Identify Edge Cases",
+        "Determine Constraints and Limitations",
+        "Algorithm Selection"
+      ],
+      "answer": "Algorithm Selection",
+      "explanation": "Algorithm selection is the final step after identifying inputs, outputs, constraints, limitations, and edge cases to choose the most appropriate data structures and algorithms.",
+      "incorrect_explanation": {
+        "Identify Inputs and Outputs": "Incorrect because this is the first step.",
+        "Identify Edge Cases": "Incorrect as this comes before algorithm selection.",
+        "Determine Constraints and Limitations": "Incorrect because constraints are identified before selecting the algorithm."
+      }
+    },
+    {
+      "question": "Which of the following is NOT typically considered a real-world application of DSA?",
+      "options": [
+        "Artificial Intelligence",
+        "Gaming",
+        "Graphic Design",
+        "Database Management"
+      ],
+      "answer": "Graphic Design",
+      "explanation": "Graphic Design is not typically a primary application of DSA, which is more focused on areas like AI, gaming, and database management.",
+      "incorrect_explanation": {
+        "Artificial Intelligence": "Incorrect because AI heavily relies on DSA for machine learning algorithms.",
+        "Gaming": "Incorrect as gaming uses DSA for game state management and rendering.",
+        "Database Management": "Incorrect since database systems use DSA for efficient data retrieval and storage."
+      }
+    },
+    {
+      "question": "In problem-solving with DSA, why is it important to consider edge cases?",
+      "options": [
+        "To make the solution more complex",
+        "To ensure the solution handles unusual or extreme scenarios",
+        "To improve the aesthetic of the code",
+        "To reduce the number of lines of code"
+      ],
+      "answer": "To ensure the solution handles unusual or extreme scenarios",
+      "explanation": "Considering edge cases ensures that the solution is robust and can handle unusual or extreme scenarios that might otherwise cause it to fail.",
+      "incorrect_explanation": {
+        "To make the solution more complex": "Incorrect because the goal is robustness, not complexity.",
+        "To improve the aesthetic of the code": "Incorrect as edge cases are about functionality, not aesthetics.",
+        "To reduce the number of lines of code": "Incorrect since handling edge cases may sometimes increase code complexity."
+      }
+    },
+    {
+      "question": "Which of the following algorithm paradigms is best suited for problems where making a locally optimal choice leads to a globally optimal solution?",
+      "options": [
+        "Divide and Conquer",
+        "Dynamic Programming",
+        "Greedy Algorithms",
+        "Backtracking"
+      ],
+      "answer": "Greedy Algorithms",
+      "explanation": "Greedy algorithms make locally optimal choices at each step with the hope of finding a globally optimal solution.",
+      "incorrect_explanation": {
+        "Divide and Conquer": "Incorrect because this paradigm focuses on breaking problems into subproblems.",
+        "Dynamic Programming": "Incorrect as dynamic programming handles overlapping subproblems and optimal substructure.",
+        "Backtracking": "Incorrect since backtracking explores all possible solutions."
+      }
+    }
+  ]
+}

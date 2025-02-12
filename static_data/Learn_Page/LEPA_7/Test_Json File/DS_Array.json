@@ -1,0 +1,357 @@
+{
+    "questions": [
+      {
+        "question": "What is a one-dimensional (1D) array?",
+        "options": [
+          "A linear data structure consisting of elements identified by a single index",
+          "A data structure with elements identified by multiple indices",
+          "A hierarchical data structure with parent and child nodes",
+          "A dynamic data structure that can grow or shrink in size"
+        ],
+        "answer": "A linear data structure consisting of elements identified by a single index",
+        "explanation": "A one-dimensional (1D) array is a linear data structure consisting of a sequence of elements, each identified by a unique index.",
+        "incorrect_explanation": {
+          "A data structure with elements identified by multiple indices": "This describes a multi-dimensional array, not a one-dimensional array.",
+          "A hierarchical data structure with parent and child nodes": "This describes trees, not arrays.",
+          "A dynamic data structure that can grow or shrink in size": "Arrays typically have a fixed size determined at creation."
+        }
+      },
+      {
+        "question": "Which characteristic is NOT associated with one-dimensional arrays?",
+        "options": [
+          "Fixed size determined at creation",
+          "Elements stored in contiguous memory locations",
+          "Elements accessed using multiple indices",
+          "Elements accessed using zero-based indices"
+        ],
+        "answer": "Elements accessed using multiple indices",
+        "explanation": "One-dimensional arrays use a single index to access elements, not multiple indices.",
+        "incorrect_explanation": {
+          "Fixed size determined at creation": "One-dimensional arrays have a fixed size determined at creation.",
+          "Elements stored in contiguous memory locations": "Elements in a one-dimensional array are stored in contiguous memory locations.",
+          "Elements accessed using zero-based indices": "One-dimensional arrays are typically accessed using zero-based indices."
+        }
+      },
+      {
+        "question": "How can you access the third element in a one-dimensional array named `numbers` in Python?",
+        "options": [
+          "numbers[3]",
+          "numbers[2]",
+          "numbers[-3]",
+          "numbers.get(2)"
+        ],
+        "answer": "numbers[2]",
+        "explanation": "In zero-based indexing, the third element is accessed using index 2.",
+        "incorrect_explanation": {
+          "numbers[3]": "numbers[3] accesses the fourth element, not the third.",
+          "numbers[-3]": "numbers[-3] accesses the third element from the end, which may not be the third element from the start.",
+          "numbers.get(2)": "Lists in Python do not have a `get` method; dictionaries do."
+        }
+      },
+      {
+        "question": "Which operation on an array has a time complexity of O(n)?",
+        "options": [
+          "Accessing an element by index",
+          "Traversing the entire array",
+          "Accessing the first element",
+          "Checking if the array is empty"
+        ],
+        "answer": "Traversing the entire array",
+        "explanation": "Traversing the entire array requires visiting each element once, resulting in linear time complexity, O(n).",
+        "incorrect_explanation": {
+          "Accessing an element by index": "Accessing an element by index is a constant time operation, O(1).",
+          "Accessing the first element": "Accessing the first element is a constant time operation, O(1).",
+          "Checking if the array is empty": "Checking if the array is empty is a constant time operation, O(1)."
+        }
+      },
+      {
+        "question": "What is the space complexity of creating a copy of a list in Python using the `copy()` method?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Creating a copy of a list requires additional space proportional to the size of the input list, resulting in O(n) space complexity.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant space, which is not the case when copying a list.",
+          "O(log n)": "O(log n) is not applicable here as space grows linearly with input size.",
+          "O(n²)": "O(n²) implies quadratic space, which is not the case for copying a list."
+        }
+      },
+      {
+        "question": "Which of the following is an example of a two-dimensional (2D) array in Python?",
+        "options": [
+          "numbers = [10, 20, 30, 40, 50]",
+          "matrix = [1, 2, 3, 4, 5]",
+          "matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+          "three_d = [[[1], [2]], [[3], [4]]]"
+        ],
+        "answer": "matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+        "explanation": "A two-dimensional (2D) array in Python can be represented as a list of lists, where each sublist represents a row.",
+        "incorrect_explanation": {
+          "numbers = [10, 20, 30, 40, 50]": "This is a one-dimensional array.",
+          "matrix = [1, 2, 3, 4, 5]": "This is also a one-dimensional array.",
+          "three_d = [[[1], [2]], [[3], [4]]]": "This is a three-dimensional array."
+        }
+      },
+      {
+        "question": "What is the primary difference between a 1D array and a 2D array?",
+        "options": [
+          "1D arrays store elements of different data types, while 2D arrays store the same data type",
+          "1D arrays use zero-based indexing, while 2D arrays do not",
+          "1D arrays are linear, while 2D arrays consist of rows and columns",
+          "1D arrays have dynamic size, while 2D arrays have fixed size"
+        ],
+        "answer": "1D arrays are linear, while 2D arrays consist of rows and columns",
+        "explanation": "The primary difference is that 1D arrays are linear structures with elements accessed by a single index, whereas 2D arrays are organized in rows and columns, accessed by two indices.",
+        "incorrect_explanation": {
+          "1D arrays store elements of different data types, while 2D arrays store the same data type": "Both 1D and 2D arrays typically store elements of the same data type.",
+          "1D arrays use zero-based indexing, while 2D arrays do not": "Both 1D and 2D arrays commonly use zero-based indexing.",
+          "1D arrays have dynamic size, while 2D arrays have fixed size": "Both can have fixed or dynamic sizes depending on the programming language and implementation."
+        }
+      },
+      {
+        "question": "Which operation on a 2D array requires iterating through each row and each column?",
+        "options": [
+          "Accessing an element by its row index",
+          "Traversing the entire 2D array",
+          "Inserting a new row",
+          "Removing the first column"
+        ],
+        "answer": "Traversing the entire 2D array",
+        "explanation": "Traversing the entire 2D array involves iterating through each row and each column to visit every element.",
+        "incorrect_explanation": {
+          "Accessing an element by its row index": "Accessing a single element by its row and column index is a constant time operation, O(1).",
+          "Inserting a new row": "Inserting a new row involves adding a sublist, which can be done in O(1) or O(n) time depending on the implementation.",
+          "Removing the first column": "Removing the first column requires modifying each row, which is O(n) where n is the number of rows."
+        }
+      },
+      {
+        "question": "What is the space complexity of a three-dimensional (3D) array with dimensions n x m x p?",
+        "options": [
+          "O(n)",
+          "O(m)",
+          "O(p)",
+          "O(n * m * p)"
+        ],
+        "answer": "O(n * m * p)",
+        "explanation": "A three-dimensional array with dimensions n x m x p requires space proportional to the product of its dimensions, resulting in O(n * m * p) space complexity.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply space proportional to a single dimension.",
+          "O(m)": "O(m) would imply space proportional to a single dimension.",
+          "O(p)": "O(p) would imply space proportional to a single dimension."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a common operation performed on arrays?",
+        "options": [
+          "Traversal",
+          "Insertion",
+          "Deletion",
+          "Graph Traversal"
+        ],
+        "answer": "Graph Traversal",
+        "explanation": "Graph traversal is an operation performed on graph data structures, not on arrays.",
+        "incorrect_explanation": {
+          "Traversal": "Traversal is a common operation for arrays, involving visiting each element.",
+          "Insertion": "Insertion involves adding new elements to the array.",
+          "Deletion": "Deletion involves removing elements from the array."
+        }
+      },
+      {
+        "question": "Which of the following is an example of an in-place operation on a 1D array?",
+        "options": [
+          "Creating a new array with elements in reverse order",
+          "Swapping elements within the original array to reverse it",
+          "Appending elements to a new array",
+          "Using a hash table to store unique elements"
+        ],
+        "answer": "Swapping elements within the original array to reverse it",
+        "explanation": "Swapping elements within the original array modifies it in place without requiring additional space, making it an in-place operation.",
+        "incorrect_explanation": {
+          "Creating a new array with elements in reverse order": "This requires additional space proportional to the array size.",
+          "Appending elements to a new array": "This requires additional space proportional to the array size.",
+          "Using a hash table to store unique elements": "This requires additional space for the hash table."
+        }
+      },
+      {
+        "question": "What is the primary advantage of using multi-dimensional arrays?",
+        "options": [
+          "They use less memory than one-dimensional arrays",
+          "They simplify the representation of complex data structures",
+          "They allow elements of different data types",
+          "They provide faster access to elements"
+        ],
+        "answer": "They simplify the representation of complex data structures",
+        "explanation": "Multi-dimensional arrays allow for the organized representation of complex data structures like matrices, making it easier to manage and manipulate such data.",
+        "incorrect_explanation": {
+          "They use less memory than one-dimensional arrays": "Multi-dimensional arrays typically use more memory as they have additional dimensions.",
+          "They allow elements of different data types": "Arrays generally store elements of the same data type, regardless of dimensions.",
+          "They provide faster access to elements": "Access speed is similar, but multi-dimensional arrays may involve more complex indexing."
+        }
+      },
+      {
+        "question": "Which of the following best describes a practical application of multi-dimensional arrays?",
+        "options": [
+          "Storing a list of names",
+          "Implementing a stack",
+          "Representing a 3D game world",
+          "Performing linear search"
+        ],
+        "answer": "Representing a 3D game world",
+        "explanation": "Multi-dimensional arrays are ideal for representing complex structures like a 3D game world, where data is organized in three dimensions.",
+        "incorrect_explanation": {
+          "Storing a list of names": "A one-dimensional array is sufficient for storing a list of names.",
+          "Implementing a stack": "Stacks are typically implemented using one-dimensional data structures like lists.",
+          "Performing linear search": "Linear search operates on one-dimensional arrays or lists."
+        }
+      },
+      {
+        "question": "What is the time complexity of accessing an element in a two-dimensional array?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Accessing an element in a two-dimensional array involves calculating the memory address using the indices, which is a constant time operation, O(1).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply linear time complexity, which is not the case for direct access.",
+          "O(log n)": "O(log n) is typical for divide-and-conquer algorithms, not for direct access.",
+          "O(n²)": "O(n²) implies quadratic time complexity, which is not applicable here."
+        }
+      },
+      {
+        "question": "Which operation on a multi-dimensional array typically requires nested loops?",
+        "options": [
+          "Accessing an element by index",
+          "Traversing all elements",
+          "Accessing the first element",
+          "Checking if the array is empty"
+        ],
+        "answer": "Traversing all elements",
+        "explanation": "Traversing all elements in a multi-dimensional array requires nested loops to iterate through each dimension.",
+        "incorrect_explanation": {
+          "Accessing an element by index": "Accessing a single element by its indices is a constant time operation, O(1).",
+          "Accessing the first element": "Accessing the first element is a constant time operation, O(1).",
+          "Checking if the array is empty": "Checking if the array is empty is a constant time operation, O(1)."
+        }
+      },
+      {
+        "question": "Which of the following best describes the process of representing a matrix using a 2D array?",
+        "options": [
+          "Storing matrix elements in a single list",
+          "Using a list of lists where each sublist represents a row",
+          "Using a dictionary with row and column keys",
+          "Storing matrix elements in a linked list"
+        ],
+        "answer": "Using a list of lists where each sublist represents a row",
+        "explanation": "A matrix can be represented using a 2D array by organizing the data as a list of lists, where each sublist corresponds to a row in the matrix.",
+        "incorrect_explanation": {
+          "Storing matrix elements in a single list": "This does not capture the two-dimensional structure of a matrix.",
+          "Using a dictionary with row and column keys": "While possible, it's not the typical way to represent a matrix using a 2D array.",
+          "Storing matrix elements in a linked list": "Linked lists are not suitable for representing multi-dimensional arrays efficiently."
+        }
+      },
+      {
+        "question": "Which of the following is an example of a basic operation performed on both 1D and 2D arrays?",
+        "options": [
+          "Matrix multiplication",
+          "Traversal",
+          "Transposing",
+          "Finding eigenvalues"
+        ],
+        "answer": "Traversal",
+        "explanation": "Traversal, which involves visiting each element in the array, is a basic operation performed on both 1D and 2D arrays.",
+        "incorrect_explanation": {
+          "Matrix multiplication": "This is specific to 2D arrays (matrices) and not applicable to 1D arrays.",
+          "Transposing": "Transposing is specific to 2D arrays (matrices).",
+          "Finding eigenvalues": "This is a complex operation specific to matrices in linear algebra."
+        }
+      },
+      {
+        "question": "What is the space complexity of a multi-dimensional array with d dimensions, each of size n?",
+        "options": [
+          "O(n)",
+          "O(d * n)",
+          "O(n^d)",
+          "O(d^n)"
+        ],
+        "answer": "O(n^d)",
+        "explanation": "A multi-dimensional array with d dimensions, each of size n, requires space proportional to n raised to the power of d, resulting in O(n^d) space complexity.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply space proportional to a single dimension.",
+          "O(d * n)": "This would imply linear growth with the number of dimensions and size, not exponential.",
+          "O(d^n)": "This implies exponential growth with the size, which is not the case for multi-dimensional arrays."
+        }
+      },
+      {
+        "question": "Which of the following scenarios is best suited for using a two-dimensional array?",
+        "options": [
+          "Storing a list of student names",
+          "Implementing a stack",
+          "Representing a chessboard",
+          "Tracking user login sessions"
+        ],
+        "answer": "Representing a chessboard",
+        "explanation": "A chessboard is a grid-like structure with rows and columns, making it ideal for representation using a two-dimensional array.",
+        "incorrect_explanation": {
+          "Storing a list of student names": "A one-dimensional array is sufficient for storing a list of names.",
+          "Implementing a stack": "Stacks are typically implemented using one-dimensional data structures like lists.",
+          "Tracking user login sessions": "This can be managed using one-dimensional data structures or more complex structures like hash tables."
+        }
+      },
+      {
+        "question": "What is the primary challenge when working with higher-dimensional arrays?",
+        "options": [
+          "Managing memory allocation",
+          "Accessing elements by index",
+          "Visualizing and managing the complexity",
+          "Ensuring elements are of the same data type"
+        ],
+        "answer": "Visualizing and managing the complexity",
+        "explanation": "Higher-dimensional arrays increase the complexity of data management and visualization, making it more challenging to work with compared to lower-dimensional arrays.",
+        "incorrect_explanation": {
+          "Managing memory allocation": "While higher-dimensional arrays do require more memory, the primary challenge is the complexity in managing and visualizing the data.",
+          "Accessing elements by index": "Accessing elements by index is straightforward, though it involves multiple indices.",
+          "Ensuring elements are of the same data type": "This is a characteristic of arrays in general, not specific to higher dimensions."
+        }
+      },
+      {
+        "question": "Which Python library is commonly used for efficient multi-dimensional array operations?",
+        "options": [
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "TensorFlow"
+        ],
+        "answer": "NumPy",
+        "explanation": "NumPy is a popular Python library that provides efficient implementations for multi-dimensional arrays and a wide range of operations on them.",
+        "incorrect_explanation": {
+          "Pandas": "Pandas is used for data manipulation and analysis, primarily with data frames.",
+          "Matplotlib": "Matplotlib is used for plotting and visualization.",
+          "TensorFlow": "TensorFlow is a machine learning framework that utilizes tensors, which are multi-dimensional arrays, but NumPy is the primary library for array operations."
+        }
+      },
+      {
+        "question": "Which of the following is a basic operation performed on multi-dimensional arrays?",
+        "options": [
+          "Heapify",
+          "Graph traversal",
+          "Matrix multiplication",
+          "Depth-first search"
+        ],
+        "answer": "Matrix multiplication",
+        "explanation": "Matrix multiplication is a fundamental operation performed on multi-dimensional arrays (matrices).",
+        "incorrect_explanation": {
+          "Heapify": "Heapify is related to heap data structures.",
+          "Graph traversal": "Graph traversal pertains to graph data structures.",
+          "Depth-first search": "Depth-first search is an algorithm used in graph theory."
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,565 @@
+{
+    "questions": [
+      {
+        "question": "What does Big O notation primarily describe?",
+        "options": [
+          "The exact runtime of an algorithm",
+          "The upper bound of an algorithm's running time",
+          "The memory usage of an algorithm",
+          "The average case scenario of an algorithm"
+        ],
+        "answer": "The upper bound of an algorithm's running time",
+        "explanation": "Big O notation is used to describe the upper bound of an algorithm's running time, characterizing the worst-case scenario.",
+        "incorrect_explanation": {
+          "The exact runtime of an algorithm": "Big O provides an upper bound, not the exact runtime.",
+          "The memory usage of an algorithm": "Big O primarily focuses on time complexity, though it can be used for space complexity as well.",
+          "The average case scenario of an algorithm": "Big O typically describes the worst-case scenario."
+        }
+      },
+      {
+        "question": "Which of the following best describes O(1) time complexity?",
+        "options": [
+          "The running time increases linearly with input size",
+          "The running time decreases as input size increases",
+          "The running time remains constant regardless of input size",
+          "The running time increases logarithmically with input size"
+        ],
+        "answer": "The running time remains constant regardless of input size",
+        "explanation": "O(1) time complexity means the algorithm's running time does not change with the size of the input.",
+        "incorrect_explanation": {
+          "The running time increases linearly with input size": "This describes O(n) time complexity.",
+          "The running time decreases as input size increases": "Time complexity does not typically decrease with larger inputs.",
+          "The running time increases logarithmically with input size": "This describes O(log n) time complexity."
+        }
+      },
+      {
+        "question": "Which time complexity is typically associated with binary search?",
+        "options": [
+          "O(n)",
+          "O(n²)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary search divides the search interval in half each time, resulting in logarithmic time complexity.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is linear time complexity, which is not characteristic of binary search.",
+          "O(n²)": "O(n²) is quadratic time complexity, typical of algorithms with nested loops.",
+          "O(1)": "O(1) is constant time complexity, which binary search does not have."
+        }
+      },
+      {
+        "question": "What is the time complexity of accessing the first element in a list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Accessing the first element in a list is a constant time operation, hence O(1).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply the time increases with the list size, which is not the case for accessing an element by index.",
+          "O(log n)": "O(log n) is typical for algorithms that divide the problem size in half, like binary search.",
+          "O(n log n)": "O(n log n) is typical for efficient sorting algorithms like merge sort."
+        }
+      },
+      {
+        "question": "Which time complexity is commonly seen in efficient sorting algorithms like merge sort and heapsort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "Efficient sorting algorithms like merge sort and heapsort have a time complexity of O(n log n).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) time complexity is typical of linear algorithms, not efficient sorting algorithms.",
+          "O(log n)": "O(log n) is typical for algorithms that divide the problem size, like binary search.",
+          "O(n²)": "O(n²) is typical of less efficient sorting algorithms like bubble sort and insertion sort."
+        }
+      },
+      {
+        "question": "What does O(n²) time complexity indicate about an algorithm's performance?",
+        "options": [
+          "The running time doubles as input size doubles",
+          "The running time increases quadratically as input size increases",
+          "The running time remains constant regardless of input size",
+          "The running time increases logarithmically with input size"
+        ],
+        "answer": "The running time increases quadratically as input size increases",
+        "explanation": "O(n²) indicates that the running time grows proportionally to the square of the input size, typical of algorithms with nested loops.",
+        "incorrect_explanation": {
+          "The running time doubles as input size doubles": "This describes linear time complexity, O(n).",
+          "The running time remains constant regardless of input size": "This describes constant time complexity, O(1).",
+          "The running time increases logarithmically with input size": "This describes logarithmic time complexity, O(log n)."
+        }
+      },
+      {
+        "question": "Which scenario represents the best case for a linear search algorithm?",
+        "options": [
+          "The target element is the last in the list",
+          "The target element is not in the list",
+          "The target element is the first element in the list",
+          "The list is unsorted"
+        ],
+        "answer": "The target element is the first element in the list",
+        "explanation": "In linear search, the best case occurs when the target element is the first element, resulting in O(1) time complexity.",
+        "incorrect_explanation": {
+          "The target element is the last in the list": "This represents the worst case, requiring O(n) time.",
+          "The target element is not in the list": "This also represents the worst case, requiring O(n) time.",
+          "The list is unsorted": "Whether the list is sorted or not does not affect the best case scenario."
+        }
+      },
+      {
+        "question": "What is the time complexity of the following algorithm?\n```python\ndef print_elements(lst):\n    for element in lst:\n        print(element)\n```",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The algorithm iterates through each element in the list once, resulting in linear time complexity, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) would mean the time does not depend on the input size, which is not the case here.",
+          "O(log n)": "O(log n) is typical of divide-and-conquer algorithms like binary search.",
+          "O(n²)": "O(n²) would imply nested iterations, which are not present in this algorithm."
+        }
+      },
+      {
+        "question": "Which of the following best describes the average case time complexity?",
+        "options": [
+          "The time complexity when the input is the smallest possible",
+          "The time complexity when the input causes the maximum number of operations",
+          "The expected time complexity over all possible inputs",
+          "The time complexity that never occurs"
+        ],
+        "answer": "The expected time complexity over all possible inputs",
+        "explanation": "Average case time complexity represents the expected number of operations over all possible inputs.",
+        "incorrect_explanation": {
+          "The time complexity when the input is the smallest possible": "This describes the best case scenario.",
+          "The time complexity when the input causes the maximum number of operations": "This describes the worst case scenario.",
+          "The time complexity that never occurs": "Average case is about expected scenarios, not impossible ones."
+        }
+      },
+      {
+        "question": "In Big O notation, which term is considered most significant when simplifying the expression?",
+        "options": [
+          "The constant terms",
+          "The lower-order terms",
+          "The highest-order term",
+          "All terms equally"
+        ],
+        "answer": "The highest-order term",
+        "explanation": "In Big O notation, the highest-order term dominates the growth rate and is the most significant when simplifying the expression.",
+        "incorrect_explanation": {
+          "The constant terms": "Constants are ignored in Big O notation as they do not affect growth rate.",
+          "The lower-order terms": "Lower-order terms are also ignored as the highest-order term dominates.",
+          "All terms equally": "Only the highest-order term is considered significant."
+        }
+      },
+      {
+        "question": "Which time complexity is typically associated with nested loops where each loop runs 'n' times?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n²)",
+          "O(1)"
+        ],
+        "answer": "O(n²)",
+        "explanation": "Nested loops where each loop runs 'n' times result in quadratic time complexity, O(n²).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is linear time complexity, typical of single loops.",
+          "O(log n)": "O(log n) is logarithmic time complexity, typical of divide-and-conquer algorithms.",
+          "O(1)": "O(1) is constant time complexity, unrelated to loops."
+        }
+      },
+      {
+        "question": "What is the time complexity of the binary search algorithm in the worst case?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary search has a time complexity of O(log n) in the worst case, as it repeatedly divides the search interval in half.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant time, which is not the case for binary search.",
+          "O(n)": "O(n) is linear time complexity, which binary search does not have.",
+          "O(n log n)": "O(n log n) is typical of efficient sorting algorithms, not binary search."
+        }
+      },
+      {
+        "question": "Which of the following algorithms has a time complexity of O(n log n)?",
+        "options": [
+          "Bubble Sort",
+          "Merge Sort",
+          "Linear Search",
+          "Insertion Sort"
+        ],
+        "answer": "Merge Sort",
+        "explanation": "Merge Sort has a time complexity of O(n log n), making it more efficient than quadratic sorting algorithms like Bubble Sort and Insertion Sort.",
+        "incorrect_explanation": {
+          "Bubble Sort": "Bubble Sort has a time complexity of O(n²).",
+          "Linear Search": "Linear Search has a time complexity of O(n).",
+          "Insertion Sort": "Insertion Sort has a time complexity of O(n²) in the worst case."
+        }
+      },
+      {
+        "question": "Which of the following best describes the worst case scenario?",
+        "options": [
+          "The scenario where the algorithm performs the fewest operations",
+          "The scenario where the algorithm performs the most operations",
+          "The average number of operations the algorithm performs",
+          "The scenario where the algorithm's performance is unaffected by input size"
+        ],
+        "answer": "The scenario where the algorithm performs the most operations",
+        "explanation": "The worst case scenario refers to the input that causes the algorithm to perform the maximum number of operations.",
+        "incorrect_explanation": {
+          "The scenario where the algorithm performs the fewest operations": "This describes the best case scenario.",
+          "The average number of operations the algorithm performs": "This describes the average case scenario.",
+          "The scenario where the algorithm's performance is unaffected by input size": "This describes the best case scenario with constant time complexity."
+        }
+      },
+      {
+        "question": "What is the time complexity of the following algorithm?\n```python\ndef check_duplicates(lst):\n    seen = set()\n    for num in lst:\n        if num in seen:\n            return True\n        seen.add(num)\n    return False\n```",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The algorithm iterates through the list once, performing constant-time operations within the loop, resulting in linear time complexity, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant time, which is not the case here as the loop depends on input size.",
+          "O(log n)": "O(log n) is typical of divide-and-conquer algorithms, not this linear search.",
+          "O(n²)": "O(n²) would imply nested loops, which are not present here."
+        }
+      },
+      {
+        "question": "Which time complexity represents an algorithm that doubles its running time with each additional input element?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(2^n)"
+        ],
+        "answer": "O(2^n)",
+        "explanation": "O(2^n) time complexity means the running time doubles with each additional input element, typical of exponential algorithms.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) means constant time, unaffected by input size.",
+          "O(n)": "O(n) is linear time complexity, where running time increases proportionally with input size.",
+          "O(log n)": "O(log n) is logarithmic time complexity, where running time increases logarithmically with input size."
+        }
+      },
+      {
+        "question": "In the context of time complexity, what does the term 'linearithmic' refer to?",
+        "options": [
+          "A combination of linear and constant time complexities",
+          "A combination of linear and logarithmic time complexities",
+          "A combination of logarithmic and quadratic time complexities",
+          "A combination of constant and quadratic time complexities"
+        ],
+        "answer": "A combination of linear and logarithmic time complexities",
+        "explanation": "Linearithmic time complexity, represented as O(n log n), combines linear and logarithmic growth rates.",
+        "incorrect_explanation": {
+          "A combination of linear and constant time complexities": "Linearithmic involves logarithmic, not constant, time complexity.",
+          "A combination of logarithmic and quadratic time complexities": "Quadratic is not part of linearithmic time complexity.",
+          "A combination of constant and quadratic time complexities": "Linearithmic combines linear and logarithmic, not constant and quadratic."
+        }
+      },
+      {
+        "question": "What is the time complexity of the following algorithm?\n```python\ndef sum_elements(lst):\n    total = 0\n    for num in lst:\n        total += num\n    return total\n```",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The algorithm iterates through each element in the list once, performing a constant-time operation in each iteration, resulting in linear time complexity, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant time, which is not the case as the loop depends on input size.",
+          "O(log n)": "O(log n) is typical of divide-and-conquer algorithms, not this linear iteration.",
+          "O(n²)": "O(n²) would imply nested loops, which are not present here."
+        }
+      },
+      {
+        "question": "Which of the following statements is true about O(n log n) time complexity?",
+        "options": [
+          "It grows slower than O(n)",
+          "It grows faster than O(n²)",
+          "It grows faster than O(n) but slower than O(n²)",
+          "It is the same as O(n²)"
+        ],
+        "answer": "It grows faster than O(n) but slower than O(n²)",
+        "explanation": "O(n log n) time complexity grows faster than linear time, O(n), but slower than quadratic time, O(n²).",
+        "incorrect_explanation": {
+          "It grows slower than O(n)": "O(n log n) grows faster than O(n).",
+          "It grows faster than O(n²)": "O(n log n) grows slower than O(n²).",
+          "It is the same as O(n²)": "O(n log n) and O(n²) are distinct complexities, with O(n log n) being slower."
+        }
+      },
+      {
+        "question": "What is the time complexity of the following algorithm?\n```python\ndef binary_search(lst, target):\n    low = 0\n    high = len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary search repeatedly divides the search interval in half, leading to logarithmic time complexity, O(log n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant time, which is not the case for binary search.",
+          "O(n)": "O(n) is linear time complexity, not characteristic of binary search.",
+          "O(n log n)": "O(n log n) is typical of efficient sorting algorithms, not binary search."
+        }
+      },
+      {
+        "question": "Which time complexity is typically seen in algorithms with nested loops where each loop runs 'n' times?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n²)",
+        "explanation": "Nested loops where each loop runs 'n' times result in quadratic time complexity, O(n²).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is linear time complexity, typical of single loops.",
+          "O(log n)": "O(log n) is logarithmic time complexity, typical of divide-and-conquer algorithms.",
+          "O(n log n)": "O(n log n) is typical of efficient sorting algorithms like merge sort."
+        }
+      },
+      {
+        "question": "Which of the following is an example of a constant time operation?",
+        "options": [
+          "Looping through a list",
+          "Accessing an element by index in an array",
+          "Sorting a list",
+          "Performing a binary search"
+        ],
+        "answer": "Accessing an element by index in an array",
+        "explanation": "Accessing an element by its index in an array is a constant time operation, O(1).",
+        "incorrect_explanation": {
+          "Looping through a list": "Looping through a list typically has linear time complexity, O(n).",
+          "Sorting a list": "Sorting algorithms generally have higher time complexities like O(n log n).",
+          "Performing a binary search": "Binary search has a logarithmic time complexity, O(log n)."
+        }
+      },
+      {
+        "question": "What is the time complexity of the following algorithm?\n```python\ndef has_duplicates(lst):\n    seen = set()\n    for num in lst:\n        if num in seen:\n            return True\n        seen.add(num)\n    return False\n```",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The algorithm iterates through the list once, performing constant-time operations within the loop, resulting in linear time complexity, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant time, which is not the case as the loop depends on input size.",
+          "O(log n)": "O(log n) is typical of divide-and-conquer algorithms, not this linear search.",
+          "O(n²)": "O(n²) would imply nested loops, which are not present here."
+        }
+      },
+      {
+        "question": "Which of the following best describes the average case time complexity?",
+        "options": [
+          "The scenario where the algorithm performs the fewest operations",
+          "The scenario where the algorithm performs the most operations",
+          "The expected time complexity over all possible inputs",
+          "The scenario where the algorithm's performance is unaffected by input size"
+        ],
+        "answer": "The expected time complexity over all possible inputs",
+        "explanation": "Average case time complexity represents the expected number of operations over all possible inputs.",
+        "incorrect_explanation": {
+          "The scenario where the algorithm performs the fewest operations": "This describes the best case scenario.",
+          "The scenario where the algorithm performs the most operations": "This describes the worst case scenario.",
+          "The scenario where the algorithm's performance is unaffected by input size": "This describes the best case scenario with constant time complexity."
+        }
+      },
+      {
+        "question": "Which time complexity is associated with algorithms that have a constant number of operations regardless of input size?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "O(1) time complexity indicates a constant number of operations, regardless of the input size.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) indicates linear time complexity, where operations increase with input size.",
+          "O(log n)": "O(log n) indicates logarithmic time complexity, where operations grow logarithmically with input size.",
+          "O(n log n)": "O(n log n) indicates linearithmic time complexity, combining linear and logarithmic growth."
+        }
+      },
+      {
+        "question": "What does the 'log n' term in O(n log n) represent?",
+        "options": [
+          "A constant factor",
+          "A linear relationship",
+          "A logarithmic relationship",
+          "A quadratic relationship"
+        ],
+        "answer": "A logarithmic relationship",
+        "explanation": "The 'log n' term represents a logarithmic relationship, indicating that part of the algorithm's complexity grows logarithmically with input size.",
+        "incorrect_explanation": {
+          "A constant factor": "'log n' is not a constant; it grows with input size.",
+          "A linear relationship": "A linear relationship is represented by 'n', not 'log n'.",
+          "A quadratic relationship": "A quadratic relationship is represented by 'n²', not 'log n'."
+        }
+      },
+      {
+        "question": "Which algorithm has a time complexity of O(n²)?",
+        "options": [
+          "Merge Sort",
+          "Quick Sort",
+          "Bubble Sort",
+          "Binary Search"
+        ],
+        "answer": "Bubble Sort",
+        "explanation": "Bubble Sort has a time complexity of O(n²) due to its nested loop structure.",
+        "incorrect_explanation": {
+          "Merge Sort": "Merge Sort has a time complexity of O(n log n).",
+          "Quick Sort": "Quick Sort typically has a time complexity of O(n log n), though it can degrade to O(n²) in the worst case.",
+          "Binary Search": "Binary Search has a time complexity of O(log n)."
+        }
+      },
+      {
+        "question": "In the context of time complexity, what does the term 'linear' refer to?",
+        "options": [
+          "Time complexity that does not change with input size",
+          "Time complexity that grows logarithmically with input size",
+          "Time complexity that grows proportionally with input size",
+          "Time complexity that grows exponentially with input size"
+        ],
+        "answer": "Time complexity that grows proportionally with input size",
+        "explanation": "Linear time complexity, O(n), means the running time grows proportionally with the input size.",
+        "incorrect_explanation": {
+          "Time complexity that does not change with input size": "This describes constant time complexity, O(1).",
+          "Time complexity that grows logarithmically with input size": "This describes logarithmic time complexity, O(log n).",
+          "Time complexity that grows exponentially with input size": "This describes exponential time complexity, such as O(2^n)."
+        }
+      },
+      {
+        "question": "Which of the following best describes the purpose of analyzing simple algorithms?",
+        "options": [
+          "To avoid understanding complex algorithms",
+          "To understand how to apply complexity analysis techniques",
+          "To increase the number of operations in algorithms",
+          "To simplify programming languages"
+        ],
+        "answer": "To understand how to apply complexity analysis techniques",
+        "explanation": "Analyzing simple algorithms helps in understanding how to apply complexity analysis techniques, which can then be used for more complex algorithms.",
+        "incorrect_explanation": {
+          "To avoid understanding complex algorithms": "Analyzing simple algorithms builds the foundation for understanding complex ones.",
+          "To increase the number of operations in algorithms": "The goal is to understand efficiency, not to increase operations.",
+          "To simplify programming languages": "Complexity analysis is about algorithms, not programming languages."
+        }
+      },
+      {
+        "question": "What is the time complexity of checking if an element exists in a Python set?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Checking if an element exists in a Python set is a constant time operation, O(1), due to the underlying hash table implementation.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) time complexity would imply a linear search, which is not the case for sets.",
+          "O(log n)": "O(log n) is typical of binary search algorithms, not set lookups.",
+          "O(n log n)": "O(n log n) is typical of efficient sorting algorithms, not set lookups."
+        }
+      },
+      {
+        "question": "Which of the following best describes the relationship between input size and running time in O(n log n) complexity?",
+        "options": [
+          "Running time grows exponentially with input size",
+          "Running time grows proportionally with input size",
+          "Running time grows faster than linear but slower than quadratic with input size",
+          "Running time remains constant regardless of input size"
+        ],
+        "answer": "Running time grows faster than linear but slower than quadratic with input size",
+        "explanation": "O(n log n) time complexity indicates that the running time grows faster than linear (O(n)) but slower than quadratic (O(n²)) as input size increases.",
+        "incorrect_explanation": {
+          "Running time grows exponentially with input size": "Exponential growth is represented by complexities like O(2^n).",
+          "Running time grows proportionally with input size": "Proportional growth describes linear time complexity, O(n).",
+          "Running time remains constant regardless of input size": "Constant time complexity is represented by O(1)."
+        }
+      },
+      {
+        "question": "What is the primary purpose of complexity analysis in algorithm design?",
+        "options": [
+          "To determine the exact runtime of an algorithm",
+          "To evaluate how runtime and memory usage scale with input size",
+          "To choose the most popular programming language",
+          "To eliminate the need for testing algorithms"
+        ],
+        "answer": "To evaluate how runtime and memory usage scale with input size",
+        "explanation": "Complexity analysis helps in evaluating how the runtime and memory usage of an algorithm scale with the size of the input, aiding in the design of efficient and scalable algorithms.",
+        "incorrect_explanation": {
+          "To determine the exact runtime of an algorithm": "Complexity analysis provides an upper bound, not the exact runtime.",
+          "To choose the most popular programming language": "Complexity analysis is language-agnostic and focuses on algorithms, not programming languages.",
+          "To eliminate the need for testing algorithms": "Testing is still necessary to validate the correctness and performance of algorithms."
+        }
+      },
+      {
+        "question": "Which of the following algorithms has a time complexity of O(n log n) in the average case?",
+        "options": [
+          "Quick Sort",
+          "Bubble Sort",
+          "Linear Search",
+          "Selection Sort"
+        ],
+        "answer": "Quick Sort",
+        "explanation": "Quick Sort typically has a time complexity of O(n log n) in the average case, although its worst case is O(n²).",
+        "incorrect_explanation": {
+          "Bubble Sort": "Bubble Sort has a time complexity of O(n²).",
+          "Linear Search": "Linear Search has a time complexity of O(n).",
+          "Selection Sort": "Selection Sort has a time complexity of O(n²)."
+        }
+      },
+      {
+        "question": "What is the time complexity of the following algorithm?\n```python\ndef binary_search(lst, target):\n    low = 0\n    high = len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary search divides the search interval in half each time, resulting in logarithmic time complexity, O(log n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant time, which is not the case for binary search.",
+          "O(n)": "O(n) is linear time complexity, not characteristic of binary search.",
+          "O(n log n)": "O(n log n) is typical of efficient sorting algorithms, not binary search."
+        }
+      },
+      {
+        "question": "Which time complexity indicates that the running time grows proportionally to the input size?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "O(n) time complexity means that the running time grows linearly with the input size.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) indicates constant time, unaffected by input size.",
+          "O(log n)": "O(log n) indicates logarithmic time, growing slower than linear time.",
+          "O(n²)": "O(n²) indicates quadratic time, growing faster than linear time."
+        }
+      }
+    ]
+  }
+  

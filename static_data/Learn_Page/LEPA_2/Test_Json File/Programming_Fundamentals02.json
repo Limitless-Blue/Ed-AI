@@ -1,0 +1,422 @@
+{
+    "questions": [
+        {
+            "question": "Which arithmetic operator is used to find the remainder of a division operation?",
+            "options": [
+            "+",
+            "-",
+            "*",
+            "%"
+            ],
+            "answer": "%",
+            "explanation": "The modulus operator (%) returns the remainder of a division between two operands.",
+            "incorrect_explanation": {
+            "+": "Addition operator is used to add two operands.",
+            "-": "Subtraction operator is used to subtract the second operand from the first.",
+            "*": "Multiplication operator is used to multiply two operands."
+            }
+        },
+        {
+            "question": "What is the result of the following Python expression: `2 ** 3 ** 2`?",
+            "options": [
+            64,
+            512,
+            256,
+            128
+            ],
+            "answer": "512",
+            "explanation": "Exponentiation is right-associative, so the expression is evaluated as 2 ** (3 ** 2) = 2 ** 9 = 512.",
+            "incorrect_explanation": {
+            "64": "Incorrect due to misunderstanding operator associativity.",
+            "256": "Incorrect calculation of the exponentiation.",
+            "128": "Incorrect calculation of the exponentiation."
+            }
+        },
+        {
+            "question": "In Java, what is the result of `~5` using bitwise NOT operator?",
+            "options": [
+            -6,
+            4,
+            -5,
+            5
+            ],
+            "answer": "-6",
+            "explanation": "The bitwise NOT operator (~) inverts all the bits of the operand. For 5 (0101 in binary), ~5 is -6 in two's complement.",
+            "incorrect_explanation": {
+            "4": "Incorrect inversion of bits.",
+            "-5": "Incorrect inversion resulting in -5 instead of -6.",
+            "5": "Bitwise NOT inverts the bits, so the result cannot be the same as the operand."
+            }
+        },
+        {
+            "question": "Which logical operator returns `True` only if both operands are `True`?",
+            "options": [
+            "OR",
+            "AND",
+            "NOT",
+            "XOR"
+            ],
+            "answer": "AND",
+            "explanation": "The AND logical operator returns `True` only if both operands are `True`.",
+            "incorrect_explanation": {
+            "OR": "OR returns `True` if at least one operand is `True`.",
+            "NOT": "NOT is a unary operator that inverts the boolean value.",
+            "XOR": "XOR returns `True` if exactly one operand is `True`."
+            }
+        },
+        {
+            "question": "What is the precedence of the multiplication operator (*) compared to the addition operator (+) in most programming languages?",
+            "options": [
+            "Multiplication has lower precedence than addition.",
+            "Multiplication and addition have the same precedence.",
+            "Multiplication has higher precedence than addition.",
+            "Precedence varies and cannot be determined."
+            ],
+            "answer": "Multiplication has higher precedence than addition.",
+            "explanation": "In most programming languages, the multiplication operator (*) has higher precedence than the addition operator (+), meaning it is evaluated first.",
+            "incorrect_explanation": {
+            "Multiplication has lower precedence than addition.": "Incorrect, multiplication has higher precedence.",
+            "Multiplication and addition have the same precedence.": "Incorrect, multiplication has higher precedence.",
+            "Precedence varies and cannot be determined.": "Precedence is generally consistent in most languages."
+            }
+        },
+        {
+            "question": "Evaluate the following Java expression: `5 + 3 * 2`",
+            "options": [
+            16,
+            11,
+            10,
+            13
+            ],
+            "answer": "11",
+            "explanation": "Multiplication has higher precedence, so 3 * 2 = 6, then 5 + 6 = 11.",
+            "incorrect_explanation": {
+            "16": "Incorrect addition without considering operator precedence.",
+            "10": "Incorrect calculation of multiplication or addition.",
+            "13": "Incorrect calculation of multiplication or addition."
+            }
+        },
+        {
+            "question": "What does the logical NOT operator (`!` or `not`) do to a boolean value?",
+            "options": [
+            "Returns the same boolean value.",
+            "Inverts the boolean value.",
+            "Returns `True` regardless of the operand.",
+            "Returns `False` regardless of the operand."
+            ],
+            "answer": "Inverts the boolean value.",
+            "explanation": "The logical NOT operator inverts the boolean value of the operand. If the operand is `True`, it returns `False`, and vice versa.",
+            "incorrect_explanation": {
+            "Returns the same boolean value.": "NOT operator inverts the value.",
+            "Returns `True` regardless of the operand.": "NOT operator depends on the operand.",
+            "Returns `False` regardless of the operand.": "NOT operator depends on the operand."
+            }
+        },
+        {
+            "question": "Which of the following is a bitwise operator?",
+            "options": [
+            "&&",
+            "||",
+            "&",
+            "=="
+            ],
+            "answer": "&",
+            "explanation": "The ampersand (&) is a bitwise AND operator.",
+            "incorrect_explanation": {
+            "&&": "Logical AND operator, not bitwise.",
+            "||": "Logical OR operator, not bitwise.",
+            "==": "Equality operator, not bitwise."
+            }
+        },
+        {
+            "question": "In Python, what is the result of `10 + 5 * 2`?",
+            "options": [
+            30,
+            20,
+            25,
+            15
+            ],
+            "answer": "20",
+            "explanation": "Multiplication has higher precedence, so 5 * 2 = 10, then 10 + 10 = 20.",
+            "incorrect_explanation": {
+            "30": "Incorrect addition after ignoring operator precedence.",
+            "25": "Incorrect calculation of multiplication or addition.",
+            "15": "Incorrect calculation of multiplication or addition."
+            }
+        },
+        {
+            "question": "Which operator is used for bitwise XOR in most programming languages?",
+            "options": [
+            "^",
+            "|",
+            "&",
+            "~"
+            ],
+            "answer": "^",
+            "explanation": "The caret (^) symbol is commonly used for the bitwise XOR operation.",
+            "incorrect_explanation": {
+            "|": "Bitwise OR operator.",
+            "&": "Bitwise AND operator.",
+            "~": "Bitwise NOT operator."
+            }
+        },
+        {
+            "question": "What will be the value of `result` after executing the following Python code?\n```python\nresult = (10 + 5) * 2\n```",
+            "options": [
+            20,
+            15,
+            30,
+            25
+            ],
+            "answer": "30",
+            "explanation": "Parentheses override the default precedence. (10 + 5) = 15, then 15 * 2 = 30.",
+            "incorrect_explanation": {
+            "20": "Incorrect if parentheses are ignored.",
+            "15": "Incorrect calculation after addition.",
+            "25": "Incorrect calculation of multiplication."
+            }
+        },
+        {
+            "question": "Which operator has right-to-left associativity?",
+            "options": [
+            "Addition (+)",
+            "Multiplication (*)",
+            "Exponentiation (**)",
+            "Logical AND (&&)"
+            ],
+            "answer": "Exponentiation (**)",
+            "explanation": "Exponentiation operators are typically right-associative, meaning they are evaluated from right to left.",
+            "incorrect_explanation": {
+            "Addition (+)": "Addition is left-associative.",
+            "Multiplication (*)": "Multiplication is left-associative.",
+            "Logical AND (&&)": "Logical AND is left-associative."
+            }
+        },
+        {
+            "question": "In Python, what is the result of the expression `True and False`?",
+            "options": [
+            "True",
+            "False",
+            "Error",
+            "None"
+            ],
+            "answer": "False",
+            "explanation": "The AND logical operator returns `False` if at least one operand is `False`.",
+            "incorrect_explanation": {
+            "True": "Incorrect, since one operand is `False`.",
+            "Error": "No error occurs in this expression.",
+            "None": "The expression evaluates to a boolean value, not `None`."
+            }
+        },
+        {
+            "question": "Which of the following best describes short-circuit evaluation?",
+            "options": [
+            "All operands are evaluated before the operator is applied.",
+            "The second operand is evaluated only if necessary.",
+            "Operands are evaluated in a random order.",
+            "Operands are not evaluated at all."
+            ],
+            "answer": "The second operand is evaluated only if necessary.",
+            "explanation": "Short-circuit evaluation means that in logical operations, the second operand is evaluated only if the first operand does not determine the result.",
+            "incorrect_explanation": {
+            "All operands are evaluated before the operator is applied.": "Short-circuit evaluation skips evaluating the second operand if not necessary.",
+            "Operands are evaluated in a random order.": "Operands are evaluated in a specific order, not random.",
+            "Operands are not evaluated at all.": "Operands are evaluated as needed."
+            }
+        },
+        {
+            "question": "What is the output of the following Java code?\n```java\nint a = 5;\nint b = 3;\nint result = a << 1;\nSystem.out.println(result);\n```",
+            "options": [
+            2,
+            10,
+            6,
+            5
+            ],
+            "answer": "10",
+            "explanation": "Left shift operator (<<) shifts the bits of `a` to the left by 1 position. 5 in binary is 0101. Shifting left by 1 gives 1010, which is 10 in decimal.",
+            "incorrect_explanation": {
+            "2": "Incorrect shift resulting in a different value.",
+            "6": "Incorrect shift resulting in a different value.",
+            "5": "No shift applied."
+            }
+        },
+        {
+            "question": "Which relational operator checks if two operands are not equal?",
+            "options": [
+            "==",
+            "!=",
+            ">",
+            "<"
+            ],
+            "answer": "!=",
+            "explanation": "The '!=' operator checks if two operands are not equal.",
+            "incorrect_explanation": {
+            "==": "Checks if two operands are equal.",
+            ">": "Checks if the first operand is greater than the second.",
+            "<": "Checks if the first operand is less than the second."
+            }
+        },
+        {
+            "question": "In Python, what does the expression `a and b` evaluate to if `a` is `False`?",
+            "options": [
+            "b",
+            "True",
+            "False",
+            "a"
+            ],
+            "answer": "False",
+            "explanation": "In Python, if the first operand of `and` is `False`, the expression evaluates to `False` without evaluating `b`.",
+            "incorrect_explanation": {
+            "b": "If `a` is `False`, the expression short-circuits and does not evaluate `b`.",
+            "True": "Incorrect result based on the value of `a`.",
+            "a": "The expression evaluates to `False`, not `a`."
+            }
+        },
+        {
+            "question": "Which operator would you use to perform a bitwise OR operation?",
+            "options": [
+            "|",
+            "&",
+            "^",
+            "!"
+            ],
+            "answer": "|",
+            "explanation": "The pipe symbol (|) is used for the bitwise OR operation.",
+            "incorrect_explanation": {
+            "&": "Bitwise AND operator.",
+            "^": "Bitwise XOR operator.",
+            "!": "Logical NOT operator."
+            }
+        },
+        {
+            "question": "What is the associativity of the logical OR operator (`||` or `or`)?",
+            "options": [
+            "Left-to-right",
+            "Right-to-left",
+            "No associativity",
+            "Depends on the programming language"
+            ],
+            "answer": "Left-to-right",
+            "explanation": "The logical OR operator typically has left-to-right associativity, meaning expressions are evaluated from left to right.",
+            "incorrect_explanation": {
+            "Right-to-left": "Only some operators like exponentiation have right-to-left associativity.",
+            "No associativity": "Logical OR operators do have associativity.",
+            "Depends on the programming language": "Most languages follow left-to-right associativity for logical OR."
+            }
+        },
+        {
+            "question": "Which of the following is a best practice when dealing with operator precedence?",
+            "options": [
+            "Avoid using parentheses to make expressions shorter.",
+            "Use parentheses to make the intended order of operations explicit.",
+            "Rely on default precedence without checking.",
+            "Chain multiple operators without considering readability."
+            ],
+            "answer": "Use parentheses to make the intended order of operations explicit.",
+            "explanation": "Using parentheses clarifies the intended order of operations, enhancing readability and preventing errors.",
+            "incorrect_explanation": {
+            "Avoid using parentheses to make expressions shorter.": "This can lead to confusion and errors.",
+            "Rely on default precedence without checking.": "This can cause unexpected results.",
+            "Chain multiple operators without considering readability.": "This can make the code hard to read and maintain."
+            }
+        },
+        {
+            "question": "In Java, what is the result of the expression `5 + 3 * 2 - 4 / 2`?",
+            "options": [
+            10,
+            9,
+            11,
+            8
+            ],
+            "answer": "9",
+            "explanation": "Following operator precedence: 3 * 2 = 6; 4 / 2 = 2; then 5 + 6 - 2 = 9.",
+            "incorrect_explanation": {
+            "10": "Incorrect calculation of the operations.",
+            "11": "Incorrect calculation of the operations.",
+            "8": "Incorrect calculation of the operations."
+            }
+        },
+        {
+            "question": "Which operator would you use to check if two values are equal in a conditional statement?",
+            "options": [
+            "=",
+            "==",
+            "===",
+            "!="
+            ],
+            "answer": "==",
+            "explanation": "The double equals (==) operator is used to check if two values are equal.",
+            "incorrect_explanation": {
+            "=": "Single equals is an assignment operator, not a comparison operator.",
+            "===": "Strict equality operator used in some languages like JavaScript, but generally '==' is used.",
+            "!=": "Used to check if two values are not equal."
+            }
+        },
+        {
+            "question": "What does the following Python expression evaluate to?\n```python\nresult = not (a > b)\n```",
+            "options": [
+            "True if a is greater than b",
+            "False if a is greater than b",
+            "True if a is not greater than b",
+            "False if a is not greater than b"
+            ],
+            "answer": "False if a is greater than b",
+            "explanation": "The expression `not (a > b)` inverts the boolean result of `a > b`. If `a > b` is `True`, the result is `False`.",
+            "incorrect_explanation": {
+            "True if a is greater than b": "It actually inverts the result.",
+            "True if a is not greater than b": "Correct in the inverted case, but the answer focuses on when `a > b`.",
+            "False if a is not greater than b": "Incorrect interpretation of the expression."
+            }
+        },
+        {
+            "question": "Which of the following expressions demonstrates left-to-right associativity?",
+            "options": [
+            "a ** b ** c",
+            "a - b - c",
+            "a = b = c",
+            "a + (b * c)"
+            ],
+            "answer": "a - b - c",
+            "explanation": "Subtraction operators are left-associative, so `a - b - c` is evaluated as `(a - b) - c`.",
+            "incorrect_explanation": {
+            "a ** b ** c": "Exponentiation is right-associative.",
+            "a = b = c": "Assignment operators are typically right-associative.",
+            "a + (b * c)": "Parentheses override associativity."
+            }
+        },
+        {
+            "question": "In bitwise operations, what is the result of `5 | 3`?",
+            "options": [
+            "1",
+            "7",
+            "6",
+            "15"
+            ],
+            "answer": "7",
+            "explanation": "5 in binary is 0101, 3 is 0011. Bitwise OR results in 0111, which is 7.",
+            "incorrect_explanation": {
+            "1": "Incorrect result of the OR operation.",
+            "6": "Incorrect result of the OR operation.",
+            "15": "Incorrect result of the OR operation."
+            }
+        },
+        {
+            "question": "What is the result of the following Python expression?\n```python\nresult = (a >= b) or (c < d)\n```",
+            "options": [
+            "True only if both conditions are True",
+            "True if at least one condition is True",
+            "False only if both conditions are False",
+            "Both B and C are correct",
+            "Both A and D are correct"
+            ],
+            "answer": "Both B and C are correct",
+            "explanation": "The OR operator returns `True` if at least one of the conditions is `True` and `False` only if both are `False`.",
+            "incorrect_explanation": {
+            "True only if both conditions are True": "This describes the AND operator.",
+            "True if at least one condition is True": "This is correct, but the most complete answer is 'Both B and C are correct'.",
+            "False only if both conditions are False": "This is also correct, but the option 'Both B and C are correct' encompasses both truths.",
+            "Both A and D are correct": "Incorrect as A is not correct."
+            }
+        }
+    ]
+}

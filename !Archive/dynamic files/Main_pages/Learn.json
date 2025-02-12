@@ -1,145 +1,145 @@
 {
-    "Image Box 1": {
+    "LEPA_1": {
         "Title": "DSA Introduction",
         "Completed": false
     },
-    "Image Box 2": {
+    "LEPA_2": {
         "Title": "Programming Fundamentals",
         "Completed": false
     },
-    "Image Box 3": {
+    "LEPA_3": {
         "Title": "control structures and functions",
         "Completed": false
     },
-    "Image Box 4": {
+    "LEPA_4": {
         "Title": "Programming Fundamentals",
         "Completed": false
     },
-    "Image Box 5": {
+    "LEPA_5": {
         "Title": "Programming Fundamentals",
         "Completed": false
     },
-    "Image Box 6": {
+    "LEPA_6": {
         "Title": "Programming Fundamentals",
         "Completed": false
     },
-    "Image Box 7": {
+    "LEPA_7": {
         "Title": "Array",
         "Completed": false
     },
-    "Image Box 8": {
+    "LEPA_8": {
         "Title": "Array",
         "Completed": false
     },
-    "Image Box 9": {
+    "LEPA_9": {
         "Title": "LinkedList",
         "Completed": false
     },
-    "Image Box 10": {
+    "LEPA_10": {
         "Title": "LinkedList",
         "Completed": false
     },
-    "Image Box 11": {
+    "LEPA_11": {
         "Title": "Stack",
         "Completed": false
     },
-    "Image Box 12": {
+    "LEPA_12": {
         "Title": "Stack",
         "Completed": false
     },
-    "Image Box 13": {
+    "LEPA_13": {
         "Title": "Queue",
         "Completed": false
     },
-    "Image Box 14": {
+    "LEPA_14": {
         "Title": "Queue",
         "Completed": false
     },
-    "Image Box 15": {
+    "LEPA_15": {
         "Title": "Tree",
         "Completed": false
     },
-    "Image Box 16": {
+    "LEPA_16": {
         "Title": "Tree",
         "Completed": false
     },
-    "Image Box 17": {
+    "LEPA_17": {
         "Title": "Tree",
         "Completed": false
     },
-    "Image Box 18": {
+    "LEPA_18": {
         "Title": "Graph",
         "Completed": false
     },
-    "Image Box 19": {
+    "LEPA_19": {
         "Title": "Graph",
         "Completed": false
     },
-    "Image Box 20": {
+    "LEPA_20": {
         "Title": "Hashing",
         "Completed": false
     },
-    "Image Box 21": {
+    "LEPA_21": {
         "Title": "Hashing",
         "Completed": false
     },
-    "Image Box 22": {
+    "LEPA_22": {
         "Title": "Heap",
         "Completed": false
     },
-    "Image Box 23": {
+    "LEPA_23": {
         "Title": "Heap",
         "Completed": false
     },
-    "Image Box 24": {
+    "LEPA_24": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 25": {
+    "LEPA_25": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 26": {
+    "LEPA_26": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 27": {
+    "LEPA_27": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 28": {
+    "LEPA_28": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 29": {
+    "LEPA_29": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 30": {
+    "LEPA_30": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 31": {
+    "LEPA_31": {
         "Title": "Sort",
         "Completed": false
     },
-    "Image Box 32": {
+    "LEPA_32": {
         "Title": "Search",
         "Completed": false
     },
-    "Image Box 33": {
+    "LEPA_33": {
         "Title": "Search",
         "Completed": false
     },
-    "Image Box 34": {
+    "LEPA_34": {
         "Title": "Search",
         "Completed": false
     },
-    "Image Box 35": {
+    "LEPA_35": {
         "Title": "Search",
         "Completed": false
     },
-    "Image Box 36": {
+    "LEPA_36": {
         "Title": "Search",
         "Completed": false
     }

@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "question": "What is the primary purpose of a variable in programming?",
+      "options": [
+        "To perform arithmetic operations",
+        "To store data values",
+        "To create loops",
+        "To handle exceptions"
+      ],
+      "answer": "To store data values",
+      "explanation": "Variables act as containers that hold information which can be referenced and manipulated throughout a program.",
+      "incorrect_explanation": {
+        "To perform arithmetic operations": "Incorrect because variables themselves do not perform operations; they store values used in operations.",
+        "To create loops": "Incorrect as loops are control structures, not related to the primary purpose of variables.",
+        "To handle exceptions": "Incorrect because exception handling is managed by specific constructs, not variables."
+      }
+    },
+    {
+      "question": "Which of the following is a valid variable declaration in Python?",
+      "options": [
+        "int age = 25",
+        "age = 25",
+        "var age: int = 25",
+        "let age = 25"
+      ],
+      "answer": "age = 25",
+      "explanation": "In Python, variables are declared by simply assigning a value to a name without specifying the data type.",
+      "incorrect_explanation": {
+        "int age = 25": "Incorrect because Python does not require specifying the data type during variable declaration.",
+        "var age: int = 25": "Incorrect as 'var' is not used in Python for variable declarations.",
+        "let age = 25": "Incorrect because 'let' is used in JavaScript, not Python."
+      }
+    },
+    {
+      "question": "Which naming convention is typically used for variable names in Java?",
+      "options": [
+        "snake_case",
+        "PascalCase",
+        "kebab-case",
+        "camelCase"
+      ],
+      "answer": "camelCase",
+      "explanation": "In Java, camelCase is the standard naming convention for variables, where the first word is lowercase and subsequent words are capitalized.",
+      "incorrect_explanation": {
+        "snake_case": "Incorrect because snake_case is more common in languages like Python.",
+        "PascalCase": "Incorrect as PascalCase is typically used for class names in Java.",
+        "kebab-case": "Incorrect because kebab-case is not valid for variable names in Java."
+      }
+    },
+    {
+      "question": "What is the scope of a global variable?",
+      "options": [
+        "Accessible only within a function",
+        "Accessible only within a class",
+        "Accessible throughout the entire program",
+        "Accessible only within a loop"
+      ],
+      "answer": "Accessible throughout the entire program",
+      "explanation": "Global variables are accessible from any part of the program, including all functions and classes.",
+      "incorrect_explanation": {
+        "Accessible only within a function": "Incorrect because that describes local variables.",
+        "Accessible only within a class": "Incorrect as global variables are not restricted to classes.",
+        "Accessible only within a loop": "Incorrect because loops do not define variable scope."
+      }
+    },
+    {
+      "question": "Which of the following data types is used to represent a single character in Java?",
+      "options": [
+        "String",
+        "char",
+        "int",
+        "boolean"
+      ],
+      "answer": "char",
+      "explanation": "The 'char' data type in Java is used to represent single characters, such as 'A', '3', or '$'.",
+      "incorrect_explanation": {
+        "String": "Incorrect because String represents a sequence of characters, not a single character.",
+        "int": "Incorrect as 'int' is used for integer values.",
+        "boolean": "Incorrect because 'boolean' represents truth values."
+      }
+    },
+    {
+      "question": "Which data type would you use to store the value `True` in Python?",
+      "options": [
+        "int",
+        "float",
+        "bool",
+        "str"
+      ],
+      "answer": "bool",
+      "explanation": "The 'bool' data type in Python is used to store boolean values, which are `True` or `False`.",
+      "incorrect_explanation": {
+        "int": "Incorrect because 'int' is used for integer values.",
+        "float": "Incorrect as 'float' is used for decimal numbers.",
+        "str": "Incorrect because 'str' represents string values."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\nnum_int = 10\nnum_float = num_int + 5.5\nprint(type(num_float))\n```",
+      "options": [
+        "<class 'int'>",
+        "<class 'float'>",
+        "<class 'str'>",
+        "<class 'bool'>"
+      ],
+      "answer": "<class 'float'>",
+      "explanation": "The integer 'num_int' is implicitly converted to a float when added to 5.5, resulting in 'num_float' being of type float.",
+      "incorrect_explanation": {
+        "<class 'int'>": "Incorrect because the result of adding an int and a float is a float.",
+        "<class 'str'>": "Incorrect as the operation does not involve string conversion.",
+        "<class 'bool'>": "Incorrect because the result is a numerical type, not a boolean."
+      }
+    },
+    {
+      "question": "Which of the following is an example of explicit type casting in Java?",
+      "options": [
+        "int num = 10",
+        "double numDouble = 9.78",
+        "int numInt = (int) numDouble",
+        "String numStr = \"123\""
+      ],
+      "answer": "int numInt = (int) numDouble",
+      "explanation": "Explicit type casting in Java is done by specifying the target type in parentheses before the variable, as shown.",
+      "incorrect_explanation": {
+        "int num = 10": "Incorrect because this is a simple variable declaration, not type casting.",
+        "double numDouble = 9.78": "Incorrect as it is a declaration of a double variable.",
+        "String numStr = \"123\"": "Incorrect because it involves string assignment, not type casting."
+      }
+    },
+    {
+      "question": "What will happen if you try to convert the string \"abc\" to an integer in Python?",
+      "options": [
+        "It will convert to 0",
+        "It will raise a ValueError",
+        "It will convert to ASCII values",
+        "It will convert to a floating-point number"
+      ],
+      "answer": "It will raise a ValueError",
+      "explanation": "Attempting to convert a non-numeric string to an integer in Python will raise a ValueError.",
+      "incorrect_explanation": {
+        "It will convert to 0": "Incorrect because Python does not default to 0 for invalid conversions.",
+        "It will convert to ASCII values": "Incorrect as the int() function does not perform ASCII conversions.",
+        "It will convert to a floating-point number": "Incorrect because the conversion to int expects a valid integer string."
+      }
+    },
+    {
+      "question": "Which of the following is a composite data type?",
+      "options": [
+        "int",
+        "float",
+        "char",
+        "list"
+      ],
+      "answer": "list",
+      "explanation": "Lists are composite data types that can hold multiple elements, typically of the same or different data types.",
+      "incorrect_explanation": {
+        "int": "Incorrect because 'int' is a primitive data type.",
+        "float": "Incorrect as 'float' is also a primitive data type.",
+        "char": "Incorrect because 'char' represents a single character."
+      }
+    },
+    {
+      "question": "In Python, how do you explicitly convert a string to an integer?",
+      "options": [
+        "str_to_int('123')",
+        "int('123')",
+        "convert('123', int)",
+        "Integer('123')"
+      ],
+      "answer": "int('123')",
+      "explanation": "The int() function is used to explicitly convert a string to an integer in Python.",
+      "incorrect_explanation": {
+        "str_to_int('123')": "Incorrect because there is no built-in function named 'str_to_int'.",
+        "convert('123', int)": "Incorrect as 'convert' is not a built-in Python function for type conversion.",
+        "Integer('123')": "Incorrect because 'Integer' with a capital 'I' is not a Python function."
+      }
+    },
+    {
+      "question": "Which of the following best describes implicit type conversion?",
+      "options": [
+        "Manual conversion by the programmer",
+        "Automatic conversion performed by the compiler or interpreter",
+        "Conversion using external libraries",
+        "No conversion is performed"
+      ],
+      "answer": "Automatic conversion performed by the compiler or interpreter",
+      "explanation": "Implicit type conversion happens automatically without explicit instructions from the programmer.",
+      "incorrect_explanation": {
+        "Manual conversion by the programmer": "Incorrect because this describes explicit type casting.",
+        "Conversion using external libraries": "Incorrect as implicit conversion does not require external libraries.",
+        "No conversion is performed": "Incorrect because implicit conversion involves automatic type changes."
+      }
+    },
+    {
+      "question": "What is a potential risk of implicit type conversion?",
+      "options": [
+        "Improved performance",
+        "Data loss or unexpected results",
+        "Increased code readability",
+        "Simpler code syntax"
+      ],
+      "answer": "Data loss or unexpected results",
+      "explanation": "Implicit type conversion can lead to data loss or unexpected behavior if the conversion is not handled carefully.",
+      "incorrect_explanation": {
+        "Improved performance": "Incorrect because implicit conversion does not inherently improve performance.",
+        "Increased code readability": "Incorrect as implicit conversions can sometimes make code harder to understand.",
+        "Simpler code syntax": "Incorrect because while it may reduce the need for explicit casts, it can introduce confusion."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a composite data type mentioned in the markdown?",
+      "options": [
+        "Strings",
+        "Arrays",
+        "Objects",
+        "Booleans"
+      ],
+      "answer": "Booleans",
+      "explanation": "Booleans are primitive data types, whereas strings, arrays, and objects are composite data types.",
+      "incorrect_explanation": {
+        "Strings": "Incorrect because strings are composite data types.",
+        "Arrays": "Incorrect as arrays are composite data types.",
+        "Objects": "Incorrect because objects are composite data types."
+      }
+    },
+    {
+      "question": "In the context of variables, what does 'scope' refer to?",
+      "options": [
+        "The data type of the variable",
+        "The memory location of the variable",
+        "The context in which a variable is accessible",
+        "The initial value of the variable"
+      ],
+      "answer": "The context in which a variable is accessible",
+      "explanation": "Scope defines where a variable can be accessed within the code, such as globally or within a specific function.",
+      "incorrect_explanation": {
+        "The data type of the variable": "Incorrect because scope is unrelated to data type.",
+        "The memory location of the variable": "Incorrect as scope pertains to accessibility, not memory location.",
+        "The initial value of the variable": "Incorrect because scope does not relate to the variable's value."
+      }
+    },
+    {
+      "question": "Which of the following best describes a local variable?",
+      "options": [
+        "Accessible throughout the entire program",
+        "Accessible only within a specific block or function",
+        "Cannot be modified once assigned",
+        "Used to store global settings"
+      ],
+      "answer": "Accessible only within a specific block or function",
+      "explanation": "Local variables are declared within a function or block and can only be accessed within that specific context.",
+      "incorrect_explanation": {
+        "Accessible throughout the entire program": "Incorrect because that describes global variables.",
+        "Cannot be modified once assigned": "Incorrect as local variables can be modified unless declared otherwise.",
+        "Used to store global settings": "Incorrect because local variables are not intended for global settings."
+      }
+    },
+    {
+      "question": "What is the lifetime of a static variable?",
+      "options": [
+        "Until the function ends",
+        "For the duration of a loop",
+        "For the lifetime of the program",
+        "Until it goes out of scope"
+      ],
+      "answer": "For the lifetime of the program",
+      "explanation": "Static variables retain their value and exist for the entire duration of the program.",
+      "incorrect_explanation": {
+        "Until the function ends": "Incorrect because static variables persist beyond the function scope.",
+        "For the duration of a loop": "Incorrect as loops do not define the lifetime of static variables.",
+        "Until it goes out of scope": "Incorrect because static variables do not go out of scope in the same way as local variables."
+      }
+    },
+    {
+      "question": "Which data type would you use to store the value `3.14` in Python?",
+      "options": [
+        "int",
+        "float",
+        "char",
+        "bool"
+      ],
+      "answer": "float",
+      "explanation": "The 'float' data type is used to store numbers with fractional parts in Python.",
+      "incorrect_explanation": {
+        "int": "Incorrect because 'int' only stores whole numbers.",
+        "char": "Incorrect as 'char' represents single characters.",
+        "bool": "Incorrect because 'bool' represents boolean values."
+      }
+    },
+    {
+      "question": "Which of the following is a best practice when performing type conversion?",
+      "options": [
+        "Always convert types without validation",
+        "Use built-in functions for type conversion",
+        "Avoid using type conversion altogether",
+        "Manually manipulate memory for type conversion"
+      ],
+      "answer": "Use built-in functions for type conversion",
+      "explanation": "Using built-in functions ensures safe and efficient type conversions as they are optimized and handle common cases.",
+      "incorrect_explanation": {
+        "Always convert types without validation": "Incorrect because it can lead to errors and data loss.",
+        "Avoid using type conversion altogether": "Incorrect as type conversion is often necessary.",
+        "Manually manipulate memory for type conversion": "Incorrect because manual memory manipulation is error-prone and not recommended."
+      }
+    },
+    {
+      "question": "What is the result of the following Python code?\n```python\nnum_float = 9.99\nnum_int = int(num_float)\nprint(num_int)\n```",
+      "options": [
+        "9.99",
+        "10",
+        "9",
+        "Error"
+      ],
+      "answer": "9",
+      "explanation": "Converting a float to an int in Python truncates the decimal part, resulting in 9.",
+      "incorrect_explanation": {
+        "9.99": "Incorrect because the conversion to int removes the decimal part.",
+        "10": "Incorrect as Python's int() function truncates towards zero, not rounding.",
+        "Error": "Incorrect because the conversion is valid and does not raise an error."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a valid boolean value in Python?",
+      "options": [
+        "True",
+        "False",
+        "TRUE",
+        "FALSE"
+      ],
+      "answer": "TRUE",
+      "explanation": "In Python, boolean values are case-sensitive and must be 'True' or 'False'. 'TRUE' and 'FALSE' are invalid.",
+      "incorrect_explanation": {
+        "True": "Incorrect because 'True' is a valid boolean value.",
+        "False": "Incorrect as 'False' is also a valid boolean value.",
+        "FALSE": "Incorrect because although 'FALSE' is not valid, 'FALSE' is listed as an option but the question asks for a single answer."
+      }
+    },
+    {
+      "question": "Which of the following is a correct way to declare an array in Python?",
+      "options": [
+        "int[] numbers = {1, 2, 3}",
+        "numbers = [1, 2, 3]",
+        "array numbers = (1, 2, 3)",
+        "list numbers = [1, 2, 3]"
+      ],
+      "answer": "numbers = [1, 2, 3]",
+      "explanation": "In Python, arrays are typically implemented using lists, which are declared using square brackets.",
+      "incorrect_explanation": {
+        "int[] numbers = {1, 2, 3}": "Incorrect because this is Java syntax, not Python.",
+        "array numbers = (1, 2, 3)": "Incorrect as this resembles a tuple declaration, not an array.",
+        "list numbers = [1, 2, 3]": "Incorrect because 'list' is not a keyword used for declaration; 'numbers = [1, 2, 3]' is sufficient."
+      }
+    },
+    {
+      "question": "What will be the output of the following Java code?\n```java\nclass Person {\n    String name;\n    int age;\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.name = \"Alice\";\n        p.age = 30;\n        System.out.println(p.name + \" is \" + p.age + \" years old.\");\n    }\n}\n```",
+      "options": [
+        "Alice is 30 years old.",
+        "Person is 30 years old.",
+        "Alice is years old.",
+        "Error in code."
+      ],
+      "answer": "Alice is 30 years old.",
+      "explanation": "The code creates a Person object with name 'Alice' and age 30, then prints the concatenated string.",
+      "incorrect_explanation": {
+        "Person is 30 years old.": "Incorrect because it prints the name 'Alice', not the class name.",
+        "Alice is years old.": "Incorrect as the age is correctly included in the print statement.",
+        "Error in code.": "Incorrect because the code is syntactically correct and will compile."
+      }
+    },
+    {
+      "question": "Which of the following is true about strings in Python?",
+      "options": [
+        "Strings are mutable",
+        "Strings are immutable",
+        "Strings can only contain letters",
+        "Strings are a primitive data type"
+      ],
+      "answer": "Strings are immutable",
+      "explanation": "In Python, strings cannot be changed after they are created; any modification results in a new string.",
+      "incorrect_explanation": {
+        "Strings are mutable": "Incorrect because strings in Python are immutable.",
+        "Strings can only contain letters": "Incorrect as strings can contain letters, numbers, and symbols.",
+        "Strings are a primitive data type": "Incorrect because strings are considered composite data types."
+      }
+    },
+    {
+      "question": "What does the following Python code output?\n```python\nname = \"Alice\"\nprint(name[0])\n```",
+      "options": [
+        "A",
+        "Alice",
+        "lice",
+        "Error"
+      ],
+      "answer": "A",
+      "explanation": "The code accesses the first character of the string 'Alice', which is 'A'.",
+      "incorrect_explanation": {
+        "Alice": "Incorrect because name[0] accesses only the first character.",
+        "lice": "Incorrect as it accesses all characters except the first.",
+        "Error": "Incorrect because the code is syntactically correct and will run without errors."
+      }
+    },
+    {
+      "question": "Which of the following best describes a boolean data type?",
+      "options": [
+        "Stores numeric values",
+        "Stores single characters",
+        "Represents truth values",
+        "Stores sequences of characters"
+      ],
+      "answer": "Represents truth values",
+      "explanation": "Boolean data types represent truth values, typically `True` or `False`.",
+      "incorrect_explanation": {
+        "Stores numeric values": "Incorrect because numeric values are stored using data types like int or float.",
+        "Stores single characters": "Incorrect as single characters are stored using char or similar data types.",
+        "Stores sequences of characters": "Incorrect because sequences of characters are stored using strings."
+      }
+    },
+    {
+      "question": "Which of the following is an example of implicit type conversion in Python?",
+      "options": [
+        "int('123')",
+        "float(9)",
+        "str(10)",
+        "bool(\"True\")"
+      ],
+      "answer": "float(9)",
+      "explanation": "When an integer is used in a float context, Python automatically converts it to a float.",
+      "incorrect_explanation": {
+        "int('123')": "Incorrect because this is an explicit type conversion.",
+        "str(10)": "Incorrect as this also represents explicit type conversion.",
+        "bool(\"True\")": "Incorrect because converting a string to a boolean is an explicit conversion."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\ntry:\n    num = int(\"abc\")\nexcept ValueError:\n    print(\"Invalid input\")\n```",
+      "options": [
+        "abc",
+        "0",
+        "Invalid input",
+        "Error message"
+      ],
+      "answer": "Invalid input",
+      "explanation": "Attempting to convert \"abc\" to an integer raises a ValueError, which is caught and prints \"Invalid input\".",
+      "incorrect_explanation": {
+        "abc": "Incorrect because the string itself is not printed.",
+        "0": "Incorrect as the conversion fails and does not assign any value to 'num'.",
+        "Error message": "Incorrect because the specific message \"Invalid input\" is printed instead."
+      }
+    },
+    {
+      "question": "Which data type would you use to store a user's name in Python?",
+      "options": [
+        "int",
+        "float",
+        "bool",
+        "str"
+      ],
+      "answer": "str",
+      "explanation": "The 'str' data type is used to store sequences of characters, such as a user's name.",
+      "incorrect_explanation": {
+        "int": "Incorrect because 'int' is for integer values.",
+        "float": "Incorrect as 'float' is used for decimal numbers.",
+        "bool": "Incorrect because 'bool' represents boolean values."
+      }
+    },
+    {
+      "question": "Which of the following is a best practice when naming variables?",
+      "options": [
+        "Use single-letter names",
+        "Use meaningful and descriptive names",
+        "Use reserved keywords",
+        "Use names with special characters"
+      ],
+      "answer": "Use meaningful and descriptive names",
+      "explanation": "Meaningful and descriptive names improve code readability and maintainability.",
+      "incorrect_explanation": {
+        "Use single-letter names": "Incorrect because single-letter names can be unclear and confusing.",
+        "Use reserved keywords": "Incorrect as reserved keywords cannot be used for variable names.",
+        "Use names with special characters": "Incorrect because variable names should follow language-specific rules and typically avoid special characters."
+      }
+    },
+    {
+      "question": "What type of data structure is used to store multiple values in a single variable in Python?",
+      "options": [
+        "int",
+        "float",
+        "list",
+        "bool"
+      ],
+      "answer": "list",
+      "explanation": "Lists are used in Python to store multiple values in a single variable.",
+      "incorrect_explanation": {
+        "int": "Incorrect because 'int' stores single integer values.",
+        "float": "Incorrect as 'float' stores single decimal numbers.",
+        "bool": "Incorrect because 'bool' stores single boolean values."
+      }
+    },
+    {
+      "question": "Which of the following statements about type conversion is true?",
+      "options": [
+        "It always preserves the original value",
+        "It can prevent errors in the program",
+        "It is unnecessary in most cases",
+        "It can only be done explicitly"
+      ],
+      "answer": "It can prevent errors in the program",
+      "explanation": "Proper type conversion ensures that data types are compatible, preventing runtime errors and ensuring data integrity.",
+      "incorrect_explanation": {
+        "It always preserves the original value": "Incorrect because some conversions can lead to data loss.",
+        "It is unnecessary in most cases": "Incorrect as type conversion is often necessary when dealing with different data types.",
+        "It can only be done explicitly": "Incorrect because implicit type conversion also exists."
+      }
+    },
+    {
+      "question": "In Python, what is the data type of the variable 'numbers' after the following declaration?\n```python\nnumbers = [1, 2, 3, 4, 5]\n```",
+      "options": [
+        "int",
+        "list",
+        "tuple",
+        "dict"
+      ],
+      "answer": "list",
+      "explanation": "The variable 'numbers' is assigned a list containing integers.",
+      "incorrect_explanation": {
+        "int": "Incorrect because 'numbers' holds a collection of integers, not a single integer.",
+        "tuple": "Incorrect as the declaration uses square brackets, which denote a list.",
+        "dict": "Incorrect because 'dict' represents a dictionary, not a list."
+      }
+    },
+    {
+      "question": "Which of the following is true about objects in programming?",
+      "options": [
+        "They can only contain primitive data types",
+        "They can contain multiple properties and methods",
+        "They are immutable",
+        "They are the same as variables"
+      ],
+      "answer": "They can contain multiple properties and methods",
+      "explanation": "Objects are complex data types that can encapsulate multiple properties (attributes) and methods (functions).",
+      "incorrect_explanation": {
+        "They can only contain primitive data types": "Incorrect because objects can contain both primitive and composite data types.",
+        "They are immutable": "Incorrect as objects can often be mutable depending on the programming language.",
+        "They are the same as variables": "Incorrect because objects are data structures, whereas variables are storage containers."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\nheight_str = \"175.5\"\nheight_float = float(height_str)\nheight_int = int(height_float)\nprint(height_int)\n```",
+      "options": [
+        "175.5",
+        "175",
+        "176",
+        "Error"
+      ],
+      "answer": "175",
+      "explanation": "Converting the float 175.5 to an integer truncates the decimal part, resulting in 175.",
+      "incorrect_explanation": {
+        "175.5": "Incorrect because converting to int removes the decimal part.",
+        "176": "Incorrect as Python's int() function truncates, not rounds.",
+        "Error": "Incorrect because the conversions are valid and the code runs without errors."
+      }
+    },
+    {
+      "question": "Which of the following is an example of an implicit conversion in Python?",
+      "options": [
+        "int('100')",
+        "str(100)",
+        "float(100)",
+        "bool(100)"
+      ],
+      "answer": "float(100)",
+      "explanation": "When an integer is used in a float context, Python automatically converts it to a float without explicit instructions.",
+      "incorrect_explanation": {
+        "int('100')": "Incorrect because this is an explicit conversion from string to int.",
+        "str(100)": "Incorrect as this is an explicit conversion from int to string.",
+        "bool(100)": "Incorrect because converting to bool is an explicit conversion."
+      }
+    },
+    {
+      "question": "What is the main difference between type conversion and casting?",
+      "options": [
+        "Type conversion changes the value, casting does not",
+        "Casting is a type of type conversion",
+        "Type conversion is manual, casting is automatic",
+        "There is no difference"
+      ],
+      "answer": "Casting is a type of type conversion",
+      "explanation": "Casting refers specifically to manually converting one data type to another, which is a subset of type conversion.",
+      "incorrect_explanation": {
+        "Type conversion changes the value, casting does not": "Incorrect because both can change the value.",
+        "Type conversion is manual, casting is automatic": "Incorrect because casting is typically manual.",
+        "There is no difference": "Incorrect because casting is a specific form of type conversion."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a step in understanding a problem statement using DSA?",
+      "options": [
+        "Identify Inputs and Outputs",
+        "Determine Constraints and Limitations",
+        "Design the User Interface",
+        "Identify Edge Cases"
+      ],
+      "answer": "Design the User Interface",
+      "explanation": "Designing the user interface is part of the implementation phase, not understanding the problem statement.",
+      "incorrect_explanation": {
+        "Identify Inputs and Outputs": "Incorrect because it is a crucial step in understanding the problem.",
+        "Determine Constraints and Limitations": "Incorrect as it helps in selecting appropriate algorithms.",
+        "Identify Edge Cases": "Incorrect because considering edge cases ensures robustness."
+      }
+    }
+  ]
+}

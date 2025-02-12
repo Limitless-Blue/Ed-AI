@@ -1,0 +1,165 @@
+{
+    "questions": [
+      {
+        "question": "What is the average-case time complexity of Quick Sort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "Quick Sort has an average-case time complexity of O(n log n), making it efficient for large datasets.",
+        "incorrect_explanation": {
+          "O(n)": "This is incorrect. O(n) would be too fast for a sorting algorithm that divides the array.",
+          "O(log n)": "This is incorrect. O(log n) applies to logarithmic operations, but sorting involves more steps.",
+          "O(n²)": "This is incorrect. O(n²) is the worst-case time complexity, not the average case."
+        }
+      },
+      {
+        "question": "Which partitioning scheme always selects the last element as the pivot?",
+        "options": [
+          "Hoare Partition Scheme",
+          "Lomuto Partition Scheme",
+          "Median-of-Three Partition",
+          "Randomized Partition"
+        ],
+        "answer": "Lomuto Partition Scheme",
+        "explanation": "The Lomuto Partition Scheme always selects the last element as the pivot.",
+        "incorrect_explanation": {
+          "Hoare Partition Scheme": "This is incorrect. Hoare's scheme uses two indices moving toward each other.",
+          "Median-of-Three Partition": "This is incorrect. Median-of-Three chooses the median of three elements.",
+          "Randomized Partition": "This is incorrect. Randomized partition selects a random pivot."
+        }
+      },
+      {
+        "question": "In the Hoare partitioning process, when do the two pointers stop moving?",
+        "options": [
+          "When they reach the end of the array",
+          "When they detect an inversion",
+          "When they are equal",
+          "When they cross each other"
+        ],
+        "answer": "When they detect an inversion",
+        "explanation": "In Hoare partitioning, the pointers stop when they detect an inversion, where an element on the left is greater than an element on the right.",
+        "incorrect_explanation": {
+          "When they reach the end of the array": "This is incorrect. The process doesn't require reaching the end of the array.",
+          "When they are equal": "This is incorrect. They stop before crossing, not when they are equal.",
+          "When they cross each other": "This is incorrect. They continue until they detect an inversion."
+        }
+      },
+      {
+        "question": "What is the best-case time complexity of Quick Sort?",
+        "options": [
+          "O(n log n)",
+          "O(n²)",
+          "O(n)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "The best-case time complexity of Quick Sort occurs when the pivot splits the array into two equal halves, leading to O(n log n).",
+        "incorrect_explanation": {
+          "O(n²)": "This is incorrect. O(n²) represents the worst-case time complexity.",
+          "O(n)": "This is incorrect. Sorting requires more operations than O(n).",
+          "O(log n)": "This is incorrect. Sorting of n elements requires more than O(log n) time."
+        }
+      },
+      {
+        "question": "What is the key process that makes Quick Sort work efficiently?",
+        "options": [
+          "Merging",
+          "Insertion",
+          "Partitioning",
+          "Heapifying"
+        ],
+        "answer": "Partitioning",
+        "explanation": "The partitioning process ensures that elements less than the pivot are on one side and elements greater than the pivot are on the other, allowing Quick Sort to work efficiently.",
+        "incorrect_explanation": {
+          "Merging": "This is incorrect. Merging is part of merge sort, not Quick Sort.",
+          "Insertion": "This is incorrect. Insertion is a step in insertion sort, not Quick Sort.",
+          "Heapifying": "This is incorrect. Heapifying is used in heap sort, not Quick Sort."
+        }
+      },
+      {
+        "question": "In Quick Sort, what happens to the pivot after partitioning?",
+        "options": [
+          "It is swapped with the first element",
+          "It is placed in its correct sorted position",
+          "It is removed from the array",
+          "It remains unchanged"
+        ],
+        "answer": "It is placed in its correct sorted position",
+        "explanation": "After partitioning, the pivot is moved to its correct sorted position in the array.",
+        "incorrect_explanation": {
+          "It is swapped with the first element": "This is incorrect. The pivot is placed at its sorted position, not necessarily at the start.",
+          "It is removed from the array": "This is incorrect. The pivot is not removed from the array.",
+          "It remains unchanged": "This is incorrect. The pivot may change its position during partitioning."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a characteristic of Quick Sort?",
+        "options": [
+          "In-place sorting",
+          "Unstable sorting",
+          "Worst-case time complexity is O(n²)",
+          "Stable sorting"
+        ],
+        "answer": "Stable sorting",
+        "explanation": "Quick Sort is an unstable sorting algorithm, meaning it doesn't preserve the relative order of equal elements.",
+        "incorrect_explanation": {
+          "In-place sorting": "This is correct. Quick Sort is an in-place algorithm.",
+          "Unstable sorting": "This is correct. Quick Sort is an unstable sorting algorithm.",
+          "Worst-case time complexity is O(n²)": "This is correct. The worst-case time complexity of Quick Sort is O(n²)."
+        }
+      },
+      {
+        "question": "What is the space complexity of Quick Sort due to recursion?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Quick Sort's space complexity is O(log n) due to the recursive nature of the algorithm.",
+        "incorrect_explanation": {
+          "O(n)": "This is incorrect. The space complexity is lower than O(n) for Quick Sort.",
+          "O(1)": "This is incorrect. Recursive calls require more than constant space.",
+          "O(n log n)": "This is incorrect. The space complexity is not O(n log n)."
+        }
+      },
+      {
+        "question": "Which technique can be used to avoid the worst-case time complexity in Quick Sort?",
+        "options": [
+          "Always select the last element as pivot",
+          "Use the median-of-three rule",
+          "Sort the array before partitioning",
+          "Use bubble sort"
+        ],
+        "answer": "Use the median-of-three rule",
+        "explanation": "Using the median-of-three rule to select the pivot reduces the chance of encountering the worst-case time complexity by providing a better-balanced partition.",
+        "incorrect_explanation": {
+          "Always select the last element as pivot": "This is incorrect. This often leads to the worst case.",
+          "Sort the array before partitioning": "This is incorrect. Sorting before partitioning defeats the purpose of the algorithm.",
+          "Use bubble sort": "This is incorrect. Bubble sort is a different, less efficient algorithm."
+        }
+      },
+      {
+        "question": "What happens in the worst-case scenario for Quick Sort?",
+        "options": [
+          "The pivot splits the array into two equal halves",
+          "The recursion depth is minimal",
+          "The pivot is always the smallest or largest element",
+          "The pivot is chosen randomly"
+        ],
+        "answer": "The pivot is always the smallest or largest element",
+        "explanation": "In the worst-case scenario, the pivot is always the smallest or largest element, leading to highly unbalanced partitions and a time complexity of O(n²).",
+        "incorrect_explanation": {
+          "The pivot splits the array into two equal halves": "This describes the best-case scenario, not the worst case.",
+          "The recursion depth is minimal": "This is incorrect. The recursion depth is maximal in the worst case.",
+          "The pivot is chosen randomly": "This reduces the likelihood of the worst case, not causes it."
+        }
+      }
+    ]
+  }
+  

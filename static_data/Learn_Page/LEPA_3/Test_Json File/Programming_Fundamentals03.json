@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "question": "Which Python function is used to read user input from the console?",
+      "options": [
+        "read()",
+        "input()",
+        "get()",
+        "fetch()"
+      ],
+      "answer": "input()",
+      "explanation": "The `input()` function is used in Python to read user input from the console.",
+      "incorrect_explanation": {
+        "read()": "`read()` is not a built-in function for reading user input in Python.",
+        "get()": "`get()` is typically used with dictionaries, not for reading user input.",
+        "fetch()": "`fetch()` is not a built-in function for reading user input in Python."
+      }
+    },
+    {
+      "question": "In Java, which class is commonly used to read user input from the console?",
+      "options": [
+        "InputReader",
+        "Scanner",
+        "BufferedReader",
+        "ConsoleReader"
+      ],
+      "answer": "Scanner",
+      "explanation": "The `Scanner` class is commonly used in Java to read user input from the console.",
+      "incorrect_explanation": {
+        "InputReader": "There is no standard `InputReader` class for console input in Java.",
+        "BufferedReader": "`BufferedReader` can be used for input but is more complex compared to `Scanner`.",
+        "ConsoleReader": "`ConsoleReader` is not a standard class in Java for reading console input."
+      }
+    },
+    {
+      "question": "What will the following Python code output?\n```python\nname = input(\"Enter your name: \")\nprint(f\"Hello, {name}!\")\n```",
+      "options": [
+        "Hello, {name}!",
+        "Hello, !",
+        "It will prompt the user to enter their name and then greet them.",
+        "Error"
+      ],
+      "answer": "It will prompt the user to enter their name and then greet them.",
+      "explanation": "The code prompts the user to enter their name and then prints a greeting with the entered name.",
+      "incorrect_explanation": {
+        "Hello, {name}!": "The `{name}` will be replaced by the user's input, not printed literally.",
+        "Hello, !": "If a name is entered, it will be included in the greeting.",
+        "Error": "The code is syntactically correct and will execute without errors."
+      }
+    },
+    {
+      "question": "Which method is used in Java to print output to the console with a newline at the end?",
+      "options": [
+        "System.out.print",
+        "System.out.println",
+        "System.out.write",
+        "System.out.display"
+      ],
+      "answer": "System.out.println",
+      "explanation": "`System.out.println` prints the output to the console followed by a newline.",
+      "incorrect_explanation": {
+        "System.out.print": "`System.out.print` does not add a newline at the end.",
+        "System.out.write": "`System.out.write` is used for writing bytes, not typically for console output.",
+        "System.out.display": "`System.out.display` is not a standard method in Java."
+      }
+    },
+    {
+      "question": "What is the output of the following Python code?\n```python\nmessage = \"Welcome to the program!\"\nprint(message)\n```",
+      "options": [
+        "Welcome to the program!",
+        "\"Welcome to the program!\"",
+        "message",
+        "Error"
+      ],
+      "answer": "Welcome to the program!",
+      "explanation": "The `print` function outputs the value of the `message` variable without quotes.",
+      "incorrect_explanation": {
+        "\"Welcome to the program!\"": "Quotes are not printed when using `print`.",
+        "message": "The `print` function outputs the value, not the variable name.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    },
+    {
+      "question": "In Java, what is the purpose of the `scanner.close()` statement?",
+      "options": [
+        "It closes the scanner and releases any associated resources.",
+        "It clears the scanner's input buffer.",
+        "It pauses the scanner from reading further input.",
+        "It resets the scanner to its initial state."
+      ],
+      "answer": "It closes the scanner and releases any associated resources.",
+      "explanation": "Calling `scanner.close()` closes the `Scanner` instance and releases any resources associated with it.",
+      "incorrect_explanation": {
+        "It clears the scanner's input buffer.": "`scanner.close()` does not clear the buffer; it closes the scanner.",
+        "It pauses the scanner from reading further input.": "`scanner.close()` terminates the scanner, not just pauses it.",
+        "It resets the scanner to its initial state.": "`scanner.close()` does not reset the scanner."
+      }
+    },
+    {
+      "question": "Which Python feature allows you to embed expressions inside string literals for formatting?",
+      "options": [
+        "Concatenation",
+        "f-strings",
+        "The `format()` method",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Python allows embedding expressions inside string literals using f-strings, the `format()` method, and concatenation, though f-strings are the most concise.",
+      "incorrect_explanation": {
+        "f-strings": "While f-strings allow embedding expressions, other methods like `format()` and concatenation also allow formatting.",
+        "The `format()` method": "The `format()` method also allows embedding expressions within strings.",
+        "Concatenation": "Concatenation can combine strings and variables but is less flexible for embedding expressions."
+      }
+    },
+    {
+      "question": "What will the following Java code output?\n```java\npublic class Example {\n    public static void main(String[] args) {\n        String name = \"Alice\";\n        int age = 30;\n        System.out.printf(\"%s is %d years old.%n\", name, age);\n    }\n}\n```",
+      "options": [
+        "Alice is 30 years old.",
+        "Alice is 30 years old.%n",
+        "Alice is 30 years old.\n",
+        "Error"
+      ],
+      "answer": "Alice is 30 years old.",
+      "explanation": "`System.out.printf` formats the string with the provided variables and `%n` adds a newline.",
+      "incorrect_explanation": {
+        "Alice is 30 years old.%n": "`%n` is a format specifier for a newline and is not printed literally.",
+        "Alice is 30 years old.\n": "`%n` produces a newline, but it's displayed as a newline character, not `\n`.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    },
+    {
+      "question": "Which of the following is a best practice when prompting users for input?",
+      "options": [
+        "Using vague prompts to allow flexibility",
+        "Prompting clearly to indicate what input is expected",
+        "Avoiding prompts and expecting the user to know what to input",
+        "Using multiple prompts for the same input"
+      ],
+      "answer": "Prompting clearly to indicate what input is expected",
+      "explanation": "Clear prompts help users understand what input is required, enhancing user experience.",
+      "incorrect_explanation": {
+        "Using vague prompts to allow flexibility": "Vague prompts can confuse users about what is expected.",
+        "Avoiding prompts and expecting the user to know what to input": "This can lead to incorrect or unexpected inputs.",
+        "Using multiple prompts for the same input": "Redundant prompts can frustrate users and complicate the input process."
+      }
+    },
+    {
+      "question": "What is the purpose of formatting output in programming?",
+      "options": [
+        "To increase the execution speed of the program",
+        "To enhance readability and presentation of information",
+        "To secure the program against attacks",
+        "To minimize memory usage"
+      ],
+      "answer": "To enhance readability and presentation of information",
+      "explanation": "Formatting output makes the information more accessible and visually appealing to users.",
+      "incorrect_explanation": {
+        "To increase the execution speed of the program": "Formatting output does not significantly impact execution speed.",
+        "To secure the program against attacks": "Security involves different measures unrelated to output formatting.",
+        "To minimize memory usage": "Formatting output does not typically reduce memory usage."
+      }
+    },
+    {
+      "question": "Which Python feature allows you to format strings using placeholders and the `format()` method?",
+      "options": [
+        "f-strings",
+        "Formatted string literals",
+        "String concatenation",
+        "Both f-strings and the `format()` method"
+      ],
+      "answer": "Both f-strings and the `format()` method",
+      "explanation": "Python allows string formatting using both f-strings and the `format()` method, enabling the use of placeholders.",
+      "incorrect_explanation": {
+        "f-strings": "While f-strings allow formatting, the `format()` method is also a valid option.",
+        "Formatted string literals": "This refers to f-strings, but the `format()` method is another method.",
+        "String concatenation": "String concatenation combines strings but is not the same as using placeholders for formatting."
+      }
+    },
+    {
+      "question": "In Java, what does the `%s` and `%d` in `System.out.printf` represent?",
+      "options": [
+        "`%s` is for strings and `%d` is for decimals",
+        "`%s` is for strings and `%d` is for integers",
+        "`%s` is for scalars and `%d` is for doubles",
+        "`%s` is for static text and `%d` is for dynamic data"
+      ],
+      "answer": "`%s` is for strings and `%d` is for integers",
+      "explanation": "In `System.out.printf`, `%s` is a placeholder for strings and `%d` is for integers.",
+      "incorrect_explanation": {
+        "`%s` is for strings and `%d` is for decimals": "`%d` is specifically for integers, not decimals.",
+        "`%s` is for scalars and `%d` is for doubles": "`%s` is for strings, and `%d` is for integers, not doubles.",
+        "`%s` is for static text and `%d` is for dynamic data": "`%s` is for string variables, which are dynamic."
+      }
+    },
+    {
+      "question": "What will the following Python code output?\n```python\nname = \"Alice\"\nage = 30\nprint(f\"{name} is {age} years old.\")\n```",
+      "options": [
+        "{name} is {age} years old.",
+        "Alice is 30 years old.",
+        "Alice is {age} years old.",
+        "Error"
+      ],
+      "answer": "Alice is 30 years old.",
+      "explanation": "f-strings in Python replace the placeholders with the corresponding variable values.",
+      "incorrect_explanation": {
+        "{name} is {age} years old.": "The placeholders are replaced by the variable values in f-strings.",
+        "Alice is {age} years old.": "Both `{name}` and `{age}` are replaced by their respective values.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    },
+    {
+      "question": "Which Java method is used for formatted output similar to `printf` in C?",
+      "options": [
+        "System.out.printFormatted",
+        "System.out.printf",
+        "System.out.formatPrint",
+        "System.out.printfFormatted"
+      ],
+      "answer": "System.out.printf",
+      "explanation": "`System.out.printf` is used in Java for formatted output, similar to `printf` in C.",
+      "incorrect_explanation": {
+        "System.out.printFormatted": "This is not a valid method in Java.",
+        "System.out.formatPrint": "This is not a valid method in Java.",
+        "System.out.printfFormatted": "This is not a valid method in Java."
+      }
+    },
+    {
+      "question": "Why is it important to handle exceptions or errors that may arise from invalid input?",
+      "options": [
+        "To ensure the program runs faster",
+        "To prevent the program from crashing",
+        "To make the code shorter",
+        "To avoid using loops"
+      ],
+      "answer": "To prevent the program from crashing",
+      "explanation": "Handling exceptions ensures that the program can manage unexpected or invalid input gracefully without crashing.",
+      "incorrect_explanation": {
+        "To ensure the program runs faster": "Exception handling does not directly impact execution speed.",
+        "To make the code shorter": "Handling exceptions can sometimes make the code longer.",
+        "To avoid using loops": "Exception handling is unrelated to the use of loops."
+      }
+    },
+    {
+      "question": "What is the output of the following Java code?\n```java\npublic class Example {\n    public static void main(String[] args) {\n        String name = \"Bob\";\n        int age = 25;\n        System.out.printf(\"%s is %d years old.%n\", name, age);\n    }\n}\n```",
+      "options": [
+        "Bob is 25 years old.",
+        "Bob is 25 years old.%n",
+        "Bob is 25 years old.\n",
+        "Error"
+      ],
+      "answer": "Bob is 25 years old.",
+      "explanation": "`System.out.printf` formats the string with the provided variables and `%n` adds a newline.",
+      "incorrect_explanation": {
+        "Bob is 25 years old.%n": "`%n` is a format specifier for a newline and is not printed literally.",
+        "Bob is 25 years old.\n": "`%n` produces a newline, but it's displayed as a newline character, not `\n`.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a recommended best practice for handling input and output?",
+      "options": [
+        "Using clear and descriptive prompts for user input",
+        "Validating user input to meet required criteria",
+        "Ignoring potential exceptions during I/O operations",
+        "Consistently formatting output messages"
+      ],
+      "answer": "Ignoring potential exceptions during I/O operations",
+      "explanation": "Ignoring exceptions can lead to unexpected program crashes and unstable behavior. It's important to handle them properly.",
+      "incorrect_explanation": {
+        "Using clear and descriptive prompts for user input": "This is a recommended best practice.",
+        "Validating user input to meet required criteria": "This helps ensure the program receives correct and expected data.",
+        "Consistently formatting output messages": "Consistent formatting improves readability and user experience."
+      }
+    },
+    {
+      "question": "In Python, how can you use the `format()` method to insert variables into a string?",
+      "options": [
+        "`print(\"{} is {} years old.\".format(name, age))`",
+        "`print(f\"{name} is {age} years old.\")`",
+        "`print(\"{name} is {age} years old.\")`",
+        "`print(\"%s is %d years old.\", name, age)`"
+      ],
+      "answer": "`print(\"{} is {} years old.\".format(name, age))`",
+      "explanation": "The `format()` method replaces `{}` placeholders with the provided arguments in the order they are given.",
+      "incorrect_explanation": {
+        "`print(f\"{name} is {age} years old.\")`": "This uses f-strings, not the `format()` method.",
+        "`print(\"{name} is {age} years old.\")`": "This does not use the `format()` method to replace placeholders.",
+        "`print(\"%s is %d years old.\", name, age)`": "This resembles printf-style formatting but is not using the `format()` method."
+      }
+    },
+    {
+      "question": "What is the purpose of using placeholders and format specifiers in output statements?",
+      "options": [
+        "To perform mathematical operations",
+        "To insert variables into strings in a formatted manner",
+        "To secure the program against injections",
+        "To create loops"
+      ],
+      "answer": "To insert variables into strings in a formatted manner",
+      "explanation": "Placeholders and format specifiers allow you to embed variable values into strings in a structured and readable way.",
+      "incorrect_explanation": {
+        "To perform mathematical operations": "Placeholders are for formatting, not for performing calculations.",
+        "To secure the program against injections": "Placeholders can help prevent certain types of injections but their primary purpose is formatting.",
+        "To create loops": "Placeholders are unrelated to loop creation."
+      }
+    },
+    {
+      "question": "Which of the following is true about using `System.out.println` and `System.out.printf` in Java?",
+      "options": [
+        "`System.out.println` can format strings while `System.out.printf` cannot.",
+        "`System.out.printf` can format strings while `System.out.println` cannot.",
+        "Both can format strings equally.",
+        "Neither can format strings."
+      ],
+      "answer": "`System.out.printf` can format strings while `System.out.println` cannot.",
+      "explanation": "`System.out.printf` is specifically used for formatted output, whereas `System.out.println` simply prints the string with a newline.",
+      "incorrect_explanation": {
+        "`System.out.println` can format strings while `System.out.printf` cannot.": "`System.out.println` does not support formatting like `printf` does.",
+        "Both can format strings equally.": "`System.out.println` does not support format specifiers.",
+        "Neither can format strings.": "`System.out.printf` can format strings."
+      }
+    },
+    {
+      "question": "What does the `%n` specifier do in Java's `System.out.printf` method?",
+      "options": [
+        "Inserts a newline character",
+        "Formats a number",
+        "Formats a string",
+        "Inserts a tab character"
+      ],
+      "answer": "Inserts a newline character",
+      "explanation": "`%n` is a platform-independent newline character in Java's `printf` method.",
+      "incorrect_explanation": {
+        "Formats a number": "`%n` is not used for formatting numbers.",
+        "Formats a string": "`%n` is not used for formatting strings.",
+        "Inserts a tab character": "`%n` inserts a newline, not a tab."
+      }
+    },
+    {
+      "question": "Which of the following is a security consideration when handling user input?",
+      "options": [
+        "Validating and sanitizing input to prevent injection attacks",
+        "Ignoring user input to reduce complexity",
+        "Using global variables to store user input",
+        "Formatting output without validating input"
+      ],
+      "answer": "Validating and sanitizing input to prevent injection attacks",
+      "explanation": "Validating and sanitizing input helps prevent security vulnerabilities such as injection attacks.",
+      "incorrect_explanation": {
+        "Ignoring user input to reduce complexity": "Ignoring input can lead to security vulnerabilities and poor user experience.",
+        "Using global variables to store user input": "Using global variables can lead to unintended side effects and security issues.",
+        "Formatting output without validating input": "Even if formatting output, not validating input can still leave security gaps."
+      }
+    },
+    {
+      "question": "What is the advantage of using `System.out.printf` over `System.out.println` in Java?",
+      "options": [
+        "It automatically handles all types of data",
+        "It allows for formatted output with placeholders and specifiers",
+        "It is faster in execution",
+        "It does not require a newline at the end"
+      ],
+      "answer": "It allows for formatted output with placeholders and specifiers",
+      "explanation": "`System.out.printf` allows developers to format output using placeholders and specifiers, providing more control over the output format.",
+      "incorrect_explanation": {
+        "It automatically handles all types of data": "`System.out.println` also handles multiple data types.",
+        "It is faster in execution": "There is no significant difference in speed for typical use cases.",
+        "It does not require a newline at the end": "`System.out.println` adds a newline automatically, whereas `printf` does not unless specified."
+      }
+    },
+    {
+      "question": "In Python, what will the following code output if the user inputs 'Bob' when prompted?\n```python\nname = input(\"Enter your name: \")\nprint(f\"Hello, {name}!\")\n```",
+      "options": [
+        "Hello, {name}!",
+        "Hello, Bob!",
+        "Enter your name: Hello, !",
+        "Error"
+      ],
+      "answer": "Hello, Bob!",
+      "explanation": "The `input()` function captures 'Bob', and the f-string inserts it into the greeting.",
+      "incorrect_explanation": {
+        "Hello, {name}!": "The placeholder `{name}` is replaced by the user's input.",
+        "Enter your name: Hello, !": "The input prompt and the print statement are separate.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    },
+    {
+      "question": "Which of the following best describes the `print()` function in Python?",
+      "options": [
+        "It reads input from the user",
+        "It writes output to the console",
+        "It formats strings without printing",
+        "It stores data in a variable"
+      ],
+      "answer": "It writes output to the console",
+      "explanation": "The `print()` function is used in Python to display output to the console.",
+      "incorrect_explanation": {
+        "It reads input from the user": "`print()` is for output, not input.",
+        "It formats strings without printing": "`print()` outputs the formatted string.",
+        "It stores data in a variable": "`print()` does not store data; it displays it."
+      }
+    },
+    {
+      "question": "What will be the result of the following Java code?\n```java\npublic class Example {\n    public static void main(String[] args) {\n        String name = \"Charlie\";\n        int age = 28;\n        System.out.printf(\"%s is %d years old.%n\", name, age);\n    }\n}\n```",
+      "options": [
+        "Charlie is 28 years old.",
+        "Charlie is 28 years old.%n",
+        "Charlie is 28 years old.\n",
+        "Error"
+      ],
+      "answer": "Charlie is 28 years old.",
+      "explanation": "`System.out.printf` formats the string with the provided variables and `%n` adds a newline.",
+      "incorrect_explanation": {
+        "Charlie is 28 years old.%n": "`%n` is a format specifier for a newline and is not printed literally.",
+        "Charlie is 28 years old.\n": "`%n` produces a newline, but it's displayed as a newline character, not `\n`.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    },
+    {
+      "question": "Why should you use appropriate methods for writing to different output streams (console, files, etc.)?",
+      "options": [
+        "To ensure data is written correctly to the intended destination",
+        "To make the code run faster",
+        "To reduce the size of the program",
+        "To prevent the use of global variables"
+      ],
+      "answer": "To ensure data is written correctly to the intended destination",
+      "explanation": "Using the correct methods ensures that data is accurately and appropriately written to the desired output stream.",
+      "incorrect_explanation": {
+        "To make the code run faster": "While some methods might be faster, the primary reason is correctness.",
+        "To reduce the size of the program": "Using appropriate methods does not necessarily reduce program size.",
+        "To prevent the use of global variables": "Output methods are unrelated to variable scope."
+      }
+    },
+    {
+      "question": "What is the purpose of using default parameters in Python functions?",
+      "options": [
+        "To make parameters optional by providing default values",
+        "To ensure all parameters must be provided by the caller",
+        "To define global variables",
+        "To enhance security"
+      ],
+      "answer": "To make parameters optional by providing default values",
+      "explanation": "Default parameters allow functions to be called with fewer arguments by providing default values for some parameters.",
+      "incorrect_explanation": {
+        "To ensure all parameters must be provided by the caller": "Default parameters make some parameters optional.",
+        "To define global variables": "Default parameters are used within function definitions, not for global variables.",
+        "To enhance security": "Default parameters are primarily for flexibility in function calls, not security."
+      }
+    },
+    {
+      "question": "In Python, what will the following code output if the user inputs 'Eve'?\n```python\nname = input(\"Enter your name: \")\ndef greet(name=\"Guest\"):\n    print(f\"Hello, {name}!\")\ngreet()\ngreet(name)\n```",
+      "options": [
+        "Hello, Guest!\nHello, Eve!",
+        "Hello, Eve!\nHello, Eve!",
+        "Hello, Guest!\nHello, Guest!",
+        "Hello, Eve!\nHello, Guest!"
+      ],
+      "answer": "Hello, Guest!\nHello, Eve!",
+      "explanation": "The first call to `greet()` uses the default parameter 'Guest'. The second call `greet(name)` uses the user input 'Eve'.",
+      "incorrect_explanation": {
+        "Hello, Eve!\nHello, Eve!": "The first call uses the default parameter, not the user input.",
+        "Hello, Guest!\nHello, Guest!": "The second call uses the user input 'Eve'.",
+        "Hello, Eve!\nHello, Guest!": "The order is reversed; the first call uses the default value."
+      }
+    },
+    {
+      "question": "Which of the following is a method to ensure that output is clear and formatted for easy understanding?",
+      "options": [
+        "Using ambiguous variable names",
+        "Using placeholders and format specifiers",
+        "Printing raw data without formatting",
+        "Using multiple print statements for a single message"
+      ],
+      "answer": "Using placeholders and format specifiers",
+      "explanation": "Placeholders and format specifiers allow for structured and readable output, enhancing clarity.",
+      "incorrect_explanation": {
+        "Using ambiguous variable names": "Ambiguous names can reduce readability.",
+        "Printing raw data without formatting": "Unformatted output can be hard to read and understand.",
+        "Using multiple print statements for a single message": "This can make the output disjointed and less clear."
+      }
+    },
+    {
+      "question": "What is the main benefit of using the `Scanner` class in Java for input operations?",
+      "options": [
+        "It automatically formats the input",
+        "It provides methods to parse different data types",
+        "It handles all exceptions internally",
+        "It is faster than other input methods"
+      ],
+      "answer": "It provides methods to parse different data types",
+      "explanation": "The `Scanner` class offers convenient methods to parse various data types from the input.",
+      "incorrect_explanation": {
+        "It automatically formats the input": "Formatting is not a primary feature of `Scanner`.",
+        "It handles all exceptions internally": "Exceptions still need to be managed appropriately.",
+        "It is faster than other input methods": "Performance is not the main advantage of `Scanner`."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a formatting method available in Python?",
+      "options": [
+        "f-strings",
+        "`format()` method",
+        "Template strings",
+        "printf() method"
+      ],
+      "answer": "printf() method",
+      "explanation": "Python does not have a `printf()` method; it uses f-strings, the `format()` method, and Template strings for formatting.",
+      "incorrect_explanation": {
+        "f-strings": "Python supports f-strings for formatting.",
+        "`format()` method": "Python supports the `format()` method for formatting strings.",
+        "Template strings": "Python supports Template strings via the `string` module."
+      }
+    },
+    {
+      "question": "What is the role of the `print()` function in Python?",
+      "options": [
+        "To read input from the user",
+        "To display output to the console",
+        "To format strings",
+        "To store data in variables"
+      ],
+      "answer": "To display output to the console",
+      "explanation": "The `print()` function in Python is used to display output to the console.",
+      "incorrect_explanation": {
+        "To read input from the user": "`print()` is for output, not input.",
+        "To format strings": "While `print()` can display formatted strings, its primary role is to output data.",
+        "To store data in variables": "`print()` does not store data; it displays it."
+      }
+    },
+    {
+      "question": "In Java, what does the `Scanner.nextLine()` method do?",
+      "options": [
+        "Reads the next integer from the input",
+        "Reads the next word from the input",
+        "Reads the entire next line of input as a string",
+        "Skips the next line of input"
+      ],
+      "answer": "Reads the entire next line of input as a string",
+      "explanation": "`Scanner.nextLine()` reads the entire next line of input from the user as a string.",
+      "incorrect_explanation": {
+        "Reads the next integer from the input": "Use `Scanner.nextInt()` for integers.",
+        "Reads the next word from the input": "Use `Scanner.next()` for the next word.",
+        "Skips the next line of input": "`Scanner.nextLine()` reads and returns the next line."
+      }
+    },
+    {
+      "question": "Which of the following is a security consideration when handling user input?",
+      "options": [
+        "Ignoring unexpected input",
+        "Validating and sanitizing input",
+        "Using global variables for input data",
+        "Only accepting numeric input"
+      ],
+      "answer": "Validating and sanitizing input",
+      "explanation": "Validating and sanitizing input helps prevent security vulnerabilities such as injection attacks.",
+      "incorrect_explanation": {
+        "Ignoring unexpected input": "Ignoring input can lead to vulnerabilities and incorrect program behavior.",
+        "Using global variables for input data": "Global variables can lead to unintended side effects and security issues.",
+        "Only accepting numeric input": "While limiting input types can help, it may not be sufficient for all security concerns."
+      }
+    },
+    {
+      "question": "What is the purpose of the newline character (`%n` in Java and `\\n` in Python) in formatted output?",
+      "options": [
+        "To insert a tab space",
+        "To start a new line",
+        "To add a space between words",
+        "To terminate the string"
+      ],
+      "answer": "To start a new line",
+      "explanation": "The newline character inserts a line break, starting the output on a new line.",
+      "incorrect_explanation": {
+        "To insert a tab space": "A tab space is inserted using `\t` in Python or Java.",
+        "To add a space between words": "A space between words is simply a space character, not a newline.",
+        "To terminate the string": "Strings are terminated with quotes, not with a newline character."
+      }
+    },
+    {
+      "question": "Which Python method allows you to print variables without using f-strings?",
+      "options": [
+        "`print_variables()`",
+        "`format()`",
+        "`display()`",
+        "`printf()`"
+      ],
+      "answer": "`format()`",
+      "explanation": "The `format()` method allows you to insert variables into strings without using f-strings.",
+      "incorrect_explanation": {
+        "`print_variables()`": "There is no built-in `print_variables()` method in Python.",
+        "`display()`": "`display()` is not a standard method for printing in Python.",
+        "`printf()`": "`printf()` is not a standard Python method for printing."
+      }
+    },
+    {
+      "question": "What will be the output of the following Java code?\n```java\npublic class Example {\n    public static void main(String[] args) {\n        String message = \"Hello, World!\";\n        System.out.println(message);\n    }\n}\n```",
+      "options": [
+        "Hello, World!",
+        "\"Hello, World!\"",
+        "message",
+        "Error"
+      ],
+      "answer": "Hello, World!",
+      "explanation": "The `System.out.println` method prints the value of `message` without quotes.",
+      "incorrect_explanation": {
+        "\"Hello, World!\"": "Quotes are not printed when using `System.out.println`.",
+        "message": "The method prints the value of the variable, not the variable name.",
+        "Error": "The code is syntactically correct and executes without errors."
+      }
+    }
+  ]
+}

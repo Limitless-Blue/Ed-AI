@@ -1,0 +1,149 @@
+{
+    "questions": [
+      {
+        "question": "What does the Push operation do in a stack?",
+        "options": [
+          "Adds an element to the top of the stack",
+          "Removes the top element from the stack",
+          "Checks if the stack is empty",
+          "Returns the top element without removing it"
+        ],
+        "answer": "Adds an element to the top of the stack",
+        "explanation": "The Push operation adds a new element to the top of the stack, which is the only way to insert items into a stack.",
+        "incorrect_explanation": {
+          "Removes the top element from the stack": "This is the function of the Pop operation.",
+          "Checks if the stack is empty": "This is what the IsEmpty operation does.",
+          "Returns the top element without removing it": "This describes the Peek/Top operation."
+        }
+      },
+      {
+        "question": "What happens when you call Pop on an empty stack?",
+        "options": [
+          "The stack underflows",
+          "The stack overflows",
+          "A new element is added to the stack",
+          "Nothing happens"
+        ],
+        "answer": "The stack underflows",
+        "explanation": "Calling Pop on an empty stack results in a stack underflow, which is an error condition because there are no elements to remove.",
+        "incorrect_explanation": {
+          "The stack overflows": "Stack overflow occurs when too many elements are pushed onto a stack beyond its capacity, not when popping.",
+          "A new element is added to the stack": "Pop removes elements, it does not add them.",
+          "Nothing happens": "Attempting to pop from an empty stack should correctly trigger an error or exception."
+        }
+      },
+      {
+        "question": "What does the Peek/Top operation return?",
+        "options": [
+          "The number of elements in the stack",
+          "True if the stack is empty",
+          "The bottom element of the stack",
+          "The top element of the stack without removing it"
+        ],
+        "answer": "The top element of the stack without removing it",
+        "explanation": "Peek/Top lets you see the top element of the stack without removing it, providing a way to check the current top value.",
+        "incorrect_explanation": {
+          "The number of elements in the stack": "This is not the function of the Peek/Top operation.",
+          "True if the stack is empty": "This describes part of what the IsEmpty operation checks.",
+          "The bottom element of the stack": "Stack operations do not provide direct access to the bottom element."
+        }
+      },
+      {
+        "question": "What does the IsEmpty operation check?",
+        "options": [
+          "If the stack has space to add more elements",
+          "If there are any elements in the stack",
+          "If the stack can be popped",
+          "If the stack elements are sorted"
+        ],
+        "answer": "If there are any elements in the stack",
+        "explanation": "IsEmpty checks whether the stack has any elements in it, returning True if it is empty and False otherwise.",
+        "incorrect_explanation": {
+          "If the stack has space to add more elements": "This is related to capacity, not whether it is empty.",
+          "If the stack can be popped": "While an empty stack cannot be popped, IsEmpty specifically checks for the presence of elements.",
+          "If the stack elements are sorted": "Sorting is not relevant to the IsEmpty operation."
+        }
+      },
+      {
+        "question": "Which of the following is a correct sequence of operations for a stack starting with an empty state?",
+        "options": [
+          "Pop, Push, Peek",
+          "Push, Push, Pop",
+          "Peek, Push, Pop",
+          "IsEmpty, Pop, Push"
+        ],
+        "answer": "Push, Push, Pop",
+        "explanation": "Starting with an empty stack, you must Push before you can Pop or Peek. The sequence Push, Push, Pop correctly uses the stack without causing an underflow.",
+        "incorrect_explanation": {
+          "Pop, Push, Peek": "Popping from an empty stack would cause an underflow.",
+          "Peek, Push, Pop": "Peeking into an empty stack would return an error or null, depending on implementation.",
+          "IsEmpty, Pop, Push": "Popping after checking IsEmpty on an initially empty stack would still result in underflow."
+        }
+      },
+      {
+        "question": "What is returned by the Pop operation?",
+        "options": [
+          "True if the stack is now empty",
+          "The size of the stack after the pop",
+          "The element that was on top of the stack",
+          "Nothing, it only removes the top element"
+        ],
+        "answer": "The element that was on top of the stack",
+        "explanation": "The Pop operation removes and returns the top element from the stack, altering the stack's state by removing its uppermost item.",
+        "incorrect_explanation": {
+          "True if the stack is now empty": "Pop returns the top element, not the empty status of the stack.",
+          "The size of the stack after the pop": "Pop does not return the stack's size.",
+          "Nothing, it only removes the top element": "Pop operation does indeed remove the top element, but it also returns it."
+        }
+      },
+      {
+        "question": "What would be the state of the stack after pushing the integers 10, 20, and 30 in that order and then popping one element?",
+        "options": [
+          "[10]",
+          "[10, 20]",
+          "[10, 20, 30]",
+          "[20, 30]"
+        ],
+        "answer": "[10, 20]",
+        "explanation": "After pushing 10, 20, and 30 onto the stack, the stack is [10, 20, 30]. Popping one element removes 30, leaving [10, 20].",
+        "incorrect_explanation": {
+          "[10]": "Only one element (30) is removed, so 20 would still be in the stack with 10.",
+          "[10, 20, 30]": "This would be the state before the pop operation, not after.",
+          "[20, 30]": "The number 10 would not be removed by a single pop operation as it's at the bottom of the stack."
+        }
+      },
+      {
+        "question": "If a stack's last operation was a Peek returning 50, what would be the result of the immediate next Pop operation?",
+        "options": [
+          "50",
+          "The stack becomes empty",
+          "A different number from 50",
+          "None of the above"
+        ],
+        "answer": "50",
+        "explanation": "Since Peek returns the top element without removing it, if Peek shows 50, the next Pop would also return 50, as the state of the stack has not changed between operations.",
+        "incorrect_explanation": {
+          "The stack becomes empty": "The stack's empty state is not guaranteed solely by the returned value.",
+          "A different number from 50": "Unless a Push or Pop occurred after Peek and before the next Pop, the top element remains 50.",
+          "None of the above": "50 is indeed the correct answer."
+        }
+      },
+      {
+        "question": "What is a typical behavior when a Pop operation is attempted on an empty stack in most implementations?",
+        "options": [
+          "The stack automatically resizes",
+          "It returns a default value like zero",
+          "An error or exception is raised",
+          "The stack will perform a self-check"
+        ],
+        "answer": "An error or exception is raised",
+        "explanation": "Attempting to Pop from an empty stack usually triggers an error or exception because there is no element to remove.",
+        "incorrect_explanation": {
+          "The stack automatically resizes": "Automatic resizing would not occur on a Pop operation; it's more relevant to Push operations when needed.",
+          "It returns a default value like zero": "Returning a default value could mask errors, so it is not typical behavior.",
+          "The stack will perform a self-check": "Stacks do not perform self-checks on Pop operations."
+        }
+      }
+    ]
+  }
+  

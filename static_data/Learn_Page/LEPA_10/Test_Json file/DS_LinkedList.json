@@ -1,0 +1,245 @@
+{
+    "questions": [
+      {
+        "question": "What is the time complexity of inserting a node at the front of a singly linked list?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Insertion at the front of a singly linked list takes constant time, O(1), as it only involves changing the head pointer.",
+        "incorrect_explanation": {
+          "O(n)": "Inserting at the front does not require traversing the list, hence it doesn't take linear time.",
+          "O(log n)": "Linked lists do not offer logarithmic time complexity for any standard operations like insertion.",
+          "O(n^2)": "Insertion in a linked list is never quadratic."
+        }
+      },
+      {
+        "question": "What is the primary benefit of using a linked list over an array?",
+        "options": [
+          "Fast random access",
+          "Efficient memory usage",
+          "Dynamic size and efficient insertions/deletions",
+          "Supports negative indices"
+        ],
+        "answer": "Dynamic size and efficient insertions/deletions",
+        "explanation": "Linked lists allow dynamic resizing and support efficient insertions and deletions, especially at the beginning or end.",
+        "incorrect_explanation": {
+          "Fast random access": "Linked lists do not support random access, and each element must be accessed sequentially.",
+          "Efficient memory usage": "Linked lists generally use more memory due to the extra pointers needed for each node.",
+          "Supports negative indices": "This is a feature of arrays in some languages, not linked lists."
+        }
+      },
+      {
+        "question": "In a linked list, what is the time complexity of deleting the last node?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "To delete the last node, you must traverse the list to find the second-to-last node, which takes linear time, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "Deleting the last node is not constant time because you need to find the second-to-last node.",
+          "O(log n)": "Linked lists do not provide logarithmic time operations.",
+          "O(n log n)": "This complexity is more typical for divide-and-conquer algorithms, not linked lists."
+        }
+      },
+      {
+        "question": "What does the 'next' pointer in a singly linked list node refer to?",
+        "options": [
+          "The previous node",
+          "The current node",
+          "The next node in the list",
+          "The head of the list"
+        ],
+        "answer": "The next node in the list",
+        "explanation": "In a singly linked list, the 'next' pointer points to the subsequent node in the sequence.",
+        "incorrect_explanation": {
+          "The previous node": "In a singly linked list, there is no reference to the previous node.",
+          "The current node": "The 'next' pointer points to the next node, not the current one.",
+          "The head of the list": "The head is a separate reference, usually stored in the list structure itself."
+        }
+      },
+      {
+        "question": "What is the time complexity of reversing a singly linked list iteratively?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n^2)",
+          "O(log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Reversing a singly linked list requires iterating through the entire list, which takes linear time, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "Reversing the list involves traversing all nodes, so it cannot be done in constant time.",
+          "O(n^2)": "Reversing does not involve nested loops or operations, so it doesn't take quadratic time.",
+          "O(log n)": "Logarithmic time complexities are not associated with simple linear list traversals."
+        }
+      },
+      {
+        "question": "In a recursive traversal of a singly linked list, what is the base case?",
+        "options": [
+          "When the next node is the head",
+          "When the node data is 0",
+          "When the node is null",
+          "When the current node is the last node"
+        ],
+        "answer": "When the node is null",
+        "explanation": "In recursive traversal, the base case occurs when the recursion reaches the end of the list (i.e., a null node).",
+        "incorrect_explanation": {
+          "When the next node is the head": "This condition is relevant in circular linked lists, not standard singly linked lists.",
+          "When the node data is 0": "The base case should be about structure, not specific data values.",
+          "When the current node is the last node": "The traversal needs to handle the null condition after the last node."
+        }
+      },
+      {
+        "question": "What is the time complexity of inserting a node at a specific position in a singly linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n^2)",
+          "O(log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Inserting at a specific position requires traversing the list to that position, resulting in linear time complexity, O(n).",
+        "incorrect_explanation": {
+          "O(1)": "This would be true for inserting at the head, but not at an arbitrary position.",
+          "O(n^2)": "This is too high for the simple linear traversal required.",
+          "O(log n)": "Linked lists do not provide logarithmic time operations."
+        }
+      },
+      {
+        "question": "Which operation is more efficient in a linked list compared to an array?",
+        "options": [
+          "Accessing an element by index",
+          "Inserting a node at the front",
+          "Searching for an element",
+          "Reversing the list"
+        ],
+        "answer": "Inserting a node at the front",
+        "explanation": "Inserting at the front of a linked list takes constant time, O(1), whereas arrays require shifting elements.",
+        "incorrect_explanation": {
+          "Accessing an element by index": "Linked lists do not support efficient random access, unlike arrays.",
+          "Searching for an element": "Searching is O(n) in both linked lists and arrays.",
+          "Reversing the list": "Both arrays and linked lists take O(n) to reverse."
+        }
+      },
+      {
+        "question": "What is the difference between recursive and iterative traversal of a linked list?",
+        "options": [
+          "Recursive traversal is faster",
+          "Iterative traversal uses more memory",
+          "Recursive traversal can lead to stack overflow for large lists",
+          "Iterative traversal cannot handle circular lists"
+        ],
+        "answer": "Recursive traversal can lead to stack overflow for large lists",
+        "explanation": "Recursive traversal relies on the call stack, which can overflow for large lists due to deep recursion.",
+        "incorrect_explanation": {
+          "Recursive traversal is faster": "Both methods have the same time complexity, O(n).",
+          "Iterative traversal uses more memory": "Recursive traversal typically uses more memory due to the call stack.",
+          "Iterative traversal cannot handle circular lists": "Both methods can handle circular lists with the appropriate checks."
+        }
+      },
+      {
+        "question": "What is the time complexity of deleting a node from the end of a singly linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(n)",
+        "explanation": "To delete the last node, the second-to-last node must be found, which requires traversing the list.",
+        "incorrect_explanation": {
+          "O(1)": "Deleting the last node is not a constant time operation in singly linked lists.",
+          "O(log n)": "Linked lists do not offer logarithmic time operations.",
+          "O(n^2)": "The operation is linear, not quadratic."
+        }
+      },
+      {
+        "question": "In reversing a singly linked list, what should be the new head of the list?",
+        "options": [
+          "The node with the smallest value",
+          "The previous last node",
+          "The node at the middle",
+          "The node with the largest value"
+        ],
+        "answer": "The previous last node",
+        "explanation": "Reversing a singly linked list makes the previous last node the new head of the list.",
+        "incorrect_explanation": {
+          "The node with the smallest value": "Reversing does not depend on the values in the list.",
+          "The node at the middle": "Reversing reorders all nodes, not just the middle.",
+          "The node with the largest value": "Reversing does not depend on node values."
+        }
+      },
+      {
+        "question": "How can we reverse a linked list using recursion?",
+        "options": [
+          "Reverse each node's data",
+          "Change the direction of the pointers while traversing",
+          "Move the tail to the head",
+          "Swap nodes pair by pair"
+        ],
+        "answer": "Change the direction of the pointers while traversing",
+        "explanation": "Reversing a list with recursion involves changing the direction of the pointers as you traverse each node.",
+        "incorrect_explanation": {
+          "Reverse each node's data": "Reversing the data does not change the node order.",
+          "Move the tail to the head": "Reversing involves all nodes, not just moving the tail.",
+          "Swap nodes pair by pair": "Reversing the list is not done by swapping node pairs."
+        }
+      },
+      {
+        "question": "What happens to the head pointer during an iterative reversal of a singly linked list?",
+        "options": [
+          "It remains the same",
+          "It points to the previous last node",
+          "It points to the middle node",
+          "It becomes null"
+        ],
+        "answer": "It points to the previous last node",
+        "explanation": "After reversing a singly linked list, the head pointer is updated to point to the previous last node.",
+        "incorrect_explanation": {
+          "It remains the same": "The head pointer must be updated to reflect the new start of the list.",
+          "It points to the middle node": "The head should point to the new first node, which is the previous last node.",
+          "It becomes null": "The head should never point to null after a reversal."
+        }
+      },
+      {
+        "question": "What is the time complexity of reversing a linked list recursively?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Reversing a linked list recursively involves traversing each node once, so the time complexity is O(n).",
+        "incorrect_explanation": {
+          "O(1)": "Reversing a list involves a full traversal of the nodes.",
+          "O(log n)": "Recursion does not make this operation logarithmic in linked lists.",
+          "O(n^2)": "There are no nested operations to cause quadratic complexity."
+        }
+      },
+      {
+        "question": "Which of the following operations requires the most time in a singly linked list?",
+        "options": [
+          "Inserting at the front",
+          "Accessing the middle element",
+          "Deleting the first element",
+          "Reversing the list"
+        ],
+        "answer": "Reversing the list",
+        "explanation": "Reversing the list requires O(n) time, whereas the other operations take constant time or close to it.",
+        "incorrect_explanation": {
+          "Inserting at the front": "This operation takes constant time, O(1).",
+          "Accessing the middle element": "Accessing an element takes O(n) time, but reversing the list takes O(n) as well and involves pointer manipulations.",
+          "Deleting the first element": "This operation takes constant time, O(1)."
+        }
+      }
+    ]
+  }
+  

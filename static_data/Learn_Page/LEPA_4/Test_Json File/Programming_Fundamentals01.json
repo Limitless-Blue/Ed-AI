@@ -1,0 +1,356 @@
+{
+  "questions": [
+    {
+      "question": "What is the first step in analyzing requirements for a programming problem?",
+      "options": [
+        "Define the output",
+        "Break down the problem",
+        "Read the problem statement carefully",
+        "Identify edge cases"
+      ],
+      "answer": "Read the problem statement carefully",
+      "explanation": "Reading the problem statement thoroughly is essential to grasp the essence of the problem before analyzing its components.",
+      "incorrect_explanation": {
+        "Define the output": "Defining the output comes after understanding the problem statement.",
+        "Break down the problem": "Breaking down the problem is a subsequent step after reading and understanding the problem statement.",
+        "Identify edge cases": "Identifying edge cases is part of clarifying constraints and edge cases, which follows analyzing requirements."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a step to analyze requirements?",
+      "options": [
+        "Read Carefully",
+        "Identify Key Components",
+        "Implement the solution immediately",
+        "Break Down the Problem"
+      ],
+      "answer": "Implement the solution immediately",
+      "explanation": "Implementing the solution immediately skips the essential steps of understanding and analyzing the problem, which can lead to incomplete or incorrect solutions.",
+      "incorrect_explanation": {
+        "Read Carefully": "Reading carefully is a fundamental step in analyzing requirements.",
+        "Identify Key Components": "Identifying key components helps in understanding the main tasks and goals.",
+        "Break Down the Problem": "Breaking down the problem into smaller parts makes it more manageable."
+      }
+    },
+    {
+      "question": "Why is it important to ask questions while analyzing requirements?",
+      "options": [
+        "To confuse the problem",
+        "To clarify ambiguities and uncertainties",
+        "To delay the solution process",
+        "To reduce the number of steps"
+      ],
+      "answer": "To clarify ambiguities and uncertainties",
+      "explanation": "Asking questions helps clarify any unclear aspects of the problem, ensuring a comprehensive understanding before proceeding.",
+      "incorrect_explanation": {
+        "To confuse the problem": "Asking questions aims to clarify, not confuse.",
+        "To delay the solution process": "The goal is to understand the problem better, not to delay.",
+        "To reduce the number of steps": "Asking questions enhances understanding, not necessarily reduces steps."
+      }
+    },
+    {
+      "question": "In the example problem statement provided, what is the key component identified?",
+      "options": [
+        "Sorting the list of integers",
+        "Identifying prime numbers",
+        "Calculating the sum of integers",
+        "Finding the average of the list"
+      ],
+      "answer": "Identifying prime numbers",
+      "explanation": "The key components are identifying prime numbers and filtering the list based on those primes.",
+      "incorrect_explanation": {
+        "Sorting the list of integers": "Sorting is not mentioned as a requirement in the example.",
+        "Calculating the sum of integers": "The task is to filter prime numbers, not to calculate their sum.",
+        "Finding the average of the list": "Calculating the average is not part of the problem statement."
+      }
+    },
+    {
+      "question": "What is the input in the provided example problem statement?",
+      "options": [
+        "A single integer",
+        "A list of integers",
+        "A string of numbers",
+        "A list of strings"
+      ],
+      "answer": "A list of integers",
+      "explanation": "The input specified is a list of integers that the program will process to filter out prime numbers.",
+      "incorrect_explanation": {
+        "A single integer": "The problem requires processing a list, not just a single integer.",
+        "A string of numbers": "The input is a list of integers, not a string.",
+        "A list of strings": "The input consists of integers, not strings."
+      }
+    },
+    {
+      "question": "What should the program return in the provided example problem statement?",
+      "options": [
+        "The sum of the integers",
+        "A new list containing only prime numbers",
+        "The average of the integers",
+        "The largest integer in the list"
+      ],
+      "answer": "A new list containing only prime numbers",
+      "explanation": "The program is required to filter the original list and return a new list that includes only the prime numbers.",
+      "incorrect_explanation": {
+        "The sum of the integers": "The task is to filter prime numbers, not to calculate their sum.",
+        "The average of the integers": "Calculating the average is not part of the problem statement.",
+        "The largest integer in the list": "Finding the largest integer is not the goal; filtering primes is."
+      }
+    },
+    {
+      "question": "Which step involves determining the data the program will receive and produce?",
+      "options": [
+        "Analyzing Requirements",
+        "Identifying Inputs and Outputs",
+        "Clarifying Constraints and Edge Cases",
+        "Breaking Down the Problem"
+      ],
+      "answer": "Identifying Inputs and Outputs",
+      "explanation": "Identifying inputs and outputs focuses on determining the data the program will accept and what it should return or display.",
+      "incorrect_explanation": {
+        "Analyzing Requirements": "This step is broader and includes understanding the problem statement.",
+        "Clarifying Constraints and Edge Cases": "This involves understanding the limitations and special cases, not just inputs and outputs.",
+        "Breaking Down the Problem": "This is about dividing the problem into smaller parts."
+      }
+    },
+    {
+      "question": "In the factorial function example, what is the input?",
+      "options": [
+        "An integer `n`",
+        "A list of integers",
+        "A string representing a number",
+        "No input is required"
+      ],
+      "answer": "An integer `n`",
+      "explanation": "The factorial function takes a single integer `n` as its input to calculate its factorial.",
+      "incorrect_explanation": {
+        "A list of integers": "The factorial function operates on a single integer.",
+        "A string representing a number": "The function expects an integer, not a string.",
+        "No input is required": "The function requires an integer input to perform the calculation."
+      }
+    },
+    {
+      "question": "What is the output of the factorial function when the input `n` is 5?",
+      "options": [
+        "15",
+        "60",
+        "120",
+        "24"
+      ],
+      "answer": "120",
+      "explanation": "The factorial of 5 (5!) is 5 × 4 × 3 × 2 × 1 = 120.",
+      "incorrect_explanation": {
+        "15": "5! equals 120, not 15.",
+        "60": "The correct factorial value is 120.",
+        "24": "4! equals 24, but 5! is 120."
+      }
+    },
+    {
+      "question": "Why is it important to identify edge cases when solving a problem?",
+      "options": [
+        "To make the program run faster",
+        "To ensure the program handles unusual or extreme inputs correctly",
+        "To reduce the complexity of the program",
+        "To avoid writing test cases"
+      ],
+      "answer": "To ensure the program handles unusual or extreme inputs correctly",
+      "explanation": "Identifying edge cases helps in verifying that the program behaves as expected under unusual or extreme conditions, ensuring robustness.",
+      "incorrect_explanation": {
+        "To make the program run faster": "Edge cases are about correctness, not performance.",
+        "To reduce the complexity of the program": "Handling edge cases can sometimes increase complexity.",
+        "To avoid writing test cases": "Edge cases are essential for comprehensive testing."
+      }
+    },
+    {
+      "question": "Which of the following is an example of an edge case in the problem statement for finding the largest number in a list?",
+      "options": [
+        "A list with negative numbers",
+        "A list with all identical numbers",
+        "A list with the maximum allowed size",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "All listed scenarios are edge cases that test the program's ability to handle unusual or extreme inputs.",
+      "incorrect_explanation": {
+        "A list with negative numbers": "This is an edge case, but not the only one.",
+        "A list with all identical numbers": "This is an edge case, but not the only one.",
+        "A list with the maximum allowed size": "This is an edge case, but not the only one."
+      }
+    },
+    {
+      "question": "What should a developer do after identifying all constraints in a problem?",
+      "options": [
+        "Start coding immediately",
+        "Create test cases that cover all identified edge cases",
+        "Ignore the constraints",
+        "Focus only on the main problem"
+      ],
+      "answer": "Create test cases that cover all identified edge cases",
+      "explanation": "Creating test cases for edge cases ensures that the program handles all possible scenarios correctly.",
+      "incorrect_explanation": {
+        "Start coding immediately": "Understanding and planning are essential before coding.",
+        "Ignore the constraints": "Constraints define the limits within which the program must operate.",
+        "Focus only on the main problem": "Edge cases are crucial for a robust solution."
+      }
+    },
+    {
+      "question": "Why is breaking down a problem into smaller sub-problems beneficial?",
+      "options": [
+            "It makes the problem more complex",
+            "It helps in managing and solving each part systematically",
+            "It reduces the overall number of tasks",
+            "It allows ignoring some parts of the problem"
+      ],
+      "answer": "It helps in managing and solving each part systematically",
+      "explanation": "Breaking down a problem makes it more manageable by allowing the developer to focus on solving each smaller part step by step.",
+      "incorrect_explanation": {
+            "It makes the problem more complex": "Breaking down simplifies the problem by dividing it into manageable parts.",
+            "It reduces the overall number of tasks": "It organizes tasks into smaller, more manageable steps rather than reducing them.",
+            "It allows ignoring some parts of the problem": "All parts of the problem should be addressed to ensure a complete solution."
+      }
+    },
+    {
+      "question": "What is the primary goal of problem-solving techniques in programming?",
+      "options": [
+            "To write code as quickly as possible",
+            "To create efficient and maintainable solutions",
+            "To use as many programming languages as possible",
+            "To minimize the use of functions"
+      ],
+      "answer": "To create efficient and maintainable solutions",
+      "explanation": "Effective problem-solving aims to develop solutions that are not only correct but also efficient and easy to maintain.",
+      "incorrect_explanation": {
+            "To write code as quickly as possible": "Speed is important, but correctness and maintainability are paramount.",
+            "To use as many programming languages as possible": "Using multiple languages is unrelated to problem-solving techniques.",
+            "To minimize the use of functions": "Functions enhance code modularity and reusability, which are important for maintainability."
+      }
+    },
+    {
+      "question": "Which of the following best practices helps in effective problem-solving?",
+      "options": [
+            "Skipping documentation to save time",
+            "Thoroughly understanding the problem before solving it",
+            "Implementing the solution without planning",
+            "Using global variables extensively"
+      ],
+      "answer": "Thoroughly understanding the problem before solving it",
+      "explanation": "Understanding the problem in depth ensures that the solution addresses all aspects and requirements effectively.",
+      "incorrect_explanation": {
+            "Skipping documentation to save time": "Documentation aids in understanding and maintaining the solution.",
+            "Implementing the solution without planning": "Lack of planning can lead to incomplete or inefficient solutions.",
+            "Using global variables extensively": "Overusing global variables can lead to unintended side effects and reduce code maintainability."
+      }
+    },
+    {
+      "question": "What is the significance of visualizing the problem during the analysis phase?",
+      "options": [
+            "It makes the problem harder to understand",
+            "It helps in representing the problem structure clearly",
+            "It eliminates the need for writing code",
+            "It reduces the number of required steps"
+      ],
+      "answer": "It helps in representing the problem structure clearly",
+      "explanation": "Visualizing the problem through diagrams or flowcharts can provide a clear representation of the problem's structure, aiding in better understanding and solution planning.",
+      "incorrect_explanation": {
+            "It makes the problem harder to understand": "Visualization simplifies understanding by providing a clear representation.",
+            "It eliminates the need for writing code": "Visualization aids in planning but does not replace coding.",
+            "It reduces the number of required steps": "Visualization clarifies the problem but does not necessarily reduce steps."
+      }
+    },
+    {
+      "question": "Why should a developer ensure completeness after analyzing requirements?",
+      "options": [
+            "To start writing code without delay",
+            "To confirm that all aspects of the problem are understood",
+            "To minimize the use of variables",
+            "To focus only on the main components"
+      ],
+      "answer": "To confirm that all aspects of the problem are understood",
+      "explanation": "Ensuring completeness helps verify that no part of the problem has been overlooked, leading to a more accurate and effective solution.",
+      "incorrect_explanation": {
+            "To start writing code without delay": "Completeness ensures a solid understanding before coding begins.",
+            "To minimize the use of variables": "Minimizing variables is unrelated to ensuring completeness.",
+            "To focus only on the main components": "Ensuring completeness involves addressing all components, not just the main ones."
+      }
+    },
+    {
+      "question": "In the context of problem-solving, what does the term 'constraints' refer to?",
+      "options": [
+            "The programming languages used",
+            "The limitations within which the program must operate",
+            "The types of variables used",
+            "The number of functions in the program"
+      ],
+      "answer": "The limitations within which the program must operate",
+      "explanation": "Constraints define the boundaries and limitations, such as time, space, and input restrictions, that the program must adhere to.",
+      "incorrect_explanation": {
+            "The programming languages used": "Constraints are about limitations, not specific to programming languages.",
+            "The types of variables used": "While variable types can be part of constraints, constraints are broader.",
+            "The number of functions in the program": "Constraints are not specifically about the number of functions."
+      }
+    },
+    {
+      "question": "What is an example of handling an edge case in the problem statement for returning the largest number in a list?",
+      "options": [
+            "Ensuring the list is not empty",
+            "Finding the smallest number instead",
+            "Ignoring negative numbers",
+            "Sorting the list first"
+      ],
+      "answer": "Ensuring the list is not empty",
+      "explanation": "Ensuring the list is not empty is an edge case that the program must handle to avoid errors when trying to find the largest number.",
+      "incorrect_explanation": {
+            "Finding the smallest number instead": "This changes the problem's objective.",
+            "Ignoring negative numbers": "Negative numbers can be valid inputs and should be considered.",
+            "Sorting the list first": "Sorting is not directly related to handling edge cases."
+      }
+    },
+    {
+      "question": "Why is documenting your analysis important in problem-solving?",
+      "options": [
+            "It helps in keeping track of important points and requirements",
+            "It makes the code run faster",
+            "It allows skipping the testing phase",
+            "It reduces the need for comments in code"
+      ],
+      "answer": "It helps in keeping track of important points and requirements",
+      "explanation": "Documentation ensures that all important aspects of the problem are recorded, aiding in clarity and future reference.",
+      "incorrect_explanation": {
+            "It makes the code run faster": "Documentation does not impact code execution speed.",
+            "It allows skipping the testing phase": "Documentation complements testing but does not replace it.",
+            "It reduces the need for comments in code": "Documentation and comments serve different purposes and both are beneficial."
+      }
+    },
+    {
+      "question": "Which of the following best describes the purpose of handling invalid inputs?",
+      "options": [
+            "To make the program crash gracefully",
+            "To ensure the program behaves predictably with unexpected data",
+            "To ignore the invalid data and continue",
+            "To convert invalid inputs into valid ones automatically"
+      ],
+      "answer": "To ensure the program behaves predictably with unexpected data",
+      "explanation": "Handling invalid inputs ensures that the program can manage unexpected or incorrect data without crashing or producing incorrect results.",
+      "incorrect_explanation": {
+            "To make the program crash gracefully": "The goal is to prevent crashes, not to crash gracefully.",
+            "To ignore the invalid data and continue": "Ignoring invalid data can lead to incorrect behavior or results.",
+            "To convert invalid inputs into valid ones automatically": "Automatic conversion may not be possible or appropriate; handling often involves validation and user feedback."
+      }
+    },
+    {
+      "question": "What should a developer do if they identify multiple edge cases for a problem?",
+      "options": [
+            "Ignore them and focus on the main problem",
+            "Create test cases that cover all identified edge cases",
+            "Handle only the most common edge case",
+            "Re-write the problem statement"
+      ],
+      "answer": "Create test cases that cover all identified edge cases",
+      "explanation": "Creating test cases for all edge cases ensures that the program can handle various scenarios correctly, enhancing its robustness.",
+      "incorrect_explanation": {
+            "Ignore them and focus on the main problem": "Ignoring edge cases can lead to incomplete or faulty solutions.",
+            "Handle only the most common edge case": "All identified edge cases should be addressed to ensure comprehensive coverage.",
+            "Re-write the problem statement": "Rewriting the problem statement is not necessary; focus on addressing the edge cases."
+      }
+    }
+  ]
+}
