@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the average time complexity for searching an element in a hash table?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "In an ideal hash table with a good hash function and low load factor, searching for an element can be done in constant time, O(1).",
+        "incorrect_explanation": {
+          "O(n)": "This is the time complexity for searching in an unsorted array or a linked list, not in a well-implemented hash table.",
+          "O(log n)": "Logarithmic time is typical for binary search trees, not for hash tables.",
+          "O(n log n)": "This complexity is associated with efficient sorting algorithms, not with hash table operations."
+        }
+      },
+      {
+        "question": "2. Which of the following is a collision resolution technique in hash tables?",
+        "options": [
+          "Binary Search",
+          "Open Addressing",
+          "Heap Allocation",
+          "Depth-First Search"
+        ],
+        "answer": "Open Addressing",
+        "explanation": "Open addressing is a collision resolution technique where, upon a collision, the algorithm probes the hash table to find another open slot.",
+        "incorrect_explanation": {
+          "Binary Search": "Binary search is an algorithm for finding elements in sorted arrays, not a collision resolution technique.",
+          "Heap Allocation": "Heap allocation is related to memory management, not specifically to hash table collisions.",
+          "Depth-First Search": "DFS is a graph traversal algorithm, unrelated to hash table collision resolution."
+        }
+      },
+      {
+        "question": "3. What is the primary advantage of using chaining over open addressing in hash tables?",
+        "options": [
+          "Better cache performance",
+          "Simpler implementation",
+          "Handles high load factors more gracefully",
+          "Requires less memory"
+        ],
+        "answer": "Handles high load factors more gracefully",
+        "explanation": "Chaining allows hash tables to handle higher load factors by maintaining linked lists or other structures at each bucket, reducing the likelihood of excessive collisions.",
+        "incorrect_explanation": {
+          "Better cache performance": "Open addressing generally has better cache performance due to contiguous storage.",
+          "Simpler implementation": "Both chaining and open addressing have their own complexities; chaining can be more complex due to linked structures.",
+          "Requires less memory": "Chaining may require more memory because it needs additional storage for pointers in linked lists."
+        }
+      },
+      {
+        "question": "4. Which of the following is a property of a good hash function?",
+        "options": [
+          "Deterministic",
+          "Generates the same hash for similar inputs",
+          "Produces a fixed number of collisions",
+          "Depends on the order of inputs"
+        ],
+        "answer": "Deterministic",
+        "explanation": "A good hash function is deterministic, meaning it consistently produces the same hash value for the same input.",
+        "incorrect_explanation": {
+          "Generates the same hash for similar inputs": "A good hash function should distribute similar inputs to different hash values to minimize collisions.",
+          "Produces a fixed number of collisions": "The number of collisions should be minimized and not fixed.",
+          "Depends on the order of inputs": "A good hash function should uniformly distribute inputs regardless of their order."
+        }
+      },
+      {
+        "question": "5. What is a load factor in the context of hash tables?",
+        "options": [
+          "The ratio of the number of elements to the number of buckets",
+          "The speed at which elements are inserted",
+          "The number of collisions in the table",
+          "The memory usage of the table"
+        ],
+        "answer": "The ratio of the number of elements to the number of buckets",
+        "explanation": "The load factor is defined as the ratio of the number of stored elements to the number of available buckets in the hash table.",
+        "incorrect_explanation": {
+          "The speed at which elements are inserted": "This refers to the performance of insert operations, not the load factor.",
+          "The number of collisions in the table": "While related, the load factor specifically measures the ratio of elements to buckets.",
+          "The memory usage of the table": "Memory usage is related but not directly defined by the load factor."
+        }
+      },
+      {
+        "question": "6. Which collision resolution technique uses a secondary hash function to determine the probe sequence?",
+        "options": [
+          "Linear Probing",
+          "Chaining",
+          "Double Hashing",
+          "Quadratic Probing"
+        ],
+        "answer": "Double Hashing",
+        "explanation": "Double hashing uses a second hash function to calculate the probe sequence, reducing clustering compared to linear or quadratic probing.",
+        "incorrect_explanation": {
+          "Linear Probing": "Linear probing uses a fixed step size, typically 1, for probing.",
+          "Chaining": "Chaining handles collisions by maintaining linked lists at each bucket, not by probing.",
+          "Quadratic Probing": "Quadratic probing uses a quadratic function of the probe number, not a secondary hash function."
+        }
+      },
+      {
+        "question": "7. What is the primary disadvantage of using a linked list for chaining in hash tables?",
+        "options": [
+          "Increased memory usage",
+          "Difficulty in handling collisions",
+          "Inability to handle high load factors",
+          "Poor cache performance"
+        ],
+        "answer": "Poor cache performance",
+        "explanation": "Linked lists can lead to poor cache performance because nodes are typically scattered in memory, causing cache misses during traversal.",
+        "incorrect_explanation": {
+          "Increased memory usage": "While linked lists do use additional memory for pointers, this is not typically the primary disadvantage compared to cache performance.",
+          "Difficulty in handling collisions": "Chaining is specifically designed to handle collisions efficiently by using linked lists.",
+          "Inability to handle high load factors": "Chaining can handle high load factors more gracefully than open addressing."
+        }
+      },
+      {
+        "question": "8. What is a perfect hash function?",
+        "options": [
+          "A hash function with no collisions",
+          "A hash function that minimizes collisions",
+          "A hash function that distributes keys uniformly",
+          "A hash function that is cryptographically secure"
+        ],
+        "answer": "A hash function with no collisions",
+        "explanation": "A perfect hash function maps each key to a unique hash value with no collisions, which is ideal but often difficult to achieve in practice.",
+        "incorrect_explanation": {
+          "A hash function that minimizes collisions": "While minimizing collisions is important, a perfect hash function specifically has no collisions.",
+          "A hash function that distributes keys uniformly": "Uniform distribution helps reduce collisions but does not guarantee zero collisions.",
+          "A hash function that is cryptographically secure": "Cryptographic security is unrelated to collision avoidance in hash tables."
+        }
+      },
+      {
+        "question": "9. Which of the following is an application of hashing?",
+        "options": [
+          "Implementing queues",
+          "Implementing binary search trees",
+          "Implementing hash maps",
+          "Implementing linked lists"
+        ],
+        "answer": "Implementing hash maps",
+        "explanation": "Hashing is fundamental in implementing hash maps, which store key-value pairs with efficient access, insertion, and deletion.",
+        "incorrect_explanation": {
+          "Implementing queues": "Queues are typically implemented using linked lists or arrays, not hash maps.",
+          "Implementing binary search trees": "Binary search trees rely on node ordering, not hashing.",
+          "Implementing linked lists": "Linked lists use nodes connected by pointers, not hash functions."
+        }
+      },
+      {
+        "question": "10. What is the average-case time complexity for inserting an element into a hash table?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "In the average case, inserting an element into a hash table takes constant time, O(1), assuming a good hash function and low load factor.",
+        "incorrect_explanation": {
+          "O(n)": "This is the worst-case time complexity when many collisions occur, not the average case.",
+          "O(log n)": "Logarithmic time is typical for balanced trees, not for hash table insertions.",
+          "O(n log n)": "This complexity is associated with efficient sorting algorithms, not with hash table operations."
+        }
+      },
+      {
+        "question": "11. What happens to the load factor of a hash table when it is resized?",
+        "options": [
+          "It increases",
+          "It decreases",
+          "It remains the same",
+          "It becomes unpredictable"
+        ],
+        "answer": "It decreases",
+        "explanation": "When a hash table is resized (typically doubled in size), the load factor decreases because the number of buckets increases while the number of elements remains the same.",
+        "incorrect_explanation": {
+          "It increases": "Resizing increases the number of buckets, which decreases the load factor if the number of elements stays the same.",
+          "It remains the same": "The load factor changes proportionally to the number of buckets and elements.",
+          "It becomes unpredictable": "The change in load factor is deterministic based on the resizing strategy."
+        }
+      },
+      {
+        "question": "12. Which of the following is NOT a type of hash collision?",
+        "options": [
+          "Primary clustering",
+          "Secondary clustering",
+          "Tertiary clustering",
+          "Random collision"
+        ],
+        "answer": "Tertiary clustering",
+        "explanation": "Primary and secondary clustering are types of collision phenomena in open addressing. Tertiary clustering is not a standard term in hashing.",
+        "incorrect_explanation": {
+          "Primary clustering": "Primary clustering refers to the tendency of keys to cluster together in certain collision resolution schemes.",
+          "Secondary clustering": "Secondary clustering occurs when keys that hash to the same initial position follow the same probe sequence.",
+          "Random collision": "While not a standard term, it can refer to any unpredictable collision, making it a plausible option."
+        }
+      },
+      {
+        "question": "13. In open addressing, what strategy uses the probe sequence h(k, i) = (h(k) + i^2) mod m?",
+        "options": [
+          "Linear Probing",
+          "Quadratic Probing",
+          "Double Hashing",
+          "Separate Chaining"
+        ],
+        "answer": "Quadratic Probing",
+        "explanation": "Quadratic probing uses a probe sequence that includes quadratic terms of the probe number to reduce clustering.",
+        "incorrect_explanation": {
+          "Linear Probing": "Linear probing uses a probe sequence of h(k) + i, not involving squares.",
+          "Double Hashing": "Double hashing uses two separate hash functions for the probe sequence.",
+          "Separate Chaining": "Separate chaining handles collisions using linked lists or other structures, not probing sequences."
+        }
+      },
+      {
+        "question": "14. What is a hash table's primary advantage over a binary search tree?",
+        "options": [
+          "Guaranteed O(1) time for search, insert, and delete operations",
+          "Less memory usage",
+          "Maintains elements in sorted order",
+          "Easier to implement"
+        ],
+        "answer": "Guaranteed O(1) time for search, insert, and delete operations",
+        "explanation": "Hash tables offer average-case constant time complexity for search, insert, and delete operations, which is faster than the average O(log n) time for binary search trees.",
+        "incorrect_explanation": {
+          "Less memory usage": "Hash tables may require more memory due to the need for a large number of buckets and handling collisions.",
+          "Maintains elements in sorted order": "Hash tables do not maintain any order among elements, whereas binary search trees do.",
+          "Easier to implement": "Implementing a hash table with efficient collision handling can be more complex than implementing a binary search tree."
+        }
+      },
+      {
+        "question": "15. What is a perfect hash function?",
+        "options": [
+          "A hash function with no collisions for any possible input",
+          "A hash function that uniformly distributes keys",
+          "A hash function that minimizes collisions",
+          "A hash function that is cryptographically secure"
+        ],
+        "answer": "A hash function with no collisions for any possible input",
+        "explanation": "A perfect hash function maps each key to a unique hash value with no collisions, which is ideal but often difficult to achieve in practice.",
+        "incorrect_explanation": {
+          "A hash function that uniformly distributes keys": "Uniform distribution helps reduce collisions but does not guarantee zero collisions.",
+          "A hash function that minimizes collisions": "Minimizing collisions is desirable, but a perfect hash function specifically has no collisions.",
+          "A hash function that is cryptographically secure": "Cryptographic security is unrelated to collision avoidance in hash tables."
+        }
+      },
+      {
+        "question": "16. Which of the following is a disadvantage of using separate chaining for collision resolution?",
+        "options": [
+          "It requires additional memory for pointers",
+          "It cannot handle high load factors",
+          "It leads to primary clustering",
+          "It complicates the hash function"
+        ],
+        "answer": "It requires additional memory for pointers",
+        "explanation": "Separate chaining requires additional memory to store pointers for the linked lists at each bucket, which can increase overall memory usage.",
+        "incorrect_explanation": {
+          "It cannot handle high load factors": "Separate chaining can handle higher load factors better than open addressing.",
+          "It leads to primary clustering": "Primary clustering is an issue with open addressing techniques like linear probing, not with separate chaining.",
+          "It complicates the hash function": "The hash function remains the same; separate chaining affects collision handling, not the hash function itself."
+        }
+      },
+      {
+        "question": "17. In the context of hash tables, what is rehashing?",
+        "options": [
+          "Generating a new hash function",
+          "Resizing the hash table and re-inserting all elements",
+          "Removing duplicate elements",
+          "Converting a hash table to a binary search tree"
+        ],
+        "answer": "Resizing the hash table and re-inserting all elements",
+        "explanation": "Rehashing involves creating a new, larger hash table and re-inserting all existing elements using the hash function to distribute them across the new table.",
+        "incorrect_explanation": {
+          "Generating a new hash function": "Rehashing typically uses the same hash function but with a new table size.",
+          "Removing duplicate elements": "Rehashing does not inherently remove duplicates; it redistributes existing elements.",
+          "Converting a hash table to a binary search tree": "Rehashing involves resizing and redistributing within a hash table, not converting to another data structure."
+        }
+      },
+      {
+        "question": "18. What is a common use case for a hash set?",
+        "options": [
+          "Storing key-value pairs",
+          "Maintaining a collection of unique elements",
+          "Implementing a queue",
+          "Implementing a stack"
+        ],
+        "answer": "Maintaining a collection of unique elements",
+        "explanation": "A hash set is used to store unique elements, allowing for efficient insertion, deletion, and membership testing.",
+        "incorrect_explanation": {
+          "Storing key-value pairs": "Hash maps (or hash tables) are used for key-value pairs, not hash sets.",
+          "Implementing a queue": "Queues are typically implemented using linked lists or arrays.",
+          "Implementing a stack": "Stacks are typically implemented using linked lists or arrays."
+        }
+      },
+      {
+        "question": "19. Which of the following hash functions is commonly used in practice?",
+        "options": [
+          "SHA-256",
+          "CRC32",
+          "DJB2",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "SHA-256 and CRC32 are used in various applications requiring hashing, while DJB2 is a popular simple hash function used in programming.",
+        "incorrect_explanation": {
+          "SHA-256": "While it is used for cryptographic purposes, it is also used in hashing applications requiring security.",
+          "CRC32": "Used in error-checking and hashing applications.",
+          "DJB2": "A widely used simple hash function in programming, particularly in hash table implementations."
+        }
+      },
+      {
+        "question": "20. What is a Bloom filter?",
+        "options": [
+          "A probabilistic data structure for membership testing",
+          "A deterministic data structure for key-value storage",
+          "A type of balanced binary search tree",
+          "A graph traversal algorithm"
+        ],
+        "answer": "A probabilistic data structure for membership testing",
+        "explanation": "A Bloom filter is a space-efficient probabilistic data structure used to test whether an element is a member of a set, allowing for false positives but no false negatives.",
+        "incorrect_explanation": {
+          "A deterministic data structure for key-value storage": "Bloom filters are probabilistic and do not store key-value pairs.",
+          "A type of balanced binary search tree": "Bloom filters are not tree-based data structures.",
+          "A graph traversal algorithm": "Bloom filters are not algorithms but data structures used for membership testing."
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the average-case time complexity of Binary Search?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary Search efficiently divides the search interval in half each time, leading to a logarithmic time complexity of O(log n).",
+        "incorrect_explanation": {
+          "O(n)": "Linear Search has a time complexity of O(n), not Binary Search.",
+          "O(n log n)": "This complexity is typical for efficient sorting algorithms, not searching.",
+          "O(1)": "Constant time is only achievable with direct access, which Binary Search does not provide."
+        }
+      },
+      {
+        "question": "2. When is Binary Search more efficient than Linear Search?",
+        "options": [
+          "When the array is unsorted",
+          "When the array is sorted",
+          "When the array contains duplicate elements",
+          "When the array is very small"
+        ],
+        "answer": "When the array is sorted",
+        "explanation": "Binary Search requires the array to be sorted to efficiently divide and conquer the search space, making it more efficient than Linear Search in such cases.",
+        "incorrect_explanation": {
+          "When the array is unsorted": "Binary Search cannot be applied to unsorted arrays.",
+          "When the array contains duplicate elements": "While Binary Search can handle duplicates, its efficiency gain comes from the array being sorted.",
+          "When the array is very small": "For very small arrays, Linear Search may be as efficient or more due to lower overhead."
+        }
+      },
+      {
+        "question": "3. What precondition must be satisfied to perform Binary Search on an array?",
+        "options": [
+          "The array must be circular",
+          "The array must be sorted",
+          "The array must contain unique elements",
+          "The array must have an even number of elements"
+        ],
+        "answer": "The array must be sorted",
+        "explanation": "Binary Search relies on the array being sorted to eliminate half of the remaining elements in each step, making sorting a necessary precondition.",
+        "incorrect_explanation": {
+          "The array must be circular": "Circular arrays are unrelated to the requirements of Binary Search.",
+          "The array must contain unique elements": "Binary Search can handle duplicate elements as long as the array is sorted.",
+          "The array must have an even number of elements": "The number of elements does not affect the applicability of Binary Search."
+        }
+      },
+      {
+        "question": "4. How does Jump Search work?",
+        "options": [
+          "By dividing the array into two halves and searching recursively",
+          "By jumping ahead by fixed steps and then performing Linear Search",
+          "By using a binary heap to manage elements",
+          "By hashing elements for quick access"
+        ],
+        "answer": "By jumping ahead by fixed steps and then performing Linear Search",
+        "explanation": "Jump Search involves jumping ahead by fixed steps (typically √n) to find a block where the target may reside, then performing Linear Search within that block.",
+        "incorrect_explanation": {
+          "By dividing the array into two halves and searching recursively": "This describes Binary Search, not Jump Search.",
+          "By using a binary heap to manage elements": "Heaps are used for priority queues and Heap Sort, not Jump Search.",
+          "By hashing elements for quick access": "Hashing is related to hash tables, not Jump Search."
+        }
+      },
+      {
+        "question": "5. What is the time complexity of Jump Search in the average case?",
+        "options": [
+          "O(n)",
+          "O(√n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(√n)",
+        "explanation": "Jump Search has an average-case time complexity of O(√n) due to the fixed step jumps and subsequent Linear Search within a block.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is the time complexity for Linear Search, not Jump Search.",
+          "O(log n)": "This is the time complexity for Binary Search, not Jump Search.",
+          "O(n log n)": "This complexity is typical for efficient sorting algorithms, not searching."
+        }
+      },
+      {
+        "question": "6. Under what condition does Interpolation Search perform better than Binary Search?",
+        "options": [
+          "When elements are uniformly distributed",
+          "When the array is small",
+          "When elements are randomly distributed",
+          "When the array contains many duplicates"
+        ],
+        "answer": "When elements are uniformly distributed",
+        "explanation": "Interpolation Search performs better (close to O(log log n)) when elements are uniformly distributed because it can make better estimates of the target's position.",
+        "incorrect_explanation": {
+          "When the array is small": "For small arrays, the difference in performance between Interpolation and Binary Search is negligible.",
+          "When elements are randomly distributed": "Uniform distribution is key; random distribution can lead to poor performance.",
+          "When the array contains many duplicates": "Duplicates can affect the efficiency of both search algorithms but do not specifically benefit Interpolation Search."
+        }
+      },
+      {
+        "question": "7. What is the average-case time complexity of Interpolation Search?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(log log n)",
+          "O(1)"
+        ],
+        "answer": "O(log log n)",
+        "explanation": "Interpolation Search can achieve an average-case time complexity of O(log log n) when the elements are uniformly distributed.",
+        "incorrect_explanation": {
+          "O(n)": "This is the time complexity for Linear Search, not Interpolation Search.",
+          "O(log n)": "While Binary Search has O(log n) time complexity, Interpolation Search can be faster under certain conditions.",
+          "O(1)": "Constant time is not achievable for searching algorithms in general."
+        }
+      },
+      {
+        "question": "8. What is Exponential Search primarily used for?",
+        "options": [
+          "Searching in unsorted arrays",
+          "Searching in sorted arrays",
+          "Finding duplicates in an array",
+          "Sorting arrays"
+        ],
+        "answer": "Searching in sorted arrays",
+        "explanation": "Exponential Search is used for searching in sorted arrays, particularly when the size of the array is unknown.",
+        "incorrect_explanation": {
+          "Searching in unsorted arrays": "Exponential Search requires the array to be sorted.",
+          "Finding duplicates in an array": "This is typically handled by hashing or other specific algorithms.",
+          "Sorting arrays": "Exponential Search is a searching algorithm, not a sorting algorithm."
+        }
+      },
+      {
+        "question": "9. What is the time complexity of Exponential Search?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(log log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Exponential Search has a time complexity of O(log n) as it first finds a range where the target may exist and then performs Binary Search within that range.",
+        "incorrect_explanation": {
+          "O(n)": "This is the time complexity for Linear Search, not Exponential Search.",
+          "O(log log n)": "This is better than Exponential Search's actual complexity.",
+          "O(1)": "Constant time is not achievable for searching algorithms."
+        }
+      },
+      {
+        "question": "10. What is the main advantage of Jump Search over Linear Search?",
+        "options": [
+          "Less memory usage",
+          "Faster search in sorted arrays",
+          "Ability to handle unsorted data",
+          "Simpler implementation"
+        ],
+        "answer": "Faster search in sorted arrays",
+        "explanation": "Jump Search reduces the number of comparisons by jumping ahead in fixed steps, making it faster than Linear Search in sorted arrays.",
+        "incorrect_explanation": {
+          "Less memory usage": "Both Jump Search and Linear Search use similar memory.",
+          "Ability to handle unsorted data": "Jump Search requires the array to be sorted.",
+          "Simpler implementation": "Jump Search is slightly more complex to implement than Linear Search due to the step jumps."
+        }
+      },
+      {
+        "question": "11. Which searching algorithm is used in the implementation of the unordered hash table?",
+        "options": [
+              "Binary Search",
+              "Linear Search",
+              "Jump Search",
+              "Interpolation Search"
+            ],
+            "answer": "Linear Search",
+            "explanation": "In an unordered hash table, each bucket is typically a linked list or similar structure, requiring Linear Search to find elements within a bucket.",
+            "incorrect_explanation": {
+              "Binary Search": "Binary Search requires sorted data, which is not maintained within hash table buckets.",
+              "Jump Search": "Jump Search is not applicable to the structure of hash table buckets.",
+              "Interpolation Search": "Interpolation Search is not used in the context of hash table buckets."
+            }
+      },
+      {
+        "question": "12. What is the primary use of the A* Search Algorithm?",
+        "options": [
+              "Sorting elements",
+              "Finding the shortest path in graphs",
+              "Balancing binary search trees",
+              "Hashing elements for quick access"
+            ],
+            "answer": "Finding the shortest path in graphs",
+            "explanation": "A* Search Algorithm is widely used in pathfinding and graph traversal to find the shortest path from a start node to a target node efficiently.",
+            "incorrect_explanation": {
+              "Sorting elements": "A* is a search algorithm, not a sorting algorithm.",
+              "Balancing binary search trees": "Balancing trees is handled by algorithms like AVL or Red-Black trees, not A*.",
+              "Hashing elements for quick access": "Hashing is related to hash tables, not to A*."
+            }
+      },
+      {
+        "question": "13. How does Bidirectional Search improve the efficiency of search operations?",
+        "options": [
+              "By searching only one direction",
+              "By searching simultaneously from the start and goal nodes",
+              "By using a priority queue for the search",
+              "By ignoring the target node until the end"
+            ],
+            "answer": "By searching simultaneously from the start and goal nodes",
+            "explanation": "Bidirectional Search runs two simultaneous searches—one forward from the start and one backward from the goal—which can significantly reduce the search space and time.",
+            "incorrect_explanation": {
+              "By searching only one direction": "Bidirectional Search involves two directions, not one.",
+              "By using a priority queue for the search": "While it can use priority queues, the primary efficiency gain comes from searching from both ends.",
+              "By ignoring the target node until the end": "Bidirectional Search aims to meet in the middle, not ignore the target until the end."
+            }
+      },
+      {
+        "question": "14. What is the key idea behind the Knuth-Morris-Pratt (KMP) algorithm?",
+        "options": [
+              "Using a hash table to store patterns",
+              "Preprocessing the pattern to avoid redundant comparisons",
+              "Dividing the text into blocks",
+              "Using a sliding window without preprocessing"
+            ],
+            "answer": "Preprocessing the pattern to avoid redundant comparisons",
+            "explanation": "KMP preprocesses the pattern to create a partial match table, which allows the algorithm to skip unnecessary comparisons, improving efficiency.",
+            "incorrect_explanation": {
+              "Using a hash table to store patterns": "KMP does not use hash tables for pattern storage.",
+              "Dividing the text into blocks": "This is more characteristic of algorithms like Boyer-Moore.",
+              "Using a sliding window without preprocessing": "KMP relies on preprocessing the pattern to optimize the search."
+            }
+      },
+      {
+        "question": "15. Which searching algorithm is most efficient for finding a substring within a string?",
+        "options": [
+              "Linear Search",
+              "Binary Search",
+              "Knuth-Morris-Pratt (KMP) Algorithm",
+              "Jump Search"
+            ],
+            "answer": "Knuth-Morris-Pratt (KMP) Algorithm",
+            "explanation": "The KMP algorithm is specifically designed for efficient substring searching by preprocessing the pattern to allow linear-time searching.",
+            "incorrect_explanation": {
+              "Linear Search": "Linear Search would require checking each position, leading to higher time complexity.",
+              "Binary Search": "Binary Search requires sorted data and is not applicable to substring searching.",
+              "Jump Search": "Jump Search is used for searching in sorted arrays, not for substring searching."
+            }
+      },
+      {
+        "question": "16. What is the time complexity of Breadth-First Search (BFS) when searching in a graph represented using an adjacency list?",
+        "options": [
+              "O(V)",
+              "O(E)",
+              "O(V + E)",
+              "O(V²)"
+            ],
+            "answer": "O(V + E)",
+            "explanation": "BFS explores all vertices and edges in the graph. Using an adjacency list, the time complexity is O(V + E).",
+            "incorrect_explanation": {
+              "O(V)": "This only accounts for visiting all vertices without considering the edges.",
+              "O(E)": "This only accounts for traversing edges without considering the vertices.",
+              "O(V²)": "This is the time complexity for BFS on an adjacency matrix, not an adjacency list."
+            }
+      },
+      {
+        "question": "17. How does the Jump Search algorithm determine the block to perform Linear Search in?",
+        "options": [
+              "By calculating the midpoint of the array",
+              "By jumping ahead in fixed steps until a block where the target may reside is found",
+              "By randomly selecting a block",
+              "By using a hash function to determine the block"
+            ],
+            "answer": "By jumping ahead in fixed steps until a block where the target may reside is found",
+            "explanation": "Jump Search divides the array into blocks of fixed size and jumps ahead by these steps until it finds a block where the target could be, then performs Linear Search within that block.",
+            "incorrect_explanation": {
+              "By calculating the midpoint of the array": "Calculating the midpoint is a characteristic of Binary Search, not Jump Search.",
+              "By randomly selecting a block": "Jump Search uses fixed steps, not random selection.",
+              "By using a hash function to determine the block": "Hash functions are unrelated to the block selection process in Jump Search."
+            }
+      },
+      {
+        "question": "18. What distinguishes Exponential Search from Binary Search?",
+        "options": [
+              "Exponential Search does not require the array to be sorted",
+              "Exponential Search first finds a range by doubling the index before performing Binary Search",
+              "Exponential Search uses a hash table internally",
+              "Exponential Search has a better worst-case time complexity than Binary Search"
+            ],
+            "answer": "Exponential Search first finds a range by doubling the index before performing Binary Search",
+            "explanation": "Exponential Search starts by finding a range where the target may exist by doubling the index, then performs Binary Search within that range.",
+            "incorrect_explanation": {
+              "Exponential Search does not require the array to be sorted": "Exponential Search requires the array to be sorted, similar to Binary Search.",
+              "Exponential Search uses a hash table internally": "Exponential Search does not utilize hash tables.",
+              "Exponential Search has a better worst-case time complexity than Binary Search": "Both have similar worst-case time complexities, but Exponential Search can be more efficient in certain scenarios."
+            }
+      },
+      {
+        "question": "19. In the context of searching algorithms, what is a heuristic?",
+        "options": [
+              "A method for handling collisions",
+              "An approach to estimate the cost from a node to the goal",
+              "A data structure used for storing elements",
+              "A way to sort elements before searching"
+            ],
+            "answer": "An approach to estimate the cost from a node to the goal",
+            "explanation": "A heuristic is a function that estimates the cost of the cheapest path from a given node to the goal, used in algorithms like A* Search.",
+            "incorrect_explanation": {
+              "A method for handling collisions": "Heuristics are not related to collision handling in hashing.",
+              "A data structure used for storing elements": "Heuristics are functions, not data structures.",
+              "A way to sort elements before searching": "Heuristics are not about sorting but about estimating costs or distances."
+            }
+      },
+      {
+        "question": "20. Which algorithm is particularly effective for searching in a graph with weighted edges and no negative weights?",
+        "options": [
+              "Depth-First Search",
+              "Breadth-First Search",
+              "Dijkstra's Algorithm",
+              "Bellman-Ford Algorithm"
+            ],
+            "answer": "Dijkstra's Algorithm",
+            "explanation": "Dijkstra's Algorithm is designed to find the shortest paths from a single source in a graph with non-negative edge weights.",
+            "incorrect_explanation": {
+              "Depth-First Search": "DFS is not specifically designed for finding shortest paths in weighted graphs.",
+              "Breadth-First Search": "BFS is effective for unweighted graphs or graphs with equal edge weights.",
+              "Bellman-Ford Algorithm": "While Bellman-Ford can handle negative weights, it is generally slower than Dijkstra's in graphs without negative weights."
+            }
+      }
+    ]
+  }
+  

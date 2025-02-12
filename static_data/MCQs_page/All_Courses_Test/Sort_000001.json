@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the average-case time complexity of QuickSort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n²)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "QuickSort has an average-case time complexity of O(n log n) due to the divide-and-conquer approach of partitioning the array.",
+        "incorrect_explanation": {
+          "O(n)": "QuickSort performs multiple recursive calls, making linear time infeasible.",
+          "O(n²)": "O(n²) is the worst-case time complexity when the pivot selection is poor, not the average case.",
+          "O(log n)": "Logarithmic time is too efficient for sorting algorithms that must examine each element."
+        }
+      },
+      {
+        "question": "2. Which sorting algorithm is stable?",
+        "options": [
+          "QuickSort",
+          "HeapSort",
+          "MergeSort",
+          "Selection Sort"
+        ],
+        "answer": "MergeSort",
+        "explanation": "MergeSort is a stable sorting algorithm as it preserves the relative order of equal elements during the merge process.",
+        "incorrect_explanation": {
+          "QuickSort": "QuickSort is generally not stable because equal elements can be reordered during partitioning.",
+          "HeapSort": "HeapSort is not stable as the heap operations can change the relative order of equal elements.",
+          "Selection Sort": "Selection Sort is typically not stable because it may swap non-consecutive elements."
+        }
+      },
+      {
+        "question": "3. What is the space complexity of MergeSort?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "MergeSort requires additional space proportional to the size of the input array for the temporary arrays used during merging.",
+        "incorrect_explanation": {
+          "O(1)": "MergeSort is not an in-place sorting algorithm and requires extra space.",
+          "O(log n)": "O(log n) space is associated with the recursion stack in some algorithms, but MergeSort needs O(n) space.",
+          "O(n log n)": "This is the time complexity of MergeSort, not its space complexity."
+        }
+      },
+      {
+        "question": "4. Which sorting algorithm is generally the fastest in practice for large datasets?",
+        "options": [
+          "Bubble Sort",
+          "Insertion Sort",
+          "QuickSort",
+          "Selection Sort"
+        ],
+        "answer": "QuickSort",
+        "explanation": "QuickSort is often the fastest in practice for large datasets due to its efficient cache usage and average-case O(n log n) time complexity.",
+        "incorrect_explanation": {
+          "Bubble Sort": "Bubble Sort has a poor time complexity of O(n²) and is inefficient for large datasets.",
+          "Insertion Sort": "Insertion Sort is efficient for small or nearly sorted datasets but not for large ones.",
+          "Selection Sort": "Selection Sort also has a time complexity of O(n²), making it unsuitable for large datasets."
+        }
+      },
+      {
+        "question": "5. What characteristic distinguishes HeapSort from QuickSort?",
+        "options": [
+          "HeapSort is not in-place, QuickSort is",
+          "HeapSort has a worst-case time complexity of O(n log n), QuickSort has O(n²)",
+          "HeapSort is stable, QuickSort is not",
+          "HeapSort requires less memory than QuickSort"
+        ],
+        "answer": "HeapSort has a worst-case time complexity of O(n log n), QuickSort has O(n²)",
+        "explanation": "HeapSort guarantees O(n log n) time complexity in the worst case, whereas QuickSort can degrade to O(n²) if not implemented with good pivot selection.",
+        "incorrect_explanation": {
+          "HeapSort is not in-place, QuickSort is": "Both HeapSort and QuickSort are in-place sorting algorithms.",
+          "HeapSort is stable, QuickSort is not": "HeapSort is generally not stable, and QuickSort can be implemented as stable or unstable.",
+          "HeapSort requires less memory than QuickSort": "Both sorting algorithms have similar in-place memory requirements."
+        }
+      },
+      {
+        "question": "6. Which sorting algorithm works by repeatedly swapping adjacent elements that are in the wrong order?",
+        "options": [
+          "Bubble Sort",
+          "Insertion Sort",
+          "QuickSort",
+          "HeapSort"
+        ],
+        "answer": "Bubble Sort",
+        "explanation": "Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.",
+        "incorrect_explanation": {
+          "Insertion Sort": "Insertion Sort builds the sorted array one element at a time by inserting elements into their correct position.",
+          "QuickSort": "QuickSort partitions the array around a pivot and recursively sorts the subarrays.",
+          "HeapSort": "HeapSort builds a heap and repeatedly extracts the maximum or minimum element."
+        }
+      },
+      {
+        "question": "7. What is the best-case time complexity of Insertion Sort?",
+        "options": [
+          "O(n²)",
+          "O(n log n)",
+          "O(n)",
+          "O(log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The best-case time complexity of Insertion Sort is O(n) when the array is already sorted, requiring only a single pass with no swaps.",
+        "incorrect_explanation": {
+          "O(n²)": "This is the average and worst-case time complexity of Insertion Sort.",
+          "O(n log n)": "This time complexity is associated with more efficient sorting algorithms like QuickSort and MergeSort.",
+          "O(log n)": "Logarithmic time does not apply to Insertion Sort operations."
+        }
+      },
+      {
+        "question": "8. Which sorting algorithm divides the array into subarrays, sorts them, and then merges them back together?",
+        "options": [
+          "QuickSort",
+          "MergeSort",
+          "HeapSort",
+          "Bubble Sort"
+        ],
+        "answer": "MergeSort",
+        "explanation": "MergeSort is a divide-and-conquer algorithm that splits the array into subarrays, recursively sorts them, and then merges the sorted subarrays.",
+        "incorrect_explanation": {
+          "QuickSort": "QuickSort partitions the array around a pivot but does not explicitly merge sorted subarrays.",
+          "HeapSort": "HeapSort builds a heap and extracts elements in order without merging.",
+          "Bubble Sort": "Bubble Sort repeatedly swaps adjacent elements without dividing the array into subarrays."
+        }
+      },
+      {
+        "question": "9. Which sorting algorithm is best suited for sorting linked lists?",
+        "options": [
+          "QuickSort",
+          "MergeSort",
+          "HeapSort",
+          "Bubble Sort"
+        ],
+        "answer": "MergeSort",
+        "explanation": "MergeSort is well-suited for linked lists as it does not require random access and can efficiently merge sorted sublists.",
+        "incorrect_explanation": {
+          "QuickSort": "QuickSort requires efficient random access, which is not available in linked lists.",
+          "HeapSort": "HeapSort also relies on array-based implementations for efficiency.",
+          "Bubble Sort": "While possible, Bubble Sort is inefficient for large linked lists."
+        }
+      },
+      {
+        "question": "10. What is the main advantage of Counting Sort over comparison-based sorting algorithms?",
+        "options": [
+          "It is stable",
+          "It has a linear time complexity",
+          "It requires less memory",
+          "It can sort any type of data"
+        ],
+        "answer": "It has a linear time complexity",
+        "explanation": "Counting Sort operates in O(n + k) time, where k is the range of input, making it linear and faster than comparison-based sorts for small ranges.",
+        "incorrect_explanation": {
+          "It is stable": "While Counting Sort is stable, some comparison-based sorts like MergeSort are also stable.",
+          "It requires less memory": "Counting Sort requires additional space proportional to the range of input, which can be more than some comparison-based algorithms.",
+          "It can sort any type of data": "Counting Sort is limited to sorting integers or objects that can be mapped to integers within a specific range."
+        }
+      },
+      {
+        "question": "11. Which sorting algorithm is based on the divide-and-conquer paradigm and uses a pivot element?",
+        "options": [
+          "Bubble Sort",
+          "Insertion Sort",
+          "QuickSort",
+          "Selection Sort"
+        ],
+        "answer": "QuickSort",
+        "explanation": "QuickSort uses a pivot element to partition the array into subarrays, then recursively sorts the subarrays using the divide-and-conquer approach.",
+        "incorrect_explanation": {
+          "Bubble Sort": "Bubble Sort repeatedly swaps adjacent elements without using a pivot.",
+          "Insertion Sort": "Insertion Sort builds the sorted array one element at a time by inserting elements into their correct position.",
+          "Selection Sort": "Selection Sort repeatedly selects the minimum element and swaps it into position without using a pivot."
+        }
+      },
+      {
+        "question": "12. What makes HeapSort an in-place sorting algorithm?",
+        "options": [
+          "It uses only a constant amount of extra space",
+          "It requires additional memory proportional to the input size",
+          "It is a stable sort",
+          "It does not use any extra memory"
+        ],
+        "answer": "It uses only a constant amount of extra space",
+        "explanation": "HeapSort is considered in-place because it transforms the input array into a heap using only a constant amount of additional space.",
+        "incorrect_explanation": {
+          "It requires additional memory proportional to the input size": "HeapSort does not require additional space proportional to the input size.",
+          "It is a stable sort": "HeapSort is generally not stable as it can reorder equal elements.",
+          "It does not use any extra memory": "HeapSort uses a constant amount of extra memory, not zero."
+        }
+      },
+      {
+        "question": "13. Which sorting algorithm is not comparison-based?",
+        "options": [
+          "QuickSort",
+          "MergeSort",
+          "HeapSort",
+          "Radix Sort"
+        ],
+        "answer": "Radix Sort",
+        "explanation": "Radix Sort is a non-comparison-based sorting algorithm that sorts data by processing individual digits or characters.",
+        "incorrect_explanation": {
+          "QuickSort": "QuickSort is a comparison-based sorting algorithm.",
+          "MergeSort": "MergeSort is also a comparison-based sorting algorithm.",
+          "HeapSort": "HeapSort relies on comparisons to maintain the heap property."
+        }
+      },
+      {
+        "question": "14. What is the worst-case time complexity of MergeSort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n²)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "MergeSort consistently has a worst-case time complexity of O(n log n) due to the divide-and-conquer approach.",
+        "incorrect_explanation": {
+          "O(n)": "Linear time is not achievable for a divide-and-conquer sorting algorithm like MergeSort.",
+          "O(n²)": "This is the worst-case time complexity for algorithms like Bubble Sort or Selection Sort, not MergeSort.",
+          "O(log n)": "Logarithmic time does not apply to sorting algorithms that process each element."
+        }
+      },
+      {
+        "question": "15. Which sorting algorithm is particularly efficient for small datasets?",
+        "options": [
+          "QuickSort",
+          "Insertion Sort",
+          "HeapSort",
+          "MergeSort"
+        ],
+        "answer": "Insertion Sort",
+        "explanation": "Insertion Sort is very efficient for small datasets or nearly sorted data due to its low overhead and simplicity.",
+        "incorrect_explanation": {
+          "QuickSort": "QuickSort is efficient for large datasets but has higher overhead for small datasets.",
+          "HeapSort": "HeapSort is generally not as efficient as Insertion Sort for small datasets.",
+          "MergeSort": "MergeSort has higher overhead and is more suitable for larger datasets."
+        }
+      },
+      {
+        "question": "16. What is the key idea behind Bucket Sort?",
+        "options": [
+          "Dividing elements into buckets and then sorting each bucket individually",
+          "Using a binary heap to sort elements",
+          "Recursively partitioning the array around a pivot",
+          "Swapping adjacent elements to sort the array"
+        ],
+        "answer": "Dividing elements into buckets and then sorting each bucket individually",
+        "explanation": "Bucket Sort distributes elements into several buckets, sorts each bucket individually (often using another sorting algorithm), and then concatenates the sorted buckets.",
+        "incorrect_explanation": {
+          "Using a binary heap to sort elements": "This describes HeapSort, not Bucket Sort.",
+          "Recursively partitioning the array around a pivot": "This describes QuickSort.",
+          "Swapping adjacent elements to sort the array": "This describes Bubble Sort."
+        }
+      },
+      {
+        "question": "17. Which sorting algorithm can be implemented without recursion?",
+        "options": [
+          "MergeSort",
+          "QuickSort",
+          "HeapSort",
+          "All of the above"
+        ],
+        "answer": "HeapSort",
+        "explanation": "HeapSort can be implemented iteratively without the need for recursion, unlike MergeSort and QuickSort which are typically recursive.",
+        "incorrect_explanation": {
+          "MergeSort": "MergeSort is generally implemented recursively, although it can be implemented iteratively.",
+          "QuickSort": "QuickSort is typically implemented recursively, though it can also be implemented iteratively with additional data structures.",
+          "All of the above": "Only HeapSort can be efficiently implemented without recursion."
+        }
+      },
+      {
+        "question": "18. What is the main drawback of using Counting Sort?",
+        "options": [
+          "It is unstable",
+          "It has a high time complexity",
+          "It requires additional space proportional to the range of input",
+          "It cannot sort integers"
+        ],
+        "answer": "It requires additional space proportional to the range of input",
+        "explanation": "Counting Sort requires additional space for the count array, which is proportional to the range of the input data, making it inefficient for large ranges.",
+        "incorrect_explanation": {
+          "It is unstable": "Counting Sort is a stable sorting algorithm.",
+          "It has a high time complexity": "Counting Sort operates in linear time, O(n + k), which is efficient for suitable ranges.",
+          "It cannot sort integers": "Counting Sort is specifically designed to sort integers or objects that can be mapped to integers."
+        }
+      },
+      {
+        "question": "19. Which sorting algorithm is best suited for external sorting (sorting data that does not fit into main memory)?",
+        "options": [
+          "QuickSort",
+          "MergeSort",
+          "HeapSort",
+          "Bubble Sort"
+        ],
+        "answer": "MergeSort",
+        "explanation": "MergeSort is well-suited for external sorting because it accesses data sequentially and can efficiently merge large sorted chunks of data.",
+        "incorrect_explanation": {
+          "QuickSort": "QuickSort's recursive nature and random access patterns make it less suitable for external sorting.",
+          "HeapSort": "HeapSort is not as efficient as MergeSort for external sorting due to its access patterns.",
+          "Bubble Sort": "Bubble Sort is highly inefficient for large datasets and unsuitable for external sorting."
+        }
+      },
+      {
+        "question": "20. What is the primary reason for the inefficiency of Bubble Sort?",
+        "options": [
+          "It requires additional memory",
+          "It has a high number of comparisons and swaps",
+          "It cannot handle duplicate elements",
+          "It is not stable"
+        ],
+        "answer": "It has a high number of comparisons and swaps",
+        "explanation": "Bubble Sort is inefficient because it makes a large number of comparisons and swaps, leading to a time complexity of O(n²).",
+        "incorrect_explanation": {
+          "It requires additional memory": "Bubble Sort is an in-place sorting algorithm and does not require additional memory.",
+          "It cannot handle duplicate elements": "Bubble Sort can handle duplicate elements just fine.",
+          "It is not stable": "Bubble Sort is actually a stable sorting algorithm."
+        }
+      }
+    ]
+  }
+  

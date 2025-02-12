@@ -1,0 +1,46 @@
+{
+    "Programming_Fundamentals_000001": {
+      "Title": "Programming_Fundamentals",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Programming_Fundamentals_000001.json"
+    },
+    "Array_000001": {
+      "Title": "Array",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Array_000001.json"
+    },
+    "Linked_List_000001": {
+      "Title": "Linked_List",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Linked_List_000001.json"
+    },
+    "Stack_000001": {
+      "Title": "Stack",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Stack_000001.json"
+    },
+    "Queue_000001": {
+      "Title": "Queue",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Queue_000001.json"
+    },
+    "Trees_000001": {
+      "Title": "Trees",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Trees_000001.json"
+    },
+    "Graph_000001": {
+      "Title": "Graph",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Graph_000001.json"
+    },
+    "Hashing_000001": {
+      "Title": "Hashing",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Hashing_000001.json"
+    },
+    "Heap_000001": {
+      "Title": "Heap",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Heap_000001.json"
+    },
+    "Sort_000001": {
+      "Title": "Sort",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Sort_000001.json"
+    },
+    "Search_000001": {
+      "Title": "Search",
+      "Test_file": "Static_Files/Practice_Page/All_Courses_Test/Search_000001.json"
+    }
+  }
