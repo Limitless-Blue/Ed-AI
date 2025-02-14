@@ -1,0 +1,79 @@
+{
+  "MCPA_1": {
+    "Title": "Programming_Fundamentals",
+    "Test_file": "static_data/MCQs_page/All_Courses_Test.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_2": {
+    "Title": "Array",
+    "Test_file": "static_data/MCQs_page/Array_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_3": {
+    "Title": "Linked_List",
+    "Test_file": "static_data/MCQs_page/Linked_List_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_4": {
+    "Title": "Stack",
+    "Test_file": "static_data/MCQs_page/Stack_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_5": {
+    "Title": "Queue",
+    "Test_file": "static_data/MCQs_page/Queue_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_6": {
+    "Title": "Trees",
+    "Test_file": "static_data/MCQs_page/Trees_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_7": {
+    "Title": "Graph",
+    "Test_file": "static_data/MCQs_page/Graph_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_8": {
+    "Title": "Hashing",
+    "Test_file": "static_data/MCQs_page/Hashing_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_9": {
+    "Title": "Heap",
+    "Test_file": "static_data/MCQs_page/Heap_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_10": {
+    "Title": "Sort",
+    "Test_file": "static_data/MCQs_page/Sort_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  },
+  "MCPA_11": {
+    "Title": "Search",
+    "Test_file": "static_data/MCQs_page/Search_000001.json",
+    "Saved": false,
+    "Completed": false,
+    "Score": 0
+  }
+}
