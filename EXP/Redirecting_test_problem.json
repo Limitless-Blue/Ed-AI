@@ -1,9 +1,0 @@
-{
-    "ID": "prob_arra_00000000001",
-    "title": "Array",
-    "Problem_Description": "EXP\\problem.md",
-    "Test_Cases": [
-        ["1 2", "3"],
-        ["3 5", "8"]
-    ]
-}
