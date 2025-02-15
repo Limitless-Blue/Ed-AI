@@ -2,7 +2,7 @@
     "ForWebsite": {
         "username": "Chaitanya",
         "password": "Katoro kamado",
-        "profilePicture": "static_data\\user_data\\profile_pic.png"
+        "profilePicture": "Database\\user_data\\profile_pic.png"
     },
     "ResumeDetails": {
         "personalInformation": {
