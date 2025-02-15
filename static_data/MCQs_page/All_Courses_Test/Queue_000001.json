@@ -1,0 +1,320 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the time complexity of enqueue and dequeue operations in a standard queue implemented using a linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Both enqueue and dequeue operations can be performed in constant time, O(1), when using a linked list with pointers to both the head and tail.",
+        "incorrect_explanation": {
+          "O(n)": "This implies linear time complexity, which is not the case for standard queue operations with proper pointers.",
+          "O(log n)": "Logarithmic time complexity does not apply to basic queue operations.",
+          "O(n log n)": "This is typically associated with efficient sorting algorithms, not queue operations."
+        }
+      },
+      {
+        "question": "2. Which of the following is a common application of a queue?",
+        "options": [
+          "Depth-First Search (DFS)",
+          "Breadth-First Search (BFS)",
+          "Quick Sort",
+          "Binary Search"
+        ],
+        "answer": "Breadth-First Search (BFS)",
+        "explanation": "Queues are used in BFS to keep track of nodes to visit next in level order.",
+        "incorrect_explanation": {
+          "Depth-First Search (DFS)": "DFS typically uses a stack or recursion, not a queue.",
+          "Quick Sort": "Quick Sort uses a divide-and-conquer approach, not queues.",
+          "Binary Search": "Binary Search requires random access, typically implemented on arrays, not queues."
+        }
+      },
+      {
+        "question": "3. How can you implement a queue using two stacks?",
+        "options": [
+          "Push all elements to the first stack and pop from the second",
+          "Use one stack for enqueue and one for dequeue operations",
+          "Push and pop elements alternatively from both stacks",
+          "Use both stacks to store elements simultaneously"
+        ],
+        "answer": "Use one stack for enqueue and one for dequeue operations",
+        "explanation": "One stack is used to handle enqueue operations, and the other stack is used for dequeue operations, allowing queue behavior using two LIFO stacks.",
+        "incorrect_explanation": {
+          "Push all elements to the first stack and pop from the second": "This is incomplete and doesn't specify how to transfer elements between stacks.",
+          "Push and pop elements alternatively from both stacks": "This does not correctly maintain the queue order.",
+          "Use both stacks to store elements simultaneously": "Storing elements in both stacks simultaneously does not achieve the desired queue behavior."
+        }
+      },
+      {
+        "question": "4. What is the primary difference between a standard queue and a circular queue?",
+        "options": [
+          "Circular queue allows insertion at both ends",
+          "Circular queue uses a fixed-size buffer and connects the end to the front",
+          "Standard queue allows random access",
+          "Standard queue uses two pointers, while circular queue uses only one"
+        ],
+        "answer": "Circular queue uses a fixed-size buffer and connects the end to the front",
+        "explanation": "A circular queue wraps around to the beginning of the buffer when the end is reached, efficiently utilizing space.",
+        "incorrect_explanation": {
+          "Circular queue allows insertion at both ends": "This describes a deque, not a circular queue.",
+          "Standard queue allows random access": "Queues do not allow random access; they follow FIFO order.",
+          "Standard queue uses two pointers, while circular queue uses only one": "Both can use two pointers; the primary difference is the circular nature."
+        }
+      },
+      {
+        "question": "5. How do you implement a priority queue?",
+        "options": [
+          "Using a linked list",
+          "Using a binary heap",
+          "Using two stacks",
+          "Using a circular buffer"
+        ],
+        "answer": "Using a binary heap",
+        "explanation": "A binary heap allows for efficient insertion and removal of the highest (or lowest) priority element in O(log n) time.",
+        "incorrect_explanation": {
+          "Using a linked list": "While possible, it does not provide efficient operations compared to a binary heap.",
+          "Using two stacks": "Stacks do not inherently support priority-based ordering.",
+          "Using a circular buffer": "Circular buffers manage order but do not handle priorities efficiently."
+        }
+      },
+      {
+        "question": "6. What will be the output of the following queue operations? Enqueue(1), Enqueue(2), Dequeue(), Enqueue(3), Dequeue()",
+        "options": [
+          "1, 2",
+          "2, 3",
+          "1, 3",
+          "3, 2"
+        ],
+        "answer": "1, 2",
+        "explanation": "After Enqueue(1) and Enqueue(2), the queue is [1,2]. Dequeue() removes 1, making the queue [2]. Enqueue(3) makes it [2,3]. Dequeue() removes 2.",
+        "incorrect_explanation": {
+          "2, 3": "Incorrect because the first Dequeue() removes 1, not 2.",
+          "1, 3": "Incorrect because the second Dequeue() removes 2, not 3.",
+          "3, 2": "Incorrect order of removal."
+        }
+      },
+      {
+        "question": "7. How can you efficiently implement a queue using a dynamic array?",
+        "options": [
+          "Insert and delete elements from the beginning",
+          "Insert elements at the end and keep track of the front index",
+          "Use two pointers, one for enqueue and one for dequeue",
+          "Shift all elements after each dequeue"
+        ],
+        "answer": "Insert elements at the end and keep track of the front index",
+        "explanation": "By maintaining a front index, you can enqueue at the end in O(1) and dequeue by incrementing the front index without shifting elements.",
+        "incorrect_explanation": {
+          "Insert and delete elements from the beginning": "Deleting from the beginning of a dynamic array is inefficient as it requires shifting elements.",
+          "Use two pointers, one for enqueue and one for dequeue": "While similar to the correct approach, the main idea is tracking the front index.",
+          "Shift all elements after each dequeue": "Shifting elements leads to O(n) time complexity for each dequeue."
+        }
+      },
+      {
+        "question": "8. What is the space complexity of a queue implemented using a linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The space complexity is linear, O(n), as it requires space for each element in the queue.",
+        "incorrect_explanation": {
+          "O(1)": "Constant space would imply the space does not grow with the number of elements, which is incorrect.",
+          "O(log n)": "Logarithmic space does not apply to queue implementations.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not queue space requirements."
+        }
+      },
+      {
+        "question": "9. How can you implement a deque (double-ended queue) using a circular buffer?",
+        "options": [
+          "By allowing insertion and deletion at both the front and rear ends",
+          "By restricting insertions and deletions to one end only",
+          "By using two separate circular buffers",
+          "By doubling the size of the circular buffer"
+        ],
+        "answer": "By allowing insertion and deletion at both the front and rear ends",
+        "explanation": "A deque allows operations at both ends, which can be efficiently managed using a circular buffer by maintaining front and rear pointers.",
+        "incorrect_explanation": {
+          "By restricting insertions and deletions to one end only": "This describes a standard queue, not a deque.",
+          "By using two separate circular buffers": "This is unnecessary and complicates the implementation.",
+          "By doubling the size of the circular buffer": "Increasing size handles capacity but does not inherently allow double-ended operations."
+        }
+      },
+      {
+        "question": "10. What is the time complexity of accessing the front element in a queue implemented using a linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Accessing the front element is a constant-time operation when using a linked list with a pointer to the head.",
+        "incorrect_explanation": {
+          "O(n)": "Linear time is not required as the front is directly accessible.",
+          "O(log n)": "Logarithmic time does not apply to accessing elements in a queue.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not queue access."
+        }
+      },
+      {
+        "question": "11. How do you handle queue overflow in a fixed-size queue implementation?",
+        "options": [
+          "Ignore the overflow",
+          "Automatically resize the queue",
+          "Use exception handling to manage overflow",
+          "Both B and C"
+        ],
+        "answer": "Both B and C",
+        "explanation": "Handling queue overflow can involve automatically resizing the queue or using exception handling to manage the overflow gracefully.",
+        "incorrect_explanation": {
+          "Ignore the overflow": "Ignoring overflow can lead to undefined behavior and potential crashes.",
+          "Automatically resize the queue": "While correct, it is not the only way to handle overflow.",
+          "Use exception handling to manage overflow": "While correct, it is not the only way to handle overflow."
+        }
+      },
+      {
+        "question": "12. What is the primary difference between a queue and a priority queue?",
+        "options": [
+          "Queue is FIFO while priority queue orders elements based on priority",
+          "Queue allows random access while priority queue does not",
+          "Queue uses a binary heap while priority queue uses a linked list",
+          "Queue supports multiple insertions while priority queue does not"
+        ],
+        "answer": "Queue is FIFO while priority queue orders elements based on priority",
+        "explanation": "A standard queue follows the First-In-First-Out (FIFO) principle, whereas a priority queue orders elements based on their priority.",
+        "incorrect_explanation": {
+          "Queue allows random access while priority queue does not": "Queues do not allow random access; they follow FIFO order.",
+          "Queue uses a binary heap while priority queue uses a linked list": "Typically, priority queues use binary heaps or other heap structures, while standard queues can use linked lists or arrays.",
+          "Queue supports multiple insertions while priority queue does not": "Both queues and priority queues support multiple insertions."
+        }
+      },
+      {
+        "question": "13. How can you implement a circular queue using an array?",
+        "options": [
+          "By setting the last element's next pointer to the first element",
+          "By using two pointers, front and rear, and wrapping them around using modulo operation",
+          "By dynamically resizing the array when full",
+          "By using a single pointer to track the rear"
+        ],
+        "answer": "By using two pointers, front and rear, and wrapping them around using modulo operation",
+        "explanation": "Using front and rear pointers with modulo allows the queue to efficiently utilize the array space in a circular manner.",
+        "incorrect_explanation": {
+          "By setting the last element's next pointer to the first element": "This describes a circular linked list, not a circular queue using an array.",
+          "By dynamically resizing the array when full": "Dynamic resizing can handle overflow but does not inherently implement the circular nature.",
+          "By using a single pointer to track the rear": "A single pointer is insufficient to manage both enqueue and dequeue operations effectively."
+        }
+      },
+      {
+        "question": "14. What is the time complexity of searching for an element in a queue?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Searching for an element in a queue requires traversing the elements, resulting in linear time complexity.",
+        "incorrect_explanation": {
+          "O(1)": "Constant time is only possible with direct access, which queues do not provide.",
+          "O(log n)": "Logarithmic time is not achievable for unsorted queue searches.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not queue searches."
+        }
+      },
+      {
+        "question": "15. How can you implement a queue using a circular linked list?",
+        "options": [
+          "By connecting the tail to the head to form a loop",
+          "By maintaining separate pointers for front and rear",
+          "By using a single pointer to the tail",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "Implementing a circular linked list as a queue involves connecting the tail to the head, maintaining separate front and rear pointers, and often using a single pointer to the tail for efficient operations.",
+        "incorrect_explanation": {}
+      },
+      {
+        "question": "16. What is the main advantage of using a priority queue over a standard queue?",
+        "options": [
+          "Faster enqueue operations",
+          "Elements are ordered based on priority rather than arrival time",
+          "Uses less memory",
+          "Allows random access to elements"
+        ],
+        "answer": "Elements are ordered based on priority rather than arrival time",
+        "explanation": "A priority queue orders elements based on their priority, enabling access to the highest (or lowest) priority element first, unlike a standard queue which follows FIFO.",
+        "incorrect_explanation": {
+          "Faster enqueue operations": "Priority queues typically have O(log n) enqueue operations, which may not be faster than standard queues.",
+          "Uses less memory": "Memory usage depends on the implementation and is not inherently less.",
+          "Allows random access to elements": "Priority queues do not support random access; they focus on priority-based access."
+        }
+      },
+      {
+        "question": "17. How can you implement a queue that supports constant-time retrieval of the minimum element?",
+        "options": [
+          "Use a standard queue and traverse it to find the minimum",
+          "Use two queues, one for elements and one for minimums",
+          "Use a priority queue",
+          "Store the minimum value as a separate variable"
+        ],
+        "answer": "Use two queues, one for elements and one for minimums",
+        "explanation": "Maintaining a second queue that keeps track of the current minimum allows constant-time retrieval of the minimum element.",
+        "incorrect_explanation": {
+          "Use a standard queue and traverse it to find the minimum": "Traversing would result in O(n) time complexity for finding the minimum.",
+          "Use a priority queue": "While priority queues can provide minimum elements efficiently, they do not maintain the FIFO order required for standard queue operations.",
+          "Store the minimum value as a separate variable": "A single variable cannot track changes to the minimum when elements are dequeued."
+        }
+      },
+      {
+        "question": "18. What is the time complexity of enqueue operation in a circular queue implemented using an array?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Enqueue operations in a circular queue using an array can be performed in constant time by updating the rear pointer with modulo operation.",
+        "incorrect_explanation": {
+          "O(n)": "Linear time is not required as enqueue operations can be done in constant time.",
+          "O(log n)": "Logarithmic time does not apply to basic enqueue operations.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not queue operations."
+        }
+      },
+      {
+        "question": "19. How can you efficiently implement a multi-level queue scheduling system?",
+        "options": [
+          "Using a single queue with priority tags",
+          "Using multiple queues for different priority levels",
+          "Using a circular queue for all levels",
+          "Using a stack for higher priority levels"
+        ],
+        "answer": "Using multiple queues for different priority levels",
+        "explanation": "Multi-level queues use separate queues for different priority levels, allowing scheduling based on priority by checking queues in order.",
+        "incorrect_explanation": {
+          "Using a single queue with priority tags": "While possible, it is less efficient than having separate queues for each priority level.",
+          "Using a circular queue for all levels": "A circular queue does not inherently handle multiple priority levels.",
+          "Using a stack for higher priority levels": "Stacks follow LIFO order, which does not align with priority-based scheduling."
+        }
+      },
+      {
+        "question": "20. What is the result of performing a dequeue operation on an empty queue?",
+        "options": [
+          "Returns null or a special value indicating the queue is empty",
+          "Removes the last element",
+          "Throws an error or exception",
+          "Both A and C"
+        ],
+        "answer": "Both A and C",
+        "explanation": "Attempting to dequeue from an empty queue can either return a null/special value or throw an error/exception, depending on the implementation.",
+        "incorrect_explanation": {
+          "Removes the last element": "There are no elements to remove in an empty queue.",
+          "Returns null or a special value indicating the queue is empty": "This is correct, but not the only possible outcome."
+        }
+      }
+    ]
+  }
+  

@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 22",
+    "ID": "LEPA_22",
     "title": "Heap",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 22/Course Markdown File/DS_Heap.md"
+      "Static_Files/Learn_Page/LEPA_22/Course Markdown File/DS_Heap.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 22/Test Json File/DS_Heap.json"
+      "Static_Files/Learn_Page/LEPA_22/Test Json File/DS_Heap.json"
     ]
 }

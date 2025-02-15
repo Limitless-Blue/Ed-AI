@@ -1,0 +1,181 @@
+{
+    "questions": [
+      {
+        "question": "What is the key difference between Binary Search and Ternary Search?",
+        "options": [
+          "Ternary Search divides the array into three parts, while Binary Search divides it into two",
+          "Ternary Search uses Fibonacci numbers, while Binary Search does not",
+          "Ternary Search only works on unsorted arrays, while Binary Search works on sorted arrays",
+          "There is no difference, both are the same"
+        ],
+        "answer": "Ternary Search divides the array into three parts, while Binary Search divides it into two",
+        "explanation": "Ternary Search divides the search space into three parts, whereas Binary Search divides it into two.",
+        "incorrect_explanation": {
+          "Ternary Search uses Fibonacci numbers, while Binary Search does not": "This describes Fibonacci Search, not Ternary Search.",
+          "Ternary Search only works on unsorted arrays, while Binary Search works on sorted arrays": "Both Ternary and Binary Search require sorted arrays.",
+          "There is no difference, both are the same": "Ternary Search divides the array differently than Binary Search."
+        }
+      },
+      {
+        "question": "How are the midpoints calculated in Ternary Search?",
+        "options": [
+          "mid1 = left + (right - left) / 2, mid2 = right - (right - left) / 2",
+          "mid1 = left + (right - left) / 3, mid2 = right - (right - left) / 3",
+          "mid1 = left + right, mid2 = left - right",
+          "mid1 = (left + right) / 2, mid2 = (left + right) / 3"
+        ],
+        "answer": "mid1 = left + (right - left) / 3, mid2 = right - (right - left) / 3",
+        "explanation": "Ternary Search divides the array into three parts by calculating two midpoints, mid1 and mid2.",
+        "incorrect_explanation": {
+          "mid1 = left + (right - left) / 2, mid2 = right - (right - left) / 2": "This describes Binary Search, not Ternary Search.",
+          "mid1 = left + right, mid2 = left - right": "This is not a valid calculation for either search method.",
+          "mid1 = (left + right) / 2, mid2 = (left + right) / 3": "These are incorrect formulas for Ternary Search."
+        }
+      },
+      {
+        "question": "In Ternary Search, if the target is between mid1 and mid2, which part of the array is searched?",
+        "options": [
+          "Left third",
+          "Middle third",
+          "Right third",
+          "The entire array"
+        ],
+        "answer": "Middle third",
+        "explanation": "When the target is between mid1 and mid2, Ternary Search continues in the middle third of the array.",
+        "incorrect_explanation": {
+          "Left third": "The left third is searched if the target is less than mid1.",
+          "Right third": "The right third is searched if the target is greater than mid2.",
+          "The entire array": "The array is divided, not searched in its entirety."
+        }
+      },
+      {
+        "question": "What is the time complexity of Ternary Search?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(log2 n)",
+          "O(log3 n)"
+        ],
+        "answer": "O(log3 n)",
+        "explanation": "Ternary Search reduces the size of the search space by a third at each iteration, leading to a time complexity of O(log3 n).",
+        "incorrect_explanation": {
+          "O(n)": "This is the time complexity of Linear Search.",
+          "O(log n)": "This is the time complexity of Binary Search.",
+          "O(log2 n)": "This describes Binary Search."
+        }
+      },
+      {
+        "question": "How does Fibonacci Search determine the division points in the array?",
+        "options": [
+          "By using Fibonacci numbers",
+          "By using Binary divisions",
+          "By randomly selecting indices",
+          "By using midpoint calculations"
+        ],
+        "answer": "By using Fibonacci numbers",
+        "explanation": "Fibonacci Search divides the array using precomputed Fibonacci numbers to determine the optimal points for comparison.",
+        "incorrect_explanation": {
+          "By using Binary divisions": "Binary divisions are used in Binary Search, not Fibonacci Search.",
+          "By randomly selecting indices": "Random index selection is not part of Fibonacci Search.",
+          "By using midpoint calculations": "Midpoint calculations are used in Binary and Ternary Search."
+        }
+      },
+      {
+        "question": "In Fibonacci Search, what happens if the target is greater than the division point?",
+        "options": [
+          "Search the left Fibonacci segment",
+          "Search the right Fibonacci segment",
+          "Search the entire array",
+          "Return -1"
+        ],
+        "answer": "Search the right Fibonacci segment",
+        "explanation": "If the target is greater than the element at the Fibonacci division point, the search continues in the right Fibonacci segment.",
+        "incorrect_explanation": {
+          "Search the left Fibonacci segment": "The left Fibonacci segment is searched if the target is smaller.",
+          "Search the entire array": "Only the relevant segment is searched.",
+          "Return -1": "Search is not terminated until the target is found or the space is exhausted."
+        }
+      },
+      {
+        "question": "What is the space complexity of Fibonacci Search?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Fibonacci Search has a space complexity of O(1) because it uses a constant amount of memory.",
+        "incorrect_explanation": {
+          "O(n)": "This would be the space complexity if the algorithm stored additional data for each element.",
+          "O(log n)": "This would be the case for recursive implementations of some search algorithms.",
+          "O(n log n)": "This is not a common space complexity for search algorithms."
+        }
+      },
+      {
+        "question": "Which search algorithm uses precomputed Fibonacci numbers?",
+        "options": [
+          "Ternary Search",
+          "Binary Search",
+          "Fibonacci Search",
+          "Linear Search"
+        ],
+        "answer": "Fibonacci Search",
+        "explanation": "Fibonacci Search uses precomputed Fibonacci numbers to divide the array and locate the target.",
+        "incorrect_explanation": {
+          "Ternary Search": "Ternary Search divides the array into three parts, but does not use Fibonacci numbers.",
+          "Binary Search": "Binary Search divides the array into two parts without using Fibonacci numbers.",
+          "Linear Search": "Linear Search examines each element sequentially, without any complex divisions."
+        }
+      },
+      {
+        "question": "What is the primary advantage of using Fibonacci Search?",
+        "options": [
+          "It works on unsorted arrays",
+          "It uses less memory",
+          "It is optimized for datasets that are not a power of two",
+          "It is faster than Binary Search"
+        ],
+        "answer": "It is optimized for datasets that are not a power of two",
+        "explanation": "Fibonacci Search works well on datasets whose sizes are not powers of two, taking advantage of Fibonacci numbers.",
+        "incorrect_explanation": {
+          "It works on unsorted arrays": "Fibonacci Search, like Binary Search, requires a sorted array.",
+          "It uses less memory": "Both Binary and Fibonacci Search have similar memory footprints.",
+          "It is faster than Binary Search": "Fibonacci Search has similar performance to Binary Search but is more optimal in certain cases."
+        }
+      },
+      {
+        "question": "In Ternary Search, what happens if the target is less than mid1?",
+        "options": [
+          "Search the left third of the array",
+          "Search the middle third of the array",
+          "Search the right third of the array",
+          "Search the entire array"
+        ],
+        "answer": "Search the left third of the array",
+        "explanation": "If the target is less than mid1, Ternary Search continues in the left third of the array.",
+        "incorrect_explanation": {
+          "Search the middle third of the array": "The middle third is searched if the target is between mid1 and mid2.",
+          "Search the right third of the array": "The right third is searched if the target is greater than mid2.",
+          "Search the entire array": "Ternary Search divides the array, not searches the entire array."
+        }
+      },
+      {
+        "question": "How does Fibonacci Search handle arrays whose size is not a Fibonacci number?",
+        "options": [
+          "It skips elements",
+          "It adds dummy elements",
+          "It extends the array size",
+          "It works efficiently regardless"
+        ],
+        "answer": "It works efficiently regardless",
+        "explanation": "Fibonacci Search can efficiently handle arrays that are not Fibonacci-sized by utilizing the nearest Fibonacci number.",
+        "incorrect_explanation": {
+          "It skips elements": "Elements are not skipped during Fibonacci Search.",
+          "It adds dummy elements": "No additional elements are added.",
+          "It extends the array size": "The array is not modified."
+        }
+      }
+    ]
+  }
+  

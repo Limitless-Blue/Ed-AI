@@ -1,0 +1,321 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the time complexity of in-order traversal of a binary tree?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "answer": "O(n)",
+        "explanation": "In-order traversal visits each node exactly once, resulting in linear time complexity.",
+        "incorrect_explanation": {
+          "O(log n)": "Logarithmic time complexity typically applies to operations on balanced trees like BST search, not traversal.",
+          "O(n log n)": "This is usually associated with efficient sorting algorithms, not tree traversal.",
+          "O(1)": "Constant time is impossible for traversing all nodes in a tree."
+        }
+      },
+      {
+        "question": "2. Which of the following properties must a binary search tree (BST) satisfy?",
+        "options": [
+          "Left subtree contains nodes with keys greater than the node’s key, and right subtree contains keys less than the node’s key.",
+          "All nodes have either zero or two children.",
+          "Left subtree contains keys less than the node’s key, and right subtree contains keys greater than the node’s key.",
+          "All leaves are at the same level."
+        ],
+        "answer": "Left subtree contains keys less than the node’s key, and right subtree contains keys greater than the node’s key.",
+        "explanation": "A BST must ensure that for any node, all nodes in the left subtree have keys less than the node’s key, and all nodes in the right subtree have keys greater than the node’s key.",
+        "incorrect_explanation": {
+          "Left subtree contains nodes with keys greater than the node’s key, and right subtree contains keys less than the node’s key.": "This is the opposite of the BST property.",
+          "All nodes have either zero or two children.": "This is a property of a full binary tree, not necessarily a BST.",
+          "All leaves are at the same level.": "This is a property of a complete or perfect binary tree, not specifically a BST."
+        }
+      },
+      {
+        "question": "3. What is the height of a balanced binary search tree with n nodes?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "A balanced BST maintains its height proportional to log n, ensuring efficient operations.",
+        "incorrect_explanation": {
+          "O(n)": "Unbalanced BSTs can have a height of O(n), but balanced ones maintain O(log n).",
+          "O(1)": "Only applicable for a single-node tree.",
+          "O(n log n)": "This complexity is typically associated with efficient sorting algorithms, not tree height."
+        }
+      },
+      {
+        "question": "4. Which traversal method of a binary tree can be implemented using a stack?",
+        "options": [
+          "Level-order traversal",
+          "Pre-order traversal",
+          "Breadth-first traversal",
+          "None of the above"
+        ],
+        "answer": "Pre-order traversal",
+        "explanation": "Pre-order traversal can be implemented iteratively using a stack by visiting the root, then the left subtree, followed by the right subtree.",
+        "incorrect_explanation": {
+          "Level-order traversal": "Level-order traversal is typically implemented using a queue, not a stack.",
+          "Breadth-first traversal": "Breadth-first is synonymous with level-order and also uses a queue.",
+          "None of the above": "Pre-order traversal can indeed be implemented using a stack."
+        }
+      },
+      {
+        "question": "5. What is the main purpose of an AVL tree?",
+        "options": [
+          "To maintain elements in sorted order",
+          "To balance the tree to ensure O(log n) height",
+          "To provide faster search than binary search trees",
+          "To allow duplicate elements"
+        ],
+        "answer": "To balance the tree to ensure O(log n) height",
+        "explanation": "AVL trees are self-balancing BSTs that maintain their height to be O(log n), ensuring efficient search, insert, and delete operations.",
+        "incorrect_explanation": {
+          "To maintain elements in sorted order": "All BSTs maintain sorted order, not just AVL trees.",
+          "To provide faster search than binary search trees": "AVL trees maintain balanced heights, which provides consistent O(log n) search time, similar to other balanced BSTs.",
+          "To allow duplicate elements": "Allowing duplicates is not the primary purpose of AVL trees."
+        }
+      },
+      {
+        "question": "6. How do you find the lowest common ancestor (LCA) of two nodes in a binary tree?",
+        "options": [
+          "By finding the paths from root to each node and comparing the paths",
+          "By traversing the tree in level-order and marking ancestors",
+          "By storing all ancestors of one node and then checking ancestors of the other",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "All listed methods can be used to find the LCA, using different approaches like path comparison, ancestor storage, etc.",
+        "incorrect_explanation": {}
+      },
+      {
+        "question": "7. What is the diameter of a binary tree?",
+        "options": [
+          "The number of nodes in the longest path between any two leaves",
+          "The number of nodes at the deepest level",
+          "The height of the tree",
+          "The number of leaves"
+        ],
+        "answer": "The number of nodes in the longest path between any two leaves",
+        "explanation": "Diameter is defined as the length of the longest path between any two nodes in the tree.",
+        "incorrect_explanation": {
+          "The number of nodes at the deepest level": "This refers to the number of leaves at the maximum depth, not the diameter.",
+          "The height of the tree": "Height refers to the longest path from the root to a leaf, not between any two nodes.",
+          "The number of leaves": "This counts the leaf nodes, which is unrelated to the diameter."
+        }
+      },
+      {
+        "question": "8. How can you check if two binary trees are identical?",
+        "options": [
+          "Compare their in-order traversals",
+          "Compare their pre-order traversals",
+          "Recursively check if corresponding nodes are equal",
+          "Compare their level-order traversals"
+        ],
+        "answer": "Recursively check if corresponding nodes are equal",
+        "explanation": "The most accurate way is to recursively check each corresponding node’s value and structure.",
+        "incorrect_explanation": {
+          "Compare their in-order traversals": "Different trees can have the same in-order traversal.",
+          "Compare their pre-order traversals": "Same as above; traversal sequences alone cannot confirm identical structures.",
+          "Compare their level-order traversals": "Traversal sequences alone cannot confirm identical structures."
+        }
+      },
+      {
+        "question": "9. What is the space complexity of storing a binary tree?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Storing a binary tree requires space proportional to the number of nodes, hence O(n).",
+        "incorrect_explanation": {
+          "O(1)": "Constant space is impossible as the space grows with the number of nodes.",
+          "O(log n)": "Logarithmic space only applies to the height of a balanced tree, not the total space.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not tree storage."
+        }
+      },
+      {
+        "question": "10. What is a Binary Heap?",
+        "options": [
+          "A binary search tree that is balanced",
+          "A complete binary tree that satisfies the heap property",
+          "A binary tree where all nodes have two children",
+          "A binary tree used for binary search operations"
+        ],
+        "answer": "A complete binary tree that satisfies the heap property",
+        "explanation": "Binary heaps are complete binary trees that satisfy the heap property (either min-heap or max-heap).",
+        "incorrect_explanation": {
+          "A binary search tree that is balanced": "This describes AVL trees or other balanced BSTs, not heaps.",
+          "A binary tree where all nodes have two children": "Not all nodes in a heap need to have two children; only that the tree is complete.",
+          "A binary tree used for binary search operations": "Heaps are not used for binary search operations; BSTs are."
+        }
+      },
+      {
+        "question": "11. What is the main difference between a binary tree and a binary search tree (BST)?",
+        "options": [
+          "A BST has a specific ordering of nodes",
+          "A binary tree can only have two children",
+          "A BST must be balanced",
+          "A binary tree is always complete"
+        ],
+        "answer": "A BST has a specific ordering of nodes",
+        "explanation": "BSTs maintain an ordering property where left subtree nodes are less than the parent node, and right subtree nodes are greater.",
+        "incorrect_explanation": {
+          "A binary tree can only have two children": "Both binary trees and BSTs have at most two children per node.",
+          "A BST must be balanced": "BSTs do not have to be balanced unless they are specifically balanced BSTs like AVL or Red-Black trees.",
+          "A binary tree is always complete": "Binary trees can be any shape; completeness is a separate property."
+        }
+      },
+      {
+        "question": "12. How do you convert a sorted array into a balanced binary search tree?",
+        "options": [
+          "Insert elements one by one into a BST",
+          "Use divide and conquer by choosing the middle element as root",
+          "Insert elements in reverse order",
+          "Use a stack to build the tree"
+        ],
+        "answer": "Use divide and conquer by choosing the middle element as root",
+        "explanation": "Choosing the middle element as the root ensures that the tree is balanced by recursively applying the same strategy to subarrays.",
+        "incorrect_explanation": {
+          "Insert elements one by one into a BST": "This can result in an unbalanced tree with height O(n).",
+          "Insert elements in reverse order": "This also can lead to an unbalanced tree similar to inserting in sorted order.",
+          "Use a stack to build the tree": "Stacks are not directly used in the standard approach to convert a sorted array to a BST."
+        }
+      },
+      {
+        "question": "13. What is a trie (prefix tree) used for?",
+        "options": [
+          "Storing sorted data",
+          "Efficiently searching for strings with common prefixes",
+          "Implementing binary search",
+          "Balancing binary trees"
+        ],
+        "answer": "Efficiently searching for strings with common prefixes",
+        "explanation": "Tries are specialized tree data structures used to store and search strings based on their prefixes efficiently.",
+        "incorrect_explanation": {
+          "Storing sorted data": "Tries store data based on prefixes, not necessarily in sorted order.",
+          "Implementing binary search": "Tries are not used for binary search operations.",
+          "Balancing binary trees": "Tries do not inherently maintain balance like AVL or Red-Black trees."
+        }
+      },
+      {
+        "question": "14. Which traversal of a binary tree visits nodes in the order: left, root, right?",
+        "options": [
+          "Pre-order traversal",
+          "In-order traversal",
+          "Post-order traversal",
+          "Level-order traversal"
+        ],
+        "answer": "In-order traversal",
+        "explanation": "In-order traversal visits the left subtree, then the root, followed by the right subtree.",
+        "incorrect_explanation": {
+          "Pre-order traversal": "Pre-order visits the root first, then left and right subtrees.",
+          "Post-order traversal": "Post-order visits left and right subtrees first, then the root.",
+          "Level-order traversal": "Level-order is a breadth-first traversal, visiting nodes level by level."
+        }
+      },
+      {
+        "question": "15. How do you calculate the height of a binary tree?",
+        "options": [
+          "The number of nodes along the longest path from root to a leaf",
+          "The number of leaves",
+          "The total number of nodes",
+          "The maximum degree of any node"
+        ],
+        "answer": "The number of nodes along the longest path from root to a leaf",
+        "explanation": "Height is defined as the length of the longest path from the root node down to the farthest leaf node.",
+        "incorrect_explanation": {
+          "The number of leaves": "This counts the leaf nodes, which is unrelated to the height.",
+          "The total number of nodes": "This is the size of the tree, not its height.",
+          "The maximum degree of any node": "Degree refers to the number of children, not height."
+        }
+      },
+      {
+        "question": "16. Which of the following is true about a complete binary tree?",
+        "options": [
+          "All levels except possibly the last are completely filled",
+          "Every node has exactly two children",
+          "It is always balanced",
+          "It is always a binary search tree"
+        ],
+        "answer": "All levels except possibly the last are completely filled",
+        "explanation": "A complete binary tree has all levels fully filled except possibly the last, which is filled from left to right.",
+        "incorrect_explanation": {
+          "Every node has exactly two children": "In a complete binary tree, nodes in the last level may have fewer than two children.",
+          "It is always balanced": "Complete binary trees are balanced in height, but the term 'balanced' can have different specific meanings.",
+          "It is always a binary search tree": "Completeness refers to structure, not the ordering of nodes."
+        }
+      },
+      {
+        "question": "17. What is the primary difference between a stack and a queue?",
+        "options": [
+          "Stack is FIFO and Queue is LIFO",
+          "Stack is LIFO and Queue is FIFO",
+          "Both are LIFO",
+          "Both are FIFO"
+        ],
+        "answer": "Stack is LIFO and Queue is FIFO",
+        "explanation": "Stacks follow the Last-In-First-Out (LIFO) principle, while queues follow the First-In-First-Out (FIFO) principle.",
+        "incorrect_explanation": {
+          "Stack is FIFO and Queue is LIFO": "This reverses the actual behaviors of stacks and queues.",
+          "Both are LIFO": "Only stacks are LIFO; queues are FIFO.",
+          "Both are FIFO": "Only queues are FIFO; stacks are LIFO."
+        }
+      },
+      {
+        "question": "18. How can you implement a stack using a singly linked list?",
+        "options": [
+          "Insert and delete elements at the tail",
+          "Insert at the head and delete from the head",
+          "Insert at the tail and delete from the head",
+          "Use two pointers for insertion and deletion"
+        ],
+        "answer": "Insert at the head and delete from the head",
+        "explanation": "Using the head of a singly linked list allows both push and pop operations to be performed in constant time.",
+        "incorrect_explanation": {
+          "Insert and delete elements at the tail": "Deleting from the tail of a singly linked list is not efficient as it requires traversal.",
+          "Insert at the tail and delete from the head": "This approach would behave like a queue, not a stack.",
+          "Use two pointers for insertion and deletion": "This is unnecessary for basic stack operations."
+        }
+      },
+      {
+        "question": "19. What is the result of performing a push operation followed by a pop operation on an empty stack?",
+        "options": [
+          "Stack remains empty",
+          "Stack contains one element",
+          "An error occurs",
+          "Stack contains two elements"
+        ],
+        "answer": "Stack remains empty",
+        "explanation": "Pushing an element and then immediately popping it returns the stack to its original empty state.",
+        "incorrect_explanation": {
+          "Stack contains one element": "The pushed element is removed by the pop operation.",
+          "An error occurs": "No error occurs as the stack is manipulated correctly.",
+          "Stack contains two elements": "Only one element was pushed and then popped."
+        }
+      },
+      {
+        "question": "20. What is the purpose of Morris Traversal in binary trees?",
+        "options": [
+          "To perform traversal without using recursion or a stack",
+          "To traverse only the left subtree",
+          "To traverse only the right subtree",
+          "To serialize the tree"
+        ],
+        "answer": "To perform traversal without using recursion or a stack",
+        "explanation": "Morris Traversal allows in-order traversal with O(1) space by temporarily modifying the tree structure.",
+        "incorrect_explanation": {
+          "To traverse only the left subtree": "Morris Traversal handles the entire tree in an in-order fashion.",
+          "To traverse only the right subtree": "It traverses the entire tree, not just one subtree.",
+          "To serialize the tree": "While traversal can aid in serialization, Morris Traversal specifically focuses on in-order traversal without extra space."
+        }
+      }
+    ]
+  }
+  

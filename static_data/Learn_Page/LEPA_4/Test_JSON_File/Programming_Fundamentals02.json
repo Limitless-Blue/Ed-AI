@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "question": "What is the primary goal of analyzing requirements in problem-solving?",
+      "options": [
+        "To write the code immediately",
+        "To comprehend what is being asked and address all aspects of the problem",
+        "To identify the programming language to use",
+        "To optimize the program's performance"
+      ],
+      "answer": "To comprehend what is being asked and address all aspects of the problem",
+      "explanation": "Analyzing requirements involves understanding the problem statement thoroughly to ensure that all aspects are addressed in the solution.",
+      "incorrect_explanation": {
+        "To write the code immediately": "Analyzing requirements should precede coding to ensure a clear understanding of the problem.",
+        "To identify the programming language to use": "While the choice of programming language is important, it is not the primary goal of analyzing requirements.",
+        "To optimize the program's performance": "Performance optimization is a later step after understanding the problem and designing the solution."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a step in analyzing requirements?",
+      "options": [
+        "Read Carefully",
+        "Identify Key Components",
+        "Ask Questions",
+        "Implement the Solution"
+      ],
+      "answer": "Implement the Solution",
+      "explanation": "Implementing the solution comes after thoroughly analyzing the requirements. The steps include reading carefully, identifying key components, asking questions, and breaking down the problem.",
+      "incorrect_explanation": {
+        "Read Carefully": "Reading carefully is essential to understand the problem statement.",
+        "Identify Key Components": "Identifying key components helps in understanding the main tasks and goals.",
+        "Ask Questions": "Asking questions clarifies any ambiguities or uncertainties about the problem."
+      }
+    },
+    {
+      "question": "Why is it important to break down a problem into smaller subproblems?",
+      "options": [
+        "It makes the problem more complex",
+        "It helps in managing and solving each part systematically",
+        "It reduces the overall number of tasks",
+        "It allows ignoring some parts of the problem"
+      ],
+      "answer": "It helps in managing and solving each part systematically",
+      "explanation": "Breaking down a problem into smaller subproblems makes it more manageable and allows each part to be solved systematically, leading to an organized and efficient solution.",
+      "incorrect_explanation": {
+        "It makes the problem more complex": "Breaking down simplifies the problem by dividing it into manageable parts.",
+        "It reduces the overall number of tasks": "It organizes tasks into smaller steps rather than reducing them.",
+        "It allows ignoring some parts of the problem": "All parts of the problem should be addressed to ensure a complete solution."
+      }
+    },
+    {
+      "question": "What is the first step in decomposing a problem into subproblems?",
+      "options": [
+        "Define clear objectives for each subproblem",
+        "Identify natural divisions within the problem",
+        "Solve subproblems concurrently",
+        "Integrate solutions of subproblems"
+      ],
+      "answer": "Identify natural divisions within the problem",
+      "explanation": "The first step in decomposing a problem is to identify logical separations or natural divisions that can form independent tasks.",
+      "incorrect_explanation": {
+        "Define clear objectives for each subproblem": "This is done after identifying the divisions.",
+        "Solve subproblems concurrently": "This comes after defining and identifying subproblems.",
+        "Integrate solutions of subproblems": "Integration happens after solving the subproblems."
+      }
+    },
+    {
+      "question": "Which of the following best describes an edge case?",
+      "options": [
+        "A common scenario the program will handle",
+        "A scenario that tests the limits or extremes of the program",
+        "A scenario that is impossible to occur",
+        "A scenario that is irrelevant to the problem"
+      ],
+      "answer": "A scenario that tests the limits or extremes of the program",
+      "explanation": "An edge case is a scenario that tests the boundaries or extremes of the program's input ranges or conditions, ensuring robustness.",
+      "incorrect_explanation": {
+        "A common scenario the program will handle": "This describes typical cases, not edge cases.",
+        "A scenario that is impossible to occur": "Edge cases are unlikely but possible scenarios.",
+        "A scenario that is irrelevant to the problem": "Edge cases are relevant as they test the program's limits."
+      }
+    },
+    {
+      "question": "In the example problem statement, what is identified as a key component?",
+      "options": [
+        "Sorting the list of integers",
+        "Identifying prime numbers",
+        "Calculating the sum of integers",
+        "Finding the average of the list"
+      ],
+      "answer": "Identifying prime numbers",
+      "explanation": "Identifying prime numbers is a key component as it is essential for filtering the list to include only prime numbers.",
+      "incorrect_explanation": {
+        "Sorting the list of integers": "Sorting is not mentioned as a requirement in the example.",
+        "Calculating the sum of integers": "The task is to filter prime numbers, not to calculate their sum.",
+        "Finding the average of the list": "Calculating the average is not part of the problem statement."
+      }
+    },
+    {
+      "question": "What does 'Defining Inputs and Outputs' involve?",
+      "options": [
+        "Determining the programming language to use",
+        "Determining the data the program will receive and produce",
+        "Writing the main function of the program",
+        "Optimizing the program's performance"
+      ],
+      "answer": "Determining the data the program will receive and produce",
+      "explanation": "Defining inputs and outputs involves identifying the data the program will accept and what it should return or display as a result.",
+      "incorrect_explanation": {
+        "Determining the programming language to use": "This is unrelated to defining inputs and outputs.",
+        "Writing the main function of the program": "This is part of implementation, not defining inputs and outputs.",
+        "Optimizing the program's performance": "Performance optimization is a separate concern from defining inputs and outputs."
+      }
+    },
+    {
+      "question": "Why is it important to identify the data types of inputs and outputs?",
+      "options": [
+        "To choose the correct variable names",
+        "To ensure proper handling and processing of data",
+        "To determine the programming language syntax",
+        "To reduce the size of the program"
+      ],
+      "answer": "To ensure proper handling and processing of data",
+      "explanation": "Recognizing the data types of inputs and outputs ensures that the program correctly handles and processes the data as intended.",
+      "incorrect_explanation": {
+        "To choose the correct variable names": "While data types can influence naming, the primary reason is proper data handling.",
+        "To determine the programming language syntax": "Data types are part of syntax, but the main goal is correct data processing.",
+        "To reduce the size of the program": "Data types are more about functionality than program size."
+      }
+    },
+    {
+      "question": "What should a developer do after identifying all constraints in a problem?",
+      "options": [
+        "Start coding immediately",
+        "Create test cases that cover all identified edge cases",
+        "Ignore the constraints",
+        "Focus only on the main problem"
+      ],
+      "answer": "Create test cases that cover all identified edge cases",
+      "explanation": "Creating test cases for all edge cases ensures that the program can handle various scenarios correctly, enhancing its robustness.",
+      "incorrect_explanation": {
+        "Start coding immediately": "Understanding and planning are essential before coding.",
+        "Ignore the constraints": "Constraints define the limits within which the program must operate.",
+        "Focus only on the main problem": "Edge cases are crucial for a robust solution."
+      }
+    },
+    {
+      "question": "Which step involves determining the sequence of operations required to solve each subproblem?",
+      "options": [
+        "Decomposition into Subproblems",
+        "Designing Algorithms Step-by-Step",
+        "Analyzing Requirements",
+        "Identifying Inputs and Outputs"
+      ],
+      "answer": "Designing Algorithms Step-by-Step",
+      "explanation": "Designing algorithms step-by-step involves outlining the sequence of operations needed to solve each subproblem systematically.",
+      "incorrect_explanation": {
+        "Decomposition into Subproblems": "This involves breaking the problem into smaller parts, not sequencing operations.",
+        "Analyzing Requirements": "This is about understanding the problem, not designing the solution.",
+        "Identifying Inputs and Outputs": "This focuses on the data involved, not the sequence of operations."
+      }
+    },
+    {
+      "question": "What is the purpose of using pseudocode in algorithm design?",
+      "options": [
+        "To write code in a specific programming language",
+        "To outline the algorithm without worrying about syntax",
+        "To execute the algorithm faster",
+        "To compile the program"
+      ],
+      "answer": "To outline the algorithm without worrying about syntax",
+      "explanation": "Pseudocode allows developers to focus on the logical flow of the algorithm without being constrained by the syntax of a specific programming language.",
+      "incorrect_explanation": {
+        "To write code in a specific programming language": "Pseudocode is language-agnostic and not written in any specific programming language.",
+        "To execute the algorithm faster": "Pseudocode is not executable; it is used for planning.",
+        "To compile the program": "Pseudocode cannot be compiled as it is not actual code."
+      }
+    },
+    {
+      "question": "Which of the following is a best practice when designing algorithms?",
+      "options": [
+        "Use complex steps to handle all scenarios at once",
+        "Break down complex steps into smaller, manageable steps",
+        "Ignore edge cases to simplify the algorithm",
+        "Write the algorithm in a specific programming language syntax"
+      ],
+      "answer": "Break down complex steps into smaller, manageable steps",
+      "explanation": "Breaking down complex steps into smaller, manageable steps makes the algorithm easier to understand, implement, and debug.",
+      "incorrect_explanation": {
+        "Use complex steps to handle all scenarios at once": "Complex steps can make the algorithm difficult to manage and understand.",
+        "Ignore edge cases to simplify the algorithm": "Ignoring edge cases can lead to incomplete or faulty solutions.",
+        "Write the algorithm in a specific programming language syntax": "Algorithms should be designed in a language-agnostic manner, often using pseudocode."
+      }
+    },
+    {
+      "question": "What is the main benefit of maintaining independence among subproblems?",
+      "options": [
+        "It allows subproblems to be solved out of order",
+        "It simplifies solving each subproblem without dependencies",
+        "It reduces the total number of subproblems",
+        "It ensures that all subproblems are identical"
+      ],
+      "answer": "It simplifies solving each subproblem without dependencies",
+      "explanation": "Maintaining independence among subproblems ensures that each can be solved without relying on others, simplifying the problem-solving process.",
+      "incorrect_explanation": {
+        "It allows subproblems to be solved out of order": "While independence may allow flexibility, the main benefit is simplified solving.",
+        "It reduces the total number of subproblems": "Independence does not necessarily reduce the number of subproblems.",
+        "It ensures that all subproblems are identical": "Subproblems are typically distinct parts of the larger problem."
+      }
+    },
+    {
+      "question": "Why is it important to define clear objectives for each subproblem?",
+      "options": [
+        "To ensure each subproblem contributes to the overall solution",
+        "To make the subproblems as complex as possible",
+        "To allow subproblems to be ignored if not needed",
+        "To reduce the number of programming languages used"
+      ],
+      "answer": "To ensure each subproblem contributes to the overall solution",
+      "explanation": "Defining clear objectives for each subproblem ensures that solving each one effectively contributes to solving the main problem.",
+      "incorrect_explanation": {
+        "To make the subproblems as complex as possible": "Complex subproblems can make the solution harder to implement and understand.",
+        "To allow subproblems to be ignored if not needed": "Subproblems should all contribute to the final solution and not be ignored.",
+        "To reduce the number of programming languages used": "Defining objectives is unrelated to the choice of programming languages."
+      }
+    },
+    {
+      "question": "What does the 'Designing Algorithms Step-by-Step' subtopic emphasize?",
+      "options": [
+        "Implementing code without planning",
+        "Outlining the sequence of operations required to solve each subproblem",
+        "Using multiple programming languages for a single algorithm",
+        "Focusing only on the main problem without decomposing"
+      ],
+      "answer": "Outlining the sequence of operations required to solve each subproblem",
+      "explanation": "Designing algorithms step-by-step involves outlining the sequence of operations needed to solve each subproblem systematically.",
+      "incorrect_explanation": {
+        "Implementing code without planning": "Algorithm design should precede implementation to ensure a clear plan.",
+        "Using multiple programming languages for a single algorithm": "Algorithms are typically designed in a language-agnostic manner.",
+        "Focusing only on the main problem without decomposing": "Breaking down the problem into subproblems is essential for effective algorithm design."
+      }
+    },
+    {
+      "question": "Which of the following is an example of an algorithm step for determining if a number is prime?",
+      "options": [
+        "Sort the list of numbers",
+        "Check divisibility from 2 to the square root of the number",
+        "Calculate the factorial of the number",
+        "Convert the number to a string"
+      ],
+      "answer": "Check divisibility from 2 to the square root of the number",
+      "explanation": "Checking divisibility from 2 to the square root of the number is an efficient algorithm step to determine if a number is prime.",
+      "incorrect_explanation": {
+        "Sort the list of numbers": "Sorting is unrelated to determining if a single number is prime.",
+        "Calculate the factorial of the number": "Factorial calculation is unrelated to primality testing.",
+        "Convert the number to a string": "Converting to a string does not help in checking primality."
+      }
+    },
+    {
+      "question": "Why should developers validate their algorithms with examples?",
+      "options": [
+        "To ensure the algorithm works as intended",
+        "To make the algorithm more complex",
+        "To reduce the number of steps in the algorithm",
+        "To choose the programming language"
+      ],
+      "answer": "To ensure the algorithm works as intended",
+      "explanation": "Validating algorithms with examples helps verify that the algorithm correctly solves the problem and handles various scenarios as expected.",
+      "incorrect_explanation": {
+        "To make the algorithm more complex": "Validation ensures correctness, not increased complexity.",
+        "To reduce the number of steps in the algorithm": "Validation focuses on correctness, not necessarily step reduction.",
+        "To choose the programming language": "Validation is about testing the algorithm's logic, not selecting a programming language."
+      }
+    },
+    {
+      "question": "What is the main benefit of using a modular approach in problem-solving?",
+      "options": [
+        "It increases the number of global variables",
+        "It makes the code harder to manage",
+        "It creates reusable and manageable code segments",
+        "It eliminates the need for algorithms"
+      ],
+      "answer": "It creates reusable and manageable code segments",
+      "explanation": "A modular approach divides the problem into manageable and reusable code segments, making the code easier to manage and debug.",
+      "incorrect_explanation": {
+        "It increases the number of global variables": "A modular approach typically minimizes the use of global variables.",
+        "It makes the code harder to manage": "Modularity enhances code manageability by organizing it into separate modules.",
+        "It eliminates the need for algorithms": "Algorithms are still necessary; modularity helps implement them effectively."
+      }
+    },
+    {
+      "question": "Which of the following best describes the role of documentation in problem-solving?",
+      "options": [
+        "To keep a clear record of analysis, inputs, outputs, constraints, and edge cases",
+        "To write comments directly in the code",
+        "To store variables and data",
+        "To compile the program"
+      ],
+      "answer": "To keep a clear record of analysis, inputs, outputs, constraints, and edge cases",
+      "explanation": "Documentation helps in maintaining a clear record of all aspects of the problem and the solution process, aiding in clarity and future reference.",
+      "incorrect_explanation": {
+        "To write comments directly in the code": "While comments are part of documentation, the broader role includes recording analysis and planning.",
+        "To store variables and data": "Documentation is about recording information, not storing data.",
+        "To compile the program": "Compilation is a separate process from documentation."
+      }
+    },
+    {
+      "question": "What should a developer do if a subproblem is too complex?",
+      "options": [
+        "Ignore it and move to the next subproblem",
+        "Break it down into smaller, more manageable steps",
+        "Combine it with another subproblem",
+        "Choose a different programming language"
+      ],
+      "answer": "Break it down into smaller, more manageable steps",
+      "explanation": "If a subproblem is too complex, further decomposing it into smaller steps makes it easier to handle and solve systematically.",
+      "incorrect_explanation": {
+        "Ignore it and move to the next subproblem": "Ignoring a complex subproblem can lead to an incomplete solution.",
+        "Combine it with another subproblem": "Combining might not simplify the problem and can increase complexity.",
+        "Choose a different programming language": "The complexity is about the problem, not the programming language used."
+      }
+    },
+    {
+      "question": "Why is it important to outline the logical flow when designing algorithms?",
+      "options": [
+        "To ensure the algorithm is written in pseudocode",
+        "To arrange the steps in a logical order from input to output",
+        "To make the algorithm run faster",
+        "To reduce the number of variables used"
+      ],
+      "answer": "To arrange the steps in a logical order from input to output",
+      "explanation": "Outlining the logical flow ensures that the algorithm follows a coherent sequence of operations that correctly transforms input into the desired output.",
+      "incorrect_explanation": {
+        "To ensure the algorithm is written in pseudocode": "Pseudocode is a tool for planning, but outlining the logical flow is about the sequence of steps.",
+        "To make the algorithm run faster": "While logical flow can impact efficiency, the primary purpose is to ensure correctness.",
+        "To reduce the number of variables used": "Outlining the flow is about sequencing steps, not necessarily about variable usage."
+      }
+    },
+    {
+      "question": "What is the significance of handling edge cases in algorithm design?",
+      "options": [
+        "To make the algorithm more complex",
+        "To ensure the algorithm works correctly under extreme or unusual conditions",
+        "To reduce the number of required steps",
+        "To avoid using loops in the algorithm"
+      ],
+      "answer": "To ensure the algorithm works correctly under extreme or unusual conditions",
+      "explanation": "Handling edge cases ensures that the algorithm is robust and can manage extreme or unusual inputs without failing.",
+      "incorrect_explanation": {
+        "To make the algorithm more complex": "Handling edge cases adds robustness without necessarily making the algorithm unnecessarily complex.",
+        "To reduce the number of required steps": "Edge cases are about correctness, not step reduction.",
+        "To avoid using loops in the algorithm": "Edge case handling does not relate to the use of loops."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a step in designing algorithms?",
+      "options": [
+        "Understand the requirements",
+        "Define inputs and outputs for each step",
+        "Outline the logical flow",
+        "Choose the color scheme for the user interface"
+      ],
+      "answer": "Choose the color scheme for the user interface",
+      "explanation": "Choosing a color scheme is related to UI design, not algorithm design.",
+      "incorrect_explanation": {
+        "Understand the requirements": "Understanding requirements is fundamental to designing effective algorithms.",
+        "Define inputs and outputs for each step": "Defining inputs and outputs ensures clarity in the algorithm's operations.",
+        "Outline the logical flow": "Outlining the logical flow organizes the sequence of operations in the algorithm."
+      }
+    },
+    {
+      "question": "What should be included in the 'Usage Tips' section when analyzing requirements?",
+      "options": [
+        "How to implement the solution",
+        "Tips like taking notes, visualizing the problem, and ensuring completeness",
+        "The specific programming language syntax",
+        "Performance optimization techniques"
+      ],
+      "answer": "Tips like taking notes, visualizing the problem, and ensuring completeness",
+      "explanation": "Usage tips provide practical advice to help developers effectively analyze requirements, such as taking notes, visualizing the problem, and ensuring all requirements are understood.",
+      "incorrect_explanation": {
+        "How to implement the solution": "Implementation comes after analysis, not during requirement analysis.",
+        "The specific programming language syntax": "Syntax is relevant to coding, not to analyzing requirements.",
+        "Performance optimization techniques": "Optimization is a later concern after designing the solution."
+      }
+    },
+    {
+      "question": "Why is iterative refinement important in problem-solving?",
+      "options": [
+        "To finalize the problem statement without changes",
+        "To continuously improve understanding and the solution as development progresses",
+        "To avoid revisiting the problem once a solution is found",
+        "To implement the solution in multiple programming languages"
+      ],
+      "answer": "To continuously improve understanding and the solution as development progresses",
+      "explanation": "Iterative refinement allows developers to revisit and enhance their understanding and solutions, ensuring that the approach remains aligned with the problem's requirements and any new insights gained.",
+      "incorrect_explanation": {
+        "To finalize the problem statement without changes": "Iterative refinement involves revisiting and possibly changing the understanding.",
+        "To avoid revisiting the problem once a solution is found": "Refinement encourages revisiting to improve the solution.",
+        "To implement the solution in multiple programming languages": "Refinement focuses on improving the solution logic, not on language implementation."
+      }
+    }
+  ]
+}

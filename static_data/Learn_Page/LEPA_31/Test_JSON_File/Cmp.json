@@ -1,0 +1,293 @@
+{
+    "questions": [
+      {
+        "question": "What is the time complexity of Bubble Sort in the worst case?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n²)",
+          "O(log n)"
+        ],
+        "answer": "O(n²)",
+        "explanation": "Bubble Sort has a worst-case time complexity of O(n²), making it inefficient for large datasets.",
+        "incorrect_explanation": {
+          "O(n)": "This is the best-case time complexity when the data is already sorted.",
+          "O(n log n)": "This complexity is associated with more efficient sorting algorithms like Merge Sort.",
+          "O(log n)": "This complexity is not applicable to Bubble Sort."
+        }
+      },
+      {
+        "question": "Which sorting algorithm is considered stable?",
+        "options": [
+          "Quick Sort",
+          "Heap Sort",
+          "Merge Sort",
+          "Selection Sort"
+        ],
+        "answer": "Merge Sort",
+        "explanation": "Merge Sort is a stable sorting algorithm as it maintains the relative order of equal elements.",
+        "incorrect_explanation": {
+          "Quick Sort": "Quick Sort is unstable and does not guarantee the order of equal elements.",
+          "Heap Sort": "Heap Sort is also an unstable sorting algorithm.",
+          "Selection Sort": "Selection Sort is unstable, as it can change the order of equal elements."
+        }
+      },
+      {
+        "question": "What is the space complexity of Merge Sort?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n + k)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Merge Sort requires O(n) additional space for merging the sorted subarrays.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) space complexity means no additional space is used, which is not the case for Merge Sort.",
+          "O(log n)": "O(log n) space complexity is associated with algorithms that use recursion without additional arrays.",
+          "O(n + k)": "This complexity is typically associated with Radix Sort."
+        }
+      },
+      {
+        "question": "Which algorithm is efficient for nearly sorted datasets?",
+        "options": [
+          "Selection Sort",
+          "Bubble Sort",
+          "Insertion Sort",
+          "Radix Sort"
+        ],
+        "answer": "Insertion Sort",
+        "explanation": "Insertion Sort is very efficient for nearly sorted datasets, achieving O(n) time complexity.",
+        "incorrect_explanation": {
+          "Selection Sort": "Selection Sort has a time complexity of O(n²) regardless of the input order.",
+          "Bubble Sort": "Bubble Sort can also perform well on nearly sorted data, but not as efficiently as Insertion Sort.",
+          "Radix Sort": "Radix Sort is best for integers or strings rather than nearly sorted data."
+        }
+      },
+      {
+        "question": "What is the average-case time complexity of Quick Sort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n²)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "Quick Sort has an average-case time complexity of O(n log n), making it efficient for general use.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is the best case when the data is already sorted.",
+          "O(n²)": "O(n²) is the worst-case complexity when the pivot is poorly chosen.",
+          "O(log n)": "O(log n) complexity is not applicable to Quick Sort."
+        }
+      },
+      {
+        "question": "Which sorting algorithm does not require additional memory?",
+        "options": [
+          "Merge Sort",
+          "Bubble Sort",
+          "Radix Sort",
+          "Selection Sort"
+        ],
+        "answer": "Bubble Sort",
+        "explanation": "Bubble Sort works in-place and has a space complexity of O(1), meaning it does not require additional memory.",
+        "incorrect_explanation": {
+          "Merge Sort": "Merge Sort requires O(n) additional space for merging.",
+          "Radix Sort": "Radix Sort uses O(n + k) space based on the number of digits.",
+          "Selection Sort": "Selection Sort also has a space complexity of O(1)."
+        }
+      },
+      {
+        "question": "In which case does Quick Sort perform poorly?",
+        "options": [
+          "When data is already sorted",
+          "When data is in random order",
+          "When data is nearly sorted",
+          "When pivot choices are poor"
+        ],
+        "answer": "When pivot choices are poor",
+        "explanation": "Quick Sort performs poorly with a time complexity of O(n²) when the pivot is consistently the smallest or largest element.",
+        "incorrect_explanation": {
+          "When data is already sorted": "This can lead to poor performance if the pivot is chosen poorly.",
+          "When data is in random order": "Quick Sort performs well on random order datasets.",
+          "When data is nearly sorted": "Quick Sort remains efficient with nearly sorted datasets."
+        }
+      },
+      {
+        "question": "What is the best use case for Radix Sort?",
+        "options": [
+          "Sorting strings with a large character set",
+          "Sorting integers with small digit lengths",
+          "Sorting floating-point numbers",
+          "Sorting complex data structures"
+        ],
+        "answer": "Sorting integers with small digit lengths",
+        "explanation": "Radix Sort is efficient for sorting integers or strings with a fixed number of digits or characters.",
+        "incorrect_explanation": {
+          "Sorting strings with a large character set": "Radix Sort performs best with small ranges.",
+          "Sorting floating-point numbers": "Radix Sort is not well-suited for floating-point numbers.",
+          "Sorting complex data structures": "Radix Sort is not designed for complex data types."
+        }
+      },
+      {
+        "question": "Which of the following algorithms is not efficient for large datasets?",
+        "options": [
+          "Merge Sort",
+          "Quick Sort",
+          "Bubble Sort",
+          "Heap Sort"
+        ],
+        "answer": "Bubble Sort",
+        "explanation": "Bubble Sort is inefficient for large datasets due to its O(n²) time complexity.",
+        "incorrect_explanation": {
+          "Merge Sort": "Merge Sort is efficient with a time complexity of O(n log n).",
+          "Quick Sort": "Quick Sort is efficient on average with O(n log n) complexity.",
+          "Heap Sort": "Heap Sort guarantees O(n log n) time complexity."
+        }
+      },
+      {
+        "question": "What does it mean for a sorting algorithm to be stable?",
+        "options": [
+          "It requires extra memory",
+          "It guarantees O(n log n) time complexity",
+          "It preserves the relative order of equal elements",
+          "It is efficient for large datasets"
+        ],
+        "answer": "It preserves the relative order of equal elements",
+        "explanation": "A stable sorting algorithm maintains the relative order of elements that are equal.",
+        "incorrect_explanation": {
+          "It requires extra memory": "Stability is not directly related to memory requirements.",
+          "It guarantees O(n log n) time complexity": "Stability and time complexity are independent concepts.",
+          "It is efficient for large datasets": "An algorithm can be stable yet inefficient."
+        }
+      },
+      {
+        "question": "Which sorting algorithm is typically used in hybrid algorithms like Timsort?",
+        "options": [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "Merge Sort"
+        ],
+        "answer": "Insertion Sort",
+        "explanation": "Insertion Sort is often used in hybrid algorithms like Timsort for small or nearly sorted datasets.",
+        "incorrect_explanation": {
+          "Bubble Sort": "Bubble Sort is not typically used in modern hybrid sorting algorithms.",
+          "Selection Sort": "Selection Sort is also not commonly used in hybrids due to its inefficiency.",
+          "Merge Sort": "While Merge Sort is efficient, it is not combined with Insertion Sort in Timsort."
+        }
+      },
+      {
+        "question": "What is the average-case time complexity for Merge Sort?",
+        "options": [
+          "O(n log n)",
+          "O(n)",
+          "O(n²)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "Merge Sort has an average-case time complexity of O(n log n), making it efficient for general sorting tasks.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is the best-case complexity for already sorted data.",
+          "O(n²)": "O(n²) is not applicable to Merge Sort's time complexity.",
+          "O(log n)": "O(log n) complexity does not apply to sorting algorithms."
+        }
+      },
+      {
+        "question": "What is the primary disadvantage of Heap Sort?",
+        "options": [
+          "It is not stable",
+          "It requires additional space",
+          "It is slow on small datasets",
+          "It is complex to implement"
+        ],
+        "answer": "It is not stable",
+        "explanation": "Heap Sort is an unstable sorting algorithm, which means it does not maintain the relative order of equal elements.",
+        "incorrect_explanation": {
+          "It requires additional space": "Heap Sort operates in-place with O(1) additional space.",
+          "It is slow on small datasets": "Heap Sort is efficient with O(n log n) time complexity for large datasets.",
+          "It is complex to implement": "While Heap Sort is more complex than some, it's not considered overly complex."
+        }
+      },
+      {
+        "question": "When is stability important in sorting algorithms?",
+        "options": [
+          "When sorting large datasets",
+          "When sorting integers only",
+          "When preserving original order of equal elements",
+          "When using extra memory"
+        ],
+        "answer": "When preserving original order of equal elements",
+        "explanation": "Stability is crucial when sorting data structures with multiple fields to maintain their original order.",
+        "incorrect_explanation": {
+          "When sorting large datasets": "Stability can be important regardless of dataset size.",
+          "When sorting integers only": "Stability is not limited to integer sorting.",
+          "When using extra memory": "Stability is unrelated to memory usage."
+        }
+      },
+      {
+        "question": "What is a key characteristic of Selection Sort?",
+        "options": [
+          "It is efficient for large datasets",
+          "It is stable",
+          "It always scans the entire list",
+          "It requires additional memory"
+        ],
+        "answer": "It always scans the entire list",
+        "explanation": "Selection Sort always scans the entire list to find the minimum element for each iteration.",
+        "incorrect_explanation": {
+          "It is efficient for large datasets": "Selection Sort is not efficient with O(n²) time complexity.",
+          "It is stable": "Selection Sort is not a stable sorting algorithm.",
+          "It requires additional memory": "Selection Sort operates in-place with O(1) space."
+        }
+      },
+      {
+        "question": "Which sorting algorithm can be used for external sorting?",
+        "options": [
+          "Heap Sort",
+          "Radix Sort",
+          "Insertion Sort",
+          "Bubble Sort"
+        ],
+        "answer": "Heap Sort",
+        "explanation": "Heap Sort can be adapted for external sorting, which is useful when data does not fit into memory.",
+        "incorrect_explanation": {
+          "Radix Sort": "Radix Sort is not suitable for external sorting due to its memory requirements.",
+          "Insertion Sort": "Insertion Sort is not efficient for large datasets, making it unsuitable for external sorting.",
+          "Bubble Sort": "Bubble Sort is inefficient and not used for external sorting."
+        }
+      },
+      {
+        "question": "Which of the following algorithms has a best-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Heap Sort"
+        ],
+        "answer": "Merge Sort",
+        "explanation": "Merge Sort has a best-case time complexity of O(n log n), as it always performs the same number of operations.",
+        "incorrect_explanation": {
+          "Quick Sort": "Quick Sort's best-case is O(n log n) but can degrade to O(n²) in poor cases.",
+          "Bubble Sort": "Bubble Sort has a best-case complexity of O(n) when the data is already sorted.",
+          "Heap Sort": "Heap Sort's best case is also O(n log n), but this does not apply when considering other factors."
+        }
+      },
+      {
+        "question": "What is the complexity of Radix Sort based on the number of digits?",
+        "options": [
+          "O(n log n)",
+          "O(n)",
+          "O(nk)",
+          "O(n²)"
+        ],
+        "answer": "O(nk)",
+        "explanation": "Radix Sort has a time complexity of O(nk), where k is the number of digits in the largest number.",
+        "incorrect_explanation": {
+          "O(n log n)": "O(n log n) is typical for comparison-based sorting algorithms, not Radix Sort.",
+          "O(n)": "O(n) does not account for the number of digits, which Radix Sort relies on.",
+          "O(n²)": "O(n²) complexity is not applicable to Radix Sort."
+        }
+      }
+    ]
+  }
+  

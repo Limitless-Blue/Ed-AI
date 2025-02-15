@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 19",
+    "ID": "LEPA_19",
     "title": "Graph",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 19/Course Markdown File/DS_Graph.md"
+      "Static_Files/Learn_Page/LEPA_19/Course Markdown File/DS_Graph.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 19/Test Json File/DS_Graph.json"
+      "Static_Files/Learn_Page/LEPA_19/Test Json File/DS_Graph.json"
     ]
   }

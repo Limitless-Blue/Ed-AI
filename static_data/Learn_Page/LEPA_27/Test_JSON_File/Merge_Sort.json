@@ -1,0 +1,277 @@
+{
+    "questions": [
+      {
+        "question": "What is the main approach used by Merge Sort?",
+        "options": [
+          "Greedy",
+          "Dynamic Programming",
+          "Divide and Conquer",
+          "Brute Force"
+        ],
+        "answer": "Divide and Conquer",
+        "explanation": "Merge Sort uses the Divide and Conquer strategy to sort arrays.",
+        "incorrect_explanation": {
+          "Greedy": "Greedy algorithms make locally optimal choices.",
+          "Dynamic Programming": "Dynamic Programming solves problems by breaking them into overlapping subproblems.",
+          "Brute Force": "Brute Force algorithms try all possibilities to find a solution."
+        }
+      },
+      {
+        "question": "Which of the following best describes the time complexity of Merge Sort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n^2)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "Merge Sort has a time complexity of O(n log n) in all cases.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) represents linear time complexity, which does not apply to Merge Sort.",
+          "O(n^2)": "O(n^2) is typical for simpler algorithms like Bubble Sort.",
+          "O(log n)": "O(log n) complexity applies to algorithms that halve the problem size each time."
+        }
+      },
+      {
+        "question": "Is Merge Sort an in-place sorting algorithm?",
+        "options": [
+          "Yes",
+          "No",
+          "It depends on implementation",
+          "Only for small arrays"
+        ],
+        "answer": "No",
+        "explanation": "Merge Sort requires additional space for temporary arrays during the merging process.",
+        "incorrect_explanation": {
+          "Yes": "This is incorrect as it does not sort in place.",
+          "It depends on implementation": "The core algorithm does not support in-place sorting.",
+          "Only for small arrays": "It uses additional space regardless of array size."
+        }
+      },
+      {
+        "question": "What does the 'merge' step in Merge Sort do?",
+        "options": [
+          "Sorts the array in place",
+          "Divides the array into two halves",
+          "Combines sorted subarrays into one sorted array",
+          "Finds the maximum element"
+        ],
+        "answer": "Combines sorted subarrays into one sorted array",
+        "explanation": "The merge step takes two sorted subarrays and combines them into one sorted array.",
+        "incorrect_explanation": {
+          "Sorts the array in place": "The merge step does not sort in place.",
+          "Divides the array into two halves": "This is part of the divide step, not the merge step.",
+          "Finds the maximum element": "The merge step does not focus on finding specific elements."
+        }
+      },
+      {
+        "question": "What is the space complexity of Merge Sort?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Merge Sort requires O(n) space for the temporary arrays used during merging.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) would indicate in-place sorting, which is not the case for Merge Sort.",
+          "O(log n)": "O(log n) applies to algorithms that use a small stack space.",
+          "O(n^2)": "O(n^2) complexity is not applicable here."
+        }
+      },
+      {
+        "question": "What is the final sorted array for [38, 27, 43, 3, 9, 82, 10] using Merge Sort?",
+        "options": [
+          "[3, 9, 10, 27, 38, 43, 82]",
+          "[10, 3, 9, 27, 43, 82, 38]",
+          "[27, 38, 43, 3, 9, 82, 10]",
+          "[82, 43, 38, 27, 10, 9, 3]"
+        ],
+        "answer": "[3, 9, 10, 27, 38, 43, 82]",
+        "explanation": "The final sorted array after applying Merge Sort is [3, 9, 10, 27, 38, 43, 82].",
+        "incorrect_explanation": {
+          "[10, 3, 9, 27, 43, 82, 38]": "This order is not sorted.",
+          "[27, 38, 43, 3, 9, 82, 10]": "This order is not sorted.",
+          "[82, 43, 38, 27, 10, 9, 3]": "This order is not sorted."
+        }
+      },
+      {
+        "question": "How many times does Merge Sort split the array for an array of size n?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Merge Sort splits the array in half at each level, resulting in O(log n) splits.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) suggests a linear split, which does not apply to Merge Sort.",
+          "O(n log n)": "O(n log n) is the overall time complexity, not the number of splits.",
+          "O(1)": "O(1) suggests no splits, which is incorrect."
+        }
+      },
+      {
+        "question": "What is the role of the 'conquer' step in Merge Sort?",
+        "options": [
+          "To combine subarrays",
+          "To sort each half",
+          "To find the minimum element",
+          "To determine the array length"
+        ],
+        "answer": "To sort each half",
+        "explanation": "The conquer step recursively sorts each half of the divided array.",
+        "incorrect_explanation": {
+          "To combine subarrays": "Combining occurs in the merge step, not the conquer step.",
+          "To find the minimum element": "Finding minimum elements is not part of Merge Sort's process.",
+          "To determine the array length": "This is not a function of the conquer step."
+        }
+      },
+      {
+        "question": "What happens if the array is already sorted when using Merge Sort?",
+        "options": [
+          "The time complexity becomes O(n)",
+          "The time complexity remains O(n log n)",
+          "The array will not change",
+          "Merge Sort cannot handle sorted arrays"
+        ],
+        "answer": "The time complexity remains O(n log n)",
+        "explanation": "Merge Sort will still perform the divide and merge steps, maintaining O(n log n) complexity.",
+        "incorrect_explanation": {
+          "The time complexity becomes O(n)": "This is incorrect as Merge Sort does not optimize for sorted arrays.",
+          "The array will not change": "While the output is the same, Merge Sort still processes the array.",
+          "Merge Sort cannot handle sorted arrays": "Merge Sort can handle any input, including sorted arrays."
+        }
+      },
+      {
+        "question": "Which is true about the stability of Merge Sort?",
+        "options": [
+          "It is unstable.",
+          "It is stable.",
+          "Stability is not applicable.",
+          "It can be made stable."
+        ],
+        "answer": "It is stable.",
+        "explanation": "Merge Sort is stable as it preserves the relative order of equal elements.",
+        "incorrect_explanation": {
+          "It is unstable.": "This is incorrect; Merge Sort maintains stability.",
+          "Stability is not applicable.": "Stability is relevant in sorting algorithms.",
+          "It can be made stable.": "Merge Sort is inherently stable."
+        }
+      },
+      {
+        "question": "In which scenario would you prefer Merge Sort over Quick Sort?",
+        "options": [
+          "When sorting small datasets",
+          "When memory usage is a concern",
+          "When stability is important",
+          "When performance is critical"
+        ],
+        "answer": "When stability is important",
+        "explanation": "Merge Sort is preferred when the stability of sorted elements matters.",
+        "incorrect_explanation": {
+          "When sorting small datasets": "For small datasets, Quick Sort is often faster.",
+          "When memory usage is a concern": "Merge Sort uses additional memory, making it less suitable.",
+          "When performance is critical": "Quick Sort typically performs better for performance."
+        }
+      },
+      {
+        "question": "What is the initial step in the Merge Sort algorithm?",
+        "options": [
+          "Conquer the array",
+          "Merge sorted subarrays",
+          "Divide the array",
+          "Find the maximum element"
+        ],
+        "answer": "Divide the array",
+        "explanation": "The initial step is to divide the array into halves until single elements are reached.",
+        "incorrect_explanation": {
+          "Conquer the array": "Conquering occurs after dividing.",
+          "Merge sorted subarrays": "Merging happens after sorting the halves.",
+          "Find the maximum element": "Finding maximum elements is not part of Merge Sort."
+        }
+      },
+      {
+        "question": "During the merge process, how are elements compared?",
+        "options": [
+          "In a single loop",
+          "In two separate loops",
+          "By using recursion",
+          "By swapping elements"
+        ],
+        "answer": "In a single loop",
+        "explanation": "Elements from both subarrays are compared in a single loop until all elements are merged.",
+        "incorrect_explanation": {
+          "In two separate loops": "Only one loop is used for the main comparison process.",
+          "By using recursion": "Recursion is used for dividing and conquering, not merging.",
+          "By swapping elements": "Elements are not swapped; they are copied to the sorted array."
+        }
+      },
+      {
+        "question": "How does Merge Sort handle larger datasets?",
+        "options": [
+          "It becomes inefficient.",
+          "It handles them efficiently with O(n log n) time complexity.",
+          "It cannot sort larger datasets.",
+          "It takes longer than O(n^2) algorithms."
+        ],
+        "answer": "It handles them efficiently with O(n log n) time complexity.",
+        "explanation": "Merge Sort is designed to manage large datasets efficiently due to its consistent O(n log n) performance.",
+        "incorrect_explanation": {
+          "It becomes inefficient.": "This is incorrect; Merge Sort remains efficient.",
+          "It cannot sort larger datasets.": "Merge Sort can handle any size of datasets.",
+          "It takes longer than O(n^2) algorithms.": "O(n log n) is better than O(n^2) for larger datasets."
+        }
+      },
+      {
+        "question": "Which step of Merge Sort involves merging two sorted arrays?",
+        "options": [
+          "Divide",
+          "Conquer",
+          "Merge",
+          "Combine"
+        ],
+        "answer": "Merge",
+        "explanation": "The merge step combines two sorted arrays into one sorted array.",
+        "incorrect_explanation": {
+          "Divide": "The divide step splits the array into halves.",
+          "Conquer": "The conquer step involves sorting the halves.",
+          "Combine": "Combine is not a defined step in Merge Sort."
+        }
+      },
+      {
+        "question": "What is the advantage of Merge Sort over other sorting algorithms?",
+        "options": [
+          "It is faster for all datasets.",
+          "It is stable and has predictable performance.",
+          "It uses less memory.",
+          "It is simpler to implement."
+        ],
+        "answer": "It is stable and has predictable performance.",
+        "explanation": "Merge Sort's stability and consistent time complexity make it advantageous.",
+        "incorrect_explanation": {
+          "It is faster for all datasets.": "Merge Sort is not always the fastest, especially for small datasets.",
+          "It uses less memory.": "Merge Sort uses more memory due to temporary arrays.",
+          "It is simpler to implement.": "While straightforward, it is not necessarily simpler than other algorithms."
+        }
+      },
+      {
+        "question": "In the given example, what are the first two subarrays obtained from dividing [38, 27, 43, 3, 9, 82, 10]?",
+        "options": [
+          "[38] and [27]",
+          "[38, 27, 43] and [3, 9, 82, 10]",
+          "[3] and [9]",
+          "[10] and [82]"
+        ],
+        "answer": "[38, 27, 43] and [3, 9, 82, 10]",
+        "explanation": "The first division of the array yields these two subarrays.",
+        "incorrect_explanation": {
+          "[38] and [27]": "These are individual elements from the second level of division.",
+          "[3] and [9]": "These are also individual elements from further divisions.",
+          "[10] and [82]": "These elements come from separate subarrays, not the first division."
+        }
+      }
+    ]
+  }
+  

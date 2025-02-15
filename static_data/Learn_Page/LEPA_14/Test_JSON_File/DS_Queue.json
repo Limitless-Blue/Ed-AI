@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "What principle does a Queue follow?",
+        "options": [
+          "First In First Out (FIFO)",
+          "Last In First Out (LIFO)",
+          "First In Last Out (FILO)",
+          "Random Access"
+        ],
+        "answer": "First In First Out (FIFO)",
+        "explanation": "A queue follows the First In First Out (FIFO) principle where the first element added is the first one to be removed.",
+        "incorrect_explanation": {
+          "Last In First Out (LIFO)": "LIFO refers to a stack, not a queue.",
+          "First In Last Out (FILO)": "FILO is incorrect. A queue follows FIFO.",
+          "Random Access": "Queue elements are processed in order, not randomly."
+        }
+      },
+      {
+        "question": "Which of the following is NOT an operation of a Queue?",
+        "options": [
+          "Enqueue",
+          "Dequeue",
+          "Peek",
+          "Push"
+        ],
+        "answer": "Push",
+        "explanation": "Push is an operation related to a stack, not a queue.",
+        "incorrect_explanation": {
+          "Enqueue": "Enqueue is the operation that adds an element to the rear of the queue.",
+          "Dequeue": "Dequeue is the operation that removes an element from the front of the queue.",
+          "Peek": "Peek (or front/rear access) is used to view the front or rear elements in a queue."
+        }
+      },
+      {
+        "question": "What is the time complexity of enqueue operation in a queue implemented using a linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "In a linked list implementation of a queue, the enqueue operation takes constant time O(1) because it simply adds a node at the rear.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is incorrect because enqueue does not traverse the list.",
+          "O(log n)": "Queue operations in linked lists are not logarithmic.",
+          "O(n^2)": "O(n^2) is incorrect for queue operations."
+        }
+      },
+      {
+        "question": "In an array-based queue, how is space efficiently managed?",
+        "options": [
+          "By resizing the array",
+          "By using a circular queue",
+          "By shifting elements after dequeue",
+          "By using dynamic memory allocation"
+        ],
+        "answer": "By using a circular queue",
+        "explanation": "A circular queue reuses the space vacated by dequeued elements by wrapping the rear pointer to the front when necessary.",
+        "incorrect_explanation": {
+          "By resizing the array": "Resizing the array can be expensive and is not used in efficient queue operations.",
+          "By shifting elements after dequeue": "Shifting elements is inefficient and not used in queue implementations.",
+          "By using dynamic memory allocation": "Dynamic memory allocation is used in linked list-based queues, not arrays."
+        }
+      },
+      {
+        "question": "In an array-based queue, what happens when the rear reaches the end of the array?",
+        "options": [
+          "It raises an overflow error",
+          "It wraps around to the front of the array",
+          "It starts shifting elements to make space",
+          "It resizes the array"
+        ],
+        "answer": "It wraps around to the front of the array",
+        "explanation": "In a circular array-based queue, the rear pointer wraps around to the front when it reaches the end of the array.",
+        "incorrect_explanation": {
+          "It raises an overflow error": "This only happens when the queue is full, not just when the rear reaches the end.",
+          "It starts shifting elements to make space": "Shifting is inefficient and not part of array-based queue operations.",
+          "It resizes the array": "Queue resizing is not a typical behavior of array-based queue implementations."
+        }
+      },
+      {
+        "question": "What is the key difference between array-based and linked list-based queues?",
+        "options": [
+          "Array-based queues have a fixed size, while linked list-based queues are dynamic",
+          "Array-based queues have O(1) dequeue, linked list-based queues have O(n)",
+          "Array-based queues use more memory than linked list-based queues",
+          "Linked list-based queues require index-based access"
+        ],
+        "answer": "Array-based queues have a fixed size, while linked list-based queues are dynamic",
+        "explanation": "Array-based queues are limited by the fixed size of the array, whereas linked list-based queues can grow dynamically.",
+        "incorrect_explanation": {
+          "Array-based queues have O(1) dequeue, linked list-based queues have O(n)": "Both array and linked list-based queues can achieve O(1) dequeue.",
+          "Array-based queues use more memory than linked list-based queues": "Memory usage depends on the size and capacity, not just the type of queue.",
+          "Linked list-based queues require index-based access": "Linked list-based queues do not support index-based access; they operate through pointers."
+        }
+      },
+      {
+        "question": "What will be the result of dequeuing from an empty queue?",
+        "options": [
+          "Returns None",
+          "Returns False",
+          "Raises an IndexError",
+          "Returns the first inserted element"
+        ],
+        "answer": "Raises an IndexError",
+        "explanation": "Attempting to dequeue from an empty queue raises an IndexError because there are no elements to remove.",
+        "incorrect_explanation": {
+          "Returns None": "Returning None is incorrect; queues raise an error when empty.",
+          "Returns False": "False is not a valid return type for queue operations.",
+          "Returns the first inserted element": "An empty queue has no elements to return."
+        }
+      },
+      {
+        "question": "Which queue operation allows you to view the first element without removing it?",
+        "options": [
+          "Enqueue",
+          "Dequeue",
+          "Peek",
+          "IsEmpty"
+        ],
+        "answer": "Peek",
+        "explanation": "The peek operation allows you to access the first element in the queue without dequeuing it.",
+        "incorrect_explanation": {
+          "Enqueue": "Enqueue adds an element to the queue, not access it.",
+          "Dequeue": "Dequeue removes the first element, while peek only accesses it.",
+          "IsEmpty": "IsEmpty checks if the queue is empty, it doesn't access elements."
+        }
+      },
+      {
+        "question": "What is the time complexity of checking if a queue is empty?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Checking if a queue is empty takes constant time O(1) since it's a simple check on a variable or reference.",
+        "incorrect_explanation": {
+          "O(n)": "This operation does not require traversal of the queue.",
+          "O(log n)": "Queue operations are generally not logarithmic.",
+          "O(n^2)": "O(n^2) is incorrect for simple operations like checking emptiness."
+        }
+      },
+      {
+        "question": "Which of the following scenarios best represents the use of a queue?",
+        "options": [
+          "Undo operations in a text editor",
+          "Recursive function call stack",
+          "Printer job management",
+          "Binary search on sorted arrays"
+        ],
+        "answer": "Printer job management",
+        "explanation": "Printer job management is a classic example of a queue where tasks are processed in the order they were added (FIFO).",
+        "incorrect_explanation": {
+          "Undo operations in a text editor": "Undo operations use a stack, not a queue.",
+          "Recursive function call stack": "Recursive function calls are managed using a stack.",
+          "Binary search on sorted arrays": "Binary search doesn't involve a queue."
+        }
+      },
+      {
+        "question": "What is the primary disadvantage of an array-based queue?",
+        "options": [
+          "Fixed size",
+          "Complex dequeue operation",
+          "Memory overhead due to node references",
+          "No random access"
+        ],
+        "answer": "Fixed size",
+        "explanation": "An array-based queue has a fixed size, so it must be resized or a new array must be created if more space is needed.",
+        "incorrect_explanation": {
+          "Complex dequeue operation": "The dequeue operation in an array-based queue is straightforward and O(1).",
+          "Memory overhead due to node references": "This disadvantage applies to linked list-based queues, not arrays.",
+          "No random access": "Random access is not needed in a queue since it's based on FIFO order."
+        }
+      },
+      {
+        "question": "Which of the following is true for a circular queue?",
+        "options": [
+          "The rear pointer can wrap around to the front when it reaches the end of the array",
+          "The queue is implemented using dynamic memory allocation",
+          "It supports random access",
+          "It uses a stack structure internally"
+        ],
+        "answer": "The rear pointer can wrap around to the front when it reaches the end of the array",
+        "explanation": "In a circular queue, the rear pointer wraps around to the front when the end of the array is reached, allowing efficient space usage.",
+        "incorrect_explanation": {
+          "The queue is implemented using dynamic memory allocation": "Dynamic memory allocation is used in linked list-based queues, not circular queues.",
+          "It supports random access": "A queue does not support random access; elements are processed in FIFO order.",
+          "It uses a stack structure internally": "A circular queue is not related to a stack; it follows the queue FIFO structure."
+        }
+      },
+      {
+        "question": "Which operation will raise an error when the queue is full in an array-based queue?",
+        "options": [
+          "Enqueue",
+          "Dequeue",
+          "Peek",
+          "IsEmpty"
+        ],
+        "answer": "Enqueue",
+        "explanation": "Enqueue raises an OverflowError when trying to add an element to a full array-based queue.",
+        "incorrect_explanation": {
+          "Dequeue": "Dequeue raises an error when the queue is empty, not when it's full.",
+          "Peek": "Peek only accesses elements; it doesn't change the queue size.",
+          "IsEmpty": "IsEmpty simply checks if the queue is empty; it doesn't raise errors related to capacity."
+        }
+      },
+      {
+        "question": "In a linked list-based queue, how is memory managed?",
+        "options": [
+          "Memory is allocated dynamically as elements are added",
+          "Memory is pre-allocated",
+          "Memory is managed by shifting elements",
+          "Memory is static"
+        ],
+        "answer": "Memory is allocated dynamically as elements are added",
+        "explanation": "In a linked list-based queue, memory is dynamically allocated for each node as elements are enqueued.",
+        "incorrect_explanation": {
+          "Memory is pre-allocated": "Pre-allocation of memory applies to array-based queues, not linked lists.",
+          "Memory is managed by shifting elements": "Shifting elements is not required in linked list-based queues.",
+          "Memory is static": "Memory in a linked list-based queue is dynamic, not static."
+        }
+      },
+      {
+        "question": "Which method is used to check the first element in the queue without removing it?",
+        "options": [
+          "front_element()",
+          "dequeue()",
+          "is_empty()",
+          "enqueue()"
+        ],
+        "answer": "front_element()",
+        "explanation": "The front_element() method allows you to check the element at the front of the queue without removing it.",
+        "incorrect_explanation": {
+          "dequeue()": "Dequeue removes the element, while front_element() only checks it.",
+          "is_empty()": "is_empty() checks if the queue is empty but doesn’t access elements.",
+          "enqueue()": "enqueue() adds an element to the queue, not access the front."
+        }
+      },
+      {
+        "question": "What happens when a node is removed from an empty linked list-based queue?",
+        "options": [
+          "It raises an IndexError",
+          "It raises a MemoryError",
+          "It removes the rear element",
+          "It returns None"
+        ],
+        "answer": "It raises an IndexError",
+        "explanation": "Attempting to remove a node from an empty queue raises an IndexError because there is no element to dequeue.",
+        "incorrect_explanation": {
+          "It raises a MemoryError": "MemoryError is raised when memory allocation fails, not in this context.",
+          "It removes the rear element": "The rear element is not removed from an empty queue because there are no elements to remove.",
+          "It returns None": "An empty queue operation raises an error, not returns None."
+        }
+      },
+      {
+        "question": "What does the is_empty() method return when the queue has elements?",
+        "options": [
+          "False",
+          "True",
+          "None",
+          "Raises an error"
+        ],
+        "answer": "False",
+        "explanation": "The is_empty() method returns False if the queue contains elements.",
+        "incorrect_explanation": {
+          "True": "True is returned when the queue is empty, not when it has elements.",
+          "None": "None is not returned by the is_empty() method.",
+          "Raises an error": "The is_empty() method does not raise errors, it simply checks if the queue is empty."
+        }
+      },
+      {
+        "question": "Which data structure does a queue resemble in its principle of operation?",
+        "options": [
+          "A line of people waiting for a service",
+          "A bookshelf",
+          "A tree",
+          "A heap"
+        ],
+        "answer": "A line of people waiting for a service",
+        "explanation": "A queue operates like a line of people where the first person in line is served first (FIFO).",
+        "incorrect_explanation": {
+          "A bookshelf": "A bookshelf does not operate in a FIFO manner.",
+          "A tree": "A tree is a hierarchical structure, not FIFO.",
+          "A heap": "A heap is used for priority-based access, not FIFO order."
+        }
+      },
+      {
+        "question": "Which of the following is NOT true about linked list-based queues?",
+        "options": [
+          "They can grow dynamically",
+          "They have constant time enqueue and dequeue operations",
+          "They require shifting elements after dequeue",
+          "They use nodes to store data"
+        ],
+        "answer": "They require shifting elements after dequeue",
+        "explanation": "Linked list-based queues do not require shifting elements; dequeue simply adjusts the front pointer.",
+        "incorrect_explanation": {
+          "They can grow dynamically": "Linked list-based queues can grow or shrink dynamically based on the number of elements.",
+          "They have constant time enqueue and dequeue operations": "Both enqueue and dequeue can be performed in O(1) time in a linked list-based queue.",
+          "They use nodes to store data": "Nodes are used in linked lists to store both data and references."
+        }
+      },
+      {
+        "question": "What is the rear element in the queue after enqueuing 10, 20, and 30 in sequence?",
+        "options": [
+          "10",
+          "20",
+          "30",
+          "Queue is empty"
+        ],
+        "answer": "30",
+        "explanation": "The rear element is always the last element enqueued, in this case, 30.",
+        "incorrect_explanation": {
+          "10": "10 is the front element, not the rear.",
+          "20": "20 was enqueued earlier, but the rear is the last element added.",
+          "Queue is empty": "The queue is not empty after enqueuing elements."
+        }
+      }
+    ]
+  }
+  

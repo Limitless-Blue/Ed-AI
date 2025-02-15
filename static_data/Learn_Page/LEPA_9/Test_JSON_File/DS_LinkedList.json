@@ -1,0 +1,229 @@
+{
+    "questions": [
+      {
+        "question": "What distinguishes a singly linked list from other types of linked lists?",
+        "options": [
+          "Each node contains references to both the next and previous nodes",
+          "Each node contains a reference only to the next node",
+          "The last node points back to the first node",
+          "Nodes can be accessed in both forward and backward directions"
+        ],
+        "answer": "Each node contains a reference only to the next node",
+        "explanation": "A singly linked list is characterized by each node containing a reference only to the next node in the sequence, making it unidirectional.",
+        "incorrect_explanation": {
+          "Each node contains references to both the next and previous nodes": "This describes a doubly linked list, not a singly linked list.",
+          "The last node points back to the first node": "This describes a circular linked list, not a singly linked list.",
+          "Nodes can be accessed in both forward and backward directions": "This is a feature of doubly linked lists, not singly linked lists."
+        }
+      },
+      {
+        "question": "Which operation on a singly linked list has a time complexity of O(n)?",
+        "options": [
+          "Inserting a node at the beginning",
+          "Deleting a node from the beginning",
+          "Appending a node at the end",
+          "Traversing the entire list"
+        ],
+        "answer": "Appending a node at the end",
+        "explanation": "Appending a node at the end of a singly linked list requires traversing the entire list to find the last node, resulting in O(n) time complexity.",
+        "incorrect_explanation": {
+          "Inserting a node at the beginning": "Inserting at the beginning is a constant time operation, O(1).",
+          "Deleting a node from the beginning": "Deleting from the beginning is a constant time operation, O(1).",
+          "Traversing the entire list": "While traversing has O(n) time complexity, the question specifically refers to an operation that has this complexity due to its nature."
+        }
+      },
+      {
+        "question": "What is the primary advantage of a doubly linked list over a singly linked list?",
+        "options": [
+          "Requires less memory",
+          "Allows traversal in both directions",
+          "Simpler implementation",
+          "Faster insertion at the end"
+        ],
+        "answer": "Allows traversal in both directions",
+        "explanation": "A doubly linked list allows traversal in both forward and backward directions due to each node having references to both the next and previous nodes.",
+        "incorrect_explanation": {
+          "Requires less memory": "Doubly linked lists require more memory because each node stores an additional reference to the previous node.",
+          "Simpler implementation": "Doubly linked lists are more complex to implement compared to singly linked lists.",
+          "Faster insertion at the end": "Insertion at the end still requires O(n) time complexity unless a tail pointer is maintained."
+        }
+      },
+      {
+        "question": "Which type of linked list forms a closed loop by connecting the last node back to the head?",
+        "options": [
+          "Singly Linked List",
+          "Doubly Linked List",
+          "Circular Linked List",
+          "None of the above"
+        ],
+        "answer": "Circular Linked List",
+        "explanation": "A circular linked list forms a closed loop by having the last node point back to the head, allowing for continuous traversal.",
+        "incorrect_explanation": {
+          "Singly Linked List": "Singly linked lists do not form a closed loop; the last node points to null.",
+          "Doubly Linked List": "Doubly linked lists do not inherently form a closed loop unless specifically implemented as circular.",
+          "None of the above": "Circular linked lists are specifically designed to form a closed loop."
+        }
+      },
+      {
+        "question": "What is the time complexity of deleting a node from the end of a doubly linked list without a tail pointer?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Deleting a node from the end of a doubly linked list without a tail pointer requires traversing the entire list to reach the last node, resulting in O(n) time complexity.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) time complexity is achievable with a tail pointer, not without it.",
+          "O(log n)": "O(log n) is not applicable to linked list operations.",
+          "O(n log n)": "O(n log n) implies a more complex operation than necessary."
+        }
+      },
+      {
+        "question": "Which of the following is a disadvantage of using a circular linked list?",
+        "options": [
+          "Requires more memory per node",
+          "Cannot be traversed infinitely",
+          "Risk of infinite loops if traversal conditions are not managed",
+          "Does not allow insertion at the beginning"
+        ],
+        "answer": "Risk of infinite loops if traversal conditions are not managed",
+        "explanation": "Circular linked lists can lead to infinite loops during traversal if proper stopping conditions are not implemented, making them harder to manage.",
+        "incorrect_explanation": {
+          "Requires more memory per node": "Circular linked lists typically do not require more memory per node than singly or doubly linked lists unless they are also doubly circular.",
+          "Cannot be traversed infinitely": "Circular linked lists are designed to be traversed indefinitely unless a stopping condition is applied.",
+          "Does not allow insertion at the beginning": "Insertion at the beginning is possible in circular linked lists."
+        }
+      },
+      {
+        "question": "In a doubly linked list, what additional pointer does each node contain compared to a singly linked list?",
+        "options": [
+          "A pointer to the head",
+          "A pointer to the previous node",
+          "A pointer to the tail",
+          "A pointer to a random node"
+        ],
+        "answer": "A pointer to the previous node",
+        "explanation": "Each node in a doubly linked list contains an additional pointer to the previous node, enabling bidirectional traversal.",
+        "incorrect_explanation": {
+          "A pointer to the head": "Only the list structure maintains a pointer to the head, not each node.",
+          "A pointer to the tail": "Similarly, the tail is maintained by the list, not by individual nodes.",
+          "A pointer to a random node": "Nodes do not typically contain pointers to random nodes in standard doubly linked lists."
+        }
+      },
+      {
+        "question": "What is the primary reason for using sentinel nodes or dummy headers in linked lists?",
+        "options": [
+          "To store additional data",
+          "To simplify insertion and deletion logic",
+          "To increase the memory usage",
+          "To enable bidirectional traversal"
+        ],
+        "answer": "To simplify insertion and deletion logic",
+        "explanation": "Sentinel nodes or dummy headers help simplify the insertion and deletion logic by eliminating the need to handle special cases for head or tail operations.",
+        "incorrect_explanation": {
+          "To store additional data": "Sentinel nodes typically do not store meaningful data; they are placeholders.",
+          "To increase the memory usage": "While sentinel nodes do use additional memory, the primary purpose is to simplify operations.",
+          "To enable bidirectional traversal": "Bidirectional traversal is a feature of doubly linked lists, not directly related to sentinel nodes."
+        }
+      },
+      {
+        "question": "Which operation in a circular singly linked list requires updating the last node's next pointer to point to the new head?",
+        "options": [
+          "Insertion at the end",
+          "Insertion at the beginning",
+          "Deletion from the end",
+          "Deletion from the beginning"
+        ],
+        "answer": "Insertion at the beginning",
+        "explanation": "Inserting a node at the beginning of a circular singly linked list requires updating the last node's next pointer to point to the new head to maintain the circular structure.",
+        "incorrect_explanation": {
+          "Insertion at the end": "Insertion at the end involves updating the new last node's next pointer to the head, not necessarily the beginning.",
+          "Deletion from the end": "Deletion from the end would require updating the new last node's next pointer to the head.",
+          "Deletion from the beginning": "Deletion from the beginning requires updating the last node's next pointer to the new head."
+        }
+      },
+      {
+        "question": "What is a key disadvantage of a doubly linked list compared to a singly linked list?",
+        "options": [
+          "It cannot be traversed backwards",
+          "It uses more memory per node",
+          "It has a fixed size",
+          "It does not support efficient deletions"
+        ],
+        "answer": "It uses more memory per node",
+        "explanation": "Doubly linked lists use more memory per node because each node stores an additional pointer to the previous node.",
+        "incorrect_explanation": {
+          "It cannot be traversed backwards": "Doubly linked lists can be traversed both forwards and backwards.",
+          "It has a fixed size": "Linked lists are inherently dynamic in size, regardless of being singly or doubly linked.",
+          "It does not support efficient deletions": "Doubly linked lists actually support more efficient deletions given a reference to the node."
+        }
+      },
+      {
+        "question": "In the context of linked lists, what does 'dynamic size' refer to?",
+        "options": [
+          "The ability to change the size of each node",
+          "The ability to grow or shrink the list by adding or removing nodes",
+          "The ability to store elements of different data types",
+          "The ability to randomly access elements by index"
+        ],
+        "answer": "The ability to grow or shrink the list by adding or removing nodes",
+        "explanation": "Dynamic size means that the linked list can easily grow or shrink in size by adding or removing nodes without the need for contiguous memory allocation.",
+        "incorrect_explanation": {
+          "The ability to change the size of each node": "Nodes typically have a fixed structure in terms of data and pointers.",
+          "The ability to store elements of different data types": "Linked lists generally store elements of the same data type.",
+          "The ability to randomly access elements by index": "Linked lists do not support efficient random access; elements must be accessed sequentially."
+        }
+      },
+      {
+        "question": "Which of the following linked list types allows for constant time (O(1)) deletion of a given node, assuming you have a reference to that node?",
+        "options": [
+          "Singly Linked List",
+          "Doubly Linked List",
+          "Circular Linked List",
+          "All of the above"
+        ],
+        "answer": "Doubly Linked List",
+        "explanation": "In a doubly linked list, given a reference to a node, you can delete it in constant time (O(1)) by updating the previous and next pointers of adjacent nodes.",
+        "incorrect_explanation": {
+          "Singly Linked List": "In a singly linked list, deleting a node requires access to the previous node, which is not directly available.",
+          "Circular Linked List": "Circular linked lists can be singly or doubly linked; only doubly circular linked lists allow for O(1) deletion with a node reference.",
+          "All of the above": "Only doubly linked lists support O(1) deletion given a node reference."
+        }
+      },
+      {
+        "question": "What is the primary use case for a circular linked list?",
+        "options": [
+          "Implementing stack data structures",
+          "Round-robin scheduling",
+          "Storing hierarchical data",
+          "Quickly accessing elements by index"
+        ],
+        "answer": "Round-robin scheduling",
+        "explanation": "Circular linked lists are ideal for scenarios like round-robin scheduling where the list needs to be traversed in a continuous loop.",
+        "incorrect_explanation": {
+          "Implementing stack data structures": "Stacks are typically implemented using arrays or singly linked lists, not circular linked lists.",
+          "Storing hierarchical data": "Hierarchical data is usually stored using trees, not linked lists.",
+          "Quickly accessing elements by index": "Linked lists do not support efficient random access by index."
+        }
+      },
+      {
+        "question": "Which linked list type can be implemented without a head pointer?",
+        "options": [
+          "Singly Linked List",
+          "Doubly Linked List",
+          "Circular Linked List",
+          "None of the above"
+        ],
+        "answer": "None of the above",
+        "explanation": "All standard linked list implementations require a head pointer to keep track of the starting node.",
+        "incorrect_explanation": {
+          "Singly Linked List": "Requires a head pointer to access the first node.",
+          "Doubly Linked List": "Also requires a head pointer for traversal from the start.",
+          "Circular Linked List": "Even though it's circular, it still needs a head pointer to mark the beginning of the list."
+        }
+      }
+    ]
+  }
+  

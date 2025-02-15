@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 27",
+    "ID": "LEPA_27",
     "title": "Sort",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 27/Course Markdown File/Merge_Sort.md"
+      "Static_Files/Learn_Page/LEPA_27/Course Markdown File/Merge_Sort.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 27/Test Json File/Merge_Sort.json"
+      "Static_Files/Learn_Page/LEPA_27/Test Json File/Merge_Sort.json"
     ]
 }

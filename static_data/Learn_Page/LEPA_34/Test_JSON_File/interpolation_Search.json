@@ -1,0 +1,283 @@
+{
+    "questions": [
+      {
+        "question": "What is Interpolation Search primarily used for?",
+        "options": [
+          "Finding a value in a sorted array",
+          "Sorting an array",
+          "Finding the maximum value in an array",
+          "Searching in an unsorted array"
+        ],
+        "answer": "Finding a value in a sorted array",
+        "explanation": "Interpolation Search is an efficient search algorithm specifically designed to find a target value within a sorted array.",
+        "incorrect_explanation": {
+          "Finding a value in a sorted array": "This is the correct use case for Interpolation Search.",
+          "Sorting an array": "Interpolation Search is not used for sorting; it is for searching.",
+          "Finding the maximum value in an array": "This does not describe the purpose of Interpolation Search.",
+          "Searching in an unsorted array": "Interpolation Search requires the array to be sorted."
+        }
+      },
+      {
+        "question": "How does Interpolation Search differ from Binary Search?",
+        "options": [
+          "It always searches the middle element",
+          "It uses estimation based on value distribution",
+          "It requires a linear search",
+          "It only works for small datasets"
+        ],
+        "answer": "It uses estimation based on value distribution",
+        "explanation": "Interpolation Search estimates the position of the target based on its value and the values at the boundaries, unlike Binary Search, which always checks the middle element.",
+        "incorrect_explanation": {
+          "It always searches the middle element": "This describes Binary Search, not Interpolation Search.",
+          "It requires a linear search": "Interpolation Search is more efficient than linear search in the right conditions.",
+          "It only works for small datasets": "Interpolation Search can be more efficient for large, uniformly distributed datasets."
+        }
+      },
+      {
+        "question": "When is Interpolation Search most effective?",
+        "options": [
+          "When the data is sorted and uniformly distributed",
+          "When the data is unsorted",
+          "When the dataset is small",
+          "When data points are randomly distributed"
+        ],
+        "answer": "When the data is sorted and uniformly distributed",
+        "explanation": "Interpolation Search is particularly efficient when the dataset is uniformly distributed, as it can quickly estimate the target's position.",
+        "incorrect_explanation": {
+          "When the data is sorted and uniformly distributed": "This is the correct condition for optimal performance.",
+          "When the data is unsorted": "Interpolation Search requires a sorted array.",
+          "When the dataset is small": "While it can work on small datasets, its efficiency shines on larger, uniformly distributed datasets.",
+          "When data points are randomly distributed": "Randomly distributed data does not provide the uniformity needed for efficient searching."
+        }
+      },
+      {
+        "question": "What is the time complexity of the average case for Interpolation Search?",
+        "options": [
+          "O(log n)",
+          "O(log log n)",
+          "O(n)",
+          "O(1)"
+        ],
+        "answer": "O(log log n)",
+        "explanation": "In the average case, when the data is uniformly distributed, Interpolation Search operates in O(log log n) time complexity.",
+        "incorrect_explanation": {
+          "O(log n)": "This is the time complexity for Binary Search, not Interpolation Search.",
+          "O(log log n)": "This is the correct answer for the average case time complexity.",
+          "O(n)": "This would be the time complexity in the worst case, not average.",
+          "O(1)": "This represents the best case when the target is found immediately."
+        }
+      },
+      {
+        "question": "What is a limitation of Interpolation Search?",
+        "options": [
+          "It can only find maximum values",
+          "It requires data to be sorted",
+          "It is always faster than Binary Search",
+          "It works on unsorted data"
+        ],
+        "answer": "It requires data to be sorted",
+        "explanation": "Like Binary Search, Interpolation Search requires that the array be sorted before it can be executed.",
+        "incorrect_explanation": {
+          "It can only find maximum values": "This is incorrect; it can find any target value in the sorted array.",
+          "It is always faster than Binary Search": "Its performance depends on the uniformity of the data distribution.",
+          "It works on unsorted data": "Interpolation Search cannot function properly on unsorted data."
+        }
+      },
+      {
+        "question": "In which scenario would Interpolation Search degrade to O(n) performance?",
+        "options": [
+          "When the array is sorted and uniform",
+          "When the array has a wide range of values with few elements",
+          "When the array is sorted and small",
+          "When the target value is at the start of the array"
+        ],
+        "answer": "When the array has a wide range of values with few elements",
+        "explanation": "If the array has sparse values, the performance can degrade to O(n), similar to linear search.",
+        "incorrect_explanation": {
+          "When the array is sorted and uniform": "In this case, it would perform well.",
+          "When the array is sorted and small": "Small datasets do not lead to performance degradation.",
+          "When the target value is at the start of the array": "This does not affect the overall time complexity."
+        }
+      },
+      {
+        "question": "What is the best case time complexity of Interpolation Search?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(log log n)",
+          "O(n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "The best case occurs when the target value is found at the estimated position on the first try, leading to constant time complexity.",
+        "incorrect_explanation": {
+          "O(1)": "This is the correct best case time complexity.",
+          "O(log n)": "This describes the time complexity for Binary Search.",
+          "O(log log n)": "This is the average case complexity, not the best case.",
+          "O(n)": "This represents the worst case time complexity."
+        }
+      },
+      {
+        "question": "What does the formula used in Interpolation Search help determine?",
+        "options": [
+          "The middle index of the array",
+          "The estimated position of the target value",
+          "The number of elements in the array",
+          "The maximum value in the array"
+        ],
+        "answer": "The estimated position of the target value",
+        "explanation": "The interpolation formula estimates where the target value is likely to be located based on its value and the values at the boundaries.",
+        "incorrect_explanation": {
+          "The middle index of the array": "This describes Binary Search's approach, not Interpolation Search.",
+          "The number of elements in the array": "The formula does not calculate the number of elements.",
+          "The maximum value in the array": "The formula is not concerned with finding maximum values."
+        }
+      },
+      {
+        "question": "Which statement best describes the requirement for data when using Interpolation Search?",
+        "options": [
+          "The data must be sorted and uniformly distributed",
+          "The data can be unsorted",
+          "The data must be randomly distributed",
+          "The data must contain duplicates"
+        ],
+        "answer": "The data must be sorted and uniformly distributed",
+        "explanation": "Interpolation Search requires the array to be sorted and performs best when the data is uniformly distributed.",
+        "incorrect_explanation": {
+          "The data must be sorted and uniformly distributed": "This is correct.",
+          "The data can be unsorted": "This is incorrect; the array must be sorted.",
+          "The data must be randomly distributed": "Random distribution does not support efficient searching with Interpolation Search.",
+          "The data must contain duplicates": "Duplicates are not a requirement for using Interpolation Search."
+        }
+      },
+      {
+        "question": "What is the primary advantage of using Interpolation Search over Binary Search?",
+        "options": [
+          "It always performs better than Binary Search",
+          "It requires less memory",
+          "It can reduce the number of comparisons",
+          "It works on unsorted arrays"
+        ],
+        "answer": "It can reduce the number of comparisons",
+        "explanation": "Interpolation Search can potentially require fewer comparisons by estimating the position of the target value.",
+        "incorrect_explanation": {
+          "It always performs better than Binary Search": "Its performance is highly dependent on data distribution.",
+          "It requires less memory": "Both algorithms operate in O(1) space complexity.",
+          "It works on unsorted arrays": "This is not true; it requires sorted data."
+        }
+      },
+      {
+        "question": "What does the term 'Uniform Distribution' refer to in the context of Interpolation Search?",
+        "options": [
+          "Data points are clustered together",
+          "Data points are evenly spread across a range",
+          "Data points have random values",
+          "Data points can be duplicated"
+        ],
+        "answer": "Data points are evenly spread across a range",
+        "explanation": "Uniform distribution means that values are spread evenly, allowing for better estimation during searches.",
+        "incorrect_explanation": {
+          "Data points are clustered together": "This describes a non-uniform distribution.",
+          "Data points have random values": "Random values do not imply uniformity.",
+          "Data points can be duplicated": "Duplication is not relevant to the definition of uniform distribution."
+        }
+      },
+      {
+        "question": "In the provided Python code, what does the variable 'pos' represent?",
+        "options": [
+          "The target value",
+          "The index of the middle element",
+          "The estimated position of the target",
+          "The size of the array"
+        ],
+        "answer": "The estimated position of the target",
+        "explanation": "'pos' is calculated to estimate where the target value might be located in the array.",
+        "incorrect_explanation": {
+          "The target value": "This is incorrect; 'pos' is not the target itself.",
+          "The index of the middle element": "This refers to the middle element, not the estimated position.",
+          "The size of the array": "'pos' does not relate to the array's size."
+        }
+      },
+      {
+        "question": "What happens if the 'arr[high]' is equal to 'arr[low]' during the search?",
+        "options": [
+          "The algorithm will crash",
+          "The algorithm returns the low index if it equals the target",
+          "The algorithm continues searching",
+          "The algorithm will find the maximum value"
+        ],
+        "answer": "The algorithm returns the low index if it equals the target",
+        "explanation": "If 'arr[high]' equals 'arr[low]', the algorithm checks if the target equals 'arr[low]' and returns its index if true.",
+        "incorrect_explanation": {
+          "The algorithm will crash": "The algorithm handles this case to avoid division by zero.",
+          "The algorithm continues searching": "In this case, it checks for equality before proceeding.",
+          "The algorithm will find the maximum value": "The algorithm does not focus on finding maximum values."
+        }
+      },
+      {
+        "question": "What is a major disadvantage of using Interpolation Search?",
+        "options": [
+          "It is less efficient than Binary Search",
+          "It cannot handle large datasets",
+          "Performance heavily depends on data distribution",
+          "It is easier to implement than Binary Search"
+        ],
+        "answer": "Performance heavily depends on data distribution",
+        "explanation": "The performance of Interpolation Search is significantly influenced by whether the data is uniformly distributed.",
+        "incorrect_explanation": {
+          "It is less efficient than Binary Search": "It can be more efficient under certain conditions.",
+          "It cannot handle large datasets": "It is actually more efficient for larger datasets when uniformly distributed.",
+          "It is easier to implement than Binary Search": "Implementation complexity varies, but it's not necessarily easier."
+        }
+      },
+      {
+        "question": "What type of data structure does Interpolation Search work with?",
+        "options": [
+          "Linked Lists",
+          "Unsorted Arrays",
+          "Sorted Arrays",
+          "Hash Tables"
+        ],
+        "answer": "Sorted Arrays",
+        "explanation": "Interpolation Search requires that the data be sorted in an array format for proper execution.",
+        "incorrect_explanation": {
+          "Linked Lists": "Interpolation Search does not work effectively with linked lists due to their structure.",
+          "Unsorted Arrays": "It only works on sorted arrays.",
+          "Hash Tables": "Interpolation Search is not applicable to hash tables."
+        }
+      },
+      {
+        "question": "Which search algorithm consistently divides the list in half each time?",
+        "options": [
+          "Linear Search",
+          "Binary Search",
+          "Interpolation Search",
+          "Jump Search"
+        ],
+        "answer": "Binary Search",
+        "explanation": "Binary Search consistently selects the middle element to divide the list in half for each iteration.",
+        "incorrect_explanation": {
+          "Linear Search": "Linear Search checks each element sequentially.",
+          "Binary Search": "This is the correct algorithm that halves the list each time.",
+          "Interpolation Search": "This algorithm uses estimation rather than consistently dividing the list."
+        }
+      },
+      {
+        "question": "What is the primary focus of Interpolation Search?",
+        "options": [
+          "Minimizing memory usage",
+          "Finding a target value efficiently",
+          "Sorting values quickly",
+          "Maximizing comparisons"
+        ],
+        "answer": "Finding a target value efficiently",
+        "explanation": "The main goal of Interpolation Search is to locate a target value efficiently within a sorted array.",
+        "incorrect_explanation": {
+          "Minimizing memory usage": "While memory usage is considered, efficiency in finding a target value is the primary focus.",
+          "Finding a target value efficiently": "This is the correct focus of the algorithm.",
+          "Sorting values quickly": "Interpolation Search does not sort values; it searches for them.",
+          "Maximizing comparisons": "The goal is to minimize comparisons, not maximize them."
+        }
+      }
+    ]
+  }
+  

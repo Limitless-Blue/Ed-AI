@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the time complexity of push and pop operations in a stack?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Both push and pop operations in a stack are performed in constant time, O(1), as they involve adding or removing elements from the top.",
+        "incorrect_explanation": {
+          "O(n)": "This implies linear time complexity, which is not the case for stack operations.",
+          "O(log n)": "Logarithmic time complexity does not apply to basic stack operations.",
+          "O(n log n)": "This is typically associated with efficient sorting algorithms, not stack operations."
+        }
+      },
+      {
+        "question": "2. Which of the following is a common application of a stack?",
+        "options": [
+          "Implementing a queue",
+          "Depth-First Search (DFS)",
+          "Shortest Path Algorithms",
+          "Hash Tables"
+        ],
+        "answer": "Depth-First Search (DFS)",
+        "explanation": "Stacks are commonly used in DFS to keep track of the nodes to visit next.",
+        "incorrect_explanation": {
+          "Implementing a queue": "Queues, not stacks, are used to implement the FIFO (First-In-First-Out) principle.",
+          "Shortest Path Algorithms": "These typically use priority queues or other data structures.",
+          "Hash Tables": "Hash tables use hashing mechanisms, not stacks."
+        }
+      },
+      {
+        "question": "3. How can you use a stack to check for balanced parentheses in an expression?",
+        "options": [
+          "Push every opening parenthesis and pop on encountering a closing one",
+          "Push every closing parenthesis and pop on encountering an opening one",
+          "Push all parentheses onto the stack",
+          "Count the number of opening and closing parentheses"
+        ],
+        "answer": "Push every opening parenthesis and pop on encountering a closing one",
+        "explanation": "By pushing opening parentheses onto the stack and popping when a corresponding closing parenthesis is found, you can ensure that parentheses are balanced.",
+        "incorrect_explanation": {
+          "Push every closing parenthesis and pop on encountering an opening one": "This would not correctly match the parentheses in order.",
+          "Push all parentheses onto the stack": "This would not help in verifying the balance of the parentheses.",
+          "Count the number of opening and closing parentheses": "Counting does not ensure that the parentheses are properly nested."
+        }
+      },
+      {
+        "question": "4. What data structure can be used to implement a stack using only queues?",
+        "options": [
+          "Single queue",
+          "Two queues",
+          "Priority queue",
+          "Deque"
+        ],
+        "answer": "Two queues",
+        "explanation": "Implementing a stack using two queues allows you to manage the LIFO (Last-In-First-Out) behavior by transferring elements between the queues.",
+        "incorrect_explanation": {
+          "Single queue": "A single queue cannot efficiently simulate stack behavior.",
+          "Priority queue": "Priority queues order elements based on priority, not LIFO.",
+          "Deque": "While deques can be used to implement stacks, the question specifies using queues only."
+        }
+      },
+      {
+        "question": "5. How do you implement a Min Stack that supports retrieving the minimum element in constant time?",
+        "options": [
+          "Use a single stack and traverse it to find the minimum",
+          "Use two stacks, one for elements and one for minimums",
+          "Use a queue alongside the stack",
+          "Store the minimum value as a separate variable"
+        ],
+        "answer": "Use two stacks, one for elements and one for minimums",
+        "explanation": "Using two stacks allows you to keep track of the current minimum at each state of the stack, enabling constant-time retrieval.",
+        "incorrect_explanation": {
+          "Use a single stack and traverse it to find the minimum": "Traversing the stack would result in O(n) time complexity for finding the minimum.",
+          "Use a queue alongside the stack": "Queues are not suitable for maintaining the current minimum in constant time.",
+          "Store the minimum value as a separate variable": "A single variable cannot track the minimum as elements are popped from the stack."
+        }
+      },
+      {
+        "question": "6. What will be the output of the following postfix expression: \"6 2 / 3 - 4 2 * +\"?",
+        "options": [
+          "7",
+          "10",
+          "8",
+          "5"
+        ],
+        "answer": "7",
+        "explanation": "The postfix expression evaluates as follows: 6/2=3; 3-3=0; 4*2=8; 0+8=8.",
+        "incorrect_explanation": {
+          "10": "Incorrect intermediate calculations lead to this answer.",
+          "8": "Correct steps lead to 7, not 8.",
+          "5": "This is a miscalculation of the operations."
+        }
+      },
+      {
+        "question": "7. How do you convert an infix expression to a postfix expression using a stack?",
+        "options": [
+          "Push operands to the stack and operators to the output",
+          "Push operators to the stack and operands to the output",
+          "Use the stack to hold operators and pop based on precedence",
+          "Use the stack to hold operands and pop when operators are encountered"
+        ],
+        "answer": "Use the stack to hold operators and pop based on precedence",
+        "explanation": "Infix to postfix conversion uses a stack to temporarily hold operators and ensures they are output based on their precedence.",
+        "incorrect_explanation": {
+          "Push operands to the stack and operators to the output": "Operands are typically sent directly to the output.",
+          "Push operators to the stack and operands to the output": "Operands are not pushed to the stack.",
+          "Use the stack to hold operands and pop when operators are encountered": "Operands should not be pushed to the stack in this process."
+        }
+      },
+      {
+        "question": "8. Which of the following problems can be efficiently solved using a stack?",
+        "options": [
+          "Finding the shortest path in a graph",
+          "Evaluating arithmetic expressions",
+          "Sorting a list of numbers",
+          "Searching in a database"
+        ],
+        "answer": "Evaluating arithmetic expressions",
+        "explanation": "Stacks are ideal for parsing and evaluating arithmetic expressions, especially in postfix or prefix notations.",
+        "incorrect_explanation": {
+          "Finding the shortest path in a graph": "This typically uses algorithms like BFS or Dijkstra's, not stacks.",
+          "Sorting a list of numbers": "Sorting is usually done with algorithms like QuickSort or MergeSort.",
+          "Searching in a database": "Database searching uses indexing and other optimized search techniques."
+        }
+      },
+      {
+        "question": "9. What is the main advantage of using a stack over recursion?",
+        "options": [
+          "Stacks use less memory",
+          "Stacks avoid the overhead of function calls",
+          "Stacks are easier to implement",
+          "Stacks can handle more complex problems"
+        ],
+        "answer": "Stacks avoid the overhead of function calls",
+        "explanation": "Using an explicit stack can avoid the overhead associated with recursive function calls, potentially reducing memory usage and call stack depth.",
+        "incorrect_explanation": {
+          "Stacks use less memory": "This depends on the implementation; sometimes recursion can be more memory-efficient.",
+          "Stacks are easier to implement": "Implementing recursion is often simpler than managing an explicit stack.",
+          "Stacks can handle more complex problems": "Both stacks and recursion can handle complex problems, depending on the context."
+        }
+      },
+      {
+        "question": "10. How can you use a stack to implement the undo functionality in applications?",
+        "options": [
+          "Store all actions in a queue",
+          "Store all actions in a stack and pop to undo",
+          "Use a priority queue to manage actions",
+          "Store only the last action performed"
+        ],
+        "answer": "Store all actions in a stack and pop to undo",
+        "explanation": "Stacks naturally support the Last-In-First-Out (LIFO) principle, which aligns with the undo functionality where the most recent action is undone first.",
+        "incorrect_explanation": {
+          "Store all actions in a queue": "Queues follow FIFO, which is not suitable for undo operations.",
+          "Use a priority queue to manage actions": "Priority queues order elements based on priority, not the sequence of actions.",
+          "Store only the last action performed": "Storing only the last action limits the ability to perform multiple undo operations."
+        }
+      },
+      {
+        "question": "11. What is the space complexity of implementing a stack using a linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The space complexity is O(n) because each element in the stack requires additional memory to store the node's reference.",
+        "incorrect_explanation": {
+          "O(1)": "Constant space is not possible as the space grows with the number of elements.",
+          "O(log n)": "Logarithmic space does not apply to stack implementations.",
+          "O(n^2)": "This would imply nested storage, which is not the case."
+        }
+      },
+      {
+        "question": "12. How can you implement a stack that can return the maximum element in constant time?",
+        "options": [
+          "Use a single stack and traverse it to find the maximum",
+          "Use two stacks, one for elements and one for maximums",
+          "Use a queue alongside the stack",
+          "Store the maximum value as a separate variable"
+        ],
+        "answer": "Use two stacks, one for elements and one for maximums",
+        "explanation": "By maintaining a second stack that keeps track of the current maximum, you can retrieve the maximum element in constant time.",
+        "incorrect_explanation": {
+          "Use a single stack and traverse it to find the maximum": "Traversing would take O(n) time, not constant time.",
+          "Use a queue alongside the stack": "Queues are not suitable for tracking the maximum in constant time.",
+          "Store the maximum value as a separate variable": "A single variable cannot track changes to the maximum when elements are popped."
+        }
+      },
+      {
+        "question": "13. What is the primary difference between a stack and a queue?",
+        "options": [
+          "Stack is FIFO and Queue is LIFO",
+          "Stack is LIFO and Queue is FIFO",
+          "Both are LIFO",
+          "Both are FIFO"
+        ],
+        "answer": "Stack is LIFO and Queue is FIFO",
+        "explanation": "Stacks follow the Last-In-First-Out (LIFO) principle, while queues follow the First-In-First-Out (FIFO) principle.",
+        "incorrect_explanation": {
+          "Stack is FIFO and Queue is LIFO": "This reverses the actual behaviors of stacks and queues.",
+          "Both are LIFO": "Only stacks are LIFO; queues are FIFO.",
+          "Both are FIFO": "Only queues are FIFO; stacks are LIFO."
+        }
+      },
+      {
+        "question": "14. Which of the following scenarios is best suited for using a stack?",
+        "options": [
+          "Managing browser history",
+          "Implementing a priority queue",
+          "Scheduling tasks based on priority",
+          "Storing key-value pairs"
+        ],
+        "answer": "Managing browser history",
+        "explanation": "Browser history can be managed using a stack where the most recent page is on top, allowing users to navigate back in the order they visited pages.",
+        "incorrect_explanation": {
+          "Implementing a priority queue": "Priority queues require elements to be ordered based on priority, not the LIFO order of stacks.",
+          "Scheduling tasks based on priority": "This is better suited for priority queues or other scheduling algorithms.",
+          "Storing key-value pairs": "Hash tables or dictionaries are more appropriate for key-value storage."
+        }
+      },
+      {
+        "question": "15. How can you use a stack to evaluate a prefix expression?",
+        "options": [
+          "Traverse the expression from left to right and use a stack to store operands",
+          "Traverse the expression from right to left and use a stack to store operands",
+          "Use two stacks, one for operators and one for operands",
+          "Convert it to postfix first"
+        ],
+        "answer": "Traverse the expression from right to left and use a stack to store operands",
+        "explanation": "Evaluating a prefix expression requires traversing it from right to left, pushing operands onto the stack and applying operators to the top elements.",
+        "incorrect_explanation": {
+          "Traverse the expression from left to right and use a stack to store operands": "This approach does not correctly handle the prefix notation.",
+          "Use two stacks, one for operators and one for operands": "A single stack suffices for evaluating prefix expressions.",
+          "Convert it to postfix first": "While possible, it adds unnecessary complexity compared to direct evaluation."
+        }
+      },
+      {
+        "question": "16. What will be the output of the following stack operations? Push(1), Push(2), Pop(), Push(3), Push(4), Pop(), Pop()",
+        "options": [
+          "1, 3",
+          "2, 4",
+          "2, 3",
+          "4, 3"
+        ],
+        "answer": "2, 4",
+        "explanation": "After the operations: Stack = [1,2], Pop() removes 2; Stack = [1,3,4], Pop() removes 4.",
+        "incorrect_explanation": {
+          "1, 3": "Incorrect because Pop() removes the top element, which is 2 first.",
+          "2, 3": "Incorrect because the second Pop() removes 4, not 3.",
+          "4, 3": "Incorrect as the first Pop() removes 2."
+        }
+      },
+      {
+        "question": "17. Which traversal method of a binary tree can be implemented using a stack?",
+        "options": [
+          "Level-order traversal",
+          "Pre-order traversal",
+          "Breadth-first traversal",
+          "None of the above"
+        ],
+        "answer": "Pre-order traversal",
+        "explanation": "Pre-order traversal can be implemented using a stack by visiting the root, then pushing the right and left children onto the stack.",
+        "incorrect_explanation": {
+          "Level-order traversal": "Level-order traversal is typically implemented using a queue.",
+          "Breadth-first traversal": "This is synonymous with level-order and uses a queue.",
+          "None of the above": "Pre-order traversal can indeed be implemented using a stack."
+        }
+      },
+      {
+        "question": "18. How can you implement a stack using a singly linked list?",
+        "options": [
+          "Insert and delete elements at the tail",
+          "Insert at the head and delete from the head",
+          "Insert at the tail and delete from the head",
+          "Use two pointers for insertion and deletion"
+        ],
+        "answer": "Insert at the head and delete from the head",
+        "explanation": "Using the head of a singly linked list allows both push and pop operations to be performed in constant time.",
+        "incorrect_explanation": {
+          "Insert and delete elements at the tail": "Deleting from the tail of a singly linked list is not efficient.",
+          "Insert at the tail and delete from the head": "This approach would behave like a queue, not a stack.",
+          "Use two pointers for insertion and deletion": "This is unnecessary for basic stack operations."
+        }
+      },
+      {
+        "question": "19. What is the result of performing a push operation followed by a pop operation on an empty stack?",
+        "options": [
+          "Stack remains empty",
+          "Stack contains one element",
+          "An error occurs",
+          "Stack contains two elements"
+        ],
+        "answer": "Stack remains empty",
+        "explanation": "Pushing an element and then immediately popping it returns the stack to its original empty state.",
+        "incorrect_explanation": {
+          "Stack contains one element": "The element is removed by the pop operation.",
+          "An error occurs": "No error occurs as the stack is manipulated correctly.",
+          "Stack contains two elements": "Only one element was pushed and then popped."
+        }
+      },
+      {
+        "question": "20. How do you handle stack overflow in stack implementations?",
+        "options": [
+          "Ignore the overflow",
+          "Automatically resize the stack",
+          "Use exception handling to manage overflow",
+          "Both B and C"
+        ],
+        "answer": "Both B and C",
+        "explanation": "Handling stack overflow can involve automatically resizing the stack or using exception handling to manage the overflow gracefully.",
+        "incorrect_explanation": {
+          "Ignore the overflow": "Ignoring overflow can lead to undefined behavior and potential crashes.",
+          "Automatically resize the stack": "While correct, it is not the only way to handle overflow.",
+          "Use exception handling to manage overflow": "While correct, it is not the only way to handle overflow."
+        }
+      }
+    ]
+  }
+  

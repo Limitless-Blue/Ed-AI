@@ -1,0 +1,261 @@
+{
+    "questions": [
+      {
+        "question": "What is the primary issue that collisions in hash tables cause?",
+        "options": [
+          "Data redundancy",
+          "Inefficient search time",
+          "Data loss",
+          "Increased memory usage"
+        ],
+        "answer": "Inefficient search time",
+        "explanation": "Collisions result in multiple keys being hashed to the same index, which can slow down search times due to the need for additional steps to resolve the collision.",
+        "incorrect_explanation": {
+          "Data redundancy": "Collisions do not create redundant data but rather lead to handling existing data more efficiently.",
+          "Data loss": "Collisions do not cause data loss; they require additional handling methods to manage multiple keys.",
+          "Increased memory usage": "Collisions do not inherently increase memory usage; they affect access times."
+        }
+      },
+      {
+        "question": "In the chaining method of collision resolution, what data structure is used at each index?",
+        "options": [
+          "Array",
+          "Linked list",
+          "Binary tree",
+          "Stack"
+        ],
+        "answer": "Linked list",
+        "explanation": "Chaining uses linked lists to store multiple elements that hash to the same index, allowing for dynamic storage.",
+        "incorrect_explanation": {
+          "Array": "Arrays cannot dynamically handle collisions like linked lists can, as they require a fixed size.",
+          "Binary tree": "Binary trees are not typically used in chaining; linked lists are simpler and effective for this purpose.",
+          "Stack": "Stacks are not suitable for collision resolution in hash tables, as they follow LIFO (last in, first out) order."
+        }
+      },
+      {
+        "question": "What is the main disadvantage of linear probing in open addressing?",
+        "options": [
+          "It requires more memory.",
+          "It can lead to clustering.",
+          "It is slower than chaining.",
+          "It is not suitable for small data sets."
+        ],
+        "answer": "It can lead to clustering.",
+        "explanation": "Linear probing can lead to clustering, where groups of consecutive filled slots form, resulting in longer search times.",
+        "incorrect_explanation": {
+          "It requires more memory.": "Linear probing typically requires the same amount of memory as other open addressing techniques.",
+          "It is slower than chaining.": "The speed of linear probing compared to chaining depends on implementation and data distribution.",
+          "It is not suitable for small data sets.": "Linear probing can be used for any size of data set; it is more about efficiency."
+        }
+      },
+      {
+        "question": "What is the step size in double hashing used for?",
+        "options": [
+          "To increase memory",
+          "To determine how far to probe",
+          "To find the index of the hash table",
+          "To calculate the hash value"
+        ],
+        "answer": "To determine how far to probe",
+        "explanation": "The step size in double hashing, calculated by a second hash function, determines how far to jump in the case of a collision.",
+        "incorrect_explanation": {
+          "To increase memory": "Step size does not increase memory; it merely affects how indexes are probed.",
+          "To find the index of the hash table": "The index is found using the primary hash function, not the step size.",
+          "To calculate the hash value": "The hash value is determined by the primary hash function, not the step size."
+        }
+      },
+      {
+        "question": "In which collision resolution method do we check the next available slot sequentially?",
+        "options": [
+          "Chaining",
+          "Linear Probing",
+          "Quadratic Probing",
+          "Double Hashing"
+        ],
+        "answer": "Linear Probing",
+        "explanation": "Linear probing checks subsequent slots in a sequential manner until it finds an empty slot.",
+        "incorrect_explanation": {
+          "Chaining": "Chaining does not involve sequential checking; it uses linked lists to store collisions.",
+          "Quadratic Probing": "Quadratic probing uses a quadratic function to determine the next index, not a linear sequence.",
+          "Double Hashing": "Double hashing uses a second hash function to determine the probing sequence, not a linear check."
+        }
+      },
+      {
+        "question": "What does the hash function do in a hash table?",
+        "options": [
+          "Transforms keys into values",
+          "Determines the size of the table",
+          "Maps keys to specific indices",
+          "Sorts the keys"
+        ],
+        "answer": "Maps keys to specific indices",
+        "explanation": "The hash function converts keys into indices in the hash table, determining where to store or find values.",
+        "incorrect_explanation": {
+          "Transforms keys into values": "The hash function does not convert keys to values; it maps keys to indices.",
+          "Determines the size of the table": "The size of the table is fixed and defined independently of the hash function.",
+          "Sorts the keys": "Hash functions do not sort keys; they simply assign them to specific indices."
+        }
+      },
+      {
+        "question": "What happens when deleting an element in a hash table using open addressing?",
+        "options": [
+          "The slot is marked as deleted",
+          "The element is removed from memory",
+          "The next element is moved to the deleted slot",
+          "The entire table is rehashed"
+        ],
+        "answer": "The slot is marked as deleted",
+        "explanation": "In open addressing, when an element is deleted, the slot is often marked as deleted to avoid breaking the probing sequence.",
+        "incorrect_explanation": {
+          "The element is removed from memory": "The element is not actually removed from memory; it is simply marked as deleted.",
+          "The next element is moved to the deleted slot": "Elements are not moved; marking is used to indicate that a slot is available.",
+          "The entire table is rehashed": "Rehashing is not necessary unless the table needs to be resized or optimized."
+        }
+      },
+      {
+        "question": "What is the first step in inserting a key-value pair into a hash table?",
+        "options": [
+          "Find the value",
+          "Compute the hash value of the key",
+          "Check if the table is full",
+          "Mark the index as occupied"
+        ],
+        "answer": "Compute the hash value of the key",
+        "explanation": "The first step in inserting a key-value pair is to compute the hash value to find the appropriate index.",
+        "incorrect_explanation": {
+          "Find the value": "Finding the value is not relevant until the key has been mapped to an index.",
+          "Check if the table is full": "Checking the table's fullness is not typically done during insertion unless resizing is needed.",
+          "Mark the index as occupied": "Marking the index as occupied comes after finding the correct index to insert."
+        }
+      },
+      {
+        "question": "Which probing technique uses a quadratic function for finding empty slots?",
+        "options": [
+          "Linear Probing",
+          "Chaining",
+          "Quadratic Probing",
+          "Double Hashing"
+        ],
+        "answer": "Quadratic Probing",
+        "explanation": "Quadratic probing uses a quadratic function to determine the next index to check for an empty slot.",
+        "incorrect_explanation": {
+          "Linear Probing": "Linear probing uses a linear sequence to find the next available slot, not a quadratic function.",
+          "Chaining": "Chaining does not involve probing; it uses linked lists for collision resolution.",
+          "Double Hashing": "Double hashing uses a second hash function, not a quadratic function for probing."
+        }
+      },
+      {
+        "question": "How does searching for a key in a hash table typically work?",
+        "options": [
+          "It always requires linear time.",
+          "The key is directly retrieved from the index.",
+          "The hash function is not used.",
+          "It requires sorting the table first."
+        ],
+        "answer": "The key is directly retrieved from the index.",
+        "explanation": "Searching involves using the hash function to find the index where the key is stored, allowing for quick retrieval.",
+        "incorrect_explanation": {
+          "It always requires linear time.": "Searching can be done in constant time if there are no collisions.",
+          "The hash function is not used.": "The hash function is crucial in determining the index for searching.",
+          "It requires sorting the table first.": "Hash tables do not require sorting as they are designed for direct access."
+        }
+      },
+      {
+        "question": "In the example of chaining, what happens if multiple keys hash to the same index?",
+        "options": [
+          "They are discarded.",
+          "They are stored in a linked list.",
+          "The hash table will fail.",
+          "Only the first key is kept."
+        ],
+        "answer": "They are stored in a linked list.",
+        "explanation": "In chaining, multiple keys that hash to the same index are stored in a linked list at that index.",
+        "incorrect_explanation": {
+          "They are discarded.": "Keys are not discarded; they are managed through linked lists.",
+          "The hash table will fail.": "Hash tables can handle collisions; they do not fail in such cases.",
+          "Only the first key is kept.": "All keys are stored, allowing for multiple entries at the same index."
+        }
+      },
+      {
+        "question": "What is a major benefit of using a hash table?",
+        "options": [
+          "Guaranteed sorting of elements",
+          "Constant time complexity for operations",
+          "Less memory usage than arrays",
+          "Automatic resizing"
+        ],
+        "answer": "Constant time complexity for operations",
+        "explanation": "Hash tables provide average-case constant time complexity for insertion, deletion, and searching operations.",
+        "incorrect_explanation": {
+          "Guaranteed sorting of elements": "Hash tables do not sort elements; they store them based on hashed indices.",
+          "Less memory usage than arrays": "Memory usage is context-dependent; hash tables can use more memory due to collisions.",
+          "Automatic resizing": "Hash tables do not automatically resize; resizing is a manual operation based on load factors."
+        }
+      },
+      {
+        "question": "What is the purpose of the second hash function in double hashing?",
+        "options": [
+          "To create a unique key",
+          "To find the index for a new key",
+          "To determine the probing sequence",
+          "To validate keys"
+        ],
+        "answer": "To determine the probing sequence",
+        "explanation": "The second hash function in double hashing provides the step size for probing when a collision occurs.",
+        "incorrect_explanation": {
+          "To create a unique key": "The second hash function does not create keys; it helps in probing.",
+          "To find the index for a new key": "The primary hash function finds the index; the second one is for resolving collisions.",
+          "To validate keys": "Validation of keys is not the function of a hash function; it's for indexing."
+        }
+      },
+      {
+        "question": "What is the typical time complexity for searching in a hash table under normal conditions?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Under normal conditions with a good hash function and minimal collisions, searching in a hash table is average-case O(1).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) complexity suggests that all elements need to be checked, which is not typical for hash tables.",
+          "O(log n)": "O(log n) complexity is characteristic of binary search trees, not hash tables.",
+          "O(n log n)": "O(n log n) complexity indicates a sorting algorithm, not a hash table search."
+        }
+      },
+      {
+        "question": "Which method involves finding an empty slot by checking the next index sequentially after a collision?",
+        "options": [
+          "Chaining",
+          "Linear Probing",
+          "Quadratic Probing",
+          "Double Hashing"
+        ],
+        "answer": "Linear Probing",
+        "explanation": "Linear probing checks sequentially for the next empty slot after a collision occurs.",
+        "incorrect_explanation": {
+          "Chaining": "Chaining uses linked lists, not sequential checking, for handling collisions.",
+          "Quadratic Probing": "Quadratic probing uses a quadratic sequence, not a linear one.",
+          "Double Hashing": "Double hashing uses a secondary hash function to determine the probing steps."
+        }
+      },
+      {
+        "question": "What is the initial operation in the deletion process of a hash table?",
+        "options": [
+          "Find the key",
+          "Mark the slot as deleted",
+          "Rehash the table",
+          "Compute the hash value"
+        ],
+        "answer": "Compute the hash value",
+        "explanation": "To delete an element, you first compute the hash value to locate the index of the key to be deleted.",
+        "incorrect_explanation": {
+          "Find the key": "Finding the key happens after computing the hash value.",
+          "Mark the slot as deleted": "Marking occurs after confirming the key's presence at the computed index.",
+          "Rehash the table": "Rehashing is not typically needed for simple deletions."
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,372 @@
+{
+  "questions": [
+    {
+      "question": "Which statement is executed if all preceding `if` and `else if` conditions are `False`?",
+      "options": [
+        "`if` statement",
+        "`else if` statement",
+        "`else` statement",
+        "None of the above"
+      ],
+      "answer": "`else` statement",
+      "explanation": "The `else` statement executes a block of code if all preceding `if` and `else if` conditions are `False`.",
+      "incorrect_explanation": {
+        "`if` statement": "`if` executes only if its condition is `True`.",
+        "`else if` statement": "`else if` executes only if its own condition is `True` and previous conditions are `False`.",
+        "None of the above": "The `else` statement is the correct answer."
+      }
+    },
+    {
+      "question": "In a `for` loop, which part is responsible for initializing the loop counter?",
+      "options": [
+        "Initialization section before the loop",
+        "Condition section within the loop",
+        "Iteration section within the loop",
+        "None of the above"
+      ],
+      "answer": "Initialization section before the loop",
+      "explanation": "In a `for` loop, the initialization section is used to initialize the loop counter before the loop starts.",
+      "incorrect_explanation": {
+        "Condition section within the loop": "The condition section checks whether the loop should continue.",
+        "Iteration section within the loop": "The iteration section updates the loop counter.",
+        "None of the above": "The initialization section is responsible for initializing the loop counter."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\nfor i in range(3):\n    for j in range(2):\n        print(f\"i={i}, j={j}\")\n```",
+      "options": [
+        "i=0, j=0\ni=1, j=1\ni=2, j=2",
+        "i=0, j=0\ni=0, j=1\ni=1, j=0\ni=1, j=1\ni=2, j=0\ni=2, j=1",
+        "i=0, j=0\ni=1, j=0\ni=2, j=0",
+        "i=0, j=1\ni=1, j=1\ni=2, j=1"
+      ],
+      "answer": "i=0, j=0\ni=0, j=1\ni=1, j=0\ni=1, j=1\ni=2, j=0\ni=2, j=1",
+      "explanation": "The outer loop runs for i=0,1,2 and the inner loop runs for j=0,1 for each value of i.",
+      "incorrect_explanation": {
+        "i=0, j=0\ni=1, j=1\ni=2, j=2": "The inner loop does not run for j=2 and runs for each j=0 and j=1 for each i.",
+        "i=0, j=0\ni=1, j=0\ni=2, j=0": "The inner loop runs twice for each i, not once.",
+        "i=0, j=1\ni=1, j=1\ni=2, j=1": "The inner loop starts with j=0."
+      }
+    },
+    {
+      "question": "Which loop guarantees that the code block is executed at least once?",
+      "options": [
+        "`for` loop",
+        "`while` loop",
+        "`do-while` loop",
+        "All of the above"
+      ],
+      "answer": "`do-while` loop",
+      "explanation": "`do-while` loops execute the block of code once before checking the condition.",
+      "incorrect_explanation": {
+        "`for` loop": "`for` loops may not execute if the condition is initially `False`.",
+        "`while` loop": "`while` loops may not execute if the condition is initially `False`.",
+        "All of the above": "Only `do-while` loops guarantee at least one execution."
+      }
+    },
+    {
+      "question": "In Java, what will the following code print?\n```java\nint i = 0;\ndo {\n    System.out.println(i);\n    i++;\n} while (i < 3);\n```",
+      "options": [
+        "0 1 2",
+        "0 1 2 3",
+        "1 2 3",
+        "0"
+      ],
+      "answer": "0 1 2",
+      "explanation": "The `do-while` loop prints `i` before incrementing and checks the condition after.",
+      "incorrect_explanation": {
+        "0 1 2 3": "The loop stops when i becomes 3.",
+        "1 2 3": "The first value printed is 0.",
+        "0": "The loop runs until i < 3."
+      }
+    },
+    {
+      "question": "What does the `break` statement do inside a loop?",
+      "options": [
+        "Skips the current iteration and continues with the next one",
+        "Terminates the closest enclosing loop immediately",
+        "Pauses the loop temporarily",
+        "Restarts the loop from the beginning"
+      ],
+      "answer": "Terminates the closest enclosing loop immediately",
+      "explanation": "The `break` statement exits the closest enclosing loop immediately.",
+      "incorrect_explanation": {
+        "Skips the current iteration and continues with the next one": "This describes the `continue` statement.",
+        "Pauses the loop temporarily": "`break` does not pause the loop.",
+        "Restarts the loop from the beginning": "`break` does not restart the loop."
+      }
+    },
+    {
+      "question": "Which of the following is a valid use case for the `continue` statement?",
+      "options": [
+        "Exiting a loop when a condition is met",
+        "Skipping the current iteration and proceeding to the next one",
+        "Restarting the loop from the first iteration",
+        "Ending the program execution"
+      ],
+      "answer": "Skipping the current iteration and proceeding to the next one",
+      "explanation": "The `continue` statement skips the rest of the current loop iteration and moves to the next one.",
+      "incorrect_explanation": {
+        "Exiting a loop when a condition is met": "This is done using the `break` statement.",
+        "Restarting the loop from the first iteration": "`continue` does not restart the loop.",
+        "Ending the program execution": "`continue` does not end the program."
+      }
+    },
+    {
+      "question": "What is the output of the following Java code?\n```java\nint count = 0;\nwhile (count < 3) {\n    System.out.println(count);\n    count++;\n}\n```",
+      "options": [
+        "0 1 2 3",
+        "0 1 2",
+        "1 2 3",
+        "Infinite loop"
+      ],
+      "answer": "0 1 2",
+      "explanation": "The loop runs while count is less than 3, printing 0, 1, and 2.",
+      "incorrect_explanation": {
+        "0 1 2 3": "The loop stops before count reaches 3.",
+        "1 2 3": "The loop starts with count=0.",
+        "Infinite loop": "The condition eventually becomes `False`."
+      }
+    },
+    {
+      "question": "Which of the following best describes nested loops?",
+      "options": [
+        "Loops that run independently of each other",
+        "Loops that run sequentially one after another",
+        "Loops within loops",
+        "Loops that do not contain any conditions"
+      ],
+      "answer": "Loops within loops",
+      "explanation": "Nested loops are loops placed inside other loops.",
+      "incorrect_explanation": {
+        "Loops that run independently of each other": "Nested loops are dependent as one is inside the other.",
+        "Loops that run sequentially one after another": "This describes separate, not nested loops.",
+        "Loops that do not contain any conditions": "Loops typically contain conditions regardless of nesting."
+      }
+    },
+    {
+      "question": "What is the purpose of using a `switch` statement over multiple `if-else` statements?",
+      "options": [
+        "To improve code readability and potentially increase efficiency",
+        "To handle ranges of values more effectively",
+        "To allow for complex boolean expressions",
+        "There is no advantage"
+      ],
+      "answer": "To improve code readability and potentially increase efficiency",
+      "explanation": "Switch statements can make code more readable when dealing with multiple discrete values and can be more efficient in some languages.",
+      "incorrect_explanation": {
+        "To handle ranges of values more effectively": "Switch statements are typically used for discrete values, not ranges.",
+        "To allow for complex boolean expressions": "Switch statements are less flexible for complex boolean expressions compared to `if-else`.",
+        "There is no advantage": "Switch statements offer readability and potential efficiency benefits."
+      }
+    },
+    {
+      "question": "In Python, what will be the output of the following code?\n```python\nscore = 85\nif score >= 90:\n    grade = 'A'\nelif score >= 80:\n    grade = 'B'\nelse:\n    grade = 'C'\nprint(grade)\n```",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "No output"
+      ],
+      "answer": "B",
+      "explanation": "Since score is 85, the `elif` condition `score >= 80` is `True`, so grade is set to 'B'.",
+      "incorrect_explanation": {
+        "A": "The `if` condition `score >= 90` is `False`.",
+        "C": "The `else` block is executed only if all previous conditions are `False`.",
+        "No output": "The code prints the grade."
+      }
+    },
+    {
+      "question": "Which of the following loops is best suited when the number of iterations is known beforehand?",
+      "options": [
+        "`while` loop",
+        "`for` loop",
+        "`do-while` loop",
+        "None of the above"
+      ],
+      "answer": "`for` loop",
+      "explanation": "`for` loops are ideal when the number of iterations is known beforehand.",
+      "incorrect_explanation": {
+        "`while` loop": "`while` loops are better when the number of iterations is not known.",
+        "`do-while` loop": "`do-while` loops are similar to `while` loops but guarantee at least one execution.",
+        "None of the above": "`for` loops are specifically suited for known iteration counts."
+      }
+    },
+    {
+      "question": "What is a potential drawback of using nested loops?",
+      "options": [
+        "Increased code readability",
+        "Higher computational complexity",
+        "Reduced memory usage",
+        "Simplified logic"
+      ],
+      "answer": "Higher computational complexity",
+      "explanation": "Nested loops can lead to higher computational complexity, making the code less efficient.",
+      "incorrect_explanation": {
+        "Increased code readability": "Nested loops often make code harder to read.",
+        "Reduced memory usage": "Nested loops do not inherently reduce memory usage.",
+        "Simplified logic": "Nested loops can complicate the logic."
+      }
+    },
+    {
+      "question": "Which of the following is true about the `if-elif-else` chain?",
+      "options": [
+        "Multiple `else` blocks can be used",
+        "Conditions are evaluated from bottom to top",
+        "Once a `True` condition is found, the remaining conditions are skipped",
+        "All conditions are evaluated regardless of previous results"
+      ],
+      "answer": "Once a `True` condition is found, the remaining conditions are skipped",
+      "explanation": "In an `if-elif-else` chain, once a `True` condition is found, the rest are not evaluated.",
+      "incorrect_explanation": {
+        "Multiple `else` blocks can be used": "Only one `else` block is allowed per `if-elif` chain.",
+        "Conditions are evaluated from bottom to top": "Conditions are evaluated from top to bottom.",
+        "All conditions are evaluated regardless of previous results": "Once a `True` condition is found, the rest are skipped."
+      }
+    },
+    {
+      "question": "In Java, what will be the output of the following code?\n```java\nint i = 0;\nwhile (i < 3) {\n    System.out.println(i);\n    i++;\n}\n```",
+      "options": [
+        "0 1 2 3",
+        "0 1 2",
+        "1 2 3",
+        "Infinite loop"
+      ],
+      "answer": "0 1 2",
+      "explanation": "The loop runs while i is less than 3, printing 0, 1, and 2.",
+      "incorrect_explanation": {
+        "0 1 2 3": "The loop stops before i reaches 3.",
+        "1 2 3": "The loop starts with i=0.",
+        "Infinite loop": "The condition eventually becomes `False`."
+      }
+    },
+    {
+      "question": "What is the primary advantage of using `for` loops over `while` loops when the number of iterations is known?",
+      "options": [
+        "`for` loops use less memory",
+        "`for` loops are easier to read and write",
+        "`for` loops execute faster",
+        "`for` loops can handle more complex conditions"
+      ],
+      "answer": "`for` loops are easier to read and write",
+      "explanation": "`for` loops are structured to handle a known number of iterations, making them easier to read and write for such cases.",
+      "incorrect_explanation": {
+        "`for` loops use less memory": "Memory usage is generally similar.",
+        "`for` loops execute faster": "Execution speed is typically the same.",
+        "`for` loops can handle more complex conditions": "`while` loops can handle more complex conditions."
+      }
+    },
+    {
+      "question": "Which statement is true about the `switch` statement in Java?",
+      "options": [
+        "It can handle boolean expressions",
+        "It can only handle integer and character types",
+        "It can handle string values in Java 7 and above",
+        "It does not require a `break` statement"
+      ],
+      "answer": "It can handle string values in Java 7 and above",
+      "explanation": "Starting from Java 7, the `switch` statement can handle string values.",
+      "incorrect_explanation": {
+        "It can handle boolean expressions": "`switch` cannot handle boolean expressions directly.",
+        "It can only handle integer and character types": "It can also handle strings from Java 7 onwards.",
+        "It does not require a `break` statement": "Without `break`, cases fall through, which is often undesirable."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\nfor i in range(5):\n    if i == 2:\n        break\n    print(i)\n```",
+      "options": [
+        "0 1 2",
+        "0 1",
+        "0 1 2 3 4",
+        "0"
+      ],
+      "answer": "0 1",
+      "explanation": "The loop breaks when i equals 2, so only 0 and 1 are printed.",
+      "incorrect_explanation": {
+        "0 1 2": "The loop breaks before printing 2.",
+        "0 1 2 3 4": "The loop does not complete all iterations due to the `break` statement.",
+        "0": "It prints 0 and 1 before breaking."
+      }
+    },
+    {
+      "question": "Which of the following best practices helps in preventing infinite loops?",
+      "options": [
+        "Using `break` statements inside loops",
+        "Ensuring loop conditions will eventually be met",
+        "Using nested loops",
+        "Avoiding the use of `continue` statements"
+      ],
+      "answer": "Ensuring loop conditions will eventually be met",
+      "explanation": "To prevent infinite loops, it's crucial to ensure that loop conditions will eventually become `False`.",
+      "incorrect_explanation": {
+        "Using `break` statements inside loops": "`break` can prevent infinite loops but relying solely on it is not best practice.",
+        "Using nested loops": "Nested loops can complicate loop conditions.",
+        "Avoiding the use of `continue` statements": "`continue` does not inherently cause infinite loops."
+      }
+    },
+    {
+      "question": "In Python, what does the following code do?\n```python\nfor i in range(5):\n    if i == 3:\n        continue\n    print(i)\n```",
+      "options": [
+        "Skips printing 3 and continues with the next iteration",
+        "Stops the loop when i is 3",
+        "Prints only the value 3",
+        "Causes an infinite loop"
+      ],
+      "answer": "Skips printing 3 and continues with the next iteration",
+      "explanation": "The `continue` statement skips the rest of the loop body when i equals 3 and proceeds to the next iteration.",
+      "incorrect_explanation": {
+        "Stops the loop when i is 3": "`continue` does not stop the loop; it skips the current iteration.",
+        "Prints only the value 3": "It skips printing 3.",
+        "Causes an infinite loop": "The loop runs a finite number of times."
+      }
+    },
+    {
+      "question": "Which loop control statement would you use to exit all nested loops immediately?",
+      "options": [
+        "break",
+        "continue",
+        "return",
+        "exit"
+      ],
+      "answer": "`break`",
+      "explanation": "`break` only exits the closest enclosing loop. To exit all nested loops, additional logic is required, but `break` is the primary statement used to exit loops.",
+      "incorrect_explanation": {
+        "`continue`": "`continue` skips the current iteration but does not exit loops.",
+        "`return`": "`return` exits the current function, not specifically loops.",
+        "`exit`": "`exit` terminates the entire program."
+      }
+    },
+    {
+      "question": "What will be printed by the following Python code?\n```python\ncount = 0\nwhile count < 5:\n    if count == 3:\n        break\n    print(count)\n    count += 1\n```",
+      "options": [
+        "0 1 2 3",
+        "0 1 2",
+        "0 1 2 3 4",
+        "0 1 2 4"
+      ],
+      "answer": "0 1 2",
+      "explanation": "The loop breaks when count equals 3, so only 0, 1, and 2 are printed.",
+      "incorrect_explanation": {
+        "0 1 2 3": "The loop breaks before printing 3.",
+        "0 1 2 3 4": "The loop does not reach 4 due to the `break` statement.",
+        "0 1 2 4": "The loop breaks before reaching 4."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a type of loop control statement?",
+      "options": [
+        "break",
+        "continue",
+        "pass",
+        "return"
+      ],
+      "answer": "`pass`",
+      "explanation": "`pass` is a no-operation statement and not a loop control statement. `break` and `continue` are loop control statements.",
+      "incorrect_explanation": {
+        "`break`": "Used to exit a loop.",
+        "`continue`": "Used to skip the current iteration.",
+        "`return`": "Used to exit a function, not specifically a loop."
+      }
+    }
+  ]
+}

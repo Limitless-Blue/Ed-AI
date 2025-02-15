@@ -1,0 +1,420 @@
+{
+  "questions": [
+    {
+      "question": "What is the primary purpose of defining a function in programming?",
+      "options": [
+        "To perform input/output operations",
+        "To encapsulate reusable blocks of code",
+        "To store data permanently",
+        "To handle exceptions"
+      ],
+      "answer": "To encapsulate reusable blocks of code",
+      "explanation": "Functions allow for code reusability, modularity, and better organization by encapsulating specific tasks.",
+      "incorrect_explanation": {
+        "To perform input/output operations": "While functions can perform I/O operations, their primary purpose is broader.",
+        "To store data permanently": "Functions do not store data permanently; variables and data structures handle data storage.",
+        "To handle exceptions": "Exception handling is a separate concept, although functions can include exception handling."
+      }
+    },
+    {
+      "question": "How do you define a function named `greet` that takes one parameter `name` in Python?",
+      "options": [
+        "`function greet(name) { print(\"Hello, \" + name); }`",
+        "`def greet(name):\n    print(f\"Hello, {name}!\")`",
+        "`public void greet(String name) {\n    System.out.println(\"Hello, \" + name);\n}`",
+        "`greet(name) => print(\"Hello, \" + name)`"
+      ],
+      "answer": "`def greet(name):\n    print(f\"Hello, {name}!\")`",
+      "explanation": "In Python, functions are defined using the `def` keyword followed by the function name and parameters.",
+      "incorrect_explanation": {
+        "`function greet(name) { print(\"Hello, \" + name); }`": "This is the syntax for defining a function in JavaScript, not Python.",
+        "`public void greet(String name) {\n    System.out.println(\"Hello, \" + name);\n}`": "This is the syntax for defining a method in Java, not a Python function.",
+        "`greet(name) => print(\"Hello, \" + name)`": "This resembles an arrow function but is not valid Python syntax."
+      }
+    },
+    {
+      "question": "In Java, how would you call a method named `greet` with the argument `\"Bob\"`?",
+      "options": [
+        "`greet(\"Bob\")`",
+        "`call greet(\"Bob\")`",
+        "`Greet(\"Bob\")`",
+        "`greet.bob()`"
+      ],
+      "answer": "`greet(\"Bob\")`",
+      "explanation": "In Java, methods are called by their name followed by parentheses containing any arguments.",
+      "incorrect_explanation": {
+        "`call greet(\"Bob\")`": "`call` is not used in Java to invoke methods.",
+        "`Greet(\"Bob\")`": "Method names in Java are case-sensitive and should match exactly as defined.",
+        "`greet.bob()`": "This syntax is incorrect for method invocation in Java."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\ndef add(a, b):\n    return a + b\n\nresult = add(3, 4)\nprint(result)\n```",
+      "options": [
+        "7",
+        "34",
+        "Error",
+        "None"
+      ],
+      "answer": "7",
+      "explanation": "The `add` function returns the sum of 3 and 4, which is 7.",
+      "incorrect_explanation": {
+        "34": "The numbers are concatenated as strings, which is not the case here since they are integers.",
+        "Error": "There is no syntax or runtime error in the code.",
+        "None": "The function returns a valid integer value."
+      }
+    },
+    {
+      "question": "In the context of functions, what is a 'return value'?",
+      "options": [
+        "The value passed as an argument to the function",
+        "The value that the function outputs after execution",
+        "The name of the function",
+        "A variable declared inside the function"
+      ],
+      "answer": "The value that the function outputs after execution",
+      "explanation": "A return value is the output that a function provides after it finishes executing its block of code.",
+      "incorrect_explanation": {
+        "The value passed as an argument to the function": "Arguments are inputs to the function, not return values.",
+        "The name of the function": "The name identifies the function but is not related to its output.",
+        "A variable declared inside the function": "Local variables store data within the function but are not the same as return values."
+      }
+    },
+    {
+      "question": "Which of the following best describes a local variable?",
+      "options": [
+        "A variable declared outside any function and accessible globally",
+        "A variable declared within a function and accessible only inside it",
+        "A variable that cannot be changed once assigned",
+        "A variable used to pass parameters to functions"
+      ],
+      "answer": "A variable declared within a function and accessible only inside it",
+      "explanation": "Local variables are declared inside functions and are only accessible within those functions.",
+      "incorrect_explanation": {
+        "A variable declared outside any function and accessible globally": "This describes a global variable, not a local one.",
+        "A variable that cannot be changed once assigned": "This describes a constant or immutable variable, not necessarily local.",
+        "A variable used to pass parameters to functions": "Parameters are a type of local variable, but not all local variables are parameters."
+      }
+    },
+    {
+      "question": "What is the output of the following Python code?\n```python\nglobal_var = 10\n\ndef foo():\n    local_var = 5\n    print(local_var)\n    print(global_var)\n\nfoo()\nprint(local_var)\n```",
+      "options": [
+        "5 10 5",
+        "5 10 Error",
+        "5 Error 10",
+        "10 5 Error"
+      ],
+      "answer": "5 10 Error",
+      "explanation": "The function `foo()` prints `local_var` and `global_var`. Attempting to print `local_var` outside the function results in a `NameError`.",
+      "incorrect_explanation": {
+        "5 10 5": "The second print statement outside the function cannot access `local_var`.",
+        "5 Error 10": "The order of outputs is incorrect.",
+        "10 5 Error": "The first print inside `foo()` prints `local_var` as 5, not `global_var`."
+      }
+    },
+    {
+      "question": "Why is it recommended to minimize the use of global variables?",
+      "options": [
+        "They take up more memory",
+        "They make the code run slower",
+        "They can lead to potential side effects and reduce code maintainability",
+        "They are harder to declare"
+      ],
+      "answer": "They can lead to potential side effects and reduce code maintainability",
+      "explanation": "Global variables can be modified from anywhere in the program, leading to unintended side effects and making the code harder to maintain.",
+      "incorrect_explanation": {
+        "They take up more memory": "Memory usage is not significantly different between global and local variables.",
+        "They make the code run slower": "Global variables do not inherently slow down code execution.",
+        "They are harder to declare": "Declaring global variables is not necessarily harder than local ones."
+      }
+    },
+    {
+      "question": "What is recursion in programming?",
+      "options": [
+        "A loop that runs indefinitely",
+        "A function that calls itself to solve smaller instances of a problem",
+        "A method of storing data in memory",
+        "A way to handle exceptions"
+      ],
+      "answer": "A function that calls itself to solve smaller instances of a problem",
+      "explanation": "Recursion involves a function calling itself to break down a problem into smaller, more manageable sub-problems.",
+      "incorrect_explanation": {
+        "A loop that runs indefinitely": "This describes an infinite loop, not recursion.",
+        "A method of storing data in memory": "Data storage is unrelated to recursion.",
+        "A way to handle exceptions": "Exception handling is a separate concept from recursion."
+      }
+    },
+    {
+      "question": "What is a necessary component of a recursive function to prevent infinite recursion?",
+      "options": [
+        "A loop inside the function",
+        "A base case",
+        "Global variables",
+        "Multiple parameters"
+      ],
+      "answer": "A base case",
+      "explanation": "A base case defines the condition under which the recursion stops, preventing infinite recursion.",
+      "incorrect_explanation": {
+        "A loop inside the function": "Loops are unrelated to stopping recursion.",
+        "Global variables": "While they can be used, they are not necessary for preventing infinite recursion.",
+        "Multiple parameters": "Parameters do not inherently prevent infinite recursion."
+      }
+    },
+    {
+      "question": "Which of the following is an advantage of using recursion?",
+      "options": [
+        "Simplifies code for problems with a natural recursive structure",
+        "Consumes less memory than iterative solutions",
+        "Always faster than loops",
+        "Eliminates the need for base cases"
+      ],
+      "answer": "Simplifies code for problems with a natural recursive structure",
+      "explanation": "Recursion can make code more intuitive and simpler for problems like tree traversals and combinatorial tasks.",
+      "incorrect_explanation": {
+        "Consumes less memory than iterative solutions": "Recursion often uses more memory due to multiple function calls.",
+        "Always faster than loops": "Recursion is not inherently faster and can be slower due to overhead.",
+        "Eliminates the need for base cases": "Base cases are essential to prevent infinite recursion."
+      }
+    },
+    {
+      "question": "What is a lambda expression?",
+      "options": [
+        "A function with a name",
+        "A concise way to define anonymous functions without a name",
+        "A type of loop",
+        "A way to handle exceptions"
+      ],
+      "answer": "A concise way to define anonymous functions without a name",
+      "explanation": "Lambda expressions allow for the creation of anonymous functions in a concise manner, useful for short, throwaway functions.",
+      "incorrect_explanation": {
+        "A function with a name": "Lambda expressions are anonymous and do not have a name.",
+        "A type of loop": "Loops and lambda expressions are different concepts.",
+        "A way to handle exceptions": "Exception handling is unrelated to lambda expressions."
+      }
+    },
+    {
+      "question": "How would you define a lambda function in Python that adds two numbers?",
+      "options": [
+        "`def add(a, b): return a + b`",
+        "`lambda a, b: a + b`",
+        "`function(a, b) { return a + b; }`",
+        "`add = (a, b) -> a + b`"
+      ],
+      "answer": "`lambda a, b: a + b`",
+      "explanation": "In Python, lambda functions are defined using the `lambda` keyword followed by parameters and an expression.",
+      "incorrect_explanation": {
+        "`def add(a, b): return a + b`": "This is a regular function definition, not a lambda function.",
+        "`function(a, b) { return a + b; }`": "This resembles JavaScript syntax, not Python.",
+        "`add = (a, b) -> a + b`": "This is Java's lambda syntax, not Python's."
+      }
+    },
+    {
+      "question": "Which of the following is a use case for lambda expressions?",
+      "options": [
+        "Implementing complex algorithms",
+        "Defining simple, single-operation functions",
+        "Creating global variables",
+        "Handling file I/O operations"
+      ],
+      "answer": "Defining simple, single-operation functions",
+      "explanation": "Lambda expressions are best suited for simple functions that perform a single operation, enhancing code conciseness.",
+      "incorrect_explanation": {
+        "Implementing complex algorithms": "Lambda expressions are not ideal for complex logic.",
+        "Creating global variables": "Lambda expressions are unrelated to variable declarations.",
+        "Handling file I/O operations": "While possible, lambda expressions are not specifically used for I/O operations."
+      }
+    },
+    {
+      "question": "What will be the output of the following Java code?\n```java\npublic class Example {\n    public static int factorial(int n) {\n        if (n == 0) {\n            return 1;\n        } else {\n            return n * factorial(n - 1);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5));\n    }\n}\n```",
+      "options": [
+        "120",
+        "24",
+        "Error",
+        "Infinite recursion"
+      ],
+      "answer": "120",
+      "explanation": "The `factorial` method recursively calculates the factorial of 5, which is 120.",
+      "incorrect_explanation": {
+        "24": "Incorrect calculation of the factorial.",
+        "Error": "There are no syntax or runtime errors in the code.",
+        "Infinite recursion": "The base case correctly terminates the recursion."
+      }
+    },
+    {
+      "question": "Which of the following best practices helps in writing maintainable functions?",
+      "options": [
+        "Using global variables extensively",
+        "Giving functions descriptive names",
+        "Writing very long functions to handle multiple tasks",
+        "Avoiding the use of comments"
+      ],
+      "answer": "Giving functions descriptive names",
+      "explanation": "Descriptive names make functions easier to understand and maintain.",
+      "incorrect_explanation": {
+        "Using global variables extensively": "This can lead to unintended side effects and reduce maintainability.",
+        "Writing very long functions to handle multiple tasks": "Long functions can be hard to read and maintain; it's better to have smaller, single-purpose functions.",
+        "Avoiding the use of comments": "Comments can enhance understanding and maintainability."
+      }
+    },
+    {
+      "question": "What is the output of the following Python code?\n```python\ndef add(a, b=5):\n    return a + b\n\nprint(add(3))\nprint(add(3, 4))\n```",
+      "options": [
+        "8 and 7",
+        "8 and 8",
+        "3 and 7",
+        "Error and 7"
+      ],
+      "answer": "8 and 7",
+      "explanation": "The first call uses the default value for `b` (5), resulting in 3 + 5 = 8. The second call overrides `b` with 4, resulting in 3 + 4 = 7.",
+      "incorrect_explanation": {
+        "8 and 8": "The second call overrides the default value with 4, not 5.",
+        "3 and 7": "The first call adds 3 and the default 5, not just 3.",
+        "Error and 7": "There is no error in the code."
+      }
+    },
+    {
+      "question": "In Java, how do you define a lambda expression for a functional interface `MathOperation` with a method `int operate(int a, int b)` that adds two numbers?",
+      "options": [
+        "`MathOperation add = (int a, int b) => { return a + b; };`",
+        "`MathOperation add = (a, b) -> a + b;`",
+        "`MathOperation add = function(a, b) { return a + b; };`",
+        "`MathOperation add = lambda a, b: a + b;`"
+      ],
+      "answer": "`MathOperation add = (a, b) -> a + b;`",
+      "explanation": "In Java, lambda expressions use the `->` syntax without specifying parameter types if they can be inferred.",
+      "incorrect_explanation": {
+        "`MathOperation add = (int a, int b) => { return a + b; };`": "This syntax is incorrect for Java lambda expressions.",
+        "`MathOperation add = function(a, b) { return a + b; };`": "This resembles JavaScript syntax, not Java.",
+        "`MathOperation add = lambda a, b: a + b;`": "This is Python lambda syntax, not Java."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\ndef foo():\n    global_var = 10\n    print(global_var)\n\nfoo()\nprint(global_var)\n```",
+      "options": [
+        "10 and 10",
+        "10 and Error",
+        "Error and 10",
+        "Error and Error"
+      ],
+      "answer": "10 and Error",
+      "explanation": "Inside `foo()`, `global_var` is treated as a local variable. Printing it outside the function results in a `NameError`.",
+      "incorrect_explanation": {
+        "10 and 10": "The `global_var` inside `foo()` is local and not accessible globally.",
+        "Error and 10": "The first print statement inside `foo()` executes successfully.",
+        "Error and Error": "The first print statement works, but the second causes an error."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of lambda expressions?",
+      "options": [
+        "They are anonymous functions",
+        "They can contain multiple expressions",
+        "They are concise and typically used for simple operations",
+        "They can be assigned to variables"
+      ],
+      "answer": "They can contain multiple expressions",
+      "explanation": "Lambda expressions are limited to a single expression and cannot contain multiple statements.",
+      "incorrect_explanation": {
+        "They are anonymous functions": "Lambda expressions are indeed anonymous.",
+        "They are concise and typically used for simple operations": "Lambda expressions are designed for simplicity and conciseness.",
+        "They can be assigned to variables": "Lambda expressions can be assigned to variables for later use."
+      }
+    },
+    {
+      "question": "What is the result of calling the following Python function?\n```python\ndef foo(n):\n    if n == 0:\n        return 0\n    else:\n        return n + foo(n - 1)\n\nprint(foo(3))\n```",
+      "options": [
+        "6",
+        "3",
+        "0",
+        "Error"
+      ],
+      "answer": "6",
+      "explanation": "The function calculates the sum of numbers from 1 to 3: 3 + 2 + 1 + 0 = 6.",
+      "incorrect_explanation": {
+        "3": "Only the first call returns 3, but the recursion adds previous results.",
+        "0": "The base case returns 0, but the recursion adds up the values.",
+        "Error": "There are no errors in the code."
+      }
+    },
+    {
+      "question": "Which of the following statements about local and global variables is true?",
+      "options": [
+        "Global variables can be accessed inside functions without any restrictions.",
+        "Local variables can be accessed outside the function they are declared in.",
+        "Global variables are accessible throughout the entire program, while local variables are restricted to their functions.",
+        "Local variables retain their values between function calls."
+      ],
+      "answer": "Global variables are accessible throughout the entire program, while local variables are restricted to their functions.",
+      "explanation": "Global variables are accessible from any part of the program, whereas local variables are confined to the scope of the function in which they are declared.",
+      "incorrect_explanation": {
+        "Global variables can be accessed inside functions without any restrictions.": "While global variables can be accessed, they can also be shadowed by local variables.",
+        "Local variables can be accessed outside the function they are declared in.": "Local variables are not accessible outside their declaring function.",
+        "Local variables retain their values between function calls.": "Local variables are reinitialized each time the function is called unless specified otherwise."
+      }
+    },
+    {
+      "question": "What will be the output of the following Python code?\n```python\ndef foo(x):\n    return x * 2\n\nlambda_func = lambda y: y + 3\n\nprint(foo(4))\nprint(lambda_func(4))\n```",
+      "options": [
+        "8 and 7",
+        "8 and 8",
+        "7 and 7",
+        "7 and 8"
+      ],
+      "answer": "8 and 7",
+      "explanation": "`foo(4)` returns 4 * 2 = 8 and `lambda_func(4)` returns 4 + 3 = 7.",
+      "incorrect_explanation": {
+        "8 and 8": "`lambda_func(4)` returns 7, not 8.",
+        "7 and 7": "`foo(4)` returns 8, not 7.",
+        "7 and 8": "`foo(4)` returns 8 and `lambda_func(4)` returns 7."
+      }
+    },
+    {
+      "question": "Which of the following is a best practice when using lambda expressions?",
+      "options": [
+        "Use them for complex operations with multiple statements",
+        "Use them for simple, single-operation functions to enhance code conciseness",
+        "Avoid using them as they reduce code readability",
+        "Use them to replace all regular function definitions"
+      ],
+      "answer": "Use them for simple, single-operation functions to enhance code conciseness",
+      "explanation": "Lambda expressions are best suited for simple functions that perform a single operation, keeping the code concise.",
+      "incorrect_explanation": {
+        "Use them for complex operations with multiple statements": "Lambda expressions are limited to single expressions.",
+        "Avoid using them as they reduce code readability": "When used appropriately, lambdas can improve readability by reducing boilerplate code.",
+        "Use them to replace all regular function definitions": "Regular functions are better for complex or reusable operations."
+      }
+    },
+    {
+      "question": "In Python, how can you declare a global variable inside a function?",
+      "options": [
+        "`global var_name` before using it inside the function",
+        "Use the `public` keyword",
+        "Assign it without any keyword",
+        "Use the `static` keyword"
+      ],
+      "answer": "`global var_name` before using it inside the function",
+      "explanation": "The `global` keyword is used inside a function to declare that a variable is global.",
+      "incorrect_explanation": {
+        "Use the `public` keyword": "`public` is not used in Python for variable scope.",
+        "Assign it without any keyword": "Assigning without `global` creates a local variable.",
+        "Use the `static` keyword": "`static` is not used in Python to declare global variables."
+      }
+    },
+    {
+      "question": "What will be the output of the following Java code?\n```java\npublic class Example {\n    public static void main(String[] args) {\n        MathOperation multiply = (a, b) -> a * b;\n        System.out.println(multiply.operate(3, 4));\n    }\n}\n\ninterface MathOperation {\n    int operate(int a, int b);\n}\n```",
+      "options": [
+        "7",
+        "12",
+        "Error",
+        "34"
+      ],
+      "answer": "12",
+      "explanation": "The lambda expression multiplies 3 and 4, resulting in 12.",
+      "incorrect_explanation": {
+        "7": "This would be the result of addition, not multiplication.",
+        "Error": "The code is syntactically correct and runs without errors.",
+        "34": "Incorrect multiplication result."
+      }
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+    "questions": [
+      {
+        "question": "What is the topmost node in a tree called?",
+        "options": [
+          "Leaf",
+          "Edge",
+          "Root",
+          "Child"
+        ],
+        "answer": "Root",
+        "explanation": "The topmost node in a tree is called the root. It has no parent.",
+        "incorrect_explanation": {
+          "Leaf": "A leaf is a node with no children.",
+          "Edge": "An edge is a connection between two nodes.",
+          "Child": "A child node descends from a parent node."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a property of trees?",
+        "options": [
+          "Acyclic",
+          "Connected",
+          "Has cycles",
+          "n-1 Edges"
+        ],
+        "answer": "Has cycles",
+        "explanation": "Trees do not contain cycles; they are acyclic.",
+        "incorrect_explanation": {
+          "Acyclic": "Trees are acyclic by definition.",
+          "Connected": "A tree is a connected graph.",
+          "n-1 Edges": "A tree with n nodes has exactly n-1 edges."
+        }
+      },
+      {
+        "question": "In a binary tree, each node can have at most how many children?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": "2",
+        "explanation": "In a binary tree, each node can have at most two children: a left child and a right child.",
+        "incorrect_explanation": {
+          "1": "A binary tree allows for up to two children per node.",
+          "3": "A binary tree has a maximum of two children per node, not three.",
+          "4": "A binary tree has a maximum of two children per node, not four."
+        }
+      },
+      {
+        "question": "Which of the following is true for Binary Search Trees (BST)?",
+        "options": [
+          "Left subtree contains smaller values",
+          "Right subtree contains smaller values",
+          "All nodes must be leaves",
+          "Root is always smaller than its children"
+        ],
+        "answer": "Left subtree contains smaller values",
+        "explanation": "In a Binary Search Tree (BST), the left subtree contains values smaller than the node, and the right subtree contains values larger.",
+        "incorrect_explanation": {
+          "Right subtree contains smaller values": "In a BST, the right subtree contains larger values.",
+          "All nodes must be leaves": "Not all nodes are leaves in a BST.",
+          "Root is always smaller than its children": "The root can be larger or smaller depending on its children, but the left must be smaller, and the right must be larger."
+        }
+      },
+      {
+        "question": "What is a leaf node?",
+        "options": [
+          "A node with no children",
+          "The root node",
+          "A node with one child",
+          "A node with two children"
+        ],
+        "answer": "A node with no children",
+        "explanation": "A leaf node is one that has no children.",
+        "incorrect_explanation": {
+          "The root node": "The root node is the topmost node, not necessarily a leaf.",
+          "A node with one child": "A node with one child is not considered a leaf.",
+          "A node with two children": "A node with two children is not considered a leaf."
+        }
+      },
+      {
+        "question": "In an AVL tree, what is the maximum allowed difference in height between left and right subtrees of a node?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": "1",
+        "explanation": "In an AVL tree, the height of the left and right subtrees of a node can differ by at most 1 to maintain balance.",
+        "incorrect_explanation": {
+          "0": "A difference of 0 means the subtrees are perfectly balanced, but AVL trees allow for a difference of 1.",
+          "2": "AVL trees must maintain a maximum height difference of 1.",
+          "3": "The height difference in AVL trees can only be 1, not 3."
+        }
+      },
+      {
+        "question": "In-order traversal of a binary tree visits nodes in which order?",
+        "options": [
+          "Left, Root, Right",
+          "Root, Left, Right",
+          "Right, Root, Left",
+          "Left, Right, Root"
+        ],
+        "answer": "Left, Root, Right",
+        "explanation": "In-order traversal visits the left subtree, then the root, and then the right subtree.",
+        "incorrect_explanation": {
+          "Root, Left, Right": "This is pre-order traversal.",
+          "Right, Root, Left": "This order is not a standard traversal method.",
+          "Left, Right, Root": "This is post-order traversal."
+        }
+      },
+      {
+        "question": "What is the time complexity for searching in a balanced Binary Search Tree (BST)?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n^2)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "In a balanced BST, search operations are performed in O(log n) time.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) is the time complexity for unbalanced trees.",
+          "O(1)": "Constant time search is not possible in BSTs.",
+          "O(n^2)": "O(n^2) is not relevant for searching in BSTs."
+        }
+      },
+      {
+        "question": "Which tree type balances itself using rotations?",
+        "options": [
+          "Binary Tree",
+          "Binary Search Tree (BST)",
+          "AVL Tree",
+          "Red-Black Tree"
+        ],
+        "answer": "AVL Tree",
+        "explanation": "An AVL tree balances itself using rotations after insertions and deletions.",
+        "incorrect_explanation": {
+          "Binary Tree": "Binary trees do not self-balance.",
+          "Binary Search Tree (BST)": "A BST does not self-balance unless it is an AVL or Red-Black tree.",
+          "Red-Black Tree": "Red-Black Trees also balance, but AVL Trees were specified in the question."
+        }
+      },
+      {
+        "question": "In a Red-Black Tree, what is the color of the root?",
+        "options": [
+          "Red",
+          "Black",
+          "Green",
+          "Either Red or Black"
+        ],
+        "answer": "Black",
+        "explanation": "In a Red-Black Tree, the root is always black to maintain balance.",
+        "incorrect_explanation": {
+          "Red": "The root of a Red-Black Tree cannot be red.",
+          "Green": "There are no green nodes in a Red-Black Tree.",
+          "Either Red or Black": "The root must always be black."
+        }
+      },
+      {
+        "question": "Which of the following is true for a Red-Black Tree?",
+        "options": [
+          "Red nodes cannot have red children",
+          "Red nodes cannot have black children",
+          "Black nodes cannot have red children",
+          "Black nodes cannot have black children"
+        ],
+        "answer": "Red nodes cannot have red children",
+        "explanation": "In a Red-Black Tree, red nodes cannot have red children, ensuring balance.",
+        "incorrect_explanation": {
+          "Red nodes cannot have black children": "Red nodes can have black children.",
+          "Black nodes cannot have red children": "Black nodes can have red children.",
+          "Black nodes cannot have black children": "Black nodes can have black children."
+        }
+      },
+      {
+        "question": "How many edges does a tree with 7 nodes have?",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "5"
+        ],
+        "answer": "6",
+        "explanation": "A tree with `n` nodes has exactly `n-1` edges. Thus, a tree with 7 nodes has 6 edges.",
+        "incorrect_explanation": {
+          "7": "The number of edges is always `n-1` for `n` nodes.",
+          "8": "A tree cannot have more edges than nodes.",
+          "5": "A tree with 7 nodes must have 6 edges, not fewer."
+        }
+      },
+      {
+        "question": "What is the depth of the root node in a tree?",
+        "options": [
+          "1",
+          "0",
+          "n",
+          "Depends on the tree"
+        ],
+        "answer": "0",
+        "explanation": "The depth of the root node is 0, as there are no edges from the root to itself.",
+        "incorrect_explanation": {
+          "1": "The depth of the root is 0, not 1.",
+          "n": "The root’s depth is not dependent on the number of nodes.",
+          "Depends on the tree": "The root’s depth is always 0, regardless of the tree."
+        }
+      },
+      {
+        "question": "Which traversal method visits the root before its left and right children?",
+        "options": [
+          "In-order",
+          "Post-order",
+          "Pre-order",
+          "Level-order"
+        ],
+        "answer": "Pre-order",
+        "explanation": "Pre-order traversal visits the root first, followed by the left and right subtrees.",
+        "incorrect_explanation": {
+          "In-order": "In-order visits the left subtree first, not the root.",
+          "Post-order": "Post-order visits the root last.",
+          "Level-order": "Level-order visits nodes level by level."
+        }
+      },
+      {
+        "question": "What is a subtree?",
+        "options": [
+          "A smaller tree inside a larger tree",
+          "A leaf node",
+          "A node with only one child",
+          "The root node"
+        ],
+        "answer": "A smaller tree inside a larger tree",
+        "explanation": "A subtree is a portion of the larger tree that itself is a tree.",
+        "incorrect_explanation": {
+          "A leaf node": "A leaf node is just a node without children, not a subtree.",
+          "A node with only one child": "A node with one child may or may not represent a subtree.",
+          "The root node": "The root node represents the entire tree, not just a subtree."
+        }
+      },
+      {
+        "question": "In a Binary Search Tree (BST), where are values larger than the root stored?",
+        "options": [
+          "Left subtree",
+          "Right subtree",
+          "Random subtree",
+          "Either left or right subtree"
+        ],
+        "answer": "Right subtree",
+        "explanation": "In a BST, values larger than the root are stored in the right subtree.",
+        "incorrect_explanation": {
+          "Left subtree": "The left subtree contains values smaller than the root.",
+          "Random subtree": "Values are not stored randomly in a BST.",
+          "Either left or right subtree": "Larger values must go into the right subtree in a BST."
+        }
+      },
+      {
+        "question": "What is the height of a leaf node?",
+        "options": [
+          "0",
+          "1",
+          "n",
+          "Depends on the tree"
+        ],
+        "answer": "0",
+        "explanation": "The height of a leaf node is 0 since it has no children.",
+        "incorrect_explanation": {
+          "1": "A leaf node’s height is 0, not 1.",
+          "n": "The height of a leaf node does not depend on the number of nodes.",
+          "Depends on the tree": "The height of a leaf node is always 0."
+        }
+      },
+      {
+        "question": "What is the purpose of self-balancing in AVL trees?",
+        "options": [
+          "To improve tree traversal",
+          "To maintain O(log n) time complexity for operations",
+          "To allow more nodes in the tree",
+          "To ensure nodes are stored randomly"
+        ],
+        "answer": "To maintain O(log n) time complexity for operations",
+        "explanation": "Self-balancing in AVL trees ensures O(log n) time complexity for search, insert, and delete operations.",
+        "incorrect_explanation": {
+          "To improve tree traversal": "Self-balancing is not primarily for traversal efficiency.",
+          "To allow more nodes in the tree": "The number of nodes is not affected by balancing.",
+          "To ensure nodes are stored randomly": "AVL trees do not store nodes randomly."
+        }
+      },
+      {
+        "question": "In which type of tree are red and black properties used for balancing?",
+        "options": [
+          "Binary Tree",
+          "AVL Tree",
+          "Red-Black Tree",
+          "Binary Search Tree (BST)"
+        ],
+        "answer": "Red-Black Tree",
+        "explanation": "Red-Black Trees use red and black node coloring for self-balancing.",
+        "incorrect_explanation": {
+          "Binary Tree": "Binary trees do not use red-black properties.",
+          "AVL Tree": "AVL trees balance using rotations, not colors.",
+          "Binary Search Tree (BST)": "A regular BST does not use red-black properties for balancing."
+        }
+      },
+      {
+        "question": "Which of the following operations has O(log n) time complexity in a balanced AVL tree?",
+        "options": [
+          "Search",
+          "Insertion",
+          "Deletion",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "In a balanced AVL tree, search, insertion, and deletion all have O(log n) time complexity.",
+        "incorrect_explanation": {
+          "Search": "While search is O(log n), so are insertion and deletion.",
+          "Insertion": "Insertion is O(log n), but so are search and deletion.",
+          "Deletion": "Deletion is O(log n), and so are search and insertion."
+        }
+      }
+    ]
+  }

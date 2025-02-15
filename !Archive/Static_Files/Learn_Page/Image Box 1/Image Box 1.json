@@ -1,10 +1,10 @@
 {
-  "ID": "Image Box 1",
+  "ID": "LEPA_1",
   "title": "DSA Introduction",
   "Course": [
-    "Static_Files/Learn_Page/Image Box 1/Course Markdown File/DSA Intro.md"
+    "Static_Files/Learn_Page/LEPA_1/Course Markdown File/DSA Intro.md"
   ],
   "Test": [
-    "Static_Files/Learn_Page/Image Box 1/Test JSON File/DSA Intro.json"
+    "Static_Files/Learn_Page/LEPA_1/Test JSON File/DSA Intro.json"
   ]
 }

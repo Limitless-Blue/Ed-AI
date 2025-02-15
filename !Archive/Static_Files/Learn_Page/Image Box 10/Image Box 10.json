@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 10",
+    "ID": "LEPA_10",
     "title": "LinkedList",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 10/Course Markdown File/DS_LinkedList.md"
+      "Static_Files/Learn_Page/LEPA_10/Course Markdown File/DS_LinkedList.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 10/Test Json File/DS_LinkedList.json"
+      "Static_Files/Learn_Page/LEPA_10/Test Json File/DS_LinkedList.json"
     ]
   }

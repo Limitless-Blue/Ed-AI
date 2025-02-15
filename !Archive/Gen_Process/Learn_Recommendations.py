@@ -33,13 +33,13 @@ def learn_recommendation():
                 {
                     "role": "user",
                     "parts": [
-                        f"""You are provided with a JSON file containing a list of courses. Each course has an \"Image Box\" identifier, a \"Title\", and a \"Completed\" status. Your task is to generate a list of 5 recommended courses based on the following criteria:\n\n1. **Exclusion of Completed Courses:** Only include courses where `\"Completed\": false`.\n2. **Order of Difficulty:** Arrange the recommended courses from easiest to hardest based on their topics.\n3. **Selection When All Courses Are Completed:** If all courses are marked as completed, select any 5 courses that are most suitable.\n4. **Output Format:** The recommendations should be a list of \"Image Box\" identifiers, strictly adhering to the format below.\n\n**Input JSON:**\n```{data}```\n[\"Image Box X\", \"Image Box Y\", \"Image Box Z\", \"Image Box A\", \"Image Box B\"]\n```\n\n**Additional Notes:**\n- Ensure that the list strictly contains only the \"Image Box\" identifiers.\n- Maintain the sequence from the easiest to the most challenging topics.\n- Do not include any courses that have `\"Completed\": true`.\n- If all courses are completed, select any 8 courses that best fit the recommendation criteria.\n- Adhere strictly to the expected output format without deviations.\n""",
+                        f"""You are provided with a JSON file containing a list of courses. Each course has an \"Image Box\" identifier, a \"Title\", and a \"Completed\" status. Your task is to generate a list of 5 recommended courses based on the following criteria:\n\n1. **Exclusion of Completed Courses:** Only include courses where `\"Completed\": false`.\n2. **Order of Difficulty:** Arrange the recommended courses from easiest to hardest based on their topics.\n3. **Selection When All Courses Are Completed:** If all courses are marked as completed, select any 5 courses that are most suitable.\n4. **Output Format:** The recommendations should be a list of \"Image Box\" identifiers, strictly adhering to the format below.\n\n**Input JSON:**\n```{data}```\n[\"LEPA_X\", \"LEPA_Y\", \"LEPA_Z\", \"LEPA_A\", \"LEPA_B\"]\n```\n\n**Additional Notes:**\n- Ensure that the list strictly contains only the \"Image Box\" identifiers.\n- Maintain the sequence from the easiest to the most challenging topics.\n- Do not include any courses that have `\"Completed\": true`.\n- If all courses are completed, select any 8 courses that best fit the recommendation criteria.\n- Adhere strictly to the expected output format without deviations.\n""",
                     ],
                 },
                 {
                     "role": "model",
                     "parts": [
-                        '```\n["Image Box 2", "Image Box 3", "Image Box 7", "Image Box 9", "Image Box 11"]\n``` \n',
+                        '```\n["LEPA_2", "LEPA_3", "LEPA_7", "LEPA_9", "LEPA_11"]\n``` \n',
                     ],
                 },
             ]
@@ -56,11 +56,11 @@ def learn_recommendation():
     except Exception as e:
         print(f"An error occurred while writing to the file: {e}")
         temp_list = [
-            "Image Box 2",
-            "Image Box 4",
-            "Image Box 5",
-            "Image Box 6",
-            "Image Box 7",
+            "LEPA_2",
+            "LEPA_4",
+            "LEPA_5",
+            "LEPA_6",
+            "LEPA_7",
         ]
         return temp_list
 

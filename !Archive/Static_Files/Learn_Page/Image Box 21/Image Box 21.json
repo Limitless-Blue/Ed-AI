@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 21",
+    "ID": "LEPA_21",
     "title": "Hashing",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 21/Course Markdown File/DS_Hashing.md"
+      "Static_Files/Learn_Page/LEPA_21/Course Markdown File/DS_Hashing.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 21/Test Json File/DS_Hashing.json"
+      "Static_Files/Learn_Page/LEPA_21/Test Json File/DS_Hashing.json"
     ]
 }

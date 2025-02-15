@@ -1,0 +1,277 @@
+{
+    "questions": [
+      {
+        "question": "What is Bubble Sort?",
+        "options": [
+          "A sorting algorithm that compares adjacent elements and swaps them if they are in the wrong order.",
+          "A searching algorithm that finds elements in a list.",
+          "An algorithm that sorts data using binary trees.",
+          "A divide and conquer sorting algorithm."
+        ],
+        "answer": "A sorting algorithm that compares adjacent elements and swaps them if they are in the wrong order.",
+        "explanation": "Bubble Sort works by comparing adjacent elements and swapping them if they are out of order, repeating this process until the list is sorted.",
+        "incorrect_explanation": {
+          "A searching algorithm that finds elements in a list.": "This describes a searching algorithm, not a sorting algorithm.",
+          "An algorithm that sorts data using binary trees.": "This describes a different kind of sorting algorithm, not Bubble Sort.",
+          "A divide and conquer sorting algorithm.": "This describes algorithms like Quick Sort or Merge Sort, not Bubble Sort."
+        }
+      },
+      {
+        "question": "What is the best-case time complexity of Bubble Sort?",
+        "options": [
+          "O(n)",
+          "O(n^2)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The best-case time complexity occurs when the array is already sorted, requiring only one pass through the array.",
+        "incorrect_explanation": {
+          "O(n^2)": "This is the average and worst-case time complexity, not the best case.",
+          "O(log n)": "This complexity applies to logarithmic algorithms, not Bubble Sort.",
+          "O(1)": "O(1) implies constant time, which is not applicable to sorting algorithms."
+        }
+      },
+      {
+        "question": "During which step does the largest unsorted element move to its correct position in Bubble Sort?",
+        "options": [
+          "First pass",
+          "Second pass",
+          "After each complete pass",
+          "After all elements are compared"
+        ],
+        "answer": "After each complete pass",
+        "explanation": "After each complete pass, the largest unsorted element is placed at the end of the list.",
+        "incorrect_explanation": {
+          "First pass": "The first pass does not sort all elements; only the largest is sorted to the end.",
+          "Second pass": "Not all elements are sorted until multiple passes are complete.",
+          "After all elements are compared": "This is not accurate; the largest is sorted after each pass."
+        }
+      },
+      {
+        "question": "What will the list [5, 2, 9, 1, 5, 6] look like after the first pass of Bubble Sort?",
+        "options": [
+          "[2, 5, 9, 1, 5, 6]",
+          "[5, 2, 1, 5, 6, 9]",
+          "[1, 2, 5, 5, 6, 9]",
+          "[5, 9, 2, 1, 5, 6]"
+        ],
+        "answer": "[2, 5, 1, 5, 6, 9]",
+        "explanation": "After the first pass, the largest element, 9, bubbles to the end, resulting in [2, 5, 1, 5, 6, 9].",
+        "incorrect_explanation": {
+          "[5, 2, 1, 5, 6, 9]": "This does not accurately reflect the swaps made during the first pass.",
+          "[1, 2, 5, 5, 6, 9]": "This is the final sorted state, not after the first pass.",
+          "[5, 9, 2, 1, 5, 6]": "This does not represent any state of the list during sorting."
+        }
+      },
+      {
+        "question": "What is the space complexity of Bubble Sort?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(1)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Bubble Sort is an in-place sorting algorithm, meaning it requires only a constant amount of additional space.",
+        "incorrect_explanation": {
+          "O(n)": "This implies linear space usage, which is not true for Bubble Sort.",
+          "O(log n)": "This complexity is not applicable for sorting algorithms like Bubble Sort.",
+          "O(n^2)": "This complexity would imply quadratic space usage, which is incorrect."
+        }
+      },
+      {
+        "question": "Which of the following statements is true about Bubble Sort?",
+        "options": [
+          "It is efficient for large datasets.",
+          "It requires less space compared to other algorithms.",
+          "It is a stable sorting algorithm.",
+          "It can be used for searching elements."
+        ],
+        "answer": "It is a stable sorting algorithm.",
+        "explanation": "Bubble Sort maintains the relative order of equal elements, making it stable.",
+        "incorrect_explanation": {
+          "It is efficient for large datasets.": "Bubble Sort is not efficient for large datasets due to its O(n^2) time complexity.",
+          "It requires less space compared to other algorithms.": "While it has O(1) space complexity, it is not necessarily less than all algorithms.",
+          "It can be used for searching elements.": "Bubble Sort is not a searching algorithm; it is specifically for sorting."
+        }
+      },
+      {
+        "question": "What happens in Bubble Sort if no swaps are made during a pass?",
+        "options": [
+          "The algorithm restarts from the beginning.",
+          "The algorithm continues until the last element is reached.",
+          "The algorithm concludes that the list is sorted.",
+          "The algorithm discards the last element."
+        ],
+        "answer": "The algorithm concludes that the list is sorted.",
+        "explanation": "If no swaps are made during a pass, it indicates that the list is sorted, and the algorithm can terminate early.",
+        "incorrect_explanation": {
+          "The algorithm restarts from the beginning.": "This is incorrect; the algorithm does not restart once sorted.",
+          "The algorithm continues until the last element is reached.": "No further action is needed once sorted.",
+          "The algorithm discards the last element.": "The last element is already in its correct position and is not discarded."
+        }
+      },
+      {
+        "question": "How many comparisons are made in the worst case for an array of size n in Bubble Sort?",
+        "options": [
+          "n",
+          "n(n-1)/2",
+          "n^2",
+          "n^2/2"
+        ],
+        "answer": "n(n-1)/2",
+        "explanation": "In the worst case, Bubble Sort compares each pair of elements, resulting in about n(n-1)/2 comparisons.",
+        "incorrect_explanation": {
+          "n": "This represents the best case, not the worst case.",
+          "n^2": "This is not accurate as it does not reflect the actual number of comparisons.",
+          "n^2/2": "This implies half of the maximum comparisons, which is not correct."
+        }
+      },
+      {
+        "question": "What type of sorting algorithm is Bubble Sort?",
+        "options": [
+          "In-place",
+          "Non-comparison-based",
+          "Recursive",
+          "Heuristic"
+        ],
+        "answer": "In-place",
+        "explanation": "Bubble Sort is an in-place sorting algorithm, meaning it does not require additional storage for sorting.",
+        "incorrect_explanation": {
+          "Non-comparison-based": "Bubble Sort is a comparison-based sorting algorithm.",
+          "Recursive": "Bubble Sort is typically implemented iteratively, not recursively.",
+          "Heuristic": "Heuristic algorithms are used for problem-solving, not specifically for sorting."
+        }
+      },
+      {
+        "question": "What does the phrase 'bubbles to the top' refer to in Bubble Sort?",
+        "options": [
+          "Elements are removed from the list.",
+          "Elements are sorted in reverse order.",
+          "Smaller elements move toward the beginning of the list.",
+          "Larger elements move toward the end of the list."
+        ],
+        "answer": "Larger elements move toward the end of the list.",
+        "explanation": "In Bubble Sort, larger elements 'bubble' to the end of the list with each pass.",
+        "incorrect_explanation": {
+          "Elements are removed from the list.": "Bubble Sort does not remove elements; it rearranges them.",
+          "Elements are sorted in reverse order.": "Bubble Sort sorts in ascending order, not reverse.",
+          "Smaller elements move toward the beginning of the list.": "This is a characteristic of the sorting process but not the focus of 'bubbles to the top.'"
+        }
+      },
+      {
+        "question": "What is the average-case time complexity of Bubble Sort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n^2)",
+          "O(1)"
+        ],
+        "answer": "O(n^2)",
+        "explanation": "On average, Bubble Sort performs about n^2 comparisons and swaps, leading to O(n^2) time complexity.",
+        "incorrect_explanation": {
+          "O(n)": "This represents the best case, not the average case.",
+          "O(n log n)": "This complexity applies to more efficient algorithms, not Bubble Sort.",
+          "O(1)": "O(1) indicates constant time complexity, which is not applicable here."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a characteristic of Bubble Sort?",
+        "options": [
+          "It is easy to implement.",
+          "It is stable.",
+          "It requires additional data structures.",
+          "It can be inefficient for large datasets."
+        ],
+        "answer": "It requires additional data structures.",
+        "explanation": "Bubble Sort is an in-place sorting algorithm and does not require additional data structures for its operation.",
+        "incorrect_explanation": {
+          "It is easy to implement.": "Bubble Sort is known for its simplicity in implementation.",
+          "It is stable.": "Bubble Sort maintains the relative order of equal elements, making it stable.",
+          "It can be inefficient for large datasets.": "This is a true statement regarding Bubble Sort."
+        }
+      },
+      {
+        "question": "What is the main reason Bubble Sort is rarely used in practice?",
+        "options": [
+          "It requires too much memory.",
+          "It is too complex to understand.",
+          "Its time complexity is too high for large datasets.",
+          "It cannot handle large datasets."
+        ],
+        "answer": "Its time complexity is too high for large datasets.",
+        "explanation": "Due to its average and worst-case time complexity of O(n^2), Bubble Sort is inefficient for sorting large datasets compared to more advanced algorithms.",
+        "incorrect_explanation": {
+          "It requires too much memory.": "Bubble Sort is an in-place algorithm and does not require additional memory.",
+          "It is too complex to understand.": "Bubble Sort is one of the simplest sorting algorithms.",
+          "It cannot handle large datasets.": "Bubble Sort can handle large datasets but is inefficient for them."
+        }
+      },
+      {
+        "question": "How does Bubble Sort determine that the list is sorted?",
+        "options": [
+          "When all elements are compared once.",
+          "When no swaps are made during a pass.",
+          "When the first element is the smallest.",
+          "When the last element is the largest."
+        ],
+        "answer": "When no swaps are made during a pass.",
+        "explanation": "Bubble Sort concludes that the list is sorted when a complete pass is made without any swaps.",
+        "incorrect_explanation": {
+          "When all elements are compared once.": "Comparisons alone do not guarantee that the list is sorted.",
+          "When the first element is the smallest.": "This does not indicate the overall sorted state of the list.",
+          "When the last element is the largest.": "This is only one condition; the entire list must be sorted."
+        }
+      },
+      {
+        "question": "What type of data structures does Bubble Sort typically use?",
+        "options": [
+          "Trees",
+          "Graphs",
+          "Arrays or Lists",
+          "Hash Tables"
+        ],
+        "answer": "Arrays or Lists",
+        "explanation": "Bubble Sort is generally implemented using arrays or lists to perform comparisons and swaps.",
+        "incorrect_explanation": {
+          "Trees": "Bubble Sort is not implemented with tree structures.",
+          "Graphs": "Graphs are not suitable data structures for Bubble Sort.",
+          "Hash Tables": "Bubble Sort is not applicable to hash tables as it is a sorting algorithm."
+        }
+      },
+      {
+        "question": "In Bubble Sort, how does the inner loop operate?",
+        "options": [
+          "It iterates through the entire array.",
+          "It compares adjacent elements in the unsorted section.",
+          "It continues until the list is empty.",
+          "It resets the index after each pass."
+        ],
+        "answer": "It compares adjacent elements in the unsorted section.",
+        "explanation": "The inner loop compares adjacent elements in the unsorted portion of the list to determine if they need to be swapped.",
+        "incorrect_explanation": {
+          "It iterates through the entire array.": "The inner loop only iterates through the unsorted section, reducing with each pass.",
+          "It continues until the list is empty.": "The loop continues until all necessary comparisons are made, not until the list is empty.",
+          "It resets the index after each pass.": "The inner loop does not reset; it works within the current unsorted range."
+        }
+      },
+      {
+        "question": "What is a common educational use of Bubble Sort?",
+        "options": [
+          "To demonstrate in-place sorting algorithms.",
+          "To show how to manage large datasets.",
+          "To implement recursive sorting techniques.",
+          "To explain the concept of data structures."
+        ],
+        "answer": "To demonstrate in-place sorting algorithms.",
+        "explanation": "Bubble Sort is often taught in educational settings to illustrate the concept of sorting algorithms and in-place operations.",
+        "incorrect_explanation": {
+          "To show how to manage large datasets.": "Bubble Sort is not efficient for large datasets, so it is not used for this purpose.",
+          "To implement recursive sorting techniques.": "Bubble Sort is typically implemented iteratively, not recursively.",
+          "To explain the concept of data structures.": "While it involves data structures, its main educational focus is on sorting."
+        }
+      }
+    ]
+  }
+  

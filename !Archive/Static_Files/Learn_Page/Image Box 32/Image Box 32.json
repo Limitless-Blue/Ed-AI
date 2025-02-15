@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 32",
+    "ID": "LEPA_32",
     "title": "Search",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 32/Course Markdown File/Linear_Search.md"
+      "Static_Files/Learn_Page/LEPA_32/Course Markdown File/Linear_Search.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 32/Test Json File/Linear_Search.json"
+      "Static_Files/Learn_Page/LEPA_32/Test Json File/Linear_Search.json"
     ]
 }

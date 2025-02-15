@@ -1,0 +1,261 @@
+{
+    "questions": [
+      {
+        "question": "What is tree traversal?",
+        "options": [
+          "Visiting all nodes in a tree data structure",
+          "Removing all nodes from a tree",
+          "Adding new nodes to a tree",
+          "Changing the structure of a tree"
+        ],
+        "answer": "Visiting all nodes in a tree data structure",
+        "explanation": "Tree traversal refers to the process of visiting all the nodes in a tree data structure, exactly once.",
+        "incorrect_explanation": {
+          "Removing all nodes from a tree": "This is not related to traversal.",
+          "Adding new nodes to a tree": "This describes insertion, not traversal.",
+          "Changing the structure of a tree": "This is not a definition of traversal."
+        }
+      },
+      {
+        "question": "What is the order of traversal in Inorder Traversal?",
+        "options": [
+          "Root, Left, Right",
+          "Left, Root, Right",
+          "Left, Right, Root",
+          "Right, Left, Root"
+        ],
+        "answer": "Left, Root, Right",
+        "explanation": "Inorder traversal visits the left subtree, then the root, and finally the right subtree.",
+        "incorrect_explanation": {
+          "Root, Left, Right": "This is the order for Preorder traversal.",
+          "Left, Right, Root": "This is the order for Postorder traversal.",
+          "Right, Left, Root": "This is not a valid traversal order."
+        }
+      },
+      {
+        "question": "In a binary tree, how many children can each node have?",
+        "options": [
+          "At most one",
+          "At most two",
+          "At most three",
+          "Any number of children"
+        ],
+        "answer": "At most two",
+        "explanation": "A binary tree is defined such that each node can have at most two children.",
+        "incorrect_explanation": {
+          "At most one": "This would describe a linked list, not a binary tree.",
+          "At most three": "Binary trees can only have two children.",
+          "Any number of children": "This is not true for binary trees."
+        }
+      },
+      {
+        "question": "What is the result of Inorder Traversal for the given tree: \n        1\n       / \\\n      2   3\n     / \\\n    4   5",
+        "options": [
+          "1, 2, 3, 4, 5",
+          "4, 2, 5, 1, 3",
+          "1, 3, 2, 4, 5",
+          "5, 4, 2, 3, 1"
+        ],
+        "answer": "4, 2, 5, 1, 3",
+        "explanation": "Inorder Traversal visits left subtree (4), root (2), right subtree (5), and then the root (1) and right (3).",
+        "incorrect_explanation": {
+          "1, 2, 3, 4, 5": "This is not the correct order for Inorder traversal.",
+          "1, 3, 2, 4, 5": "This is not the correct order for Inorder traversal.",
+          "5, 4, 2, 3, 1": "This is not the correct order for Inorder traversal."
+        }
+      },
+      {
+        "question": "Which traversal method visits the root node first?",
+        "options": [
+          "Inorder",
+          "Preorder",
+          "Postorder",
+          "Level Order"
+        ],
+        "answer": "Preorder",
+        "explanation": "In Preorder Traversal, the root node is visited before its left and right children.",
+        "incorrect_explanation": {
+          "Inorder": "Inorder visits the left child before the root.",
+          "Postorder": "Postorder visits the root last.",
+          "Level Order": "Level Order visits nodes level by level."
+        }
+      },
+      {
+        "question": "What is the correct order of nodes in Preorder Traversal for the tree: \n        1\n       / \\\n      2   3\n     / \\\n    4   5",
+        "options": [
+          "1, 2, 4, 5, 3",
+          "4, 2, 5, 1, 3",
+          "2, 4, 1, 5, 3",
+          "1, 3, 2, 4, 5"
+        ],
+        "answer": "1, 2, 4, 5, 3",
+        "explanation": "In Preorder Traversal, the order is root (1), left (2), left child (4), right child (5), and then right subtree (3).",
+        "incorrect_explanation": {
+          "4, 2, 5, 1, 3": "This is the result of Inorder Traversal.",
+          "2, 4, 1, 5, 3": "This is not a valid Preorder order.",
+          "1, 3, 2, 4, 5": "This does not represent Preorder Traversal."
+        }
+      },
+      {
+        "question": "What is the order of nodes in Postorder Traversal for the tree: \n        1\n       / \\\n      2   3\n     / \\\n    4   5",
+        "options": [
+          "1, 2, 3, 4, 5",
+          "4, 5, 2, 3, 1",
+          "2, 4, 5, 1, 3",
+          "4, 2, 5, 1, 3"
+        ],
+        "answer": "4, 5, 2, 3, 1",
+        "explanation": "Postorder visits the left subtree (4), right subtree (5), parent (2), then right (3), and finally the root (1).",
+        "incorrect_explanation": {
+          "1, 2, 3, 4, 5": "This does not represent Postorder Traversal.",
+          "2, 4, 5, 1, 3": "This is not a valid Postorder order.",
+          "4, 2, 5, 1, 3": "This does not represent Postorder Traversal."
+        }
+      },
+      {
+        "question": "In which traversal technique are nodes visited level by level?",
+        "options": [
+          "Inorder",
+          "Preorder",
+          "Postorder",
+          "Level Order"
+        ],
+        "answer": "Level Order",
+        "explanation": "Level Order Traversal visits nodes at the present depth level before moving on to the next level.",
+        "incorrect_explanation": {
+          "Inorder": "Inorder does not follow level order.",
+          "Preorder": "Preorder does not follow level order.",
+          "Postorder": "Postorder does not follow level order."
+        }
+      },
+      {
+        "question": "What data structure is typically used for Level Order Traversal?",
+        "options": [
+          "Stack",
+          "Queue",
+          "Array",
+          "Linked List"
+        ],
+        "answer": "Queue",
+        "explanation": "Level Order Traversal is usually implemented using a queue to keep track of the nodes at each level.",
+        "incorrect_explanation": {
+          "Stack": "A stack is not used for level order traversal.",
+          "Array": "An array does not support dynamic level order operations.",
+          "Linked List": "A linked list is not used for level order traversal."
+        }
+      },
+      {
+        "question": "What is the first node visited in Level Order Traversal?",
+        "options": [
+          "The root node",
+          "The leftmost leaf",
+          "The rightmost leaf",
+          "The deepest node"
+        ],
+        "answer": "The root node",
+        "explanation": "Level Order Traversal starts at the root node and then visits nodes level by level.",
+        "incorrect_explanation": {
+          "The leftmost leaf": "The leftmost leaf is not visited first.",
+          "The rightmost leaf": "The rightmost leaf is not visited first.",
+          "The deepest node": "The deepest node is not the first node visited."
+        }
+      },
+      {
+        "question": "Which traversal is most efficient for searching an element in a BST?",
+        "options": [
+          "Inorder",
+          "Preorder",
+          "Postorder",
+          "Level Order"
+        ],
+        "answer": "Inorder",
+        "explanation": "Inorder traversal of a BST returns elements in sorted order, making it efficient for search operations.",
+        "incorrect_explanation": {
+          "Preorder": "Preorder does not guarantee sorted order.",
+          "Postorder": "Postorder does not guarantee sorted order.",
+          "Level Order": "Level Order does not guarantee sorted order."
+        }
+      },
+      {
+        "question": "What is a common use case for Postorder Traversal?",
+        "options": [
+          "To delete a tree",
+          "To find the minimum element",
+          "To check if a tree is balanced",
+          "To print elements in sorted order"
+        ],
+        "answer": "To delete a tree",
+        "explanation": "Postorder traversal is often used to delete a tree since it visits children before the parent.",
+        "incorrect_explanation": {
+          "To find the minimum element": "This is usually done via Inorder traversal.",
+          "To check if a tree is balanced": "This is not a specific application of Postorder.",
+          "To print elements in sorted order": "Inorder traversal is used for sorted order."
+        }
+      },
+      {
+        "question": "In a tree with the following structure: \n        1\n       / \\\n      2   3\n     / \\\n    4   5\nWhich of the following represents Level Order Traversal?",
+        "options": [
+          "1, 2, 3, 4, 5",
+          "1, 2, 4, 5, 3",
+          "2, 4, 5, 1, 3",
+          "4, 5, 2, 3, 1"
+        ],
+        "answer": "1, 2, 3, 4, 5",
+        "explanation": "Level Order Traversal visits the nodes starting from the root and then all nodes at the same level.",
+        "incorrect_explanation": {
+          "1, 2, 4, 5, 3": "This does not represent Level Order Traversal.",
+          "2, 4, 5, 1, 3": "This does not represent Level Order Traversal.",
+          "4, 5, 2, 3, 1": "This does not represent Level Order Traversal."
+        }
+      },
+      {
+        "question": "Which traversal method can be used to recreate a binary search tree (BST) from its traversal sequence?",
+        "options": [
+          "Inorder",
+          "Preorder",
+          "Postorder",
+          "Level Order"
+        ],
+        "answer": "Preorder",
+        "explanation": "Preorder traversal can be used to reconstruct a BST, as it visits the root before the subtrees.",
+        "incorrect_explanation": {
+          "Inorder": "Inorder does not preserve the root's position.",
+          "Postorder": "Postorder visits the root last, not first.",
+          "Level Order": "Level Order does not maintain the parent-child relationship."
+        }
+      },
+      {
+        "question": "If a binary tree has only left children, what would be the result of an Inorder Traversal?",
+        "options": [
+          "The nodes in reverse order",
+          "The same order as Preorder",
+          "The same order as Postorder",
+          "It would result in an empty traversal"
+        ],
+        "answer": "The same order as Preorder",
+        "explanation": "In this case, Inorder and Preorder would yield the same result since there are no right children.",
+        "incorrect_explanation": {
+          "The nodes in reverse order": "This is not correct; the order remains the same.",
+          "The same order as Postorder": "Postorder would visit the nodes in a different sequence.",
+          "It would result in an empty traversal": "This is not true; nodes would still be visited."
+        }
+      },
+      {
+        "question": "Which of the following traversal methods is used primarily for serialization of tree structures?",
+        "options": [
+          "Inorder",
+          "Preorder",
+          "Postorder",
+          "Level Order"
+        ],
+        "answer": "Preorder",
+        "explanation": "Preorder is often used for serialization because it captures the root before its children.",
+        "incorrect_explanation": {
+          "Inorder": "Inorder does not preserve the parent-child relationship.",
+          "Postorder": "Postorder visits the root last, making it less suitable for serialization.",
+          "Level Order": "Level Order does not capture structure in a way suitable for serialization."
+        }
+      }
+    ]
+  }
+  

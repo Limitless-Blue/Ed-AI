@@ -1,0 +1,277 @@
+{
+    "questions": [
+      {
+        "question": "What is a heap?",
+        "options": [
+          "A complete binary tree that maintains a specific order",
+          "A linear data structure",
+          "A type of graph",
+          "A collection of unordered elements"
+        ],
+        "answer": "A complete binary tree that maintains a specific order",
+        "explanation": "A heap is a complete binary tree that satisfies the heap property.",
+        "incorrect_explanation": {
+          "A linear data structure": "Heaps are not linear; they are tree-based structures.",
+          "A type of graph": "Heaps are not graphs; they are binary trees.",
+          "A collection of unordered elements": "Heaps maintain a specific order based on their properties."
+        }
+      },
+      {
+        "question": "In a max heap, what is the relationship between a parent node and its children?",
+        "options": [
+          "Parent node < Children",
+          "Parent node > Children",
+          "Parent node = Children",
+          "Parent node can be either"
+        ],
+        "answer": "Parent node > Children",
+        "explanation": "In a max heap, the value of each parent node is greater than or equal to that of its children.",
+        "incorrect_explanation": {
+          "Parent node < Children": "This is the opposite of the max heap property.",
+          "Parent node = Children": "Parent nodes can be greater than or equal to their children, but not necessarily equal.",
+          "Parent node can be either": "This does not define the max heap property."
+        }
+      },
+      {
+        "question": "Which of the following is true about a min heap?",
+        "options": [
+          "The root contains the maximum element",
+          "The root contains the minimum element",
+          "Every node is less than its parent",
+          "Elements are unordered"
+        ],
+        "answer": "The root contains the minimum element",
+        "explanation": "In a min heap, the root node is the smallest element in the heap.",
+        "incorrect_explanation": {
+          "The root contains the maximum element": "This defines a max heap, not a min heap.",
+          "Every node is less than its parent": "This is not true; it is the opposite.",
+          "Elements are unordered": "Elements in a heap maintain a specific order."
+        }
+      },
+      {
+        "question": "What is the time complexity for inserting an element into a heap?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "The time complexity for inserting an element into a heap is O(log n) due to the need to maintain the heap property.",
+        "incorrect_explanation": {
+          "O(1)": "This is incorrect as it does not account for the bubbling up process.",
+          "O(n)": "This is incorrect; inserting into a heap is more efficient than linear time.",
+          "O(n log n)": "This is the time complexity for sorting, not for insertion."
+        }
+      },
+      {
+        "question": "Which of the following operations is performed to maintain the heap property after deletion?",
+        "options": [
+          "Heapify Up",
+          "Heapify Down",
+          "Bubble Up",
+          "Bubble Down"
+        ],
+        "answer": "Heapify Down",
+        "explanation": "After deleting the root element, Heapify Down is performed to restore the heap property.",
+        "incorrect_explanation": {
+          "Heapify Up": "This operation is used during insertion, not deletion.",
+          "Bubble Up": "This is another term for Heapify Up, used during insertion.",
+          "Bubble Down": "This is not a standard term, though it is conceptually similar to Heapify Down."
+        }
+      },
+      {
+        "question": "How is a max heap typically represented in memory?",
+        "options": [
+          "As a linked list",
+          "As an array",
+          "As a binary search tree",
+          "As a graph"
+        ],
+        "answer": "As an array",
+        "explanation": "A max heap can be efficiently represented as an array, where for any element at index i, its children are located at indices 2i + 1 and 2i + 2.",
+        "incorrect_explanation": {
+          "As a linked list": "Heaps are not typically represented as linked lists.",
+          "As a binary search tree": "A binary search tree has different properties compared to heaps.",
+          "As a graph": "Heaps are not graphs; they are tree structures."
+        }
+      },
+      {
+        "question": "What is the primary use case of heaps?",
+        "options": [
+          "Sorting data",
+          "Storing unordered data",
+          "Searching data",
+          "Creating hash tables"
+        ],
+        "answer": "Sorting data",
+        "explanation": "Heaps are commonly used in the heapsort algorithm, which is an efficient sorting method.",
+        "incorrect_explanation": {
+          "Storing unordered data": "Heaps maintain a specific order based on their properties.",
+          "Searching data": "Heaps are not optimized for searching; they are better suited for priority retrieval.",
+          "Creating hash tables": "Hash tables use different data structures."
+        }
+      },
+      {
+        "question": "In which scenario would you use a min heap?",
+        "options": [
+          "To implement a priority queue with the highest priority first",
+          "To implement a priority queue with the lowest priority first",
+          "To store a sorted list of elements",
+          "To create a graph"
+        ],
+        "answer": "To implement a priority queue with the lowest priority first",
+        "explanation": "Min heaps are ideal for priority queues where the lowest priority item needs to be retrieved first.",
+        "incorrect_explanation": {
+          "To implement a priority queue with the highest priority first": "This would require a max heap instead.",
+          "To store a sorted list of elements": "Heaps can sort data but are not used to store sorted lists.",
+          "To create a graph": "Heaps are not used for creating graphs."
+        }
+      },
+      {
+        "question": "What does the heapify process do?",
+        "options": [
+          "Sorts the heap",
+          "Maintains the heap property",
+          "Inserts an element",
+          "Deletes an element"
+        ],
+        "answer": "Maintains the heap property",
+        "explanation": "Heapify is the process of converting a binary tree into a heap while maintaining the heap property.",
+        "incorrect_explanation": {
+          "Sorts the heap": "Heaps can be sorted, but heapify itself does not sort.",
+          "Inserts an element": "Heapify is not an insertion operation.",
+          "Deletes an element": "Heapify does not directly delete elements."
+        }
+      },
+      {
+        "question": "What is the worst-case time complexity of heapsort?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "Heapsort has a worst-case time complexity of O(n log n) due to the repeated extraction of the maximum element and re-heapification.",
+        "incorrect_explanation": {
+          "O(n)": "This is not correct; heapsort requires more time than linear time.",
+          "O(log n)": "This is the time complexity for a single insertion or deletion, not heapsort.",
+          "O(n^2)": "Heapsort is more efficient than quadratic time algorithms."
+        }
+      },
+      {
+        "question": "Which of the following best describes a complete binary tree?",
+        "options": [
+          "All levels are fully filled except the last, which is filled from left to right",
+          "All levels are filled from top to bottom",
+          "Only the last level is filled",
+          "Nodes can have at most one child"
+        ],
+        "answer": "All levels are fully filled except the last, which is filled from left to right",
+        "explanation": "A complete binary tree has all levels fully filled except possibly the last level, which is filled from left to right.",
+        "incorrect_explanation": {
+          "All levels are filled from top to bottom": "This describes a full binary tree, not necessarily complete.",
+          "Only the last level is filled": "This is incorrect; complete binary trees have more structure.",
+          "Nodes can have at most one child": "This describes a different type of tree."
+        }
+      },
+      {
+        "question": "What operation is performed when a new element is added to a heap?",
+        "options": [
+          "Bubble Up",
+          "Heapify Down",
+          "Rebalance",
+          "Sort"
+        ],
+        "answer": "Bubble Up",
+        "explanation": "When a new element is added to a heap, Bubble Up (or Heapify Up) is performed to maintain the heap property.",
+        "incorrect_explanation": {
+          "Heapify Down": "This operation is used after deletion, not insertion.",
+          "Rebalance": "Rebalancing is not a term typically used with heaps.",
+          "Sort": "Sorting is a separate process, not related to insertion."
+        }
+      },
+      {
+        "question": "Which algorithm uses heaps for finding the minimum distance node?",
+        "options": [
+          "Dijkstra's Algorithm",
+          "A* Search Algorithm",
+          "Quick Sort",
+          "Merge Sort"
+        ],
+        "answer": "Dijkstra's Algorithm",
+        "explanation": "Dijkstra's algorithm uses heaps to efficiently retrieve the minimum distance node.",
+        "incorrect_explanation": {
+          "A* Search Algorithm": "While A* can use heaps, it is not primarily focused on distance nodes like Dijkstra's.",
+          "Quick Sort": "Quick sort is a different sorting algorithm and does not utilize heaps.",
+          "Merge Sort": "Merge sort also does not use heaps."
+        }
+      },
+      {
+        "question": "What is the root element in a max heap?",
+        "options": [
+          "The minimum value",
+          "The maximum value",
+          "The average value",
+          "The median value"
+        ],
+        "answer": "The maximum value",
+        "explanation": "The root of a max heap always contains the maximum value.",
+        "incorrect_explanation": {
+          "The minimum value": "This is characteristic of a min heap.",
+          "The average value": "Heaps do not focus on average values.",
+          "The median value": "Heaps do not guarantee median values."
+        }
+      },
+      {
+        "question": "How do you represent the children of a node at index i in a heap?",
+        "options": [
+          "2i and 2i + 1",
+          "2i + 1 and 2i + 2",
+          "i/2 and i/2 + 1",
+          "i + 1 and i + 2"
+        ],
+        "answer": "2i + 1 and 2i + 2",
+        "explanation": "In a heap, the left child is at index 2i + 1 and the right child is at index 2i + 2.",
+        "incorrect_explanation": {
+          "2i and 2i + 1": "This is incorrect; it does not account for the correct index of the right child.",
+          "i/2 and i/2 + 1": "This is a formula for finding parent nodes, not children.",
+          "i + 1 and i + 2": "This does not correctly represent the structure of heaps."
+        }
+      },
+      {
+        "question": "What is the main advantage of using heaps in priority queues?",
+        "options": [
+          "Fast searching of elements",
+          "Efficient retrieval of the highest or lowest priority item",
+          "Simple data structure",
+          "Unordered storage"
+        ],
+        "answer": "Efficient retrieval of the highest or lowest priority item",
+        "explanation": "Heaps provide efficient access to the highest or lowest priority item, which is crucial for priority queues.",
+        "incorrect_explanation": {
+          "Fast searching of elements": "Heaps are not optimized for searching; they focus on priority retrieval.",
+          "Simple data structure": "Heaps have more complexity than simpler structures.",
+          "Unordered storage": "Heaps maintain an ordered structure based on their properties."
+        }
+      },
+      {
+        "question": "What is the role of the last non-leaf node in a heap?",
+        "options": [
+          "It is the largest node",
+          "It is the smallest node",
+          "It is where the heapification process starts",
+          "It is where new elements are added"
+        ],
+        "answer": "It is where the heapification process starts",
+        "explanation": "Heapification starts from the last non-leaf node to ensure that the heap property is maintained throughout the tree.",
+        "incorrect_explanation": {
+          "It is the largest node": "This is not necessarily true; it can be smaller than other nodes.",
+          "It is the smallest node": "This is also not guaranteed.",
+          "It is where new elements are added": "New elements are added at the end of the heap."
+        }
+      }
+    ]
+  }
+  

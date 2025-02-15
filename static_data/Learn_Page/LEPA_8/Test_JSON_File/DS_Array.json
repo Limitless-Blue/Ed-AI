@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "question": "What is the time complexity of inserting an element at the beginning of a dynamic array?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "answer": "O(n)",
+      "explanation": "Inserting an element at the beginning of a dynamic array requires shifting all existing elements to make space for the new element, resulting in a time complexity of O(n).",
+      "incorrect_explanation": {
+        "O(1)": "O(1) time complexity would imply that the operation does not depend on the size of the array, which is not the case here.",
+        "O(log n)": "O(log n) is typically associated with divide-and-conquer algorithms, not with array insertions.",
+        "O(n log n)": "O(n log n) time complexity is usually related to more complex operations like certain sorting algorithms."
+      }
+    },
+    {
+      "question": "Which traversal technique involves visiting each element in the array sequentially from the beginning to the end?",
+      "options": [
+        "Reverse Traversal",
+        "Linear Traversal",
+        "Skip Traversal",
+        "Binary Traversal"
+      ],
+      "answer": "Linear Traversal",
+      "explanation": "Linear traversal involves visiting each element in the array sequentially from the beginning to the end.",
+      "incorrect_explanation": {
+        "Reverse Traversal": "Reverse traversal involves visiting elements from the end to the beginning.",
+        "Skip Traversal": "Skip traversal involves skipping certain elements based on a condition or step size.",
+        "Binary Traversal": "Binary traversal is not a standard term related to array traversal techniques."
+      }
+    },
+    {
+      "question": "What is the time complexity of deleting an element from the end of a dynamic array?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "answer": "O(1)",
+      "explanation": "Deleting the last element from a dynamic array is a constant time operation, O(1), as it does not require shifting any elements.",
+      "incorrect_explanation": {
+        "O(n)": "O(n) time complexity would imply that the operation requires shifting elements, which is not the case when deleting the last element.",
+        "O(log n)": "O(log n) is not applicable to simple deletion operations in arrays.",
+        "O(n log n)": "O(n log n) is typically associated with more complex operations, such as certain sorting algorithms."
+      }
+    },
+    {
+      "question": "Which traversal technique involves skipping certain elements based on a condition or step size?",
+      "options": [
+        "Linear Traversal",
+        "Reverse Traversal",
+        "Skip Traversal",
+        "Depth Traversal"
+      ],
+      "answer": "Skip Traversal",
+      "explanation": "Skip traversal involves skipping certain elements based on a condition or step size, allowing selective access to array elements.",
+      "incorrect_explanation": {
+        "Linear Traversal": "Linear traversal involves visiting each element sequentially without skipping.",
+        "Reverse Traversal": "Reverse traversal involves visiting elements from the end to the beginning.",
+        "Depth Traversal": "Depth traversal is related to graph or tree data structures, not arrays."
+      }
+    },
+    {
+      "question": "Why are insertion and deletion operations at the beginning or specific positions of an array considered costly?",
+      "options": [
+        "They require additional memory allocation",
+        "They involve shifting existing elements",
+        "They increase the array's size exponentially",
+        "They require recursive calls"
+      ],
+      "answer": "They involve shifting existing elements",
+      "explanation": "Insertion and deletion at the beginning or specific positions of an array are costly because they require shifting existing elements to maintain the array's order, leading to O(n) time complexity.",
+      "incorrect_explanation": {
+        "They require additional memory allocation": "While some operations may involve memory allocation, the primary cost is due to shifting elements.",
+        "They increase the array's size exponentially": "Array sizes typically grow linearly or by a fixed factor, not exponentially.",
+        "They require recursive calls": "Recursive calls are not inherently involved in array insertion or deletion operations."
+      }
+    },
+    {
+      "question": "Which of the following is a benefit of inserting elements at the end of an array?",
+      "options": [
+        "Requires no shifting of elements",
+        "Allows for elements of different data types",
+        "Enables constant time complexity for insertion",
+        "Maintains the array's sorted order"
+      ],
+      "answer": "Enables constant time complexity for insertion",
+      "explanation": "Inserting elements at the end of an array typically allows for constant time complexity, O(1), especially in dynamic arrays where the array can resize as needed.",
+      "incorrect_explanation": {
+        "Requires no shifting of elements": "While this is true, the primary benefit is achieving constant time complexity.",
+        "Allows for elements of different data types": "Arrays generally store elements of the same data type, regardless of the insertion position.",
+        "Maintains the array's sorted order": "Inserting at the end does not necessarily maintain sorted order unless the array was already sorted and the new element fits the order."
+      }
+    },
+    {
+      "question": "What is the time complexity of deleting an element from a specific position in an array?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "answer": "O(n)",
+      "explanation": "Deleting an element from a specific position requires shifting subsequent elements to fill the gap, resulting in O(n) time complexity.",
+      "incorrect_explanation": {
+        "O(1)": "O(1) implies constant time, which is not the case due to the need to shift elements.",
+        "O(log n)": "O(log n) is not applicable to deletion operations that require shifting.",
+        "O(n²)": "O(n²) would imply a nested operation, which is not the case here."
+      }
+    },
+    {
+      "question": "Which traversal technique can potentially reduce the number of operations by visiting elements selectively?",
+      "options": [
+        "Linear Traversal",
+        "Reverse Traversal",
+        "Skip Traversal",
+        "All of the above"
+      ],
+      "answer": "Skip Traversal",
+      "explanation": "Skip traversal can reduce the number of operations by visiting elements selectively based on a condition or step size.",
+      "incorrect_explanation": {
+        "Linear Traversal": "Linear traversal visits every element sequentially without skipping, potentially increasing the number of operations.",
+        "Reverse Traversal": "Reverse traversal still visits every element but in the opposite order.",
+        "All of the above": "Only skip traversal selectively reduces the number of operations."
+      }
+    },
+    {
+      "question": "What is the primary reason to consider using linked lists over arrays for certain applications?",
+      "options": [
+        "Arrays use more memory than linked lists",
+        "Linked lists allow for constant time insertions and deletions at arbitrary positions",
+        "Linked lists provide faster access to elements by index",
+        "Arrays cannot store elements of the same data type"
+      ],
+      "answer": "Linked lists allow for constant time insertions and deletions at arbitrary positions",
+      "explanation": "Linked lists enable constant time insertions and deletions at arbitrary positions without the need to shift elements, unlike arrays which require O(n) time for these operations.",
+      "incorrect_explanation": {
+        "Arrays use more memory than linked lists": "Arrays typically use less memory as linked lists require additional memory for storing pointers.",
+        "Linked lists provide faster access to elements by index": "Linked lists have O(n) access time for elements by index, which is slower than arrays' O(1) access time.",
+        "Arrays cannot store elements of the same data type": "Arrays are designed to store elements of the same data type."
+      }
+    },
+    {
+      "question": "Which of the following is NOT a common operation performed on arrays?",
+      "options": [
+        "Traversal",
+        "Insertion",
+        "Deletion",
+        "Graph Traversal"
+      ],
+      "answer": "Graph Traversal",
+      "explanation": "Graph traversal is an operation performed on graph data structures, not on arrays.",
+      "incorrect_explanation": {
+        "Traversal": "Traversal is a common operation for arrays, involving visiting each element.",
+        "Insertion": "Insertion involves adding new elements to the array.",
+        "Deletion": "Deletion involves removing elements from the array."
+      }
+    },
+    {
+      "question": "Which traversal technique would you use to print the elements of an array in reverse order?",
+      "options": [
+        "Linear Traversal",
+        "Reverse Traversal",
+        "Skip Traversal",
+        "Depth Traversal"
+      ],
+      "answer": "Reverse Traversal",
+      "explanation": "Reverse traversal involves visiting each element from the end of the array to the beginning, which is suitable for printing elements in reverse order.",
+      "incorrect_explanation": {
+        "Linear Traversal": "Linear traversal visits elements from beginning to end, not in reverse.",
+        "Skip Traversal": "Skip traversal involves skipping elements based on a condition or step size, not necessarily reversing the order.",
+        "Depth Traversal": "Depth traversal is related to graph or tree data structures, not arrays."
+      }
+    },
+    {
+      "question": "What should you always ensure before attempting to delete an element from a specific index in an array?",
+      "options": [
+        "The array is sorted",
+        "The index is within the valid range",
+        "The array has more than one element",
+        "The element at the index is not null"
+      ],
+      "answer": "The index is within the valid range",
+      "explanation": "Before attempting to delete an element from a specific index in an array, you should always ensure that the index is within the valid range to prevent runtime errors.",
+      "incorrect_explanation": {
+        "The array is sorted": "The array does not need to be sorted for deletion operations.",
+        "The array has more than one element": "You can delete elements even if the array has only one element, provided the index is valid.",
+        "The element at the index is not null": "Arrays can contain null elements; the primary concern is the validity of the index."
+      }
+    },
+    {
+      "question": "Which array operation can be optimized by performing multiple insertions in bulk?",
+      "options": [
+        "Traversal",
+        "Insertion",
+        "Deletion",
+        "Searching"
+      ],
+      "answer": "Insertion",
+      "explanation": "Batching multiple insertions can reduce overhead and improve performance by minimizing the number of shifts required.",
+      "incorrect_explanation": {
+        "Traversal": "Traversal is about visiting elements and is not directly optimized by batching operations.",
+        "Deletion": "While deletions can also benefit from batching, the primary context provided focuses on insertions.",
+        "Searching": "Searching operations are generally independent of insertion batching."
+      }
+    },
+    {
+      "question": "Which of the following best describes a linear traversal of an array?",
+      "options": [
+        "Visiting elements in a random order",
+        "Visiting each element sequentially from start to end",
+        "Visiting elements in reverse order",
+        "Visiting every second element"
+      ],
+      "answer": "Visiting each element sequentially from start to end",
+      "explanation": "A linear traversal involves visiting each element of the array sequentially from the beginning to the end.",
+      "incorrect_explanation": {
+        "Visiting elements in a random order": "Random order traversal is not linear and does not follow a sequential pattern.",
+        "Visiting elements in reverse order": "This describes reverse traversal, not linear traversal.",
+        "Visiting every second element": "This describes skip traversal, not linear traversal."
+      }
+    },
+    {
+      "question": "What is a key disadvantage of using arrays for frequent insertions and deletions at the beginning or middle?",
+      "options": [
+        "Arrays cannot grow in size",
+        "Arrays use more memory than linked lists",
+        "Shifting elements can lead to O(n) time complexity",
+        "Arrays do not support element access by index"
+      ],
+      "answer": "Shifting elements can lead to O(n) time complexity",
+      "explanation": "Frequent insertions and deletions at the beginning or middle of an array require shifting elements, resulting in O(n) time complexity for each operation.",
+      "incorrect_explanation": {
+        "Arrays cannot grow in size": "Dynamic arrays can grow in size, although resizing may involve copying elements.",
+        "Arrays use more memory than linked lists": "Arrays typically use less memory as linked lists require additional memory for storing pointers.",
+        "Arrays do not support element access by index": "Arrays do support element access by index, typically in O(1) time."
+      }
+    }
+  ]
+}

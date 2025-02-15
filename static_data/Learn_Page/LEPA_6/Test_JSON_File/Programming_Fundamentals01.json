@@ -1,0 +1,276 @@
+{
+    "questions": [
+      {
+        "question": "What does space complexity measure in an algorithm?",
+        "options": [
+          "The amount of time an algorithm takes to run",
+          "The amount of memory an algorithm uses relative to input size",
+          "The number of operations an algorithm performs",
+          "The efficiency of an algorithm's code"
+        ],
+        "answer": "The amount of memory an algorithm uses relative to input size",
+        "explanation": "Space complexity measures the amount of memory an algorithm uses relative to the size of the input.",
+        "incorrect_explanation": {
+          "The amount of time an algorithm takes to run": "This describes time complexity, not space complexity.",
+          "The number of operations an algorithm performs": "This refers to time complexity or operation count, not space.",
+          "The efficiency of an algorithm's code": "Efficiency can relate to both time and space, but space complexity specifically measures memory usage."
+        }
+      },
+      {
+        "question": "Which component is NOT part of space complexity?",
+        "options": [
+          "Fixed part for constants and simple variables",
+          "Variable part for dynamic memory allocation",
+          "Auxiliary space used by the algorithm",
+          "The runtime speed of the algorithm"
+        ],
+        "answer": "The runtime speed of the algorithm",
+        "explanation": "Space complexity focuses on memory usage, not the runtime speed of the algorithm.",
+        "incorrect_explanation": {
+          "Fixed part for constants and simple variables": "This is part of space complexity.",
+          "Variable part for dynamic memory allocation": "This is part of space complexity.",
+          "Auxiliary space used by the algorithm": "This is part of space complexity."
+        }
+      },
+      {
+        "question": "What is the space complexity of an algorithm that uses a fixed number of variables regardless of input size?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Using a fixed number of variables results in constant space complexity, O(1).",
+        "incorrect_explanation": {
+          "O(n)": "O(n) implies space grows linearly with input size.",
+          "O(log n)": "O(log n) implies logarithmic growth in space.",
+          "O(n log n)": "O(n log n) implies space grows proportionally to n log n."
+        }
+      },
+      {
+        "question": "Which of the following best describes an in-place algorithm?",
+        "options": [
+          "An algorithm that uses additional data structures proportional to input size",
+          "An algorithm that transforms input using a constant amount of extra space",
+          "An algorithm that does not modify the input data",
+          "An algorithm that requires exponential space relative to input size"
+        ],
+        "answer": "An algorithm that transforms input using a constant amount of extra space",
+        "explanation": "In-place algorithms transform the input using a constant amount of extra space, typically O(1) space complexity.",
+        "incorrect_explanation": {
+          "An algorithm that uses additional data structures proportional to input size": "This describes algorithms that require additional space, not in-place algorithms.",
+          "An algorithm that does not modify the input data": "In-place algorithms typically modify the input data directly.",
+          "An algorithm that requires exponential space relative to input size": "This describes algorithms with high space complexity, not in-place algorithms."
+        }
+      },
+      {
+        "question": "Which space complexity class represents algorithms that require additional space proportional to the input size?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "O(n) space complexity indicates that the additional space required grows linearly with the input size.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) represents constant space, not proportional to input size.",
+          "O(log n)": "O(log n) represents logarithmic space, not linear.",
+          "O(n²)": "O(n²) represents quadratic space complexity, which is more than linear."
+        }
+      },
+      {
+        "question": "What is the space complexity of the following algorithm?\n```python\ndef iterative_sum(lst):\n    total = 0\n    for num in lst:\n        total += num\n    return total\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(1)",
+        "explanation": "The algorithm uses a constant amount of additional space regardless of the input size, resulting in O(1) space complexity.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply additional space proportional to input size, which is not the case here.",
+          "O(log n)": "O(log n) is not applicable here as no logarithmic space usage occurs.",
+          "O(n²)": "O(n²) implies quadratic space, which is not present in this algorithm."
+        }
+      },
+      {
+        "question": "Which of the following functions uses additional space proportional to the input size?",
+        "options": [
+          "```python\ndef reverse_array(arr):\n    left, right = 0, len(arr) - 1\n    while left < right:\n        arr[left], arr[right] = arr[right], arr[left]\n        left += 1\n        right -= 1\n    return arr\n```",
+          "```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```",
+          "```python\ndef duplicate_list(lst):\n    duplicated = []\n    for num in lst:\n        duplicated.append(num)\n    return duplicated\n```",
+          "```python\ndef print_elements(lst):\n    for element in lst:\n        print(element)\n```"
+        ],
+        "answer": "```python\ndef duplicate_list(lst):\n    duplicated = []\n    for num in lst:\n        duplicated.append(num)\n    return duplicated\n```",
+        "explanation": "The `duplicate_list` function creates a new list `duplicated` that grows proportionally with the input size, resulting in O(n) space complexity.",
+        "incorrect_explanation": {
+          "reverse_array": "This function reverses the array in place using only a fixed number of variables, resulting in O(1) space complexity.",
+          "factorial": "This recursive function uses O(n) space due to the call stack, but the `duplicate_list` example is a clearer case of additional space proportional to input size.",
+          "print_elements": "This function uses constant space, O(1), as it only iterates through the list without creating additional data structures."
+        }
+      },
+      {
+        "question": "What is the space complexity of the following recursive algorithm?\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The recursive calls add to the call stack, resulting in space complexity of O(n).",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant space, which is not the case due to recursive calls.",
+          "O(log n)": "O(log n) is typical for divide-and-conquer algorithms, not simple recursion like factorial.",
+          "O(n²)": "O(n²) implies quadratic space complexity, which is not applicable here."
+        }
+      },
+      {
+        "question": "Which of the following is a benefit of using in-place algorithms?",
+        "options": [
+          "They are always faster than algorithms that use additional space",
+          "They use less memory by avoiding additional data structures",
+          "They are easier to implement",
+          "They do not modify the input data"
+        ],
+        "answer": "They use less memory by avoiding additional data structures",
+        "explanation": "In-place algorithms use less memory by transforming the input using a constant amount of extra space.",
+        "incorrect_explanation": {
+          "They are always faster than algorithms that use additional space": "In-place algorithms are not always faster; performance depends on the specific algorithm and context.",
+          "They are easier to implement": "In-place algorithms can be more complex to implement due to the need to manage data within the existing structure.",
+          "They do not modify the input data": "In-place algorithms typically modify the input data directly."
+        }
+      },
+      {
+        "question": "What is the space complexity of the following algorithm?\n```python\ndef remove_duplicates(lst):\n    unique = []\n    seen = set()\n    for num in lst:\n        if num not in seen:\n            unique.append(num)\n            seen.add(num)\n    return unique\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The algorithm uses additional space for the `unique` list and `seen` set, both of which can grow proportionally with the input size, resulting in O(n) space complexity.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant space, which is not the case as additional data structures grow with input size.",
+          "O(log n)": "O(log n) is not applicable here as the space grows linearly with input size.",
+          "O(n²)": "O(n²) implies quadratic space, which is not the case."
+        }
+      },
+      {
+        "question": "Which of the following is an example of an in-place algorithm?",
+        "options": [
+          "Creating a new list to store results",
+          "Reversing an array by swapping elements within the original array",
+          "Using a hash table to store unique elements",
+          "Generating a copy of a list with duplicates removed"
+        ],
+        "answer": "Reversing an array by swapping elements within the original array",
+        "explanation": "Reversing an array by swapping elements within the original array modifies the input in place using a fixed number of variables, making it an in-place algorithm.",
+        "incorrect_explanation": {
+          "Creating a new list to store results": "This requires additional space proportional to input size, not in-place.",
+          "Using a hash table to store unique elements": "This requires additional space proportional to input size, not in-place.",
+          "Generating a copy of a list with duplicates removed": "This requires additional space proportional to input size, not in-place."
+        }
+      },
+      {
+        "question": "What is the space complexity of the following algorithm?\n```python\ndef copy_list(lst):\n    return lst.copy()\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The `copy_list` function creates a new list that is a copy of the input list, requiring additional space proportional to the input size, resulting in O(n) space complexity.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant space, which is not the case as a new list is created.",
+          "O(log n)": "O(log n) is not applicable here as space grows linearly with input size.",
+          "O(n²)": "O(n²) implies quadratic space, which is not the case."
+        }
+      },
+      {
+        "question": "Which of the following is a characteristic of algorithms that use additional space?",
+        "options": [
+          "They always have lower time complexity",
+          "They do not modify the input data",
+          "They use a fixed number of variables",
+          "They operate in constant space"
+        ],
+        "answer": "They do not modify the input data",
+        "explanation": "Algorithms that use additional space typically create new data structures to store results, thereby not modifying the input data directly.",
+        "incorrect_explanation": {
+          "They always have lower time complexity": "Using additional space does not inherently lower time complexity.",
+          "They use a fixed number of variables": "They often use additional variables and data structures proportional to input size.",
+          "They operate in constant space": "They require space proportional to input size, not constant space."
+        }
+      },
+      {
+        "question": "What is the space complexity of the following algorithm?\n```python\ndef duplicate_list(lst):\n    duplicated = []\n    for num in lst:\n        duplicated.append(num)\n    return duplicated\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The `duplicated` list grows proportionally with the input size, resulting in O(n) space complexity.",
+        "incorrect_explanation": {
+          "O(1)": "O(1) implies constant space, which is not the case as the duplicated list grows with input size.",
+          "O(log n)": "O(log n) is not applicable here as space grows linearly with input size.",
+          "O(n²)": "O(n²) implies quadratic space, which is not the case."
+        }
+      },
+      {
+        "question": "Why is it important to minimize auxiliary space in an algorithm?",
+        "options": [
+          "To reduce the algorithm's time complexity",
+          "To lower the memory usage and optimize space usage",
+          "To increase the algorithm's scalability",
+          "To make the algorithm easier to understand"
+        ],
+        "answer": "To lower the memory usage and optimize space usage",
+        "explanation": "Minimizing auxiliary space reduces the additional memory required by the algorithm, optimizing space usage.",
+        "incorrect_explanation": {
+          "To reduce the algorithm's time complexity": "Minimizing space does not directly affect time complexity.",
+          "To increase the algorithm's scalability": "While optimizing space can help scalability, the primary goal is to lower memory usage.",
+          "To make the algorithm easier to understand": "Minimizing space is more about efficiency than code readability."
+        }
+      },
+      {
+        "question": "Which of the following best describes the trade-off between in-place algorithms and those that use additional space?",
+        "options": [
+          "In-place algorithms are always better in every aspect",
+          "Algorithms using additional space are always faster",
+          "In-place algorithms use less memory but may be more complex to implement",
+          "There is no trade-off; both approaches are equivalent"
+        ],
+        "answer": "In-place algorithms use less memory but may be more complex to implement",
+        "explanation": "In-place algorithms generally use less memory by avoiding additional data structures, but they can be more complex to implement.",
+        "incorrect_explanation": {
+          "In-place algorithms are always better in every aspect": "They are better in terms of space but not necessarily in other aspects.",
+          "Algorithms using additional space are always faster": "Additional space does not inherently make algorithms faster.",
+          "There is no trade-off; both approaches are equivalent": "There is a trade-off between memory usage and implementation complexity."
+        }
+      },
+      {
+        "question": "What is the space complexity of the following algorithm?\n```python\ndef reverse_array(arr):\n    left, right = 0, len(arr) - 1\n    while left < right:\n        arr[left], arr[right] = arr[right], arr[left]\n        left += 1\n        right -= 1\n    return arr\n```",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(1)",
+        "explanation": "The algorithm reverses the array in place using only a fixed number of additional variables, resulting in O(1) space complexity.",
+        "incorrect_explanation": {
+          "O(n)": "O(n) would imply additional space proportional to input size, which is not the case here.",
+          "O(log n)": "O(log n) is not applicable as no logarithmic space usage occurs.",
+          "O(n²)": "O(n²) implies quadratic space complexity, which is not present."
+        }
+      }
+    ]
+  }

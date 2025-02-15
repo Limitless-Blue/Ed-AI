@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the time complexity of finding an element in a sorted array using binary search?",
+        "options": [
+          "O(n)",
+          "O(n^2)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Binary search reduces the search space by half at every step, resulting in a logarithmic time complexity.",
+        "incorrect_explanation": {
+          "O(n)": "This is the time complexity of a linear search, not binary search.",
+          "O(n^2)": "This is a much higher time complexity, often found in nested loops, not binary search.",
+          "O(1)": "Constant time implies no iteration or recursion, which is not the case with binary search."
+        }
+      },
+      {
+        "question": "2. What is the best way to remove duplicates from an unsorted array?",
+        "options": [
+          "Sorting the array and removing duplicates",
+          "Using a HashSet",
+          "Using nested loops",
+          "Using a binary search"
+        ],
+        "answer": "Using a HashSet",
+        "explanation": "A HashSet has O(1) average time complexity for insertions and automatically removes duplicates.",
+        "incorrect_explanation": {
+          "Sorting the array and removing duplicates": "This approach works, but sorting takes O(n log n), which is slower than using a HashSet.",
+          "Using nested loops": "This has O(n^2) time complexity and is inefficient.",
+          "Using a binary search": "Binary search is used for finding elements, not for removing duplicates."
+        }
+      },
+      {
+        "question": "3. What is the time complexity of merging two sorted arrays of sizes m and n?",
+        "options": [
+          "O(m + n)",
+          "O(m * n)",
+          "O(log(m + n))",
+          "O(n)"
+        ],
+        "answer": "O(m + n)",
+        "explanation": "Merging two sorted arrays requires comparing elements from both arrays, which takes linear time relative to their combined size.",
+        "incorrect_explanation": {
+          "O(m * n)": "This would be the time complexity of nested loops, but merging only involves one pass over the arrays.",
+          "O(log(m + n))": "Logarithmic complexity would imply divide and conquer, not applicable here.",
+          "O(n)": "This doesn't account for both arrays, only one."
+        }
+      },
+      {
+        "question": "4. How do you find the maximum product of two integers in an array?",
+        "options": [
+          "Sort the array and multiply the two largest numbers",
+          "Use nested loops to multiply each pair",
+          "Find the two largest positive numbers and two smallest negative numbers",
+          "Sum all the elements and find the product"
+        ],
+        "answer": "Find the two largest positive numbers and two smallest negative numbers",
+        "explanation": "The product of two negative numbers can be larger than two positives, so checking both possibilities is necessary.",
+        "incorrect_explanation": {
+          "Sort the array and multiply the two largest numbers": "This works for positive numbers but can miss larger products formed by negatives.",
+          "Use nested loops to multiply each pair": "This is correct but inefficient with O(n^2) complexity.",
+          "Sum all the elements and find the product": "Summing doesn't help in finding the maximum product."
+        }
+      },
+      {
+        "question": "5. Given an array of size n, how do you find if there are any duplicates?",
+        "options": [
+          "Use nested loops to compare all pairs",
+          "Sort the array and check consecutive elements",
+          "Use a HashSet to track elements",
+          "Use a binary search for each element"
+        ],
+        "answer": "Use a HashSet to track elements",
+        "explanation": "A HashSet allows checking for duplicates in O(n) time on average.",
+        "incorrect_explanation": {
+          "Use nested loops to compare all pairs": "This works but has O(n^2) time complexity, which is inefficient.",
+          "Sort the array and check consecutive elements": "Sorting takes O(n log n) time, which is slower than using a HashSet.",
+          "Use a binary search for each element": "Binary search doesn't help in finding duplicates in an unsorted array."
+        }
+      },
+      {
+        "question": "6. How do you rotate an array of size n by k positions to the right?",
+        "options": [
+          "Reverse the entire array, then reverse the first k and the remaining n-k elements",
+          "Use a loop to shift each element one position k times",
+          "Sort the array and shift",
+          "Use nested loops to rotate the elements"
+        ],
+        "answer": "Reverse the entire array, then reverse the first k and the remaining n-k elements",
+        "explanation": "This approach works in O(n) time with O(1) extra space, while other methods are less efficient.",
+        "incorrect_explanation": {
+          "Use a loop to shift each element one position k times": "This results in O(n * k) time complexity, which is slower.",
+          "Sort the array and shift": "Sorting is unrelated to rotation.",
+          "Use nested loops to rotate the elements": "This approach has O(n^2) time complexity and is inefficient."
+        }
+      },
+      {
+        "question": "7. What is the time complexity of finding the majority element in an array using the Boyer-Moore Voting Algorithm?",
+        "options": [
+          "O(n)",
+          "O(n^2)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The Boyer-Moore Voting Algorithm scans the array in linear time to find the majority element.",
+        "incorrect_explanation": {
+          "O(n^2)": "This is much slower than the Boyer-Moore Algorithm, which runs in linear time.",
+          "O(log n)": "Logarithmic time implies dividing the problem, which is not done here.",
+          "O(1)": "Finding a majority element still requires scanning the array, so O(1) isn't possible."
+        }
+      },
+      {
+        "question": "8. What data structure would you use to find the kth largest element in an unsorted array?",
+        "options": [
+          "Binary search",
+          "Heap",
+          "Queue",
+          "Stack"
+        ],
+        "answer": "Heap",
+        "explanation": "A min-heap allows for efficient retrieval of the kth largest element in O(n log k) time.",
+        "incorrect_explanation": {
+          "Binary search": "Binary search doesn't work directly on unsorted arrays.",
+          "Queue": "Queues don't support random access efficiently.",
+          "Stack": "Stacks follow LIFO, which isn't useful for finding the kth largest element."
+        }
+      },
+      {
+        "question": "9. What is the time complexity of the Kadane's Algorithm for finding the maximum subarray sum?",
+        "options": [
+          "O(n)",
+          "O(n^2)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Kadane’s Algorithm processes each element once, resulting in linear time complexity.",
+        "incorrect_explanation": {
+          "O(n^2)": "This would be the complexity of a brute force approach, but Kadane's is more efficient.",
+          "O(log n)": "Kadane's Algorithm doesn't divide the problem, so logarithmic time doesn't apply.",
+          "O(n log n)": "This is faster than quadratic time, but Kadane's runs in O(n) time."
+        }
+      },
+      {
+        "question": "10. How do you find the missing number in an array of n unique integers from 0 to n?",
+        "options": [
+          "Sum all elements and subtract from the sum of numbers 0 to n",
+          "Sort the array and look for the missing element",
+          "Use a HashSet to find the missing number",
+          "Use binary search"
+        ],
+        "answer": "Sum all elements and subtract from the sum of numbers 0 to n",
+        "explanation": "The sum of the first n natural numbers is n(n+1)/2. Subtracting the sum of the array elements gives the missing number.",
+        "incorrect_explanation": {
+          "Sort the array and look for the missing element": "Sorting takes O(n log n), which is slower than the sum approach.",
+          "Use a HashSet to find the missing number": "This works, but the sum approach is simpler with O(n) time and O(1) space.",
+          "Use binary search": "Binary search only works on sorted arrays."
+        }
+      },
+      {
+        "question": "11. How do you find the peak element in an array where adjacent elements are not equal?",
+        "options": [
+          "Use binary search to locate the peak",
+          "Sort the array and find the largest element",
+          "Use a linear scan",
+          "Use recursion"
+        ],
+        "answer": "Use binary search to locate the peak",
+        "explanation": "Binary search can find a peak element in O(log n) by recursively checking midpoints and deciding which half of the array to search.",
+        "incorrect_explanation": {
+          "Sort the array and find the largest element": "This takes O(n log n), while binary search is more efficient.",
+          "Use a linear scan": "Linear scanning would take O(n), but binary search is faster.",
+          "Use recursion": "Recursion without binary search doesn't improve efficiency."
+        }
+      },
+      {
+        "question": "12. How can you check if an array is a palindrome?",
+        "options": [
+          "Compare elements from start to end and from end to start",
+          "Reverse the array and compare with the original",
+          "Use a HashSet to store elements",
+          "Sort the array and check"
+        ],
+        "answer": "Compare elements from start to end and from end to start",
+        "explanation": "Checking if corresponding elements from start and end match is the optimal approach in O(n) time.",
+        "incorrect_explanation": {
+          "Reverse the array and compare with the original": "This works, but it's less efficient than comparing elements directly.",
+          "Use a HashSet to store elements": "A HashSet isn't needed, as element order matters in a palindrome.",
+          "Sort the array and check": "Sorting would disrupt the order of the array."
+        }
+      },
+      {
+        "question": "13. What algorithm can efficiently find the minimum number of platforms required for a train schedule (represented as arrays of arrival and departure times)?",
+        "options": [
+          "Merge intervals algorithm",
+          "Kadane's algorithm",
+          "Binary search",
+          "Greedy algorithm"
+        ],
+        "answer": "Greedy algorithm",
+        "explanation": "Using a greedy algorithm, you can count platform usage by sorting arrival and departure times and iterating through both.",
+        "incorrect_explanation": {
+          "Merge intervals algorithm": "This approach is more suitable for interval merging problems, not scheduling.",
+          "Kadane's algorithm": "Kadane’s is used for subarray problems, not scheduling.",
+          "Binary search": "Binary search doesn't apply to scheduling problems like this."
+        }
+      },
+      {
+        "question": "14. How can you efficiently search for a target in a rotated sorted array?",
+        "options": [
+          "Binary search with modifications",
+          "Linear search",
+          "Sorting the array first and then binary search",
+          "Recursion"
+        ],
+        "answer": "Binary search with modifications",
+        "explanation": "A modified binary search can be used to handle the rotated sorted array by checking which half of the array is sorted.",
+        "incorrect_explanation": {
+          "Linear search": "Linear search takes O(n) time, while binary search with modifications can solve this in O(log n).",
+          "Sorting the array first and then binary search": "Sorting takes O(n log n), which adds unnecessary complexity.",
+          "Recursion": "Recursion by itself won’t improve the search process without the binary search logic."
+        }
+      },
+      {
+        "question": "15. How can you find the common elements in two sorted arrays?",
+        "options": [
+          "Use two pointers technique",
+          "Use a HashSet",
+          "Binary search for each element",
+          "Nested loops"
+        ],
+        "answer": "Use two pointers technique",
+        "explanation": "Two pointers technique allows you to find common elements in two sorted arrays in O(m + n) time by iterating through both arrays.",
+        "incorrect_explanation": {
+          "Use a HashSet": "This works but uses extra space, while the two-pointer method is more efficient for sorted arrays.",
+          "Binary search for each element": "This takes O(m log n) time, which is slower than the two-pointer method.",
+          "Nested loops": "Nested loops take O(m * n) time, which is inefficient."
+        }
+      },
+      {
+        "question": "16. What is the best approach to find the intersection of two unsorted arrays?",
+        "options": [
+          "Sort both arrays and use two pointers",
+          "Use a HashSet for one array and iterate through the other",
+          "Use a binary search for each element",
+          "Nested loops"
+        ],
+        "answer": "Use a HashSet for one array and iterate through the other",
+        "explanation": "A HashSet can store the elements of one array and allow O(1) lookup for each element of the second array.",
+        "incorrect_explanation": {
+          "Sort both arrays and use two pointers": "This works but takes O(n log n) time for sorting.",
+          "Use a binary search for each element": "Binary search doesn’t work for unsorted arrays.",
+          "Nested loops": "This has O(n^2) time complexity, which is inefficient."
+        }
+      },
+      {
+        "question": "17. What is the time complexity of QuickSort in the average case?",
+        "options": [
+          "O(n log n)",
+          "O(n^2)",
+          "O(n)",
+          "O(log n)"
+        ],
+        "answer": "O(n log n)",
+        "explanation": "QuickSort has an average-case time complexity of O(n log n) due to partitioning and recursion.",
+        "incorrect_explanation": {
+          "O(n^2)": "This is the worst-case time complexity for QuickSort, not the average case.",
+          "O(n)": "QuickSort cannot be completed in linear time in the average case.",
+          "O(log n)": "This is the complexity of binary search, not sorting."
+        }
+      },
+      {
+        "question": "18. How can you find the smallest positive missing number in an unsorted array?",
+        "options": [
+          "Using a HashSet and checking each number from 1 to n",
+          "Sort the array and check for missing numbers",
+          "Use binary search",
+          "Use dynamic programming"
+        ],
+        "answer": "Using a HashSet and checking each number from 1 to n",
+        "explanation": "Using a HashSet allows for O(n) average time complexity to track which numbers from 1 to n are present and find the missing one.",
+        "incorrect_explanation": {
+          "Sort the array and check for missing numbers": "Sorting takes O(n log n), which is slower than using a HashSet.",
+          "Use binary search": "Binary search only works on sorted arrays.",
+          "Use dynamic programming": "Dynamic programming is unnecessary for this problem."
+        }
+      },
+      {
+        "question": "19. How can you efficiently find the subarray with a given sum in an unsorted array of positive integers?",
+        "options": [
+          "Using a sliding window approach",
+          "Using a HashSet",
+          "Using binary search",
+          "Sorting the array and scanning"
+        ],
+        "answer": "Using a sliding window approach",
+        "explanation": "The sliding window technique is efficient for this problem as it allows adjusting the window size to find the target sum in O(n) time.",
+        "incorrect_explanation": {
+          "Using a HashSet": "A HashSet doesn’t help with continuous subarrays in this problem.",
+          "Using binary search": "Binary search doesn’t work for unsorted arrays or subarray sums.",
+          "Sorting the array and scanning": "Sorting disrupts the order of elements, which is required for this problem."
+        }
+      },
+      {
+        "question": "20. What is the time complexity of accessing an element at index i in a dynamic array?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Accessing an element by index in a dynamic array is done in constant time O(1).",
+        "incorrect_explanation": {
+          "O(n)": "This would be the time complexity for searching in an unsorted array, not for accessing by index.",
+          "O(log n)": "Logarithmic time implies a divide and conquer approach, which isn’t applicable here.",
+          "O(n^2)": "This would be the complexity for nested loops, which is irrelevant for index-based access."
+        }
+      }
+    ]
+  }
+  

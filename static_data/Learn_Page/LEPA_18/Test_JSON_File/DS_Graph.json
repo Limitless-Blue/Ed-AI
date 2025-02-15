@@ -1,0 +1,277 @@
+{
+    "questions": [
+      {
+        "question": "What are the two primary components of a graph?",
+        "options": ["Vertices and Paths", "Vertices and Edges", "Edges and Cycles", "Paths and Cycles"],
+        "answer": "Vertices and Edges",
+        "explanation": "Graphs consist of vertices (or nodes) and edges (connections between vertices).",
+        "incorrect_explanation": {
+          "Vertices and Paths": "Paths are a sequence of vertices, but they are not one of the fundamental components.",
+          "Edges and Cycles": "Cycles are paths that return to the starting node, but they are not a basic component.",
+          "Paths and Cycles": "Paths and Cycles are related to traversing the graph, but the core components are vertices and edges."
+        }
+      },
+      {
+        "question": "In a directed graph, what does an edge represent?",
+        "options": [
+          "A bi-directional connection between two vertices",
+          "A one-way connection from one vertex to another",
+          "The number of paths between vertices",
+          "The weight of a vertex"
+        ],
+        "answer": "A one-way connection from one vertex to another",
+        "explanation": "In directed graphs, edges have directions and represent one-way connections.",
+        "incorrect_explanation": {
+          "A bi-directional connection between two vertices": "In directed graphs, edges are one-way, not bi-directional.",
+          "The number of paths between vertices": "Edges don't represent the number of paths but a single connection.",
+          "The weight of a vertex": "Edges represent connections between vertices, not their weight."
+        }
+      },
+      {
+        "question": "What is the key difference between weighted and unweighted graphs?",
+        "options": [
+          "Weighted graphs have a direction, unweighted do not",
+          "Weighted graphs associate a numerical value with edges, unweighted do not",
+          "Weighted graphs have more vertices",
+          "Unweighted graphs only have paths"
+        ],
+        "answer": "Weighted graphs associate a numerical value with edges, unweighted do not",
+        "explanation": "In weighted graphs, each edge has an associated weight, unlike in unweighted graphs where edges are just connections.",
+        "incorrect_explanation": {
+          "Weighted graphs have a direction, unweighted do not": "Weight does not relate to direction; graphs can be directed or undirected regardless of weight.",
+          "Weighted graphs have more vertices": "The number of vertices is unrelated to whether a graph is weighted or unweighted.",
+          "Unweighted graphs only have paths": "Both weighted and unweighted graphs have paths."
+        }
+      },
+      {
+        "question": "Which of the following correctly describes a cycle in a graph?",
+        "options": [
+          "A sequence of vertices connected by edges where no vertex repeats",
+          "A sequence of edges that forms a loop and starts and ends at the same vertex",
+          "A vertex that connects to every other vertex",
+          "A sequence of unconnected vertices"
+        ],
+        "answer": "A sequence of edges that forms a loop and starts and ends at the same vertex",
+        "explanation": "A cycle is a path that starts and ends at the same vertex without repeating any vertices except the start/end point.",
+        "incorrect_explanation": {
+          "A sequence of vertices connected by edges where no vertex repeats": "In a cycle, the starting and ending vertex is the same, so the vertex repeats once.",
+          "A vertex that connects to every other vertex": "This describes a fully connected vertex, not a cycle.",
+          "A sequence of unconnected vertices": "Unconnected vertices cannot form a cycle."
+        }
+      },
+      {
+        "question": "Which of the following is NOT a property of a directed graph?",
+        "options": [
+          "Edges have directions",
+          "Vertices have an in-degree and an out-degree",
+          "Edges are bi-directional",
+          "Each vertex can have zero or more outgoing edges"
+        ],
+        "answer": "Edges are bi-directional",
+        "explanation": "In a directed graph, edges are one-way, not bi-directional.",
+        "incorrect_explanation": {
+          "Edges have directions": "Directed graphs have edges that are directional.",
+          "Vertices have an in-degree and an out-degree": "Each vertex has an in-degree (incoming edges) and an out-degree (outgoing edges).",
+          "Each vertex can have zero or more outgoing edges": "In directed graphs, vertices can have zero or more outgoing edges."
+        }
+      },
+      {
+        "question": "What is the space complexity of an adjacency matrix representation of a graph?",
+        "options": ["O(V)", "O(E)", "O(V²)", "O(V + E)"],
+        "answer": "O(V²)",
+        "explanation": "The adjacency matrix uses O(V²) space, where V is the number of vertices.",
+        "incorrect_explanation": {
+          "O(V)": "This is incorrect, the adjacency matrix requires V² space for all vertex pairings.",
+          "O(E)": "The space complexity is based on vertices, not edges.",
+          "O(V + E)": "This is the space complexity for an adjacency list, not an adjacency matrix."
+        }
+      },
+      {
+        "question": "What is an advantage of using an adjacency list over an adjacency matrix?",
+        "options": [
+          "Faster edge lookup",
+          "More space-efficient for sparse graphs",
+          "Better for dense graphs",
+          "It uses more space"
+        ],
+        "answer": "More space-efficient for sparse graphs",
+        "explanation": "Adjacency lists are more space-efficient when the graph has fewer edges compared to the number of vertices (sparse graphs).",
+        "incorrect_explanation": {
+          "Faster edge lookup": "Adjacency matrices offer faster edge lookups (O(1)), while adjacency lists take longer.",
+          "Better for dense graphs": "Adjacency matrices are better suited for dense graphs.",
+          "It uses more space": "Adjacency lists use less space compared to matrices, especially for sparse graphs."
+        }
+      },
+      {
+        "question": "In the following adjacency matrix, is there an edge between vertex A and vertex C?\n```\n   A  B  C  D\nA  0  1  0  0\nB  1  0  1  1\nC  0  1  0  0\nD  0  1  0  0\n```\n",
+        "options": ["Yes", "No"],
+        "answer": "No",
+        "explanation": "In the adjacency matrix, the value at [0][2] is 0, indicating no edge between A and C.",
+        "incorrect_explanation": {
+          "Yes": "The value at [0][2] is 0, so there is no edge between A and C."
+        }
+      },
+      {
+        "question": "In a weighted graph, what does the numerical value on an edge represent?",
+        "options": [
+          "The number of vertices connected by the edge",
+          "The total number of edges",
+          "A metric such as distance, cost, or time",
+          "The degree of the vertices"
+        ],
+        "answer": "A metric such as distance, cost, or time",
+        "explanation": "In a weighted graph, the numerical value on an edge represents some metric, such as distance, cost, or time.",
+        "incorrect_explanation": {
+          "The number of vertices connected by the edge": "An edge connects two vertices, but the number of vertices is not what the weight represents.",
+          "The total number of edges": "The weight is not related to the total number of edges.",
+          "The degree of the vertices": "The degree refers to the number of edges incident on a vertex, not the edge's weight."
+        }
+      },
+      {
+        "question": "Which of the following is an example of an unweighted graph?",
+        "options": [
+          "A graph where edges have a cost associated with them",
+          "A graph where edges do not have a numerical value",
+          "A graph where edges are directed",
+          "A graph with only one vertex"
+        ],
+        "answer": "A graph where edges do not have a numerical value",
+        "explanation": "In an unweighted graph, edges are simply connections without any numerical value associated with them.",
+        "incorrect_explanation": {
+          "A graph where edges have a cost associated with them": "This describes a weighted graph.",
+          "A graph where edges are directed": "Directionality refers to a directed graph, not whether it's weighted.",
+          "A graph with only one vertex": "This describes a trivial graph, not an unweighted graph."
+        }
+      },
+      {
+        "question": "Which graph representation is more efficient in terms of space for sparse graphs?",
+        "options": ["Adjacency Matrix", "Adjacency List", "Edge List", "Incidence Matrix"],
+        "answer": "Adjacency List",
+        "explanation": "Adjacency lists are more space-efficient for sparse graphs as they only store edges that exist.",
+        "incorrect_explanation": {
+          "Adjacency Matrix": "Adjacency matrices use O(V²) space, which is inefficient for sparse graphs.",
+          "Edge List": "Edge lists can be efficient, but adjacency lists are more commonly used for sparse graphs.",
+          "Incidence Matrix": "Incidence matrices are less commonly used and require more space than adjacency lists."
+        }
+      },
+      {
+        "question": "In the adjacency list representation of a graph, how are edges stored?",
+        "options": [
+          "In a 2D array where each entry represents an edge",
+          "As a collection of lists where each vertex has a list of connected vertices",
+          "In a matrix where each row represents a vertex",
+          "In a set where all edges are stored in order"
+        ],
+        "answer": "As a collection of lists where each vertex has a list of connected vertices",
+        "explanation": "In the adjacency list representation, each vertex is associated with a list of vertices it is connected to.",
+        "incorrect_explanation": {
+          "In a 2D array where each entry represents an edge": "This describes an adjacency matrix.",
+          "In a matrix where each row represents a vertex": "This could be part of an adjacency matrix, not a list.",
+          "In a set where all edges are stored in order": "Sets are not typically used to represent adjacency lists."
+        }
+      },
+      {
+        "question": "Which of the following is an example of a connected graph?",
+        "options": [
+          "A graph where every vertex is reachable from any other vertex",
+          "A graph with no edges",
+          "A graph where each vertex has only one edge",
+          "A graph with cycles"
+        ],
+        "answer": "A graph where every vertex is reachable from any other vertex",
+        "explanation": "A connected graph is one in which there is a path between every pair of vertices.",
+        "incorrect_explanation": {
+          "A graph with no edges": "A graph with no edges is disconnected, not connected.",
+          "A graph where each vertex has only one edge": "This could form a tree, but it's not necessarily a connected graph.",
+          "A graph with cycles": "A graph with cycles may or may not be connected."
+        }
+      },
+      {
+        "question": "What is the time complexity for looking up an edge between two vertices in an adjacency matrix?",
+        "options": ["O(1)", "O(V)", "O(E)", "O(V + E)"],
+        "answer": "O(1)",
+        "explanation": "Looking up an edge between two vertices in an adjacency matrix takes constant time, O(1).",
+        "incorrect_explanation": {
+          "O(V)": "This would be the time complexity for checking neighbors in an adjacency list.",
+          "O(E)": "This would be for iterating through all edges.",
+          "O(V + E)": "This is the time complexity for checking edges in an adjacency list."
+        }
+      },
+      {
+        "question": "What does the degree of a vertex represent in an undirected graph?",
+        "options": [
+          "The number of edges connected to the vertex",
+          "The distance to the farthest vertex",
+          "The total number of vertices in the graph",
+          "The weight of the vertex"
+        ],
+        "answer": "The number of edges connected to the vertex",
+        "explanation": "The degree of a vertex in an undirected graph is the number of edges incident to the vertex.",
+        "incorrect_explanation": {
+          "The distance to the farthest vertex": "The degree represents connections, not distances.",
+          "The total number of vertices in the graph": "The degree refers to edges, not the total number of vertices.",
+          "The weight of the vertex": "The degree relates to edges, not vertex weights."
+        }
+      },
+      {
+        "question": "Which graph representation allows for the fastest edge lookups?",
+        "options": ["Adjacency List", "Adjacency Matrix", "Incidence Matrix", "Edge List"],
+        "answer": "Adjacency Matrix",
+        "explanation": "The adjacency matrix allows for O(1) edge lookups, as it uses a 2D array.",
+        "incorrect_explanation": {
+          "Adjacency List": "Edge lookups in an adjacency list take O(V) time in the worst case.",
+          "Incidence Matrix": "Incidence matrices are not commonly used for edge lookups.",
+          "Edge List": "Edge lists require linear time to check for the existence of an edge."
+        }
+      },
+      {
+        "question": "In the adjacency list representation, how do we access the neighbors of a vertex?",
+        "options": [
+          "By indexing into a 2D array",
+          "By looking up the list associated with the vertex",
+          "By searching through all the vertices",
+          "By iterating over all edges"
+        ],
+        "answer": "By looking up the list associated with the vertex",
+        "explanation": "In the adjacency list representation, each vertex has a list of its neighbors.",
+        "incorrect_explanation": {
+          "By indexing into a 2D array": "This is the approach for an adjacency matrix.",
+          "By searching through all the vertices": "In an adjacency list, neighbors are directly accessible without searching through all vertices.",
+          "By iterating over all edges": "This would take O(E) time, but adjacency lists allow direct access to a vertex's neighbors."
+        }
+      },
+      {
+        "question": "What is the total degree of all vertices in an undirected graph?",
+        "options": [
+          "Equal to the number of vertices",
+          "Equal to twice the number of edges",
+          "Equal to half the number of edges",
+          "Equal to the number of vertices plus the number of edges"
+        ],
+        "answer": "Equal to twice the number of edges",
+        "explanation": "In an undirected graph, each edge contributes two to the total degree, so the sum of the degrees is twice the number of edges.",
+        "incorrect_explanation": {
+          "Equal to the number of vertices": "This would be true in a graph where each vertex is connected to only one edge, but not generally.",
+          "Equal to half the number of edges": "This is incorrect; the total degree is twice the number of edges.",
+          "Equal to the number of vertices plus the number of edges": "This does not represent the total degree."
+        }
+      },
+      {
+        "question": "Which of the following is a valid Python implementation of an adjacency matrix for a graph?",
+        "options": [
+          "graph = [\n [0, 1],\n [1, 0]\n]",
+          "graph = {'A': ['B']}",
+          "graph = {0: 1, 1: 0}",
+          "graph = [(A, B), (B, A)]"
+        ],
+        "answer": "graph = [\n [0, 1],\n [1, 0]\n]",
+        "explanation": "An adjacency matrix is typically represented as a 2D array or list of lists.",
+        "incorrect_explanation": {
+          "graph = {'A': ['B']}": "This is an adjacency list representation.",
+          "graph = {0: 1, 1: 0}": "This is not a valid representation for an adjacency matrix.",
+          "graph = [(A, B), (B, A)]": "This is an edge list representation."
+        }
+      }
+    ]
+  }
+  

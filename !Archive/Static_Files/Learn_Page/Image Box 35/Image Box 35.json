@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 35",
+    "ID": "LEPA_35",
     "title": "Search",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 35/Course Markdown File/Exponential_Search.md"
+      "Static_Files/Learn_Page/LEPA_35/Course Markdown File/Exponential_Search.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 35/Test Json File/Exponential_Search.json"
+      "Static_Files/Learn_Page/LEPA_35/Test Json File/Exponential_Search.json"
     ]
 }

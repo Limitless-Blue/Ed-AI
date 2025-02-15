@@ -1,10 +1,10 @@
 {
-    "ID": "Image Box 33",
+    "ID": "LEPA_33",
     "title": "Search",
     "Course": [
-      "Static_Files/Learn_Page/Image Box 33/Course Markdown File/Binary_Search.md"
+      "Static_Files/Learn_Page/LEPA_33/Course Markdown File/Binary_Search.md"
     ],
     "Test": [
-      "Static_Files/Learn_Page/Image Box 33/Test Json File/Binary_Search.json"
+      "Static_Files/Learn_Page/LEPA_33/Test Json File/Binary_Search.json"
     ]
 }

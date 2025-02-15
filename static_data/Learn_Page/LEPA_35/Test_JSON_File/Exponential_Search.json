@@ -1,0 +1,261 @@
+{
+    "questions": [
+      {
+        "question": "What is Exponential Search also known as?",
+        "options": [
+          "Galloping Search",
+          "Struzik Search",
+          "Binary Jump Search",
+          "Both A and B"
+        ],
+        "answer": "Both A and B",
+        "explanation": "Exponential Search is known as Galloping Search or Struzik Search.",
+        "incorrect_explanation": {
+          "A": "This is one of the names for Exponential Search.",
+          "B": "This is another name for Exponential Search.",
+          "C": "This is incorrect; it's not a recognized name for Exponential Search."
+        }
+      },
+      {
+        "question": "What type of arrays is Exponential Search particularly efficient for?",
+        "options": [
+          "Sorted arrays",
+          "Unsorted arrays",
+          "Randomly arranged arrays",
+          "Binary trees"
+        ],
+        "answer": "Sorted arrays",
+        "explanation": "Exponential Search works on sorted arrays to find a target element efficiently.",
+        "incorrect_explanation": {
+          "B": "Exponential Search is not designed for unsorted arrays.",
+          "C": "Random arrangement of elements is not suitable for Exponential Search.",
+          "D": "Exponential Search is not applicable to binary trees."
+        }
+      },
+      {
+        "question": "What is the first step in Exponential Search?",
+        "options": [
+          "Performing Binary Search",
+          "Jumping exponentially through the array",
+          "Sorting the array",
+          "Finding the length of the array"
+        ],
+        "answer": "Jumping exponentially through the array",
+        "explanation": "The first step in Exponential Search is to jump through the array exponentially to find a potential range.",
+        "incorrect_explanation": {
+          "A": "Binary Search is performed later within the identified range.",
+          "C": "Sorting is not a step in Exponential Search if the array is already sorted.",
+          "D": "Finding the length is not part of the initial search steps."
+        }
+      },
+      {
+        "question": "How does Exponential Search combine two algorithms?",
+        "options": [
+          "Combines linear search and jump search",
+          "Combines binary search and exponential jumping",
+          "Combines hash search and binary search",
+          "Combines depth-first search and breadth-first search"
+        ],
+        "answer": "Combines binary search and exponential jumping",
+        "explanation": "Exponential Search combines the efficiency of exponential jumps with the precision of binary search.",
+        "incorrect_explanation": {
+          "A": "This combination does not relate to Exponential Search.",
+          "C": "This combination is not part of the Exponential Search algorithm.",
+          "D": "These searches are unrelated to Exponential Search."
+        }
+      },
+      {
+        "question": "What is the time complexity of Exponential Search?",
+        "options": [
+          "O(log n)",
+          "O(n)",
+          "O(√n)",
+          "O(log n) + O(log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "The time complexity of Exponential Search is O(log n) due to the binary search performed after the exponential jumps.",
+        "incorrect_explanation": {
+          "B": "O(n) complexity is not correct for Exponential Search.",
+          "C": "O(√n) is not applicable to this search method.",
+          "D": "While two logarithmic operations are performed, they still contribute to O(log n) overall."
+        }
+      },
+      {
+        "question": "In which situation is Exponential Search most beneficial?",
+        "options": [
+          "When searching in sorted arrays with unknown size",
+          "When searching in unsorted arrays",
+          "When data is sparse",
+          "When dealing with small datasets"
+        ],
+        "answer": "When searching in sorted arrays with unknown size",
+        "explanation": "Exponential Search is most beneficial when the size of the sorted array is unknown.",
+        "incorrect_explanation": {
+          "B": "Exponential Search does not work on unsorted arrays.",
+          "C": "While it can help with sparse data, it excels with unknown sizes.",
+          "D": "For small datasets, other simpler search methods may be used."
+        }
+      },
+      {
+        "question": "What is the role of the Binary Search function in Exponential Search?",
+        "options": [
+          "To find the length of the array",
+          "To perform the initial exponential jumps",
+          "To search within the defined range",
+          "To sort the array"
+        ],
+        "answer": "To search within the defined range",
+        "explanation": "The Binary Search function is used to find the target element within the range defined by the exponential jumps.",
+        "incorrect_explanation": {
+          "A": "Finding the length is not the purpose of the Binary Search function.",
+          "B": "Exponential jumps are handled by the main Exponential Search function.",
+          "D": "Sorting the array is not part of the Binary Search function."
+        }
+      },
+      {
+        "question": "What is the maximum index checked during exponential jumps?",
+        "options": [
+          "The size of the array minus one",
+          "The total number of elements",
+          "The first element",
+          "The middle of the array"
+        ],
+        "answer": "The size of the array minus one",
+        "explanation": "The maximum index checked during exponential jumps is limited to the size of the array minus one to prevent out-of-bounds errors.",
+        "incorrect_explanation": {
+          "B": "While it checks up to the size, it does not go beyond size - 1.",
+          "C": "The first element is checked initially but not in the jumps.",
+          "D": "The middle is not relevant in the context of jumps."
+        }
+      },
+      {
+        "question": "What must be true about the array for Exponential Search to work?",
+        "options": [
+          "It must be sorted",
+          "It must contain duplicates",
+          "It must be in reverse order",
+          "It must be a binary tree"
+        ],
+        "answer": "It must be sorted",
+        "explanation": "Exponential Search requires the array to be sorted to function correctly.",
+        "incorrect_explanation": {
+          "B": "Exponential Search does not depend on duplicates.",
+          "C": "It can only work on sorted arrays, not in reverse order.",
+          "D": "Exponential Search is not applicable to binary trees."
+        }
+      },
+      {
+        "question": "What does the initial check of the first element ensure?",
+        "options": [
+          "That the target is not the first element",
+          "That the array is not empty",
+          "That the algorithm can terminate early",
+          "That the first element is the maximum"
+        ],
+        "answer": "That the algorithm can terminate early",
+        "explanation": "The check of the first element allows the algorithm to terminate early if the target is found immediately.",
+        "incorrect_explanation": {
+          "A": "The target may or may not be the first element; this is not guaranteed.",
+          "B": "While it does ensure the array is not empty, the main purpose is for early termination.",
+          "D": "This does not relate to the functionality of Exponential Search."
+        }
+      },
+      {
+        "question": "What is one limitation of Exponential Search?",
+        "options": [
+          "It only works with sorted arrays",
+          "It is faster than all search algorithms",
+          "It requires additional memory",
+          "It can only be used with integers"
+        ],
+        "answer": "It only works with sorted arrays",
+        "explanation": "A primary limitation of Exponential Search is that it only works on sorted arrays.",
+        "incorrect_explanation": {
+          "B": "It is not necessarily faster than all search algorithms.",
+          "C": "Exponential Search does not require additional memory.",
+          "D": "It can be used with various data types, not just integers."
+        }
+      },
+      {
+        "question": "What is the purpose of exponential jumps in the algorithm?",
+        "options": [
+          "To narrow down the search space quickly",
+          "To locate the maximum element",
+          "To sort the elements",
+          "To find duplicates"
+        ],
+        "answer": "To narrow down the search space quickly",
+        "explanation": "Exponential jumps are used to quickly narrow down the search space to locate the target efficiently.",
+        "incorrect_explanation": {
+          "B": "Exponential jumps are not for finding the maximum element.",
+          "C": "Sorting is not a function of exponential jumps.",
+          "D": "Finding duplicates is not related to the purpose of exponential jumps."
+        }
+      },
+      {
+        "question": "What happens when an element is found during the binary search?",
+        "options": [
+          "The search continues",
+          "The index is returned",
+          "The algorithm resets",
+          "The process begins again"
+        ],
+        "answer": "The index is returned",
+        "explanation": "When an element is found during binary search, the index of that element is returned.",
+        "incorrect_explanation": {
+          "A": "The search does not continue once the target is found.",
+          "C": "The algorithm does not reset; it returns the found index.",
+          "D": "The process does not begin again if the target is found."
+        }
+      },
+      {
+        "question": "How does Exponential Search improve upon linear search?",
+        "options": [
+          "By reducing the number of comparisons",
+          "By using less memory",
+          "By being easier to implement",
+          "By being applicable to all data types"
+        ],
+        "answer": "By reducing the number of comparisons",
+        "explanation": "Exponential Search reduces the number of comparisons significantly compared to linear search, especially in large datasets.",
+        "incorrect_explanation": {
+          "B": "Memory usage is not the primary improvement.",
+          "C": "Exponential Search can be more complex to implement than linear search.",
+          "D": "Exponential Search works best with sorted data, limiting data type applicability."
+        }
+      },
+      {
+        "question": "Which statement best describes the efficiency of Exponential Search?",
+        "options": [
+          "It is always faster than linear search",
+          "It is best for small datasets",
+          "It excels in unbounded search scenarios",
+          "It is limited to fixed-size arrays"
+        ],
+        "answer": "It excels in unbounded search scenarios",
+        "explanation": "Exponential Search is particularly efficient when the size of the array is unknown or unbounded.",
+        "incorrect_explanation": {
+          "A": "While it can be faster, it is not guaranteed for all cases.",
+          "B": "Exponential Search is designed for larger datasets, not small ones.",
+          "D": "It is not limited to fixed-size arrays."
+        }
+      },
+      {
+        "question": "What analogy does the author use to describe Exponential Search?",
+        "options": [
+          "A race car speeding on a track",
+          "A leap forward and then slowing down",
+          "A marathon runner pacing themselves",
+          "A quick sprint with a steady jog"
+        ],
+        "answer": "A leap forward and then slowing down",
+        "explanation": "The author describes Exponential Search as a strategy of 'leaping forward and then slowing down' to find the target efficiently.",
+        "incorrect_explanation": {
+          "A": "This analogy does not accurately describe Exponential Search.",
+          "C": "While pacing is important, it does not capture the essence of the search method.",
+          "D": "The analogy of a sprint does not reflect the strategy used in Exponential Search."
+        }
+      }
+    ]
+  }
+  

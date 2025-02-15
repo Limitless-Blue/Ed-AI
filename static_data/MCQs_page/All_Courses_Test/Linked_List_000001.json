@@ -1,0 +1,311 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the time complexity to reverse a singly linked list?",
+        "options": [
+          "O(n)",
+          "O(n^2)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(n)",
+        "explanation": "Reversing a singly linked list requires traversing the list once, resulting in linear time complexity.",
+        "incorrect_explanation": {
+          "O(n^2)": "This would imply nested iterations, which is not necessary for reversing a list.",
+          "O(log n)": "Logarithmic time is not achievable for this operation as each node must be visited.",
+          "O(1)": "Constant time is impossible since the entire list needs to be processed."
+        }
+      },
+      {
+        "question": "2. How can you detect a cycle in a linked list?",
+        "options": [
+          "Using a HashSet to store visited nodes",
+          "Reversing the linked list",
+          "Sorting the linked list",
+          "Using a stack"
+        ],
+        "answer": "Using a HashSet to store visited nodes",
+        "explanation": "By storing each visited node in a HashSet, you can detect a cycle if a node is revisited.",
+        "incorrect_explanation": {
+          "Reversing the linked list": "Reversing does not help in detecting cycles and can alter the list structure.",
+          "Sorting the linked list": "Sorting is unrelated to cycle detection and does not address the issue.",
+          "Using a stack": "A stack does not provide an efficient way to track visited nodes for cycle detection."
+        }
+      },
+      {
+        "question": "3. What is the space complexity of Floyd’s Cycle-Finding Algorithm (Tortoise and Hare)?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Floyd’s algorithm uses two pointers with constant extra space.",
+        "incorrect_explanation": {
+          "O(n)": "Floyd’s algorithm does not require space proportional to the input size.",
+          "O(log n)": "The space used does not depend on the logarithm of the input size.",
+          "O(n^2)": "This is incorrect as the algorithm only uses two pointers."
+        }
+      },
+      {
+        "question": "4. How do you find the middle node of a linked list in one pass?",
+        "options": [
+          "Using two pointers, where one moves twice as fast as the other",
+          "Using a HashSet to track nodes",
+          "Reversing the linked list",
+          "Sorting the linked list first"
+        ],
+        "answer": "Using two pointers, where one moves twice as fast as the other",
+        "explanation": "By advancing one pointer by two nodes and another by one node, the slower pointer will reach the middle when the faster one reaches the end.",
+        "incorrect_explanation": {
+          "Using a HashSet to track nodes": "This approach does not directly help in finding the middle node.",
+          "Reversing the linked list": "Reversing changes the list structure and does not efficiently find the middle node.",
+          "Sorting the linked list first": "Sorting is unnecessary and does not help in finding the middle node."
+        }
+      },
+      {
+        "question": "5. What is the best way to merge two sorted linked lists?",
+        "options": [
+          "Iteratively compare nodes and link them in sorted order",
+          "Convert them to arrays, merge, and convert back to a linked list",
+          "Use nested loops to compare each node",
+          "Sort the merged list after combining both lists"
+        ],
+        "answer": "Iteratively compare nodes and link them in sorted order",
+        "explanation": "This method efficiently merges two sorted lists in O(n) time without extra space.",
+        "incorrect_explanation": {
+          "Convert them to arrays, merge, and convert back to a linked list": "This approach uses extra space and is less efficient.",
+          "Use nested loops to compare each node": "This results in O(n^2) time complexity, which is inefficient.",
+          "Sort the merged list after combining both lists": "Sorting after merging would take additional time, making it less efficient."
+        }
+      },
+      {
+        "question": "6. How do you remove the Nth node from the end of a linked list in one pass?",
+        "options": [
+          "Use two pointers separated by N nodes",
+          "First traverse to count the nodes, then traverse again to remove",
+          "Reverse the linked list and remove the Nth node",
+          "Use a stack to store nodes"
+        ],
+        "answer": "Use two pointers separated by N nodes",
+        "explanation": "Using two pointers with a fixed separation allows removal in a single traversal.",
+        "incorrect_explanation": {
+          "First traverse to count the nodes, then traverse again to remove": "This requires two passes, not one.",
+          "Reverse the linked list and remove the Nth node": "Reversing changes the list structure and is not necessary for one-pass removal.",
+          "Use a stack to store nodes": "Using a stack can solve the problem but requires extra space."
+        }
+      },
+      {
+        "question": "7. What is the time complexity to search for a value in a singly linked list?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "In the worst case, you need to traverse the entire list to find the value.",
+        "incorrect_explanation": {
+          "O(1)": "Constant time is only possible with direct access, which linked lists do not provide.",
+          "O(log n)": "Logarithmic time is not achievable for linked list searches.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not searching."
+        }
+      },
+      {
+        "question": "8. How can you detect the intersection point of two linked lists?",
+        "options": [
+          "Calculate the lengths, align the start, and traverse together",
+          "Use a HashSet to store nodes of one list and traverse the other",
+          "Reverse both lists and find the first common node",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "All listed methods can be used to find the intersection point of two linked lists.",
+        "incorrect_explanation": {}
+      },
+      {
+        "question": "9. What is the approach to clone a linked list with random pointers?",
+        "options": [
+          "Use a HashMap to map original nodes to cloned nodes",
+          "Iterate through the list and clone nodes without random pointers",
+          "Reverse the linked list and clone",
+          "Use two nested loops to assign random pointers"
+        ],
+        "answer": "Use a HashMap to map original nodes to cloned nodes",
+        "explanation": "A HashMap allows maintaining the relationship between original and cloned nodes to correctly assign random pointers.",
+        "incorrect_explanation": {
+          "Iterate through the list and clone nodes without random pointers": "This does not handle the random pointers correctly.",
+          "Reverse the linked list and clone": "Reversing does not assist in cloning with random pointers.",
+          "Use two nested loops to assign random pointers": "This results in O(n^2) time complexity, which is inefficient."
+        }
+      },
+      {
+        "question": "10. What is the time complexity to find the Nth node from the end using the two-pointer technique?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(n^2)",
+          "O(log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "The two-pointer technique requires a single traversal of the list, resulting in linear time.",
+        "incorrect_explanation": {
+          "O(1)": "Constant time is not achievable as traversal is necessary.",
+          "O(n^2)": "This would imply nested traversals, which is not the case.",
+          "O(log n)": "Logarithmic time is not achievable for this operation."
+        }
+      },
+      {
+        "question": "11. How do you find the length of a circular linked list?",
+        "options": [
+          "Detect the cycle and count the nodes in the loop",
+          "Traverse until you reach the starting node again",
+          "Use two pointers to detect the cycle and then count",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "All listed methods involve detecting the cycle and counting the nodes within it.",
+        "incorrect_explanation": {}
+      },
+      {
+        "question": "12. What is the primary difference between a singly linked list and a doubly linked list?",
+        "options": [
+          "Doubly linked lists have pointers to both previous and next nodes",
+          "Singly linked lists are faster",
+          "Singly linked lists use more memory",
+          "There is no difference"
+        ],
+        "answer": "Doubly linked lists have pointers to both previous and next nodes",
+        "explanation": "Doubly linked lists maintain pointers in both directions, allowing traversal in both ways.",
+        "incorrect_explanation": {
+          "Singly linked lists are faster": "Traversal speed is similar; doubly linked lists have additional pointers.",
+          "Singly linked lists use more memory": "Doubly linked lists use more memory due to the extra pointer.",
+          "There is no difference": "They differ in structure and traversal capabilities."
+        }
+      },
+      {
+        "question": "13. How can you remove duplicates from a sorted linked list?",
+        "options": [
+          "Traverse and remove nodes with the same value as the previous node",
+          "Use a HashSet to track seen values",
+          "Sort the list first",
+          "Use nested loops to compare each node"
+        ],
+        "answer": "Traverse and remove nodes with the same value as the previous node",
+        "explanation": "Since the list is sorted, duplicates will be consecutive and can be removed in a single pass.",
+        "incorrect_explanation": {
+          "Use a HashSet to track seen values": "While possible, it's unnecessary for a sorted list and uses extra space.",
+          "Sort the list first": "The list is already sorted, so sorting is redundant.",
+          "Use nested loops to compare each node": "This approach is inefficient with O(n^2) time complexity."
+        }
+      },
+      {
+        "question": "14. What is the best way to implement a stack using linked lists?",
+        "options": [
+          "Insert and remove elements from the head of the linked list",
+          "Insert at the end and remove from the head",
+          "Insert at the end and remove from the end",
+          "Use two linked lists"
+        ],
+        "answer": "Insert and remove elements from the head of the linked list",
+        "explanation": "Using the head allows both push and pop operations to be performed in O(1) time.",
+        "incorrect_explanation": {
+          "Insert at the end and remove from the head": "This would make pop operations O(1), but push operations would be O(n).",
+          "Insert at the end and remove from the end": "Removing from the end in a singly linked list requires O(n) time.",
+          "Use two linked lists": "This is unnecessary for a simple stack implementation."
+        }
+      },
+      {
+        "question": "15. How do you find the intersection node of two linked lists?",
+        "options": [
+          "Use two pointers and switch heads when reaching the end",
+          "Use a HashSet to store nodes of one list and traverse the other",
+          "Reverse both lists and find the first common node",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "All methods listed can be used to find the intersection node, with varying space and time complexities.",
+        "incorrect_explanation": {}
+      },
+      {
+        "question": "16. How can you efficiently detect and remove a loop in a linked list?",
+        "options": [
+          "Use Floyd’s Cycle-Finding Algorithm and then remove the loop",
+          "Use a HashSet to detect the loop and remove it",
+          "Reverse the linked list to identify the loop",
+          "Both A and B"
+        ],
+        "answer": "Both A and B",
+        "explanation": "Both Floyd’s algorithm and using a HashSet can detect a loop, and subsequently, the loop can be removed.",
+        "incorrect_explanation": {
+          "Reverse the linked list to identify the loop": "Reversing can complicate the process and is not a standard approach."
+        }
+      },
+      {
+        "question": "17. What is the time complexity to insert a node at the beginning of a doubly linked list?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answer": "O(1)",
+        "explanation": "Insertion at the beginning involves updating a constant number of pointers, regardless of list size.",
+        "incorrect_explanation": {
+          "O(n)": "This would imply traversing the list, which is not necessary.",
+          "O(log n)": "Logarithmic time does not apply to this operation.",
+          "O(n^2)": "This is incorrect as only a constant number of operations are performed."
+        }
+      },
+      {
+        "question": "18. How do you implement a queue using a linked list?",
+        "options": [
+          "Maintain pointers to both head and tail",
+          "Only use the head pointer",
+          "Only use the tail pointer",
+          "Use two separate linked lists"
+        ],
+        "answer": "Maintain pointers to both head and tail",
+        "explanation": "Having both head and tail pointers allows O(1) enqueue and dequeue operations.",
+        "incorrect_explanation": {
+          "Only use the head pointer": "Enqueue operations would require traversing the list, resulting in O(n) time.",
+          "Only use the tail pointer": "Dequeue operations would require traversal from the head, which is inefficient.",
+          "Use two separate linked lists": "This is unnecessary and complicates the implementation."
+        }
+      },
+      {
+        "question": "19. What is the primary advantage of using a doubly linked list over a singly linked list?",
+        "options": [
+          "Ability to traverse in both directions",
+          "Less memory usage",
+          "Faster insertion",
+          "Simpler implementation"
+        ],
+        "answer": "Ability to traverse in both directions",
+        "explanation": "Doubly linked lists maintain pointers to both previous and next nodes, enabling bidirectional traversal.",
+        "incorrect_explanation": {
+          "Less memory usage": "Doubly linked lists use more memory due to the extra pointer.",
+          "Faster insertion": "Insertion speed is similar; however, doubly linked lists allow easier deletion.",
+          "Simpler implementation": "They are more complex due to additional pointers."
+        }
+      },
+      {
+        "question": "20. How do you implement a circular linked list?",
+        "options": [
+          "Point the last node’s next to the head node",
+          "Point the head node’s next to itself",
+          "Use two pointers to form a loop",
+          "All nodes point to the head node"
+        ],
+        "answer": "Point the last node’s next to the head node",
+        "explanation": "In a circular linked list, the last node points back to the head, forming a loop.",
+        "incorrect_explanation": {
+          "Point the head node’s next to itself": "This creates a single-node loop, not a proper circular linked list.",
+          "Use two pointers to form a loop": "This is vague and does not specifically describe how to form a circular linked list.",
+          "All nodes point to the head node": "Only the last node should point to the head to form a circular linked list."
+        }
+      }
+    ]
+  }
+  

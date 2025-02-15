@@ -1,0 +1,321 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the defining property of a max-heap?",
+        "options": [
+          "Every parent node is smaller than its child nodes.",
+          "Every parent node is greater than or equal to its child nodes.",
+          "The tree is always complete.",
+          "The heap is implemented using a linked list."
+        ],
+        "answer": "Every parent node is greater than or equal to its child nodes.",
+        "explanation": "In a max-heap, every parent node has a value greater than or equal to its child nodes, ensuring the maximum element is at the root.",
+        "incorrect_explanation": {
+          "Every parent node is smaller than its child nodes.": "This describes a min-heap, not a max-heap.",
+          "The tree is always complete.": "While heaps are typically complete binary trees, this alone does not define a max-heap.",
+          "The heap is implemented using a linked list.": "Heaps are usually implemented using arrays for efficiency, not linked lists."
+        }
+      },
+      {
+        "question": "2. What is the time complexity of inserting an element into a binary heap?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "Inserting an element into a binary heap requires placing it at the end and then performing a 'heapify-up' operation, which takes O(log n) time.",
+        "incorrect_explanation": {
+          "O(1)": "Insertion is not constant time due to the need to maintain heap properties.",
+          "O(n)": "Linear time is not required; heap operations are logarithmic.",
+          "O(n log n)": "This complexity is associated with sorting algorithms, not individual heap insertions."
+        }
+      },
+      {
+        "question": "3. How is a binary heap typically represented in memory?",
+        "options": [
+          "Using a linked list",
+          "Using an array",
+          "Using a hash table",
+          "Using a binary search tree"
+        ],
+        "answer": "Using an array",
+        "explanation": "Binary heaps are efficiently represented using arrays, where parent and child relationships can be calculated using indices.",
+        "incorrect_explanation": {
+          "Using a linked list": "Linked lists do not provide efficient access to parent and child nodes.",
+          "Using a hash table": "Hash tables are used for key-value storage, not for maintaining heap structure.",
+          "Using a binary search tree": "Binary search trees maintain sorted order, which is different from heap properties."
+        }
+      },
+      {
+        "question": "4. What is the height of a binary heap with n elements?",
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
+        "answer": "O(log n)",
+        "explanation": "A binary heap is a complete binary tree, and the height of such a tree is proportional to log n.",
+        "incorrect_explanation": {
+          "O(n)": "This would imply a linear height, which is not the case for balanced structures like heaps.",
+          "O(1)": "Constant height is only possible for very small heaps.",
+          "O(n log n)": "This complexity is associated with certain sorting algorithms, not with heap height."
+        }
+      },
+      {
+        "question": "5. Which of the following operations is used to maintain the heap property after removing the root element?",
+        "options": [
+          "Heapify-down (sift-down)",
+          "Heapify-up (sift-up)",
+          "Bubble sort",
+          "Insertion sort"
+        ],
+        "answer": "Heapify-down (sift-down)",
+        "explanation": "After removing the root, the last element is moved to the root and then 'heapify-down' is performed to maintain the heap property.",
+        "incorrect_explanation": {
+          "Heapify-up (sift-up)": "Heapify-up is used during insertion, not after removal.",
+          "Bubble sort": "Bubble sort is a separate sorting algorithm and not related to heap operations.",
+          "Insertion sort": "Insertion sort is another separate sorting algorithm, unrelated to heap maintenance."
+        }
+      },
+      {
+        "question": "6. What is heap sort's average and worst-case time complexity?",
+        "options": [
+          "O(n) and O(n log n)",
+          "O(n log n) and O(n log n)",
+          "O(log n) and O(n)",
+          "O(n^2) and O(n^2)"
+        ],
+        "answer": "O(n log n) and O(n log n)",
+        "explanation": "Heap sort consistently has a time complexity of O(n log n) for both average and worst cases due to the heap construction and sorting processes.",
+        "incorrect_explanation": {
+          "O(n) and O(n log n)": "Heap sort does not have a linear time complexity.",
+          "O(log n) and O(n)": "These complexities do not correctly represent heap sort's performance.",
+          "O(n^2) and O(n^2)": "Heap sort is more efficient than quadratic time algorithms like bubble sort."
+        }
+      },
+      {
+        "question": "7. Which of the following is NOT an application of heaps?",
+        "options": [
+          "Implementing priority queues",
+          "Heap sort",
+          "Finding the k largest elements in an array",
+          "Depth-First Search (DFS)"
+        ],
+        "answer": "Depth-First Search (DFS)",
+        "explanation": "DFS is a graph traversal algorithm that typically uses a stack or recursion, not a heap.",
+        "incorrect_explanation": {
+          "Implementing priority queues": "Heaps are commonly used to implement priority queues.",
+          "Heap sort": "Heap sort is a sorting algorithm that utilizes heap data structures.",
+          "Finding the k largest elements in an array": "Heaps are effective for finding the k largest or smallest elements."
+        }
+      },
+      {
+        "question": "8. What distinguishes a binary heap from other heap types?",
+        "options": [
+          "Each node has at most two children",
+          "It is a complete binary tree",
+          "It can be either a min-heap or a max-heap",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "A binary heap is characterized by being a complete binary tree where each node has at most two children and can be structured as either a min-heap or a max-heap.",
+        "incorrect_explanation": {}
+      },
+      {
+        "question": "9. What is a d-ary heap?",
+        "options": [
+          "A heap where each node has d children",
+          "A heap that stores data in d dimensions",
+          "A heap that supports d different operations",
+          "A heap with a depth of d"
+        ],
+        "answer": "A heap where each node has d children",
+        "explanation": "A d-ary heap generalizes the binary heap by allowing each node to have up to d children, which can improve performance in certain scenarios.",
+        "incorrect_explanation": {
+          "A heap that stores data in d dimensions": "Heaps are typically one-dimensional data structures represented as trees.",
+          "A heap that supports d different operations": "Heap operations are standard regardless of the heap's arity.",
+          "A heap with a depth of d": "The depth of a heap is related to the number of elements, not a fixed value."
+        }
+      },
+      {
+        "question": "10. How do you find the parent index of a node at index i in a binary heap represented as an array?",
+        "options": [
+          "i / 2",
+          "(i - 1) / 2",
+          "2 * i + 1",
+          "2 * i + 2"
+        ],
+        "answer": "(i - 1) / 2",
+        "explanation": "In a binary heap represented as an array, the parent index of a node at index i is calculated as (i - 1) / 2 (using integer division).",
+        "incorrect_explanation": {
+          "i / 2": "This does not correctly calculate the parent index for all nodes.",
+          "2 * i + 1": "This formula gives the index of the left child, not the parent.",
+          "2 * i + 2": "This formula gives the index of the right child, not the parent."
+        }
+      },
+      {
+        "question": "11. What is the primary reason for using a heap to implement a priority queue?",
+        "options": [
+          "Heaps provide constant-time access to the highest priority element",
+          "Heaps allow for efficient dynamic resizing",
+          "Heaps ensure elements are stored in sorted order",
+          "Heaps are easier to implement than other data structures"
+        ],
+        "answer": "Heaps provide constant-time access to the highest priority element",
+        "explanation": "Heaps allow for efficient retrieval of the highest (or lowest) priority element in constant time, with insertions and deletions in logarithmic time, making them ideal for priority queues.",
+        "incorrect_explanation": {
+          "Heaps allow for efficient dynamic resizing": "While heaps can be resized, this is not their primary advantage for priority queues.",
+          "Heaps ensure elements are stored in sorted order": "Heaps do not store elements in fully sorted order; only the heap property is maintained.",
+          "Heaps are easier to implement than other data structures": "Implementation complexity can vary, but this is not the primary reason for using heaps in priority queues."
+        }
+      },
+      {
+        "question": "12. Which heap variant allows both efficient access to the minimum and maximum elements?",
+        "options": [
+          "Binary Heap",
+          "Min-Heap",
+          "Max-Heap",
+          "Double Heap"
+        ],
+        "answer": "Double Heap",
+        "explanation": "A double heap, such as a min-max heap, allows efficient access to both the minimum and maximum elements by maintaining both heap properties.",
+        "incorrect_explanation": {
+          "Binary Heap": "A standard binary heap is either a min-heap or a max-heap, not both.",
+          "Min-Heap": "A min-heap only efficiently accesses the minimum element.",
+          "Max-Heap": "A max-heap only efficiently accesses the maximum element."
+        }
+      },
+      {
+        "question": "13. What is the primary advantage of using a Fibonacci heap over a binary heap?",
+        "options": [
+          "Faster insertion operations",
+          "Lower memory usage",
+          "Faster decrease-key and merge operations",
+          "Simpler implementation"
+        ],
+        "answer": "Faster decrease-key and merge operations",
+        "explanation": "Fibonacci heaps offer amortized constant time for decrease-key and merge operations, making them more efficient for certain algorithms like Dijkstra's.",
+        "incorrect_explanation": {
+          "Faster insertion operations": "Insertion in Fibonacci heaps is O(1), similar to binary heaps, but not the primary advantage.",
+          "Lower memory usage": "Fibonacci heaps typically use more memory due to additional pointers and structures.",
+          "Simpler implementation": "Fibonacci heaps are more complex to implement compared to binary heaps."
+        }
+      },
+      {
+        "question": "14. In a binary heap represented as an array, what indices represent the children of the node at index i?",
+        "options": [
+          "(i - 1) / 2 and (i + 1) / 2",
+          "2 * i and 2 * i + 1",
+          "2 * i + 1 and 2 * i + 2",
+          "i / 2 and i / 2 + 1"
+        ],
+        "answer": "2 * i + 1 and 2 * i + 2",
+        "explanation": "In a binary heap array representation, the left child of the node at index i is at 2 * i + 1 and the right child is at 2 * i + 2.",
+        "incorrect_explanation": {
+          "(i - 1) / 2 and (i + 1) / 2": "These formulas do not correctly represent the children indices.",
+          "2 * i and 2 * i + 1": "This is incorrect; the correct indices are 2 * i + 1 and 2 * i + 2.",
+          "i / 2 and i / 2 + 1": "These formulas do not correctly represent the children indices."
+        }
+      },
+      {
+        "question": "15. Which of the following statements is true about a binary heap?",
+        "options": [
+          "It is always a binary search tree",
+          "It can be either a min-heap or a max-heap",
+          "All leaf nodes are at the same level",
+          "It allows duplicate elements"
+        ],
+        "answer": "It can be either a min-heap or a max-heap",
+        "explanation": "A binary heap can be structured as either a min-heap, where the smallest element is at the root, or a max-heap, where the largest element is at the root.",
+        "incorrect_explanation": {
+          "It is always a binary search tree": "Binary heaps do not maintain the binary search tree property.",
+          "All leaf nodes are at the same level": "Leaf nodes in a binary heap can be on the last one or two levels, not necessarily the same level.",
+          "It allows duplicate elements": "While heaps can technically allow duplicates, this is not a defining characteristic."
+        }
+      },
+      {
+        "question": "16. What is the primary use of a heap in the Heap Sort algorithm?",
+        "options": [
+          "To store elements in sorted order",
+          "To efficiently find the median",
+          "To repeatedly extract the maximum element",
+          "To balance the array"
+        ],
+        "answer": "To repeatedly extract the maximum element",
+        "explanation": "Heap Sort builds a max-heap and repeatedly extracts the maximum element to sort the array in ascending order.",
+        "incorrect_explanation": {
+          "To store elements in sorted order": "Heaps store elements based on heap properties, not in sorted order.",
+          "To efficiently find the median": "Heaps can be used to find medians, but in Heap Sort, the purpose is sorting.",
+          "To balance the array": "Heap Sort does not involve balancing the array; it involves sorting using heap operations."
+        }
+      },
+      {
+        "question": "17. What is the space complexity of a binary heap implemented using an array?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n)",
+        "explanation": "A binary heap implemented using an array requires space proportional to the number of elements, resulting in O(n) space complexity.",
+        "incorrect_explanation": {
+          "O(1)": "Constant space is not sufficient as the heap grows with the number of elements.",
+          "O(log n)": "Logarithmic space is insufficient for storing all elements.",
+          "O(n log n)": "This is typically associated with sorting algorithms, not heap storage."
+        }
+      },
+      {
+        "question": "18. Which of the following operations is NOT supported by a standard binary heap?",
+        "options": [
+          "Insert",
+          "Delete the root",
+          "Find the minimum element",
+          "Extract the maximum element"
+        ],
+        "answer": "Find the minimum element",
+        "explanation": "In a max-heap, finding the minimum element is not efficient as it could be located anywhere in the heap. Standard binary heaps typically support efficient operations for their respective heap type (min or max).",
+        "incorrect_explanation": {
+          "Insert": "Insertion is a standard operation supported by binary heaps.",
+          "Delete the root": "Deleting the root is a standard operation in binary heaps.",
+          "Extract the maximum element": "In a max-heap, extracting the maximum element is a primary operation."
+        }
+      },
+      {
+        "question": "19. How can you build a heap from an unsorted array?",
+        "options": [
+          "By repeatedly inserting elements into an empty heap",
+          "By performing heapify operations starting from the last non-leaf node",
+          "By sorting the array first",
+          "By reversing the array and inserting elements"
+        ],
+        "answer": "By performing heapify operations starting from the last non-leaf node",
+        "explanation": "Building a heap efficiently involves starting from the last non-leaf node and performing heapify operations upwards, resulting in O(n) time complexity.",
+        "incorrect_explanation": {
+          "By repeatedly inserting elements into an empty heap": "This approach has O(n log n) time complexity, which is less efficient than the heapify method.",
+          "By sorting the array first": "Sorting is unnecessary and does not help in building a heap.",
+          "By reversing the array and inserting elements": "Reversing the array does not aid in heap construction."
+        }
+      },
+      {
+        "question": "20. What is a min-max heap?",
+        "options": [
+          "A heap that supports both min and max operations efficiently",
+          "A heap that alternates between min and max levels",
+          "A heap that can switch between being a min-heap and a max-heap",
+          "A heap with twice the number of elements"
+        ],
+        "answer": "A heap that supports both min and max operations efficiently",
+        "explanation": "A min-max heap is a specialized heap data structure that allows efficient retrieval of both the minimum and maximum elements by organizing nodes in alternating min and max levels.",
+        "incorrect_explanation": {
+          "A heap that alternates between min and max levels": "While min-max heaps do alternate, the primary feature is the efficient support for both operations.",
+          "A heap that can switch between being a min-heap and a max-heap": "Min-max heaps are structured to support both operations simultaneously, not by switching modes.",
+          "A heap with twice the number of elements": "The number of elements is not doubled; the structure is modified to support dual operations."
+        }
+      }
+    ]
+  }
+  

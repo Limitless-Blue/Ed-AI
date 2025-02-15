@@ -1,0 +1,325 @@
+{
+    "questions": [
+      {
+        "question": "1. What is the time complexity of Depth-First Search (DFS) on a graph represented using an adjacency list?",
+        "options": [
+          "O(V)",
+          "O(E)",
+          "O(V + E)",
+          "O(V^2)"
+        ],
+        "answer": "O(V + E)",
+        "explanation": "DFS explores all vertices and edges in the graph. When using an adjacency list, the time complexity is O(V + E).",
+        "incorrect_explanation": {
+          "O(V)": "This only accounts for visiting all vertices without considering the edges.",
+          "O(E)": "This only accounts for traversing edges without considering the vertices.",
+          "O(V^2)": "This is the time complexity for DFS on an adjacency matrix, not an adjacency list."
+        }
+      },
+      {
+        "question": "2. Which of the following algorithms is used to find the shortest path from a single source to all other vertices in a weighted graph?",
+        "options": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Dijkstra's Algorithm",
+          "Prim's Algorithm"
+        ],
+        "answer": "Dijkstra's Algorithm",
+        "explanation": "Dijkstra's Algorithm efficiently finds the shortest paths from a single source to all other vertices in a weighted graph with non-negative edge weights.",
+        "incorrect_explanation": {
+          "Depth-First Search": "DFS is not designed for finding shortest paths in weighted graphs.",
+          "Breadth-First Search": "BFS can find shortest paths in unweighted graphs but not in weighted ones.",
+          "Prim's Algorithm": "Prim's Algorithm is used for finding the Minimum Spanning Tree, not shortest paths."
+        }
+      },
+      {
+        "question": "3. What is a cycle in a graph?",
+        "options": [
+          "A path that starts and ends at the same vertex without repeating edges",
+          "A path that visits every vertex exactly once",
+          "A subgraph where all vertices are connected",
+          "A graph with no edges"
+        ],
+        "answer": "A path that starts and ends at the same vertex without repeating edges",
+        "explanation": "A cycle is defined as a path that begins and ends at the same vertex without traversing any edge more than once.",
+        "incorrect_explanation": {
+          "A path that visits every vertex exactly once": "This describes a Hamiltonian path, not necessarily a cycle.",
+          "A subgraph where all vertices are connected": "This describes a connected subgraph, not specifically a cycle.",
+          "A graph with no edges": "A graph with no edges cannot contain a cycle."
+        }
+      },
+      {
+        "question": "4. Which graph traversal algorithm uses a queue data structure?",
+        "options": [
+          "Depth-First Search",
+          "Breadth-First Search",
+          "Dijkstra's Algorithm",
+          "Kruskal's Algorithm"
+        ],
+        "answer": "Breadth-First Search",
+        "explanation": "Breadth-First Search (BFS) utilizes a queue to keep track of the next vertex to visit.",
+        "incorrect_explanation": {
+          "Depth-First Search": "DFS uses a stack or recursion, not a queue.",
+          "Dijkstra's Algorithm": "Dijkstra's typically uses a priority queue, not a standard queue.",
+          "Kruskal's Algorithm": "Kruskal's is a Minimum Spanning Tree algorithm that uses sorting and a disjoint-set data structure."
+        }
+      },
+      {
+        "question": "5. What is the main purpose of a Minimum Spanning Tree (MST) in a graph?",
+        "options": [
+          "To find the shortest path between two vertices",
+          "To connect all vertices with the minimum total edge weight",
+          "To detect cycles in the graph",
+          "To determine if the graph is bipartite"
+        ],
+        "answer": "To connect all vertices with the minimum total edge weight",
+        "explanation": "An MST connects all vertices in a weighted graph with the least possible total edge weight without any cycles.",
+        "incorrect_explanation": {
+          "To find the shortest path between two vertices": "This is the purpose of shortest path algorithms like Dijkstra's, not MST.",
+          "To detect cycles in the graph": "Cycle detection is a different problem; MSTs inherently avoid cycles.",
+          "To determine if the graph is bipartite": "Bipartiteness is a property unrelated to MSTs."
+        }
+      },
+      {
+        "question": "6. Which algorithm is used to detect a cycle in an undirected graph?",
+        "options": [
+          "Kruskal's Algorithm",
+          "Bellman-Ford Algorithm",
+          "Union-Find Algorithm",
+          "Floyd-Warshall Algorithm"
+        ],
+        "answer": "Union-Find Algorithm",
+        "explanation": "The Union-Find (Disjoint Set) algorithm is effective for detecting cycles in undirected graphs by checking if adding an edge creates a cycle.",
+        "incorrect_explanation": {
+          "Kruskal's Algorithm": "While Kruskal's uses Union-Find for MST, it is not specifically used for cycle detection.",
+          "Bellman-Ford Algorithm": "This is used for finding shortest paths and detecting negative cycles in directed graphs.",
+          "Floyd-Warshall Algorithm": "This is used for finding shortest paths between all pairs of vertices."
+        }
+      },
+      {
+        "question": "7. What is a bipartite graph?",
+        "options": [
+          "A graph that can be divided into two disjoint sets where each edge connects a vertex from one set to the other",
+          "A graph with two cycles",
+          "A graph that has two separate components",
+          "A graph where every vertex has degree two"
+        ],
+        "answer": "A graph that can be divided into two disjoint sets where each edge connects a vertex from one set to the other",
+        "explanation": "A bipartite graph is one where the vertex set can be partitioned into two disjoint sets such that every edge connects a vertex from one set to the other.",
+        "incorrect_explanation": {
+          "A graph that has two cycles": "A graph can have any number of cycles and still be bipartite or not.",
+          "A graph that has two separate components": "Bipartiteness is about vertex partitioning, not the number of components.",
+          "A graph where every vertex has degree two": "This describes a 2-regular graph, not necessarily bipartite."
+        }
+      },
+      {
+        "question": "8. What is the purpose of the Floyd-Warshall algorithm?",
+        "options": [
+          "To find the shortest path from a single source to all vertices",
+          "To find the shortest paths between all pairs of vertices",
+          "To detect cycles in a graph",
+          "To find the minimum spanning tree"
+        ],
+        "answer": "To find the shortest paths between all pairs of vertices",
+        "explanation": "The Floyd-Warshall algorithm computes the shortest paths between every pair of vertices in a weighted graph.",
+        "incorrect_explanation": {
+          "To find the shortest path from a single source to all vertices": "This is done by Dijkstra's or Bellman-Ford algorithms.",
+          "To detect cycles in a graph": "Cycle detection is a different problem, typically solved by DFS or Union-Find.",
+          "To find the minimum spanning tree": "Minimum spanning trees are found using algorithms like Kruskal's or Prim's."
+        }
+      },
+      {
+        "question": "9. In a directed graph, what is an edge called if it connects two vertices without forming a cycle?",
+        "options": [
+          "Bridge",
+          "Cut-edge",
+          "Tree edge",
+          "Acyclic edge"
+        ],
+        "answer": "Tree edge",
+        "explanation": "A tree edge is an edge in a directed graph that connects a vertex to a new vertex without forming a cycle during traversal.",
+        "incorrect_explanation": {
+          "Bridge": "A bridge is an edge whose removal increases the number of connected components in an undirected graph.",
+          "Cut-edge": "This is another term for a bridge in undirected graphs.",
+          "Acyclic edge": "This term is not standard in graph terminology."
+        }
+      },
+      {
+        "question": "10. What is topological sorting in a directed graph?",
+        "options": [
+          "A linear ordering of its vertices such that for every directed edge UV, vertex U comes before V",
+          "A sorting of vertices based on their degrees",
+          "A sorting based on the number of incoming edges",
+          "A way to arrange vertices in a hierarchical structure"
+        ],
+        "answer": "A linear ordering of its vertices such that for every directed edge UV, vertex U comes before V",
+        "explanation": "Topological sorting provides a linear ordering of vertices in a directed acyclic graph (DAG) where each directed edge UV implies U comes before V.",
+        "incorrect_explanation": {
+          "A sorting of vertices based on their degrees": "Degree-based sorting does not ensure the precedence required by topological sorting.",
+          "A sorting based on the number of incoming edges": "This is related to Kahn's algorithm but does not fully describe topological sorting.",
+          "A way to arrange vertices in a hierarchical structure": "While it results in a hierarchical order, the precise definition is the linear ordering based on edge directions."
+        }
+      },
+      {
+        "question": "11. Which algorithm is best suited for finding the Minimum Spanning Tree (MST) in a dense graph?",
+        "options": [
+          "Kruskal's Algorithm",
+          "Prim's Algorithm with adjacency list",
+          "Prim's Algorithm with adjacency matrix",
+          "Bellman-Ford Algorithm"
+        ],
+        "answer": "Prim's Algorithm with adjacency matrix",
+        "explanation": "Prim's Algorithm using an adjacency matrix is more efficient for dense graphs due to the faster access of edge weights.",
+        "incorrect_explanation": {
+          "Kruskal's Algorithm": "Kruskal's is efficient for sparse graphs but can be less efficient for dense graphs.",
+          "Prim's Algorithm with adjacency list": "This is better suited for sparse graphs where adjacency lists are more efficient.",
+          "Bellman-Ford Algorithm": "This algorithm is used for finding shortest paths, not MSTs."
+        }
+      },
+      {
+        "question": "12. What is a strongly connected component in a directed graph?",
+        "options": [
+          "A subgraph where all vertices are mutually reachable",
+          "A subgraph where there are no cycles",
+          "A subset of vertices connected by a single edge",
+          "A component with the maximum number of edges"
+        ],
+        "answer": "A subgraph where all vertices are mutually reachable",
+        "explanation": "A strongly connected component is a maximal subgraph in which every pair of vertices is reachable from each other.",
+        "incorrect_explanation": {
+          "A subgraph where there are no cycles": "This describes an acyclic subgraph, not necessarily strongly connected.",
+          "A subset of vertices connected by a single edge": "This describes a trivial connection, not a strongly connected component.",
+          "A component with the maximum number of edges": "Edge count does not define strong connectivity."
+        }
+      },
+      {
+        "question": "13. Which of the following is true about a complete graph?",
+        "options": [
+          "Every pair of distinct vertices is connected by a unique edge",
+          "It has no cycles",
+          "It is always bipartite",
+          "It has exactly V-1 edges"
+        ],
+        "answer": "Every pair of distinct vertices is connected by a unique edge",
+        "explanation": "In a complete graph, every pair of distinct vertices is connected by a unique edge, making it fully connected.",
+        "incorrect_explanation": {
+          "It has no cycles": "Complete graphs have many cycles, except for the trivial case of two vertices.",
+          "It is always bipartite": "Complete graphs with more than two vertices are not bipartite.",
+          "It has exactly V-1 edges": "A complete graph has V(V-1)/2 edges."
+        }
+      },
+      {
+        "question": "14. What is the main difference between a directed graph and an undirected graph?",
+        "options": [
+          "Directed graphs have weighted edges, undirected do not",
+          "Edges in directed graphs have a direction, undirected do not",
+          "Directed graphs cannot have cycles, undirected can",
+          "Undirected graphs cannot be connected"
+        ],
+        "answer": "Edges in directed graphs have a direction, undirected do not",
+        "explanation": "In directed graphs, edges have a specific direction from one vertex to another, whereas in undirected graphs, edges do not have a direction and simply connect two vertices.",
+        "incorrect_explanation": {
+          "Directed graphs have weighted edges, undirected do not": "Both directed and undirected graphs can have weighted or unweighted edges.",
+          "Directed graphs cannot have cycles, undirected can": "Both types of graphs can have cycles.",
+          "Undirected graphs cannot be connected": "Undirected graphs can be connected or disconnected, just like directed graphs."
+        }
+      },
+      {
+        "question": "15. Which of the following data structures is used in Kruskal's algorithm to detect cycles?",
+        "options": [
+          "Queue",
+          "Stack",
+          "Union-Find",
+          "Priority Queue"
+        ],
+        "answer": "Union-Find",
+        "explanation": "The Union-Find (Disjoint Set) data structure is used in Kruskal's algorithm to efficiently detect cycles when adding edges.",
+        "incorrect_explanation": {
+          "Queue": "Queues are used in BFS, not for cycle detection in Kruskal's algorithm.",
+          "Stack": "Stacks are used in DFS, not for cycle detection in Kruskal's algorithm.",
+          "Priority Queue": "While priority queues are used to select the next edge with the smallest weight, Union-Find specifically handles cycle detection."
+        }
+      },
+      {
+        "question": "16. What is the purpose of Dijkstra's Algorithm?",
+        "options": [
+          "To find the shortest path in an unweighted graph",
+          "To find the shortest path from a single source in a weighted graph with non-negative edges",
+          "To find the Minimum Spanning Tree",
+          "To detect cycles in a graph"
+        ],
+        "answer": "To find the shortest path from a single source in a weighted graph with non-negative edges",
+        "explanation": "Dijkstra's Algorithm is specifically designed to find the shortest paths from a single source vertex to all other vertices in a weighted graph with non-negative edge weights.",
+        "incorrect_explanation": {
+          "To find the shortest path in an unweighted graph": "BFS is typically used for shortest paths in unweighted graphs.",
+          "To find the Minimum Spanning Tree": "This is achieved by algorithms like Prim's or Kruskal's, not Dijkstra's.",
+          "To detect cycles in a graph": "Cycle detection is handled by DFS or Union-Find, not by Dijkstra's."
+        }
+      },
+      {
+        "question": "17. In which scenario is Bellman-Ford Algorithm preferred over Dijkstra's Algorithm?",
+        "options": [
+          "When all edge weights are positive",
+          "When the graph is undirected",
+          "When the graph contains negative weight edges",
+          "When finding the Minimum Spanning Tree"
+        ],
+        "answer": "When the graph contains negative weight edges",
+        "explanation": "Bellman-Ford can handle graphs with negative weight edges and can detect negative weight cycles, unlike Dijkstra's Algorithm.",
+        "incorrect_explanation": {
+          "When all edge weights are positive": "Dijkstra's Algorithm is more efficient in this case.",
+          "When the graph is undirected": "Both algorithms can work on undirected graphs, but Bellman-Ford is not specifically needed for undirected graphs.",
+          "When finding the Minimum Spanning Tree": "Bellman-Ford is not used for finding MSTs."
+        }
+      },
+      {
+        "question": "18. What is a weighted graph?",
+        "options": [
+          "A graph where each edge has an associated numerical value",
+          "A graph with more than one edge",
+          "A graph that forms a tree",
+          "A graph with only undirected edges"
+        ],
+        "answer": "A graph where each edge has an associated numerical value",
+        "explanation": "A weighted graph assigns a numerical value (weight) to each edge, which often represents cost, distance, or capacity.",
+        "incorrect_explanation": {
+          "A graph with more than one edge": "This describes a multigraph, not necessarily weighted.",
+          "A graph that forms a tree": "Trees are a type of graph but not necessarily weighted.",
+          "A graph with only undirected edges": "Weighted graphs can be either directed or undirected."
+        }
+      },
+      {
+        "question": "19. What is the main idea behind Breadth-First Search (BFS) algorithm?",
+        "options": [
+          "To explore as far as possible along each branch before backtracking",
+          "To explore all neighbors of a vertex before moving to the next level",
+          "To find cycles in a graph",
+          "To find the Minimum Spanning Tree"
+        ],
+        "answer": "To explore all neighbors of a vertex before moving to the next level",
+        "explanation": "BFS systematically explores the vertices level by level, ensuring all neighbors of a vertex are visited before moving to the next level.",
+        "incorrect_explanation": {
+          "To explore as far as possible along each branch before backtracking": "This describes Depth-First Search (DFS).",
+          "To find cycles in a graph": "While BFS can detect cycles, its main idea is level-by-level exploration.",
+          "To find the Minimum Spanning Tree": "BFS is not used for finding MSTs."
+        }
+      },
+      {
+        "question": "20. What is a Directed Acyclic Graph (DAG)?",
+        "options": [
+          "A directed graph with at least one cycle",
+          "An undirected graph with no cycles",
+          "A directed graph with no cycles",
+          "A graph that is both directed and undirected"
+        ],
+        "answer": "A directed graph with no cycles",
+        "explanation": "A DAG is a directed graph that contains no cycles, meaning there is no path that starts and ends at the same vertex following the direction of edges.",
+        "incorrect_explanation": {
+          "A directed graph with at least one cycle": "This describes a cyclic directed graph, not a DAG.",
+          "An undirected graph with no cycles": "This describes a tree or forest, not a DAG.",
+          "A graph that is both directed and undirected": "Graphs are typically either directed or undirected, not both simultaneously."
+        }
+      }
+    ]
+  }
+  
