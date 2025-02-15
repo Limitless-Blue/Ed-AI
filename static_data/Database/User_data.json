@@ -1,0 +1,80 @@
+{
+    "ForWebsite": {
+        "username": "Chaitanya",
+        "password": "Katoro kamado",
+        "profilePicture": "static_data\\user_data\\profile_pic.png"
+    },
+    "ResumeDetails": {
+        "personalInformation": {
+            "firstName": "Chaitanya",
+            "lastName": "Venkata",
+            "email": "venkatachaitanya373@gmail.com",
+            "location": {"city": "visakhapatnam", "state": "Andhra Pradesh", "country": "India"},
+            "linkedin": "https://www.linkedin.com/in/chaitanya-venkata-a5a908212/",
+            "github": "https://github.com/pvchaitanya8"
+        },
+        "summary": "Enthusiastic and recently graduated software engineer with a strong foundation in computer science principles and software development practices. Eager to apply my skills in a challenging and growth-oriented environment, contributing to team success while expanding my technical expertise.",
+        "experience": [
+            {
+                "company": "Software Innovations Ltd.",
+                "position": "Junior Software Engineer",
+                "startDate": "2022-06-01",
+                "endDate": "2024-05-31",
+                "responsibilities": [
+                    "Developed and maintained web applications using Java and Spring Framework under supervision.",
+                    "Assisted in the design and implementation of RESTful APIs.",
+                    "Worked with databases such as MySQL and PostgreSQL, performing basic queries and data management tasks.",
+                    "Contributed to the development of new features for an e-commerce platform, focusing on front-end components."
+                ],
+                "achievements": [
+                    "Successfully implemented several front-end features for the e-commerce platform, enhancing user interface.",
+                    "Assisted in the migration of a legacy system component to a new cloud-based infrastructure, gaining practical experience in cloud technologies."
+                ]
+            }
+        ],
+        "education": [
+            {
+                "institution": "University of California, Berkeley",
+                "degree": "Master of Science in Computer Science",
+                "major": "Computer Science",
+                "graduationDate": "2021-12-31"
+            },
+            {
+                "institution": "Stanford University",
+                "degree": "Bachelor of Science in Computer Science",
+                "major": "Computer Science",
+                "graduationDate": "2019-05-15"
+            }
+        ],
+        "skills": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "Spring Framework",
+            "React",
+            "Angular",
+            "MySQL",
+            "PostgreSQL",
+            "AWS",
+            "Agile Development",
+            "Project Management",
+            "Communication",
+            "Problem Solving"
+        ],
+        "projects": [
+            {
+                "name": "Personal Portfolio Website",
+                "description": "Developed a personal portfolio website to showcase my skills and projects.",
+                "technologies": ["React", "Node.js", "MongoDB"]
+            },
+            {
+                "name": "E-commerce Platform",
+                "description": "Contributed to the development of a large-scale e-commerce platform.",
+                "technologies": ["Java", "Spring", "MySQL"]
+            }
+        ],
+        "awardsAndRecognition": [
+            "Employee of the Month - Tech Solutions Inc. (2023)"
+        ]
+    }
+}
