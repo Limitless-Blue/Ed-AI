@@ -1,0 +1,32 @@
+.course-content {
+    padding: 20px;
+  }
+  
+  .course-status {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+  }
+  
+  .tabs {
+    margin-top: 20px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tabs .active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .markdown-viewer {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+  }  
