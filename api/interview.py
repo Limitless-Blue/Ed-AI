@@ -57,7 +57,7 @@ class VoiceChatInterviewRequest(BaseModel):
 @interview_router.post("/voice-chat")
 async def interview_voice_chat(data: VoiceChatInterviewRequest):
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
+        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
         "user": "Transcribed user speech",
         "AI": "AI's text response",
         "conversationHistory": [

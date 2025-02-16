@@ -3,3 +3,5 @@ uvicorn
 pydantic
 ffmpeg-python
 gtts
+pydub
+AudioSegment

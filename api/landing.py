@@ -13,7 +13,7 @@ class VoiceChatLandingRequest(BaseModel):
 @landing_router.post("/voice-chat")
 async def landing_voice_chat(data: VoiceChatLandingRequest):
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
+        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
         "conversationHistory": [
             {"speaker": "user", "text": "Transcribed user speech"},
             {"speaker": "AI", "text": "AI's text response"},

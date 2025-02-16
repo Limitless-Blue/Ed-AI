@@ -38,7 +38,7 @@ async def get_streak_data():
 @common_router.get("/greeting-audio")
 async def get_greeting_audio():
     return {
-        "audioFilePath": r"API_Endpoint\Temp_Static_data\Profile\greeting_audio.opus"
+        "audioFilePath": r"API_Endpoint\Temp_Static_data\Profile\greeting_audio.mp3"
     }
 
 
@@ -76,7 +76,7 @@ class VoiceChatLandingRequest(BaseModel):
 @landing_router.post("/voice-chat")
 async def landing_voice_chat(data: VoiceChatLandingRequest):
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
+        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
         "conversationHistory": [
             {"speaker": "user", "text": "Transcribed user speech"},
             {"speaker": "AI", "text": "AI's text response"},
@@ -515,7 +515,7 @@ class VoiceChatInterviewRequest(BaseModel):
 @interview_router.post("/voice-chat")
 async def interview_voice_chat(data: VoiceChatInterviewRequest):
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.opus",
+        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
         "user": "Transcribed user speech",
         "AI": "AI's text response",
         "conversationHistory": [

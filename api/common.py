@@ -10,12 +10,9 @@ async def get_streak_data():
     return streak_data()
 
 
-# TODO: added Gretting Audio
 @common_router.get("/greeting-audio")
 async def get_greeting_audio():
-    return {
-        "audioFilePath": r"API_Endpoint\Temp_Static_data\Profile\greeting_audio.opus"
-    }
+    return {"audioFilePath": "Database\\user_data\\greeting_audio.mp3"}
 
 
 @common_router.get("/user-details")
