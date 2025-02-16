@@ -1,42 +1,38 @@
 import json
 import os
-import sys
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from api.api_functions.common_functions import extract_recommendation_list
 
 
-def learn_page_recommendations():
-    input_ids = extract_recommendation_list("Learn_Page")
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-    json_file_path = os.path.join(
-        base_dir, "Database/Redirection/Redirecting_learn_page_(dynamic_version).json"
-    )
+def get_learn_page_data(input_id):
+    try:
+        current_dir = os.path.dirname(__file__)
+        base_dir = os.path.join(current_dir, "..", "..")
+        file_path = os.path.join(
+            base_dir,
+            "Database\\Redirection\\Redirecting_learn_page_(dynamic_version).json",
+        )
 
-    with open(json_file_path, "r", encoding="utf-8") as file:
-        data = json.load(file)
+        with open(file_path, "r") as f:
+            data = json.load(f)
 
-    id_to_course_name = {entry["ID"]: entry["title"] for entry in data}
+    except FileNotFoundError:
+        print("Error: JSON file not found.")
+        return {}
 
-    recommendations = [
-        {
-            "id": course_id,
-            "courseName": id_to_course_name.get(course_id, "Unknown Course"),
-        }
-        for course_id in input_ids
-    ]
+    for page_data in data:
+        try:
+            if page_data["ID"] == input_id:
+                return {
+                    "course": page_data["Course"],
+                    "test": page_data["Test"],
+                    "bookmark": page_data["Saved"],
+                    "completed": page_data["Completed"],
+                }
+        except KeyError:
+            print(f"Warning: Missing 'ID' key in page data: {page_data}")
 
-    filters = {
-        "level": ["Easy", "Medium", "Hard"],
-        "topic": ["Linked_List", "Trees", "Stacks", "Queues", "Arrays", "Strings"],
-        "status": [True, False],
-    }
-
-    output = {"recommendations": recommendations, "filters": filters}
-
-    return output
+    return {"message": f"Learn page with ID '{input_id}' not found."}
 
 
-# Generate output
-result = learn_page_recommendations()
-print(json.dumps(result, indent=4))
+input_id = "LEPA_2"
+output_data = get_learn_page_data(input_id)
+print(json.dumps(output_data, indent=4))

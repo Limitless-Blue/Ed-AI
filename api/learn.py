@@ -1,7 +1,10 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path, Query, Path
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any, Optional
-from api.api_functions.learn_functions import learn_page_recommendations
+from api.api_functions.learn_functions import (
+    learn_page_recommendations,
+    get_learn_page_data,
+)
 
 learn_router = APIRouter(prefix="/api/learn", tags=["Learn"])
 
@@ -33,20 +36,7 @@ async def get_all_courses(
 
 @learn_router.get("/course/{courseId}")
 async def get_course_content(courseId: str = Path()):
-    return {
-        "course": [
-            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_1.md",
-            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_2.md",
-            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_3.md",
-        ],
-        "test": [
-            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_1.json",
-            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_2.json",
-            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_3.json",
-        ],
-        "bookmark": True,
-        "completed": True,
-    }
+    return get_learn_page_data(courseId)
 
 
 class TextChatLearnRequest(BaseModel):
@@ -56,6 +46,7 @@ class TextChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @learn_router.post("/text-chat")
 async def learn_text_chat(data: TextChatLearnRequest):
     return {
@@ -74,6 +65,7 @@ class VoiceChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @learn_router.post("/voice-chat")
 async def learn_voice_chat(data: VoiceChatLearnRequest):
     return {
@@ -91,6 +83,7 @@ class EndCourseRequest(BaseModel):
     testResults: Dict[str, Dict[str, str]]
 
 
+# TODO: Add AI Part
 @learn_router.post("/end-course")
 async def end_course(data: EndCourseRequest):
     return {"acknowledgement": True}
@@ -103,6 +96,7 @@ class MentorHelpTextChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @learn_router.post("/mentor-help/text-chat")
 async def learn_mentor_text_chat(data: MentorHelpTextChatLearnRequest):
     return {
@@ -121,6 +115,7 @@ class MentorHelpVoiceChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @learn_router.post("/mentor-help/voice-chat")
 async def learn_mentor_voice_chat(data: MentorHelpVoiceChatLearnRequest):
     return {
