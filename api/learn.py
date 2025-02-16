@@ -1,6 +1,6 @@
-from fastapi import APIRouter, Query, Path
+from fastapi import FastAPI, APIRouter, Body, Query, Path, Query, Path
 from pydantic import BaseModel
-from typing import List, Dict, Any, Optional
+from typing import List, Optional, Dict, Any, Optional
 
 learn_router = APIRouter(prefix="/api/learn", tags=["Learn"])
 
@@ -11,12 +11,36 @@ async def get_learn_recommendations():
         "recommendations": [
             {"id": "LEPA_1", "courseName": "DSA Intro"},
             {"id": "LEPA_2", "courseName": "Trees"},
+            {"id": "LEPA_3", "courseName": "Linked Lists"},
+            {"id": "LEPA_4", "courseName": "Arrays"},
+            {"id": "LEPA_5", "courseName": "Stacks"},
         ],
         "filters": {
             "level": ["Easy", "Medium", "Hard"],
             "topic": ["Linked_List", "Trees", "Stacks", "Queues", "Arrays", "Strings"],
+            "status": [True, False],
         },
     }
+
+
+@learn_router.get("/courses")
+async def get_all_courses(
+    level: Optional[str] = Query(None),
+    status: Optional[bool] = Query(None),
+    topic: Optional[str] = Query(None),
+):
+    return [
+        {"id": "LEPA_1", "courseName": "DSA Intro"},
+        {"id": "LEPA_2", "courseName": "Trees"},
+        {"id": "LEPA_3", "courseName": "Linked Lists"},
+        {"id": "LEPA_4", "courseName": "Arrays"},
+        {"id": "LEPA_5", "courseName": "Stacks"},
+        {"id": "LEPA_6", "courseName": "DSA Intro"},
+        {"id": "LEPA_7", "courseName": "Trees"},
+        {"id": "LEPA_8", "courseName": "Linked Lists"},
+        {"id": "LEPA_9", "courseName": "Arrays"},
+        {"id": "LEPA_10", "courseName": "Stacks"},
+    ]
 
 
 @learn_router.get("/course/{courseId}")
@@ -24,7 +48,98 @@ async def get_course_content(courseId: str = Path()):
     return {
         "course": [
             r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_1.md",
+            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_2.md",
+            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_3.md",
+        ],
+        "test": [
+            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_1.json",
+            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_2.json",
+            r"API_Endpoint\Temp_Static_data\Learn Page\DSA_Intro_3.json",
         ],
         "bookmark": True,
         "completed": True,
+    }
+
+
+class TextChatLearnRequest(BaseModel):
+    socraticAI: bool
+    additionalInfo: Dict[str, Any]
+    user: str
+    conversationHistory: List[Dict[str, str]]
+
+
+@learn_router.post("/text-chat")
+async def learn_text_chat(data: TextChatLearnRequest):
+    return {
+        "AI": "AI's text response",
+        "conversationHistory": [
+            {"speaker": "user", "text": "Transcribed user speech"},
+            {"speaker": "AI", "text": "AI's text response"},
+        ],
+    }
+
+
+class VoiceChatLearnRequest(BaseModel):
+    socraticAI: bool
+    additionalInfo: Dict[str, Any]
+    audioFile: str
+    conversationHistory: List[Dict[str, str]]
+
+
+@learn_router.post("/voice-chat")
+async def learn_voice_chat(data: VoiceChatLearnRequest):
+    return {
+        "user": "Transcribed user speech",
+        "AI": "AI's text response",
+        "conversationHistory": [
+            {"speaker": "user", "text": "Transcribed user speech"},
+            {"speaker": "AI", "text": "AI's text response"},
+        ],
+    }
+
+
+class EndCourseRequest(BaseModel):
+    courseId: str
+    testResults: Dict[str, Dict[str, str]]
+
+
+@learn_router.post("/end-course")
+async def end_course(data: EndCourseRequest):
+    return {"acknowledgement": True}
+
+
+class MentorHelpTextChatLearnRequest(BaseModel):
+    socraticAI: bool
+    additionalInfo: Dict[str, Any]
+    user: str
+    conversationHistory: List[Dict[str, str]]
+
+
+@learn_router.post("/mentor-help/text-chat")
+async def learn_mentor_text_chat(data: MentorHelpTextChatLearnRequest):
+    return {
+        "AI": "AI's text response",
+        "conversationHistory": [
+            {"speaker": "user", "text": "Transcribed user speech"},
+            {"speaker": "AI", "text": "AI's text response"},
+        ],
+    }
+
+
+class MentorHelpVoiceChatLearnRequest(BaseModel):
+    socraticAI: bool
+    additionalInfo: Dict[str, Any]
+    audioFile: str
+    conversationHistory: List[Dict[str, str]]
+
+
+@learn_router.post("/mentor-help/voice-chat")
+async def learn_mentor_voice_chat(data: MentorHelpVoiceChatLearnRequest):
+    return {
+        "user": "Transcribed user speech",
+        "AI": "AI's text response",
+        "conversationHistory": [
+            {"speaker": "user", "text": "Transcribed user speech"},
+            {"speaker": "AI", "text": "AI's text response"},
+        ],
     }

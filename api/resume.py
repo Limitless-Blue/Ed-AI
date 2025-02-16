@@ -1,6 +1,6 @@
-from fastapi import APIRouter
+from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
-from typing import Optional
+from typing import List, Optional, Dict, Any
 
 resume_router = APIRouter(prefix="/api/resume", tags=["Resume"])
 
@@ -13,11 +13,15 @@ class ResumeAnalysisRequest(BaseModel):
 async def analyze_job_match(data: ResumeAnalysisRequest):
     return {
         "match": "Good",
-        "skillGapAnalysis": "Analysis details...",
-        "salaryInsights": "Insights details...",
+        "skillGapAnalysis": """Analysis details...""",
+        "salaryInsights": """Insights details...""",
         "linkedinPeople": [
-            {"name": "Katoro", "url": "https://www.linkedin.com/in/example"},
+            {
+                "name": "Katoro",
+                "url": "https://www.linkedin.com/in/chaitanya-venkata-a5a908212/",
+            },
             {"name": "person_2", "url": None},
+            {"name": "person_3", "url": None},
         ],
     }
 
@@ -26,6 +30,13 @@ async def analyze_job_match(data: ResumeAnalysisRequest):
 async def generate_cover_letter(data: ResumeAnalysisRequest):
     return {
         "coverLetter": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt"
+    }
+
+
+@resume_router.post("/generate-talore")
+async def generate_talore_resume(data: ResumeAnalysisRequest):
+    return {
+        "pdfFile": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\generated_resume.pdf"
     }
 
 
@@ -42,11 +53,32 @@ async def cover_letter_chat(data: CoverLetterChatRequest):
     }
 
 
+class TaloreChatRequest(BaseModel):
+    jobDescription: str
+    pdfFile: str
+    userMessage: Optional[str] = None
+
+
+@resume_router.post("/talore-chat")
+async def talore_chat(data: TaloreChatRequest):
+    return {
+        "pdfFile": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\generated_resume.pdf"
+    }
+
+
 @resume_router.get("/previous-cover-letters")
 async def get_previous_cover_letters():
     return [
         {
             "date": "1-03-2024",
+            "result": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt",
+        },
+        {
+            "date": "2-03-2024",
+            "result": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt",
+        },
+        {
+            "date": "3-03-2024",
             "result": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt",
         },
     ]

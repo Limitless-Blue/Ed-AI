@@ -1,6 +1,6 @@
-from fastapi import APIRouter
+from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
-from typing import List, Dict, Any
+from typing import List, Optional, Dict, Any
 
 landing_router = APIRouter(prefix="/api/landing", tags=["Landing"])
 
