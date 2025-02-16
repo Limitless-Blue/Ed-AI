@@ -1,6 +1,6 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
-from api.api_functions.common_functions import streak_data
+from api.api_functions.common_functions import streak_data, get_user_website_data
 
 common_router = APIRouter(prefix="/api/common", tags=["Common"])
 
@@ -20,11 +20,7 @@ async def get_greeting_audio():
 
 @common_router.get("/user-details")
 async def get_user_details():
-    return {
-        "firstName": "Katoro",
-        "lastName": "Kamado",
-        "image": r"API_Endpoint\Temp_Static_data\Profile\user_image.png",
-    }
+    return get_user_website_data()
 
 
 class SaveBookmarkRequest(BaseModel):
