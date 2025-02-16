@@ -1,23 +1,16 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
+from api.api_functions.common_functions import streak_data
 
 common_router = APIRouter(prefix="/api/common", tags=["Common"])
 
 
 @common_router.get("/streak")
 async def get_streak_data():
-    return {
-        "streak": 5,
-        "streakData": [
-            {"date": "1-03-2024", "status": False},
-            {"date": "2-03-2024", "status": True},
-            {"date": "3-03-2024", "status": True},
-            {"date": "4-03-2024", "status": False},
-            {"date": "5-03-2024", "status": True},
-        ],
-    }
+    return streak_data()
 
 
+# TODO: added Gretting Audio
 @common_router.get("/greeting-audio")
 async def get_greeting_audio():
     return {
