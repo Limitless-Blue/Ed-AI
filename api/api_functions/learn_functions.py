@@ -35,8 +35,3 @@ def learn_page_recommendations():
     output = {"recommendations": recommendations, "filters": filters}
 
     return output
-
-
-# Generate output
-result = learn_page_recommendations()
-print(json.dumps(result, indent=4))

@@ -1,5 +1,6 @@
 import json
 import os
+from typing import List, Optional
 
 
 def streak_data():
@@ -135,3 +136,18 @@ def save_bookmark_to_database(id: str):
         return {"acknowledgement": save_bookmark_for_Coding_problems_page(id)}
     else:
         return {"acknowledgement": False}
+
+
+def extract_recommendation_list(page_id: str) -> Optional[List[str]]:
+    base_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(
+        base_dir, "Database\\Redirection\\Recommedations_(dynamic_version).json"
+    )
+
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+            return data.get(page_id)
+    except FileNotFoundError:
+        print(f"Error: File not found at {file_path}")
+        return None

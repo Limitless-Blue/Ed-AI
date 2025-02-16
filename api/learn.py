@@ -1,26 +1,14 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path, Query, Path
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any, Optional
+from api.api_functions.learn_functions import learn_page_recommendations
 
 learn_router = APIRouter(prefix="/api/learn", tags=["Learn"])
 
 
 @learn_router.get("/recommendations")
 async def get_learn_recommendations():
-    return {
-        "recommendations": [
-            {"id": "LEPA_1", "courseName": "DSA Intro"},
-            {"id": "LEPA_2", "courseName": "Trees"},
-            {"id": "LEPA_3", "courseName": "Linked Lists"},
-            {"id": "LEPA_4", "courseName": "Arrays"},
-            {"id": "LEPA_5", "courseName": "Stacks"},
-        ],
-        "filters": {
-            "level": ["Easy", "Medium", "Hard"],
-            "topic": ["Linked_List", "Trees", "Stacks", "Queues", "Arrays", "Strings"],
-            "status": [True, False],
-        },
-    }
+    return learn_page_recommendations()
 
 
 @learn_router.get("/courses")
