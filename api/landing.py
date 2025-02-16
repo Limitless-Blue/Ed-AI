@@ -10,6 +10,7 @@ class VoiceChatLandingRequest(BaseModel):
     conversationHistory: List[Dict[str, Any]]
 
 
+# TODO: Add AI Part
 @landing_router.post("/voice-chat")
 async def landing_voice_chat(data: VoiceChatLandingRequest):
     return {
