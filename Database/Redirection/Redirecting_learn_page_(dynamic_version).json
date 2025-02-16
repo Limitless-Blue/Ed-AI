@@ -2,7 +2,9 @@
     {
         "ID": "LEPA_1",
         "title": "DSA Introduction",
-        "Course": ["Database\\Learn_Page\\LEPA_1\\Course_Markdown_File\\DSA_Intro.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_1\\Course_Markdown_File\\DSA_Intro.md"
+        ],
         "Test": [
             {
                 "id": "DSA_Intro",
@@ -120,7 +122,9 @@
     {
         "ID": "LEPA_7",
         "title": "Problem Solving Techniques - II",
-        "Course": ["Database\\Learn_Page\\LEPA_7\\Course_Markdown_File\\DS_Array.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_7\\Course_Markdown_File\\DS_Array.md"
+        ],
         "Test": [
             {
                 "id": "DS_Array",
@@ -134,7 +138,9 @@
     {
         "ID": "LEPA_8",
         "title": "Array",
-        "Course": ["Database\\Learn_Page\\LEPA_8\\Course_Markdown_File\\DS_Array.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_8\\Course_Markdown_File\\DS_Array.md"
+        ],
         "Test": [
             {
                 "id": "DS_Array",
@@ -180,7 +186,9 @@
     {
         "ID": "LEPA_11",
         "title": "Stack",
-        "Course": ["Database\\Learn_Page\\LEPA_11\\Course_Markdown_File\\DS_Stack.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_11\\Course_Markdown_File\\DS_Stack.md"
+        ],
         "Test": [
             {
                 "id": "DS_Stack",
@@ -194,7 +202,9 @@
     {
         "ID": "LEPA_12",
         "title": "Stack",
-        "Course": ["Database\\Learn_Page\\LEPA_12\\Course_Markdown_File\\DS_Stack.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_12\\Course_Markdown_File\\DS_Stack.md"
+        ],
         "Test": [
             {
                 "id": "DS_Stack",
@@ -208,7 +218,9 @@
     {
         "ID": "LEPA_13",
         "title": "Queue",
-        "Course": ["Database\\Learn_Page\\LEPA_13\\Course_Markdown_File\\DS_Queue.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_13\\Course_Markdown_File\\DS_Queue.md"
+        ],
         "Test": [
             {
                 "id": "DS_Queue",
@@ -222,7 +234,9 @@
     {
         "ID": "LEPA_14",
         "title": "Queue",
-        "Course": ["Database\\Learn_Page\\LEPA_14\\Course_Markdown_File\\DS_Queue.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_14\\Course_Markdown_File\\DS_Queue.md"
+        ],
         "Test": [
             {
                 "id": "DS_Queue",
@@ -236,7 +250,9 @@
     {
         "ID": "LEPA_15",
         "title": "Tree",
-        "Course": ["Database\\Learn_Page\\LEPA_15\\Course_Markdown_File\\DS_Tree.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_15\\Course_Markdown_File\\DS_Tree.md"
+        ],
         "Test": [
             {
                 "id": "DS_Tree",
@@ -250,7 +266,9 @@
     {
         "ID": "LEPA_16",
         "title": "Tree",
-        "Course": ["Database\\Learn_Page\\LEPA_16\\Course_Markdown_File\\DS_Tree.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_16\\Course_Markdown_File\\DS_Tree.md"
+        ],
         "Test": [
             {
                 "id": "DS_Tree",
@@ -264,7 +282,9 @@
     {
         "ID": "LEPA_17",
         "title": "Tree",
-        "Course": ["Database\\Learn_Page\\LEPA_17\\Course_Markdown_File\\DS_Tree.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_17\\Course_Markdown_File\\DS_Tree.md"
+        ],
         "Test": [
             {
                 "id": "DS_Tree",
@@ -278,7 +298,9 @@
     {
         "ID": "LEPA_18",
         "title": "Graph",
-        "Course": ["Database\\Learn_Page\\LEPA_18\\Course_Markdown_File\\DS_Graph.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_18\\Course_Markdown_File\\DS_Graph.md"
+        ],
         "Test": [
             {
                 "id": "DS_Graph",
@@ -292,7 +314,9 @@
     {
         "ID": "LEPA_19",
         "title": "Graph",
-        "Course": ["Database\\Learn_Page\\LEPA_19\\Course_Markdown_File\\DS_Graph.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_19\\Course_Markdown_File\\DS_Graph.md"
+        ],
         "Test": [
             {
                 "id": "DS_Graph",
@@ -338,7 +362,9 @@
     {
         "ID": "LEPA_22",
         "title": "Heap",
-        "Course": ["Database\\Learn_Page\\LEPA_22\\Course_Markdown_File\\DS_Heap.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_22\\Course_Markdown_File\\DS_Heap.md"
+        ],
         "Test": [
             {
                 "id": "DS_Heap",
@@ -352,7 +378,9 @@
     {
         "ID": "LEPA_23",
         "title": "Heap",
-        "Course": ["Database\\Learn_Page\\LEPA_23\\Course_Markdown_File\\DS_Heap.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_23\\Course_Markdown_File\\DS_Heap.md"
+        ],
         "Test": [
             {
                 "id": "DS_Heap",
@@ -446,7 +474,9 @@
     {
         "ID": "LEPA_29",
         "title": "Sort",
-        "Course": ["Database\\Learn_Page\\LEPA_29\\Course_Markdown_File\\Heap_Sort.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_29\\Course_Markdown_File\\Heap_Sort.md"
+        ],
         "Test": [
             {
                 "id": "Heap_Sort",
@@ -476,7 +506,9 @@
     {
         "ID": "LEPA_31",
         "title": "Sort",
-        "Course": ["Database\\Learn_Page\\LEPA_31\\Course_Markdown_File\\Cmp.md"],
+        "Course": [
+            "Database\\Learn_Page\\LEPA_31\\Course_Markdown_File\\Cmp.md"
+        ],
         "Test": [
             {
                 "id": "Cmp",

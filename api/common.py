@@ -1,6 +1,10 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
-from api.api_functions.common_functions import streak_data, get_user_website_data
+from api.api_functions.common_functions import (
+    streak_data,
+    get_user_website_data,
+    save_bookmark_to_database,
+)
 
 common_router = APIRouter(prefix="/api/common", tags=["Common"])
 
@@ -27,4 +31,4 @@ class SaveBookmarkRequest(BaseModel):
 
 @common_router.post("/save")
 async def save_bookmark(data: SaveBookmarkRequest):
-    return {"acknowledgement": True}
+    return save_bookmark_to_database(data.id, data.value)

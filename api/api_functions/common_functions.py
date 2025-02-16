@@ -37,3 +37,49 @@ def get_user_website_data():
     except json.JSONDecodeError:
         print(f"Error: Invalid JSON format in {file_path}")
         return None
+
+
+def save_bookmark_for_learn_page(id_to_update, new_saved_status):
+
+  try:
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, "Database/Redirection/Redirecting_learn_page_(dynamic_version).json")
+    with open(file_path, "r+") as f:
+      data = json.load(f)
+      for item in data:
+        if item["ID"] == id_to_update:
+          item["Saved"] = new_saved_status
+          break
+      else:
+        return False
+
+      f.seek(0)
+      f.truncate()
+      json.dump(data, f, indent=4)
+      return True
+
+  except FileNotFoundError:
+    print("Error: JSON file not found.")
+    return False
+  except Exception as e:
+    print(f"An error occurred: {e}")
+    return False
+
+
+def save_bookmark_for_MCQs_page(id: str):
+    print("Found save_bookmark_for_MCQs_page")
+
+
+def save_bookmark_for_Coding_problems_page(id: str):
+    print("Found save_bookmark_for_Coding_problems_page")
+
+
+def save_bookmark_to_database(id: str):
+    if "LEPA" in id:
+        return {"acknowledgement": save_bookmark_for_learn_page(id)}
+    elif "MCPA" in id:
+        return {"acknowledgement": save_bookmark_for_MCQs_page(id)}
+    elif "COPA" in id:
+        return {"acknowledgement": save_bookmark_for_Coding_problems_page(id)}
+    else:
+        return {"acknowledgement": False}
