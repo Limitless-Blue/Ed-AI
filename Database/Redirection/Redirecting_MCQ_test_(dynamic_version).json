@@ -6,7 +6,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Easy",
-        "topic": ["General"]
+        "topic": [
+            "General"
+        ]
     },
     "MCPA_2": {
         "Title": "Array",
@@ -15,7 +17,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Easy",
-        "topic": ["Iterables"]
+        "topic": [
+            "Iterables"
+        ]
     },
     "MCPA_3": {
         "Title": "Linked_List",
@@ -24,7 +28,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Easy",
-        "topic": ["Iterables"]
+        "topic": [
+            "Iterables"
+        ]
     },
     "MCPA_4": {
         "Title": "Stack",
@@ -33,7 +39,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Easy",
-        "topic": ["Iterables"]
+        "topic": [
+            "Iterables"
+        ]
     },
     "MCPA_5": {
         "Title": "Queue",
@@ -42,7 +50,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Easy",
-        "topic": ["Iterables"]
+        "topic": [
+            "Iterables"
+        ]
     },
     "MCPA_6": {
         "Title": "Trees",
@@ -51,7 +61,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Hard",
-        "topic": ["Trees"]
+        "topic": [
+            "Trees"
+        ]
     },
     "MCPA_7": {
         "Title": "Graph",
@@ -60,7 +72,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Hard",
-        "topic": ["Graphs"]
+        "topic": [
+            "Graphs"
+        ]
     },
     "MCPA_8": {
         "Title": "Hashing",
@@ -69,7 +83,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Medium",
-        "topic": ["Hashing"]
+        "topic": [
+            "Hashing"
+        ]
     },
     "MCPA_9": {
         "Title": "Heap",
@@ -78,7 +94,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Medium",
-        "topic": ["Heaps"]
+        "topic": [
+            "Heaps"
+        ]
     },
     "MCPA_10": {
         "Title": "Sort",
@@ -87,7 +105,9 @@
         "Completed": false,
         "Score": 0,
         "level": "Medium",
-        "topic": ["Sorting"]
+        "topic": [
+            "Sorting"
+        ]
     },
     "MCPA_11": {
         "Title": "Search",
@@ -96,6 +116,8 @@
         "Completed": false,
         "Score": 0,
         "level": "Easy",
-        "topic": ["Searching"]
+        "topic": [
+            "Searching"
+        ]
     }
 }

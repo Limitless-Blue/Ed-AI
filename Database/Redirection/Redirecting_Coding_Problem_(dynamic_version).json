@@ -25,7 +25,9 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Array"],
+            "topic": [
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_2": {
@@ -57,7 +59,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Hashing", "Array"],
+            "topic": [
+                "Hashing",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_3": {
@@ -81,7 +86,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Hash Table", "Array"],
+            "topic": [
+                "Hash Table",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_4": {
@@ -113,7 +121,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Dynamic Programming", "Array"],
+            "topic": [
+                "Dynamic Programming",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_5": {
@@ -145,7 +156,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Sliding Window", "Array"],
+            "topic": [
+                "Sliding Window",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_6": {
@@ -165,7 +179,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Math", "Array"],
+            "topic": [
+                "Math",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_7": {
@@ -197,7 +214,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Dynamic Programming", "Array"],
+            "topic": [
+                "Dynamic Programming",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_8": {
@@ -229,7 +249,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Dynamic Programming", "String"],
+            "topic": [
+                "Dynamic Programming",
+                "String"
+            ],
             "Completed": false
         },
         "COPA_9": {
@@ -269,7 +292,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Sliding Window", "String"],
+            "topic": [
+                "Sliding Window",
+                "String"
+            ],
             "Completed": false
         },
         "COPA_10": {
@@ -301,7 +327,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Bit Manipulation", "Array"],
+            "topic": [
+                "Bit Manipulation",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_11": {
@@ -333,7 +362,11 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Bit Manipulation", "Math", "Array"],
+            "topic": [
+                "Bit Manipulation",
+                "Math",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_12": {
@@ -365,7 +398,11 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Bit Manipulation", "Trie", "Array"],
+            "topic": [
+                "Bit Manipulation",
+                "Trie",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_13": {
@@ -397,7 +434,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Bit Manipulation", "Dynamic Programming"],
+            "topic": [
+                "Bit Manipulation",
+                "Dynamic Programming"
+            ],
             "Completed": false
         },
         "COPA_14": {
@@ -429,7 +469,10 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Bit Manipulation", "Array"],
+            "topic": [
+                "Bit Manipulation",
+                "Array"
+            ],
             "Completed": false
         },
         "COPA_15": {
@@ -461,7 +504,11 @@
                 ]
             ],
             "Saved": false,
-            "topic": ["Sorting", "Hash Table", "String"],
+            "topic": [
+                "Sorting",
+                "Hash Table",
+                "String"
+            ],
             "Completed": false
         }
     }
