@@ -34,7 +34,6 @@ async def edit_job_event(data: List[EditJobEventRequest]):
             "description": data.description,
         }
     )
-    return {"acknowledgement": True}
 
 
 class DeleteJobEventRequest(BaseModel):
@@ -44,7 +43,6 @@ class DeleteJobEventRequest(BaseModel):
 @jobs_router.delete("")
 async def delete_job_event(data: DeleteJobEventRequest):
     return delete_job_event_data(data.id)
-    return {"acknowledgement": True}
 
 
 class JobsMentorTextChatRequest(BaseModel):
