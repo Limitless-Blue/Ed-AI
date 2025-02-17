@@ -15,25 +15,13 @@ async def get_learn_recommendations():
     return learn_page_recommendations()
 
 
-# TODO: Added filters and changes to database
 @learn_router.get("/courses")
 async def get_all_courses(
     level: Optional[str] = Query(None),
     status: Optional[bool] = Query(None),
     topic: Optional[str] = Query(None),
 ):
-    return [
-        {"id": "LEPA_1", "courseName": "DSA Intro"},
-        {"id": "LEPA_2", "courseName": "Trees"},
-        {"id": "LEPA_3", "courseName": "Linked Lists"},
-        {"id": "LEPA_4", "courseName": "Arrays"},
-        {"id": "LEPA_5", "courseName": "Stacks"},
-        {"id": "LEPA_6", "courseName": "DSA Intro"},
-        {"id": "LEPA_7", "courseName": "Trees"},
-        {"id": "LEPA_8", "courseName": "Linked Lists"},
-        {"id": "LEPA_9", "courseName": "Arrays"},
-        {"id": "LEPA_10", "courseName": "Stacks"},
-    ]
+    return get_filtered_learn_courses(level, status, topic)
 
 
 @learn_router.get("/course/{courseId}")
