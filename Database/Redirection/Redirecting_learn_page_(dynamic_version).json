@@ -674,8 +674,10 @@
             }
         ],
         "Saved": false,
-        "level": "Unknown",
-        "topic": [],
+        "level": "Medium",
+        "topic": [
+            "Search Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -692,8 +694,10 @@
             }
         ],
         "Saved": false,
-        "level": "Unknown",
-        "topic": [],
+        "level": "Medium",
+        "topic": [
+            "Search Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -710,8 +714,10 @@
             }
         ],
         "Saved": false,
-        "level": "Unknown",
-        "topic": [],
+        "level": "Medium",
+        "topic": [
+            "Search Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -728,8 +734,10 @@
             }
         ],
         "Saved": false,
-        "level": "Unknown",
-        "topic": [],
+        "level": "Medium",
+        "topic": [
+            "Search Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -746,8 +754,10 @@
             }
         ],
         "Saved": false,
-        "level": "Unknown",
-        "topic": [],
+        "level": "Medium",
+        "topic": [
+            "Search Algorithms"
+        ],
         "Completed": false
     }
 ]
