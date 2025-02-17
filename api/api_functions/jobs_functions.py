@@ -32,5 +32,11 @@ def read_and_print_json_data():
         print(f"An error occurred: {e}")
 
 
-# Example usage:
-read_and_print_json_data()
+def edit_job_event_data(
+    id: str, title: str, status: str, deadlineDate: str, description: str
+):
+    pass
+
+
+def delete_job_event_data(id: str):
+    pass
