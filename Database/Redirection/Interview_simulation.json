@@ -1,0 +1,30 @@
+{
+    "Current_Interview": {
+        "resumeFile": "Database\\user_data\\Resume.pdf",
+        "InterviewType": "TR",
+        "Level": "Easy",
+        "JobDescriptions": "Software Engineer",
+        "Topics": [
+            "Linked_List", 
+            "Trees"
+        ],
+        "OthersData": ""
+    },
+    "Previous_Results": [
+        {
+            "date": "1-03-2024",
+            "result": "good",
+            "review": "The product performed well and met expectations. I was particularly impressed with its durability and ease of use. Highly recommend."
+        },
+        {
+            "date": "2-03-2024",
+            "result": "average",
+            "review": "The product is okay. It functions as described, but there are some minor issues. The build quality could be better, and the instructions were a bit unclear. Overall, a decent value for the price."
+        },
+        {
+            "date": "4-03-2024",
+            "result": "bad",
+            "review": "I am very disappointed with this product. It malfunctioned within a few days of use. The customer service was unhelpful. I would not recommend this product to anyone."
+        }
+    ]
+}
