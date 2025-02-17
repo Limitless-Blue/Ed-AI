@@ -26,7 +26,13 @@ class EditJobEventRequest(BaseModel):
 @jobs_router.put("")
 async def edit_job_event(data: List[EditJobEventRequest]):
     return edit_job_event_data(
-        data.id, data.title, data.status, data.deadlineDate, data.description
+        {
+            "id": data.id,
+            "title": data.title,
+            "status": data.status,
+            "deadlineDate": data.deadlineDate,
+            "description": data.description,
+        }
     )
     return {"acknowledgement": True}
 
