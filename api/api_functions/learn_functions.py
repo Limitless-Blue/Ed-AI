@@ -28,7 +28,7 @@ def learn_page_recommendations():
 
     filters = {
         "level": ["Easy", "Medium", "Hard"],
-        "topic": ["Linked_List", "Trees", "Stacks", "Queues", "Arrays", "Strings"],
+        "topic": ["Advanced Problem Solving", "Algorithm Analysis", "Array", "Control Structures", "DSA Basics", "Data Structures", "Functions", "Graph", "Hashing", "Heap", "Linked List", "Programming Basics", "Problem Solving", "Queue", "Sorting Algorithms", "Stack", "Tree"],
         "status": [True, False],
     }
 
