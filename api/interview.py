@@ -8,7 +8,7 @@ interview_router = APIRouter(prefix="/api/interview", tags=["Interview"])
 @interview_router.get("/filters")
 async def get_interview_filters():
     return {
-        "interviewType": ["HR", "TR"],
+        "interviewType": ["TR", "HR"],
         "level": ["Easy", "Medium", "Hard"],
         "topic": ["Linked_List", "Trees", "Stacks", "Queues", "Arrays", "Strings"],
     }
