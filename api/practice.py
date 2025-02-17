@@ -4,6 +4,8 @@ from typing import List, Optional, Dict, Any
 from api.api_functions.practice_functions import (
     practice_page_recommendations,
     get_filtered_practice_courses,
+    get_all_mcq_test,
+    get_all_coding_problem,
 )
 
 practice_router = APIRouter(prefix="/api/practice", tags=["Practice"])
@@ -26,23 +28,12 @@ async def get_practice_items(
 
 @practice_router.get("/mcq/{testId}")
 async def get_mcq_test(testId: str = Path()):
-    return {
-        "testFile": r"API_Endpoint\Temp_Static_data\Practice Page\MCQ\Programming_Fundamentals_000001.json"
-    }
+    return get_all_mcq_test(testId)
 
 
 @practice_router.get("/coding-problem/{problemId}")
 async def get_coding_problem(problemId: str = Path()):
-    return {
-        "problemDescription": r"API_Endpoint\Temp_Static_data\Practice Page\CodingProblem\Concatenation_of_Array.md",
-        "problemSolution": r"API_Endpoint\Temp_Static_data\Practice Page\CodingProblem\Concatenation_of_Array_solution.py",
-        "testCases": [
-            ["1 2 1", [1, 2, 1, 1, 2, 1]],
-            ["1 3 2 1", [1, 3, 2, 1, 1, 3, 2, 1]],
-            ["5 6", [5, 6, 5, 6]],
-            ["9", [9, 9]],
-        ],
-    }
+    return get_all_coding_problem(problemId)
 
 
 class SubmitPracticeRequest(BaseModel):

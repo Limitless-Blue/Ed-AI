@@ -1,49 +1,39 @@
 import json
-from typing import Optional
 import os
 
 
-def get_filtered_codingQuestions_courses(
-    level: Optional[str] = None,
-    status: Optional[bool] = None,
-    topic: Optional[str] = None,
-):
+def get_coding_problem(problemId: str):
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
     json_file_path = os.path.join(
         base_dir,
         "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json",
     )
+
     with open(json_file_path, "r") as file:
         data = json.load(file)
-    filtered_problems = []
 
-    for problem_id, problem_data in data["problems"].items():
-        if level and level.lower() != problem_data["Difficulty"].lower():
-            continue
-        if status is not None and status != problem_data["Completed"]:
-            continue
-        if topic and topic not in problem_data["topic"]:
-            continue
+    problem_data = data["problems"].get(problemId)
 
-        filtered_problems.append(
-            {
-                "id": problem_id,
-                "practiceName": problem_data["title"],
-                "status": problem_data["Completed"],
-                "difficulty": problem_data["Difficulty"].lower(),
-            }
-        )
+    if problem_data:
+        problem_description = problem_data["Problem_Description"]
+        problem_solution = problem_data["Problem_Solution"]
+        test_cases = []
 
-    return filtered_problems
+        for test_case in problem_data["Test_Cases"]:
+            input_case = test_case[0]
+            output_case = eval(test_case[1])
+            test_cases.append([input_case, output_case])
+
+        return {
+            "problemDescription": problem_description,
+            "problemSolution": problem_solution,
+            "testCases": test_cases,
+        }
+    else:
+        return {"error": f"Problem with ID {problemId} not found."}
 
 
-# Define file path
-level = "Easy"
-status = False
-topic = None
-
-filtered_results = get_filtered_codingQuestions_courses(
-    level=level, status=status, topic=topic
-)
-
-print(json.dumps(filtered_results, indent=4))
+# Example usage
+problemId = "COPA_3"
+result = get_coding_problem(problemId)
+print(json.dumps(result, indent=4))
