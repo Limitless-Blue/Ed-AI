@@ -1,4 +1,5 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path, Query
+from api.api_functions.saved_functions import retrieve_saved_courses
 
 saved_router = APIRouter(prefix="/api/saved", tags=["Saved"])
 
@@ -9,5 +10,5 @@ async def get_saved_filters():
 
 
 @saved_router.get("/courses")
-async def get_saved_courses(type: str = Query(...)):
-    return ["id_1", "id_2", "id_3"]
+async def get_saved_courses(type: str | None = Query(None)):
+    return retrieve_saved_courses(type)

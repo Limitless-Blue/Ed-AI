@@ -1,6 +1,9 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
-from api.api_functions.settings_functions import change_password_database, change_username_database
+from api.api_functions.settings_functions import (
+    change_password_database,
+    change_username_database,
+)
 
 settings_router = APIRouter(prefix="/api/settings", tags=["Settings"])
 

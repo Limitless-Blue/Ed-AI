@@ -28,6 +28,24 @@ def retrive_Course_ids():
         return []
 
 
-# Example usage:
-saved_ids = retrive_Course_ids()
-print(saved_ids)
+def retrive_MCQ_ids():
+    pass
+
+
+def retrive_Coding_ids():
+    pass
+
+
+def retrive_ALL_ids():
+    pass
+
+
+def retrieve_saved_courses(type):
+    if type == "Course":
+        return retrive_Course_ids()
+    elif type == "MCQ":
+        return retrive_MCQ_ids()
+    elif type == "Coding":
+        return retrive_Coding_ids()
+    else:
+        return retrive_ALL_ids()
