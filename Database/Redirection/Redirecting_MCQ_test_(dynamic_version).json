@@ -4,76 +4,98 @@
         "Test_file": "Database\\MCQs_page\\All_Courses_Test.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["General"]
     },
     "MCPA_2": {
         "Title": "Array",
         "Test_file": "Database\\MCQs_page\\Array_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Iterables"]
     },
     "MCPA_3": {
         "Title": "Linked_List",
         "Test_file": "Database\\MCQs_page\\Linked_List_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Iterables"]
     },
     "MCPA_4": {
         "Title": "Stack",
         "Test_file": "Database\\MCQs_page\\Stack_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Iterables"]
     },
     "MCPA_5": {
         "Title": "Queue",
         "Test_file": "Database\\MCQs_page\\Queue_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Iterables"]
     },
     "MCPA_6": {
         "Title": "Trees",
         "Test_file": "Database\\MCQs_page\\Trees_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Trees"]
     },
     "MCPA_7": {
         "Title": "Graph",
         "Test_file": "Database\\MCQs_page\\Graph_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Graphs"]
     },
     "MCPA_8": {
         "Title": "Hashing",
         "Test_file": "Database\\MCQs_page\\Hashing_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Hashing"]
     },
     "MCPA_9": {
         "Title": "Heap",
         "Test_file": "Database\\MCQs_page\\Heap_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Heaps"]
     },
     "MCPA_10": {
         "Title": "Sort",
         "Test_file": "Database\\MCQs_page\\Sort_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Sorting"]
     },
     "MCPA_11": {
         "Title": "Search",
         "Test_file": "Database\\MCQs_page\\Search_000001.json",
         "Saved": false,
         "Completed": false,
-        "Score": 0
+        "Score": 0,
+        "level": "Easy",
+        "topic": ["Searching"]
     }
 }
