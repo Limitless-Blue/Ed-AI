@@ -1,7 +1,10 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path, Query
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
-from api.api_functions.practice_functions import practice_page_recommendations
+from api.api_functions.practice_functions import (
+    practice_page_recommendations,
+    get_filtered_practice_courses,
+)
 
 practice_router = APIRouter(prefix="/api/practice", tags=["Practice"])
 
@@ -18,68 +21,7 @@ async def get_practice_items(
     status: Optional[bool] = Query(None),
     topic: Optional[str] = Query(None),
 ):
-    return [
-        {
-            "id": "MCPA_1",
-            "practiceName": "Queues",
-            "status": True,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_2",
-            "practiceName": "Trees",
-            "status": True,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_3",
-            "practiceName": "Linked Lists",
-            "status": True,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_4",
-            "practiceName": "Arrays",
-            "status": False,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_5",
-            "practiceName": "Stacks",
-            "status": False,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_6",
-            "practiceName": "Queues",
-            "status": True,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_7",
-            "practiceName": "Trees",
-            "status": True,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_8",
-            "practiceName": "Linked Lists",
-            "status": True,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_9",
-            "practiceName": "Arrays",
-            "status": False,
-            "difficulty": "easy",
-        },
-        {
-            "id": "MCPA_10",
-            "practiceName": "Stacks",
-            "status": False,
-            "difficulty": "easy",
-        },
-    ]
+    return get_filtered_practice_courses(type, level, status, topic)
 
 
 @practice_router.get("/mcq/{testId}")
@@ -108,6 +50,7 @@ class SubmitPracticeRequest(BaseModel):
     score: str
 
 
+# TODO: Add AI Part
 @practice_router.post("/submit")
 async def submit_practice(data: SubmitPracticeRequest):
     return {"acknowledgement": True}
@@ -120,6 +63,7 @@ class MentorHelpTextChatPracticeRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @practice_router.post("/mentor-help/text-chat")
 async def practice_mentor_text_chat(data: MentorHelpTextChatPracticeRequest):
     return {
@@ -138,6 +82,7 @@ class MentorHelpVoiceChatPracticeRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @practice_router.post("/mentor-help/voice-chat")
 async def practice_mentor_voice_chat(data: MentorHelpVoiceChatPracticeRequest):
     return {
@@ -155,6 +100,7 @@ class EndPracticeRequest(BaseModel):
     score: str
 
 
+# TODO: Add AI Part
 @practice_router.post("/end")
 async def end_practice(data: EndPracticeRequest):
     return {"acknowledgement": True}
@@ -167,6 +113,7 @@ class MentorHelpMCQTextChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @practice_router.post("/mentor-help/mcqs/text-chat")
 async def practice_mentor_mcq_text_chat(data: MentorHelpMCQTextChatRequest):
     return {
@@ -185,6 +132,7 @@ class MentorHelpMCQVoiceChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @practice_router.post("/mentor-help/mcqs/voice-chat")
 async def practice_mentor_mcq_voice_chat(data: MentorHelpMCQVoiceChatRequest):
     return {
