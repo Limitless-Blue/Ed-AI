@@ -11,6 +11,7 @@ class TextChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @chat_router.post("/text")
 async def chat_text(data: TextChatRequest):
     return {
@@ -28,6 +29,7 @@ class VoiceChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @chat_router.post("/voice")
 async def chat_voice(data: VoiceChatRequest):
     return {
