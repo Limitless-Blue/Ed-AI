@@ -66,3 +66,7 @@ def get_learn_page_data(input_id):
             print(f"Warning: Missing 'ID' key in page data: {page_data}")
 
     return {"message": f"Learn page with ID '{input_id}' not found."}
+
+
+def get_filtered_learn_courses():
+    pass

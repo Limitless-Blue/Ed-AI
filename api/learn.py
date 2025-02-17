@@ -4,6 +4,7 @@ from typing import List, Optional, Dict, Any, Optional
 from api.api_functions.learn_functions import (
     learn_page_recommendations,
     get_learn_page_data,
+    get_filtered_learn_courses,
 )
 
 learn_router = APIRouter(prefix="/api/learn", tags=["Learn"])
@@ -14,6 +15,7 @@ async def get_learn_recommendations():
     return learn_page_recommendations()
 
 
+# TODO: Added filters and changes to database
 @learn_router.get("/courses")
 async def get_all_courses(
     level: Optional[str] = Query(None),
