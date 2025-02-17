@@ -1,50 +1,49 @@
 import json
+from typing import Optional
 import os
 
 
-def get_filtered_mcqs_courses(level=None, status=None, topic=None):
+def get_filtered_codingQuestions_courses(
+    level: Optional[str] = None,
+    status: Optional[bool] = None,
+    topic: Optional[str] = None,
+):
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
     json_file_path = os.path.join(
-        base_dir, "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+        base_dir,
+        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json",
     )
-
     with open(json_file_path, "r") as file:
         data = json.load(file)
+    filtered_problems = []
 
-    output = []
-
-    for key, practice in data.items():
-        practice_name = practice["Title"]
-        practice_status = practice["Saved"]
-        practice_level = practice["level"]
-        practice_topic = practice["topic"]
-
-        if level and practice_level != level:
+    for problem_id, problem_data in data["problems"].items():
+        if level and level.lower() != problem_data["Difficulty"].lower():
             continue
-        if status is not None and practice_status != status:
+        if status is not None and status != problem_data["Completed"]:
             continue
-        if topic and not any(t in practice_topic for t in topic):
+        if topic and topic not in problem_data["topic"]:
             continue
 
-        output.append(
+        filtered_problems.append(
             {
-                "id": key,
-                "practiceName": practice_name,
-                "status": practice_status,
-                "difficulty": practice_level.lower(),
+                "id": problem_id,
+                "practiceName": problem_data["title"],
+                "status": problem_data["Completed"],
+                "difficulty": problem_data["Difficulty"].lower(),
             }
         )
 
-    return output
+    return filtered_problems
 
 
-# Example usage
-level = "Easy"  # Example level filter
-status = False  # Example status filter (True or False)
-topic = ["Iterables"]  # Example topic filter (can be a list of topics)
+# Define file path
+level = "Easy"
+status = False
+topic = None
 
-# Get filtered practices
-filtered_practices = get_filtered_mcqs_courses(level=level, status=status, topic=topic)
+filtered_results = get_filtered_codingQuestions_courses(
+    level=level, status=status, topic=topic
+)
 
-# Output the result
-print(json.dumps(filtered_practices, indent=4))
+print(json.dumps(filtered_results, indent=4))

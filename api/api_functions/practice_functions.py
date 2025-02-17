@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+from typing import Optional
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from api.api_functions.common_functions import extract_recommendation_list
@@ -115,8 +116,38 @@ def get_filtered_mcqs_courses(level=None, status=None, topic=None):
     return output
 
 
-def get_filtered_codingQuestions_courses(level, status, topic):
-    pass
+def get_filtered_codingQuestions_courses(
+    level: Optional[str] = None,
+    status: Optional[bool] = None,
+    topic: Optional[str] = None,
+):
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(
+        base_dir,
+        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json",
+    )
+    with open(json_file_path, "r") as file:
+        data = json.load(file)
+    filtered_problems = []
+
+    for problem_id, problem_data in data["problems"].items():
+        if level and level.lower() != problem_data["Difficulty"].lower():
+            continue
+        if status is not None and status != problem_data["Completed"]:
+            continue
+        if topic and topic not in problem_data["topic"]:
+            continue
+
+        filtered_problems.append(
+            {
+                "id": problem_id,
+                "practiceName": problem_data["title"],
+                "status": problem_data["Completed"],
+                "difficulty": problem_data["Difficulty"].lower(),
+            }
+        )
+
+    return filtered_problems
 
 
 def get_filtered_practice_courses(type, level, status, topic):
