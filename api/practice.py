@@ -1,60 +1,14 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path, Query
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
+from api.api_functions.practice_functions import practice_page_recommendations
 
 practice_router = APIRouter(prefix="/api/practice", tags=["Practice"])
 
 
 @practice_router.get("/recommendations")
 async def get_practice_recommendations():
-    return {
-        "mcqRecommendations": [
-            {"id": "MCPA_1", "practiceName": "Queues"},
-            {"id": "MCPA_2", "practiceName": "Trees"},
-            {"id": "MCPA_3", "practiceName": "Linked Lists"},
-            {"id": "MCPA_4", "practiceName": "Arrays"},
-            {"id": "MCPA_5", "practiceName": "Stacks"},
-        ],
-        "codingRecommendations": [
-            {"id": "COPA_1", "practiceName": "Queues"},
-            {"id": "COPA_2", "practiceName": "Trees"},
-            {"id": "COPA_3", "practiceName": "Linked Lists"},
-            {"id": "COPA_4", "practiceName": "Arrays"},
-            {"id": "COPA_5", "practiceName": "Stacks"},
-        ],
-        "filters": {
-            "mcqs": {
-                "level": ["Easy", "Medium", "Hard"],
-                "topic": [
-                    "General",
-                    "Iterables",
-                    "Trees",
-                    "Graphs",
-                    "Hashing",
-                    "Heaps",
-                    "Sorting",
-                    "Searching",
-                ],
-                "status": [True, False],
-            },
-            "codingQuestions": {
-                "level": ["Easy", "Medium", "Hard"],
-                "topic": [
-                    "Array",
-                    "Hashing",
-                    "Hash Table",
-                    "Dynamic Programming",
-                    "Sliding Window",
-                    "Math",
-                    "String",
-                    "Bit Manipulation",
-                    "Trie",
-                    "Sorting",
-                ],
-                "status": [True, False],
-            },
-        },
-    }
+    return practice_page_recommendations()
 
 
 @practice_router.get("/items")
