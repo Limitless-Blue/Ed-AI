@@ -13,6 +13,10 @@
             }
         ],
         "Saved": false,
+        "level": "Easy",
+        "topic": [
+            "DSA Basics"
+        ],
         "Completed": false
     },
     {
@@ -35,6 +39,10 @@
             }
         ],
         "Saved": false,
+        "level": "Easy",
+        "topic": [
+            "Programming Basics"
+        ],
         "Completed": false
     },
     {
@@ -63,6 +71,11 @@
             }
         ],
         "Saved": false,
+        "level": "Easy",
+        "topic": [
+            "Control Structures",
+            "Functions"
+        ],
         "Completed": false
     },
     {
@@ -85,6 +98,10 @@
             }
         ],
         "Saved": false,
+        "level": "Easy",
+        "topic": [
+            "Problem Solving"
+        ],
         "Completed": false
     },
     {
@@ -101,6 +118,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Algorithm Analysis"
+        ],
         "Completed": false
     },
     {
@@ -117,6 +138,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Algorithm Analysis"
+        ],
         "Completed": false
     },
     {
@@ -133,6 +158,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Advanced Problem Solving"
+        ],
         "Completed": false
     },
     {
@@ -149,6 +178,11 @@
             }
         ],
         "Saved": false,
+        "level": "Easy",
+        "topic": [
+            "Data Structures",
+            "Array"
+        ],
         "Completed": false
     },
     {
@@ -165,6 +199,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Linked List"
+        ],
         "Completed": false
     },
     {
@@ -181,6 +220,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Linked List"
+        ],
         "Completed": false
     },
     {
@@ -197,6 +241,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Stack"
+        ],
         "Completed": false
     },
     {
@@ -213,6 +262,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Stack"
+        ],
         "Completed": false
     },
     {
@@ -229,6 +283,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Queue"
+        ],
         "Completed": false
     },
     {
@@ -245,6 +304,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Queue"
+        ],
         "Completed": false
     },
     {
@@ -261,6 +325,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Tree"
+        ],
         "Completed": false
     },
     {
@@ -277,6 +346,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Tree"
+        ],
         "Completed": false
     },
     {
@@ -293,6 +367,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Tree"
+        ],
         "Completed": false
     },
     {
@@ -309,6 +388,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Graph"
+        ],
         "Completed": false
     },
     {
@@ -325,6 +409,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Graph"
+        ],
         "Completed": false
     },
     {
@@ -341,6 +430,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Hashing"
+        ],
         "Completed": false
     },
     {
@@ -357,6 +451,11 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Data Structures",
+            "Hashing"
+        ],
         "Completed": false
     },
     {
@@ -373,6 +472,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Heap"
+        ],
         "Completed": false
     },
     {
@@ -389,6 +493,11 @@
             }
         ],
         "Saved": false,
+        "level": "Hard",
+        "topic": [
+            "Data Structures",
+            "Heap"
+        ],
         "Completed": false
     },
     {
@@ -405,6 +514,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -421,6 +534,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -437,6 +554,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -453,6 +574,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -469,6 +594,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -485,6 +614,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -501,6 +634,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -517,6 +654,10 @@
             }
         ],
         "Saved": false,
+        "level": "Medium",
+        "topic": [
+            "Sorting Algorithms"
+        ],
         "Completed": false
     },
     {
@@ -533,6 +674,8 @@
             }
         ],
         "Saved": false,
+        "level": "Unknown",
+        "topic": [],
         "Completed": false
     },
     {
@@ -549,6 +692,8 @@
             }
         ],
         "Saved": false,
+        "level": "Unknown",
+        "topic": [],
         "Completed": false
     },
     {
@@ -565,6 +710,8 @@
             }
         ],
         "Saved": false,
+        "level": "Unknown",
+        "topic": [],
         "Completed": false
     },
     {
@@ -581,6 +728,8 @@
             }
         ],
         "Saved": false,
+        "level": "Unknown",
+        "topic": [],
         "Completed": false
     },
     {
@@ -597,6 +746,8 @@
             }
         ],
         "Saved": false,
+        "level": "Unknown",
+        "topic": [],
         "Completed": false
     }
 ]
