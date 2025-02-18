@@ -11,3 +11,4 @@ python-dotenv
 uvicorn
 fastapi
 PyPDF2
+SpeechRecognition
