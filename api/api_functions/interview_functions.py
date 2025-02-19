@@ -1,3 +1,4 @@
+import re
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
@@ -17,6 +18,20 @@ from dotenv import load_dotenv
 
 load_dotenv()
 genai.configure(api_key=os.getenv("Google_API_KEY"))
+
+
+import re
+
+
+def clean_json_string(text):
+    text = re.sub(
+        r"(^\s*```\s*json?\s*$|\n\s*```\s*$)",
+        "",
+        text,
+        flags=re.IGNORECASE | re.MULTILINE,
+    ).strip()
+    text = text.strip("`")
+    return text
 
 
 def generate_ai_response(prompt: str) -> str:
@@ -304,30 +319,28 @@ def interview_voice_chat_reply(audioFile, conversationHistory):
 
 
 def end_interview_results(conversationHistory):
-    """
-    This function simulates an AI component that analyzes the conversation history
-    from the interview, provides performance feedback, stores the result, and returns
-    the feedback data.
-    """
-    user_texts = [
-        entry["text"] for entry in conversationHistory if entry.get("speaker") == "user"
-    ]
-    if user_texts:
-        total_length = sum(len(text) for text in user_texts)
-        avg_length = total_length / len(user_texts)
-        performance = "good" if avg_length > 30 else "needs improvement"
-    else:
-        performance = "insufficient data"
+    generate_ai_response_input = f"""Generate an evaluation of a candidate's interview performance based on the provided conversation history. Your output should be a JSON object with the following keys:
 
-    if performance == "good":
-        review = "Great job! Your responses were articulate and detailed."
-    elif performance == "needs improvement":
-        review = (
-            "You might consider providing more detailed responses in your interview."
-        )
-    else:
-        review = "Not enough data to evaluate your performance."
+    *   **result:** A string indicating the overall performance (e.g., "Excellent", "Good", "Average"). Be as specific as possible with the available options, and choose the option that best reflects the candidate's performance.
 
-    Interview_result_data = {"result": performance, "review": review}
-    add_new_result_interview(Interview_result_data)
-    return Interview_result_data
+    *   **review:** A detailed explanation of the evaluation. Justify the "Result" by referencing specific examples and key moments from the conversation. Explain the candidate's strengths and weaknesses, and offer constructive feedback. Be specific and provide actionable insights.  Mention specific questions and answers where possible.
+
+    **Conversation History:**
+    {conversationHistory}
+
+    **Example Output:**
+    ```json
+    {{
+    "result": "Good",
+    "review": "The candidate demonstrated a good understanding of the core concepts related to the role. They effectively answered questions about [specific topic 1, e.g., data structures] and [specific topic 2, e.g., algorithm design], showcasing their knowledge of [specific skill, e.g., problem-solving]. However, their response to the question about [specific topic 3, e.g., system design] was a bit weak, indicating a potential area for improvement. While they communicated clearly and enthusiastically, they could have provided more concrete examples to support some of their claims. For example, when asked about [specific question, e.g., their experience with Agile methodologies], they described their previous team's process but didn't provide specific examples of how they contributed. Overall, the candidate is promising, but needs to strengthen their understanding of [specific topic 3] and practice providing more specific examples during interviews.  They also need to focus on structuring their answers using the STAR method (Situation, Task, Action, Result) to make their responses more impactful."
+    }}
+    ```"""
+    Interview_result_data = generate_ai_response(generate_ai_response_input)
+    Interview_result_data_cleaned = clean_json_string(Interview_result_data)
+    try:
+        Interview_result_data_dict = json.loads(Interview_result_data_cleaned)
+        add_new_result_interview(Interview_result_data_dict)
+        return Interview_result_data_dict
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {e}")
+        return {"result": "Error", "review": "Could not parse AI response."}
