@@ -8,6 +8,16 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import chromadb
 import shutil
 from datetime import datetime
+import speech_recognition as sr
+from pydub import AudioSegment
+from gtts import gTTS
+from pydub.effects import speedup
+
+
+def increase_playback_speed_no_pitch(input_file, output_file, speed_factor=1.3):
+    sound = AudioSegment.from_mp3(input_file)
+    new_sound = speedup(sound, playback_speed=speed_factor)
+    new_sound.export(output_file, format="mp3")
 
 
 def update_Current_Interview(
@@ -163,9 +173,9 @@ def delete_files_and_subfolders(folder_path):
 
 
 def get_current_interview_details():
-    file_path = "Database\\Redirection\\Interview_simulation.json"
+    json_file_path = "Database\\Redirection\\Interview_simulation.json"
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-    json_file_path = os.path.join(base_dir, file_path)
+    file_path = os.path.join(base_dir, json_file_path)
 
     try:
         with open(file_path, "r") as f:
@@ -187,22 +197,127 @@ def get_current_interview_details():
         return None
 
 
-# TODO: Add AI Part so that it can reply to the user's voice chat and update the conversation history and also the conversation should be based on the interview type, level, and topics...etc.
 def interview_voice_chat_reply(audioFile, conversationHistory):
-    current_interview_details = get_current_interview_details()
+    current_details = get_current_interview_details()
+    if current_details is None:
+        current_details = {
+            "InterviewType": "General",
+            "Level": "Beginner",
+            "Topics": [],
+        }
+
+    file_ext = os.path.splitext(audioFile)[1].lower()
+    wav_file = audioFile
+    if file_ext != ".wav":
+        try:
+            wav_file = "temp_converted.wav"
+            sound = AudioSegment.from_file(audioFile)
+            sound.export(wav_file, format="wav")
+        except Exception as e:
+            print(f"Error converting audio file to WAV: {e}")
+            return {"acknowledgement": False, "error": "Audio conversion failed."}
+
+    try:
+        recognizer = sr.Recognizer()
+        with sr.AudioFile(wav_file) as source:
+            audio_data = recognizer.record(source)
+        transcribed_text = recognizer.recognize_google(audio_data)
+    except sr.UnknownValueError:
+        transcribed_text = "Could not understand audio."
+    except sr.RequestError as e:
+        transcribed_text = f"Error in speech recognition: {e}"
+    except Exception as e:
+        transcribed_text = f"Unexpected error: {e}"
+
+    if file_ext != ".wav" and os.path.exists(wav_file):
+        os.remove(wav_file)
+
+    context = ""
+    try:
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+        chroma_path = os.path.join(base_dir, "Database\\AI_Database\\Vector_Database")
+        chroma_client = chromadb.PersistentClient(path=chroma_path)
+        collection = chroma_client.get_or_create_collection(name="psychologist")
+        query_result = collection.query(query_texts=[transcribed_text], n_results=1)
+        if (
+            query_result
+            and "documents" in query_result
+            and len(query_result["documents"]) > 0
+            and len(query_result["documents"][0]) > 0
+        ):
+            context = query_result["documents"][0][0]
+    except Exception as e:
+        print(f"Error during RAG query: {e}")
+        context = ""
+
+    ai_response = (
+        f"Based on your interview context (Type: {current_details.get('InterviewType')}, "
+        f"Level: {current_details.get('Level')}, Topics: {current_details.get('Topics')}) "
+        "and your input, I suggest: "
+    )
+    if context:
+        ai_response += f"Drawing from related materials, {context[:150]}... "
+    ai_response += "This is a simulated response to help you improve."
+
+    conversationHistory.append({"speaker": "user", "text": transcribed_text})
+    conversationHistory.append({"speaker": "AI", "text": ai_response})
+
+    response_audio_path = os.path.join(
+        "API_Endpoint", "Temp_Static_data", "Chat", "Response.mp3"
+    )
+    try:
+        tts = gTTS(text=ai_response, lang="en", slow=False)
+        os.makedirs(os.path.dirname(response_audio_path), exist_ok=True)
+        tts.save(response_audio_path)
+    except Exception as e:
+        print(f"Error during text-to-speech conversion: {e}")
+        response_audio_path = ""
+
+    response_speeded_up_output_file = os.path.join(
+        "API_Endpoint", "Temp_Static_data", "Chat", "Test_output_speed_up.mp3"
+    )
+
+    increase_playback_speed_no_pitch(
+        response_audio_path, response_speeded_up_output_file
+    )
+
     return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
+        "responseAudio": response_speeded_up_output_file,
+        "user": transcribed_text,
+        "AI": ai_response,
+        "conversationHistory": conversationHistory,
     }
 
 
-# TODO: Add an AI component that provides feedback based on the interview's conversation history, as specified in the output requirements.
+temp = interview_voice_chat_reply("Test_Recording.mp3", [])
+print(json.dumps(temp, indent=4))
+
+
 def end_interview_results(conversationHistory):
-    Interivew_result_data = {"result": "good", "review": "Detailed feedback"}
-    add_new_result_interview(Interivew_result_data)
-    return Interivew_result_data
+    """
+    This function simulates an AI component that analyzes the conversation history
+    from the interview, provides performance feedback, stores the result, and returns
+    the feedback data.
+    """
+    user_texts = [
+        entry["text"] for entry in conversationHistory if entry.get("speaker") == "user"
+    ]
+    if user_texts:
+        total_length = sum(len(text) for text in user_texts)
+        avg_length = total_length / len(user_texts)
+        performance = "good" if avg_length > 30 else "needs improvement"
+    else:
+        performance = "insufficient data"
+
+    if performance == "good":
+        review = "Great job! Your responses were articulate and detailed."
+    elif performance == "needs improvement":
+        review = (
+            "You might consider providing more detailed responses in your interview."
+        )
+    else:
+        review = "Not enough data to evaluate your performance."
+
+    Interview_result_data = {"result": performance, "review": review}
+    add_new_result_interview(Interview_result_data)
+    return Interview_result_data
