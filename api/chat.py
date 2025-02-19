@@ -22,24 +22,9 @@ class TextChatRequest(BaseModel):
 async def chat_text(data: TextChatRequest):
     if data.socraticAI:
         return chat_text_text_socraticAI(data.user, data.conversationHistory)
-        # return {
-        #     "user": "Transcribed user speech",
-        #     "AI": "AI's text response",
-        #     "conversationHistory": [
-        #         {"speaker": "user", "text": "Transcribed user speech"},
-        #         {"speaker": "AI", "text": "AI's text response"},
-        #     ],
-        # }
+
     else:
         return chat_text_text_Non_socraticAI(data.user, data.conversationHistory)
-        # return {
-        #     "user": "Transcribed user speech",
-        #     "AI": "AI's text response",
-        #     "conversationHistory": [
-        #         {"speaker": "user", "text": "Transcribed user speech"},
-        #         {"speaker": "AI", "text": "AI's text response"},
-        #     ],
-        # }
 
 
 class VoiceChatRequest(BaseModel):
@@ -53,21 +38,6 @@ class VoiceChatRequest(BaseModel):
 async def chat_voice(data: VoiceChatRequest):
     if data.socraticAI:
         return chat_text_voice_socraticAI(data.audioFile, data.conversationHistory)
-        # return {
-        #     "user": "Transcribed user speech",
-        #     "AI": "AI's text response",
-        #     "conversationHistory": [
-        #         {"speaker": "user", "text": "Transcribed user speech"},
-        #         {"speaker": "AI", "text": "AI's text response"},
-        #     ],
-        # }
+
     else:
         return chat_text_voice_Non_socraticAI(data.audioFile, data.conversationHistory)
-        # return {
-        #     "user": "Transcribed user speech",
-        #     "AI": "AI's text response",
-        #     "conversationHistory": [
-        #         {"speaker": "user", "text": "Transcribed user speech"},
-        #         {"speaker": "AI", "text": "AI's text response"},
-        #     ],
-        # }
