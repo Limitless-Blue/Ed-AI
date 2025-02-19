@@ -4,6 +4,8 @@ from typing import List, Optional, Dict, Any
 from api.api_functions.interview_functions import (
     update_Current_Interview,
     get_previous_results,
+    interview_voice_chat_reply,
+    end_interview_results,
 )
 
 interview_router = APIRouter(prefix="/api/interview", tags=["Interview"])
@@ -49,25 +51,15 @@ class VoiceChatInterviewRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @interview_router.post("/voice-chat")
 async def interview_voice_chat(data: VoiceChatInterviewRequest):
-    return {
-        "responseAudio": r"API_Endpoint\Temp_Static_data\Chat\Response.mp3",
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return interview_voice_chat_reply(data.audioFile, data.conversationHistory)
 
 
 class EndInterviewRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @interview_router.post("/end")
 async def end_interview(data: EndInterviewRequest):
-    return {"result": "good", "review": "Detailed feedback"}
+    return end_interview_results(data.conversationHistory)

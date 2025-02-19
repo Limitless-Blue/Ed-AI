@@ -1,40 +1,43 @@
 import json
 import os
+from datetime import datetime
 
 
-def delete_job_event_data(id: str):
-    file_path = "Database\\Redirection\\job_tracker_board_database.json"
+def add_new_result(new_result_data):
+    json_file_path = "Database\\Redirection\\Interview_simulation.json"
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-    json_file_path = os.path.join(base_dir, file_path)
+    file_path = os.path.join(base_dir, json_file_path)
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File not found: {file_path}")
 
     try:
-        with open(json_file_path, "r") as f:
+        with open(file_path, "r") as f:
             data = json.load(f)
-
-        updated_data = [event for event in data if event.get("id") != id]
-
-        if len(data) != len(updated_data):
-            with open(json_file_path, "w") as f:
-                json.dump(updated_data, f, indent=4)
-            return {"acknowledgement": True}
-        else:
-            return {"acknowledgement": False}
-
-    except FileNotFoundError:
-        print(f"Error: File not found at {json_file_path}")
-        return {"acknowledgement": False}
     except json.JSONDecodeError:
-        print(f"Error: Invalid JSON format in {json_file_path}")
-        return {"acknowledgement": False}
+        raise json.JSONDecodeError(f"Invalid JSON format in file: {file_path}")
+
+    if "Previous_Results" not in data:
+        raise KeyError("The JSON file must contain a 'Previous_Results' key.")
+
+    today = datetime.now().strftime("%d-%m-%Y")
+
+    new_entry = {
+        "date": today,
+        "result": new_result_data.get("result"),
+        "review": new_result_data.get("review"),
+    }
+
+    data["Previous_Results"].append(new_entry)
+
+    try:
+        with open(file_path, "w") as f:
+            json.dump(data, f, indent=4)
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        return {"acknowledgement": False}
+        print(f"An error occurred while writing to the file: {e}")
 
 
-json_file_path = "Database\\Redirection\\job_tracker_board_database.json"
-
-result = delete_job_event_data("job_id_3")  # Delete job_id_3
-print(result)
-
-result = delete_job_event_data("job_id_6")  # Delete job_id_6 (not found)
-print(result)
+new_result = {
+    "result": "Excellent",
+    "review": "Candidate demonstrated strong problem-solving skills.",
+}
+add_new_result(new_result)
