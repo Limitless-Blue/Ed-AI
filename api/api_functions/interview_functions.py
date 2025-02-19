@@ -12,6 +12,17 @@ import speech_recognition as sr
 from pydub import AudioSegment
 from gtts import gTTS
 from pydub.effects import speedup
+import google.generativeai as genai
+from dotenv import load_dotenv
+
+load_dotenv()
+genai.configure(api_key=os.getenv("Google_API_KEY"))
+
+
+def generate_ai_response(prompt: str) -> str:
+    model = genai.GenerativeModel("gemini-2.0-flash-lite-preview-02-05")
+    response = model.generate_content(prompt)
+    return response.text.strip()
 
 
 def increase_playback_speed_no_pitch(input_file, output_file, speed_factor=1.3):
@@ -250,14 +261,17 @@ def interview_voice_chat_reply(audioFile, conversationHistory):
         print(f"Error during RAG query: {e}")
         context = ""
 
-    ai_response = (
-        f"Based on your interview context (Type: {current_details.get('InterviewType')}, "
-        f"Level: {current_details.get('Level')}, Topics: {current_details.get('Topics')}) "
-        "and your input, I suggest: "
-    )
-    if context:
-        ai_response += f"Drawing from related materials, {context[:150]}... "
-    ai_response += "This is a simulated response to help you improve."
+    generate_ai_response_input = f"""Your name is Gojo. You are conducting a job interview. Act as a professional and natural interviewer.  Base your responses on the following information:
+
+        * **Current Interview Details:** {current_details}
+        * **Candidate Background (retrieved using RAG):** {context}
+        * **Previous Conversation History:** {conversationHistory}
+
+    Maintain a consistent interviewer tone throughout the interaction. Focus on asking insightful follow-up questions that probe deeper into the candidate's qualifications and fit for the role. Guide the conversation smoothly and naturally, as you would in a real interview.
+
+    **Important:** Do not leave any information blank or respond with placeholder text. If the provided context or conversation history is insufficient to formulate a relevant and meaningful response.  This response will be sent directly to the user, so avoid unnecessary content."""
+
+    ai_response = generate_ai_response(generate_ai_response_input)
 
     conversationHistory.append({"speaker": "user", "text": transcribed_text})
     conversationHistory.append({"speaker": "AI", "text": ai_response})
@@ -287,10 +301,6 @@ def interview_voice_chat_reply(audioFile, conversationHistory):
         "AI": ai_response,
         "conversationHistory": conversationHistory,
     }
-
-
-temp = interview_voice_chat_reply("Test_Recording.mp3", [])
-print(json.dumps(temp, indent=4))
 
 
 def end_interview_results(conversationHistory):
