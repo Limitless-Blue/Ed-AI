@@ -20,9 +20,6 @@ load_dotenv()
 genai.configure(api_key=os.getenv("Google_API_KEY"))
 
 
-import re
-
-
 def clean_json_string(text):
     text = re.sub(
         r"(^\s*```\s*json?\s*$|\n\s*```\s*$)",
