@@ -9,6 +9,7 @@ class ResumeAnalysisRequest(BaseModel):
     jobDescription: str
 
 
+# TODO: Add AI Part
 @resume_router.post("/analysis")
 async def analyze_job_match(data: ResumeAnalysisRequest):
     return {
@@ -26,6 +27,7 @@ async def analyze_job_match(data: ResumeAnalysisRequest):
     }
 
 
+# TODO: Add AI Part
 @resume_router.post("/generate-cover-letter")
 async def generate_cover_letter(data: ResumeAnalysisRequest):
     return {
@@ -33,6 +35,7 @@ async def generate_cover_letter(data: ResumeAnalysisRequest):
     }
 
 
+# TODO: Add AI Part
 @resume_router.post("/generate-talore")
 async def generate_talore_resume(data: ResumeAnalysisRequest):
     return {
@@ -46,6 +49,7 @@ class CoverLetterChatRequest(BaseModel):
     userMessage: Optional[str] = None
 
 
+# TODO: Add AI Part
 @resume_router.post("/cover-letter-chat")
 async def cover_letter_chat(data: CoverLetterChatRequest):
     return {
@@ -59,6 +63,7 @@ class TaloreChatRequest(BaseModel):
     userMessage: Optional[str] = None
 
 
+# TODO: Add AI Part
 @resume_router.post("/talore-chat")
 async def talore_chat(data: TaloreChatRequest):
     return {
@@ -66,6 +71,7 @@ async def talore_chat(data: TaloreChatRequest):
     }
 
 
+# TERMINATED: This endpoint is not used in the application
 @resume_router.get("/previous-cover-letters")
 async def get_previous_cover_letters():
     return [

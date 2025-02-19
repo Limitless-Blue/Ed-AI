@@ -1,6 +1,12 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
+from api.api_functions.chat_function import (
+    chat_text_text_socraticAI,
+    chat_text_text_Non_socraticAI,
+    chat_text_voice_socraticAI,
+    chat_text_voice_Non_socraticAI,
+)
 
 chat_router = APIRouter(prefix="/api/chat", tags=["Chat"])
 
@@ -13,13 +19,11 @@ class TextChatRequest(BaseModel):
 
 @chat_router.post("/text")
 async def chat_text(data: TextChatRequest):
-    return {
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    if data.socraticAI:
+        return chat_text_text_socraticAI(data.user, data.conversationHistory)
+
+    else:
+        return chat_text_text_Non_socraticAI(data.user, data.conversationHistory)
 
 
 class VoiceChatRequest(BaseModel):
@@ -30,11 +34,8 @@ class VoiceChatRequest(BaseModel):
 
 @chat_router.post("/voice")
 async def chat_voice(data: VoiceChatRequest):
-    return {
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    if data.socraticAI:
+        return chat_text_voice_socraticAI(data.audioFile, data.conversationHistory)
+
+    else:
+        return chat_text_voice_Non_socraticAI(data.audioFile, data.conversationHistory)

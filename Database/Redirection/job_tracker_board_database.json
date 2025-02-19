@@ -1,0 +1,37 @@
+[
+    {
+        "id": "job_id_1",
+        "title": "Software Engineer",
+        "status": "In Progress",
+        "deadlineDate": "1-03-2024",
+        "description": "Develop and maintain web applications using React and Node.js."
+    },
+    {
+        "id": "job_id_2",
+        "title": "Data Scientist",
+        "status": "Completed",
+        "deadlineDate": "2-03-2024",
+        "description": "Analyze large datasets to identify trends and insights."
+    },
+    {
+        "id": "job_id_3",
+        "title": "Project Manager",
+        "status": "Pending",
+        "deadlineDate": "3-03-2024",
+        "description": "Oversee the planning and execution of software development projects."
+    },
+    {
+        "id": "job_id_4",
+        "title": "UX Designer",
+        "status": "In Progress",
+        "deadlineDate": "4-03-2024",
+        "description": "Design user interfaces for web and mobile applications."
+    },
+    {
+        "id": "job_id_5",
+        "title": "QA Engineer",
+        "status": "Completed",
+        "deadlineDate": "5-03-2024",
+        "description": "Test software applications to ensure quality and identify bugs."
+    }
+]

@@ -1,6 +1,10 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
+from api.api_functions.interview_functions import (
+    update_Current_Interview,
+    get_previous_results,
+)
 
 interview_router = APIRouter(prefix="/api/interview", tags=["Interview"])
 
@@ -8,7 +12,7 @@ interview_router = APIRouter(prefix="/api/interview", tags=["Interview"])
 @interview_router.get("/filters")
 async def get_interview_filters():
     return {
-        "interviewType": ["HR", "TR"],
+        "interviewType": ["TR", "HR"],
         "level": ["Easy", "Medium", "Hard"],
         "topic": ["Linked_List", "Trees", "Stacks", "Queues", "Arrays", "Strings"],
     }
@@ -25,28 +29,19 @@ class StartInterviewRequest(BaseModel):
 
 @interview_router.post("/start")
 async def start_interview(data: StartInterviewRequest):
-    return {"acknowledgement": True}
+    return update_Current_Interview(
+        data.resumeFile,
+        data.InterviewType,
+        data.Level,
+        data.JobDescriptions,
+        data.Topics,
+        data.OthersData,
+    )
 
 
 @interview_router.get("/results")
 async def get_interview_results():
-    return [
-        {
-            "date": "1-03-2024",
-            "result": "good",
-            "review": "The product performed well and met expectations.  I was particularly impressed with its durability and ease of use.  Highly recommend.",
-        },
-        {
-            "date": "2-03-2024",
-            "result": "average",
-            "review": "The product is okay. It functions as described, but there are some minor issues. The build quality could be better, and the instructions were a bit unclear.  Overall, a decent value for the price.",
-        },
-        {
-            "date": "4-03-2024",
-            "result": "bad",
-            "review": "I am very disappointed with this product. It malfunctioned within a few days of use. The customer service was unhelpful.  I would not recommend this product to anyone.",
-        },
-    ]
+    return get_previous_results()
 
 
 class VoiceChatInterviewRequest(BaseModel):
@@ -54,6 +49,7 @@ class VoiceChatInterviewRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @interview_router.post("/voice-chat")
 async def interview_voice_chat(data: VoiceChatInterviewRequest):
     return {
@@ -71,6 +67,7 @@ class EndInterviewRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
+# TODO: Add AI Part
 @interview_router.post("/end")
 async def end_interview(data: EndInterviewRequest):
     return {"result": "good", "review": "Detailed feedback"}

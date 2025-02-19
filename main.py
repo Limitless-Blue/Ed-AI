@@ -13,7 +13,6 @@ from api.settings import settings_router
 
 app = FastAPI(title="💻 Placeholder API Application")
 
-# Middleware Configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -22,7 +21,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include Routers
 app.include_router(common_router)
 app.include_router(landing_router)
 app.include_router(learn_router)
@@ -35,7 +33,6 @@ app.include_router(saved_router)
 app.include_router(settings_router)
 
 
-# Root Route
 @app.get("/")
 async def root():
     return {"message": "🎴 Welcome to the ED AI's API Application!"}

@@ -9,7 +9,11 @@
             "firstName": "Chaitanya",
             "lastName": "Venkata",
             "email": "venkatachaitanya373@gmail.com",
-            "location": {"city": "visakhapatnam", "state": "Andhra Pradesh", "country": "India"},
+            "location": {
+                "city": "visakhapatnam",
+                "state": "Andhra Pradesh",
+                "country": "India"
+            },
             "linkedin": "https://www.linkedin.com/in/chaitanya-venkata-a5a908212/",
             "github": "https://github.com/pvchaitanya8"
         },
@@ -65,12 +69,20 @@
             {
                 "name": "Personal Portfolio Website",
                 "description": "Developed a personal portfolio website to showcase my skills and projects.",
-                "technologies": ["React", "Node.js", "MongoDB"]
+                "technologies": [
+                    "React",
+                    "Node.js",
+                    "MongoDB"
+                ]
             },
             {
                 "name": "E-commerce Platform",
                 "description": "Contributed to the development of a large-scale e-commerce platform.",
-                "technologies": ["Java", "Spring", "MySQL"]
+                "technologies": [
+                    "Java",
+                    "Spring",
+                    "MySQL"
+                ]
             }
         ],
         "awardsAndRecognition": [

@@ -2,38 +2,39 @@ import json
 import os
 
 
-def get_coding_problem(problemId: str):
+def delete_job_event_data(id: str):
+    file_path = "Database\\Redirection\\job_tracker_board_database.json"
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-    json_file_path = os.path.join(
-        base_dir,
-        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json",
-    )
+    json_file_path = os.path.join(base_dir, file_path)
 
-    with open(json_file_path, "r") as file:
-        data = json.load(file)
+    try:
+        with open(json_file_path, "r") as f:
+            data = json.load(f)
 
-    problem_data = data["problems"].get(problemId)
+        updated_data = [event for event in data if event.get("id") != id]
 
-    if problem_data:
-        problem_description = problem_data["Problem_Description"]
-        problem_solution = problem_data["Problem_Solution"]
-        test_cases = []
+        if len(data) != len(updated_data):
+            with open(json_file_path, "w") as f:
+                json.dump(updated_data, f, indent=4)
+            return {"acknowledgement": True}
+        else:
+            return {"acknowledgement": False}
 
-        for test_case in problem_data["Test_Cases"]:
-            input_case = test_case[0]
-            output_case = eval(test_case[1])
-            test_cases.append([input_case, output_case])
-
-        return {
-            "problemDescription": problem_description,
-            "problemSolution": problem_solution,
-            "testCases": test_cases,
-        }
-    else:
-        return {"error": f"Problem with ID {problemId} not found."}
+    except FileNotFoundError:
+        print(f"Error: File not found at {json_file_path}")
+        return {"acknowledgement": False}
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {json_file_path}")
+        return {"acknowledgement": False}
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return {"acknowledgement": False}
 
 
-# Example usage
-problemId = "COPA_3"
-result = get_coding_problem(problemId)
-print(json.dumps(result, indent=4))
+json_file_path = "Database\\Redirection\\job_tracker_board_database.json"
+
+result = delete_job_event_data("job_id_3")  # Delete job_id_3
+print(result)
+
+result = delete_job_event_data("job_id_6")  # Delete job_id_6 (not found)
+print(result)
