@@ -1,6 +1,5 @@
 import json
 import os
-from api.api_functions.interview_functions import generate_ai_response
 import google.generativeai as genai
 import speech_recognition as sr
 import subprocess
@@ -173,20 +172,6 @@ def jobs_mentor_text_chat_response(user_input, conversationHistory, additionalIn
     return {
         "AI": response,
         "conversationHistory": conversationHistory,
-    }
-
-
-def jobs_mentor_voice_chat_response(audioFile, conversationHistory, additionalInfo):
-    user_input = transcribe_audio(audioFile)
-    jobs_mentor_text_chat_response_data = jobs_mentor_text_chat_response(
-        user_input, conversationHistory, additionalInfo
-    )
-    return {
-        "user": user_input,
-        "AI": jobs_mentor_text_chat_response_data["AI"],
-        "conversationHistory": jobs_mentor_text_chat_response_data[
-            "conversationHistory"
-        ],
     }
 
 
