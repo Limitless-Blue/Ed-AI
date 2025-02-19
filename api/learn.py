@@ -36,16 +36,11 @@ class TextChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @learn_router.post("/text-chat")
 async def learn_text_chat(data: TextChatLearnRequest):
-    return {
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return learn_text_chat(
+        data.socraticAI, data.additionalInfo, data.user, data.conversationHistory
+    )
 
 
 class VoiceChatLearnRequest(BaseModel):
@@ -55,17 +50,11 @@ class VoiceChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @learn_router.post("/voice-chat")
 async def learn_voice_chat(data: VoiceChatLearnRequest):
-    return {
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return learn_voice_chat(
+        data.socraticAI, data.additionalInfo, data.audioFile, data.conversationHistory
+    )
 
 
 class EndCourseRequest(BaseModel):
@@ -86,16 +75,11 @@ class MentorHelpTextChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @learn_router.post("/mentor-help/text-chat")
 async def learn_mentor_text_chat(data: MentorHelpTextChatLearnRequest):
-    return {
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return learn_text_chat(
+        data.socraticAI, data.additionalInfo, data.user, data.conversationHistory
+    )
 
 
 class MentorHelpVoiceChatLearnRequest(BaseModel):
@@ -105,14 +89,8 @@ class MentorHelpVoiceChatLearnRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @learn_router.post("/mentor-help/voice-chat")
 async def learn_mentor_voice_chat(data: MentorHelpVoiceChatLearnRequest):
-    return {
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return learn_voice_chat(
+        data.socraticAI, data.additionalInfo, data.audioFile, data.conversationHistory
+    )
