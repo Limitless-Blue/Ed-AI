@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-from typing import List, Optional, Dict, Any, Optional
+from typing import List, Optional, Dict, Any
 import google.generativeai as genai
 import speech_recognition as sr
 import subprocess
@@ -162,7 +162,9 @@ def transcribe_audio(audio_file: str) -> str:
         return f"Could not request results from Speech Recognition service; {e}"
 
 
-def learn_text_chat(socraticAI, additionalInfo, user_input, conversationHistory):
+def side_text_chat_function(
+    socraticAI, additionalInfo, user_input, conversationHistory
+):
     if socraticAI:
         prompt_input = f"""Answer the following question of user based upon the conversation history, and provide additional information if necessary:
         user: {user_input}
@@ -203,9 +205,11 @@ def learn_text_chat(socraticAI, additionalInfo, user_input, conversationHistory)
     }
 
 
-def learn_voice_chat(socraticAI, additionalInfo, audioFile, conversationHistory):
+def side_voice_chat_function(
+    socraticAI, additionalInfo, audioFile, conversationHistory
+):
     user_input = transcribe_audio(audioFile)
-    response_text = learn_text_chat(
+    response_text = side_text_chat_function(
         socraticAI, additionalInfo, user_input, conversationHistory
     )
     return {
