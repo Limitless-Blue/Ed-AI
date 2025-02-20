@@ -319,10 +319,33 @@ def get_user_mcq_data():
 # TODO: Complete writing prompt such a way that results the list I can append
 def update_recommendation_coding_problem_page_database():
     updated_coding_problem_page_recommendations = []
-    prompt = """ """
     User_coding_problem_page_data = get_user_coding_problem_page_data()
 
+    prompt = f"""
+    Based on the following user learning progress, recommend a list of Coding Problem IDs. Return ONLY a valid JSON array of 5 Coding Problem IDs. Do not include any other text or explanations.
+
+    User Learning Progress:
+    ```json
+    {User_coding_problem_page_data}
+    ```
+
+    Consider these factors when making recommendations:
+
+    * **Relevance:** The recommended Coding Problem should be relevant to the user's existing progress. Prioritize Coding Problem that build upon or complement what the user has already learned.
+    * **Completion:** Avoid recommending Coding Problem the user has already completed.
+    * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar Coding Problem.
+
+    Example Output (JSON array of Coding Problem IDs):
+    ```json
+    ["COPA_1", "COPA_2", "COPA_3", "COPA_4", "COPA_5"]
+    ```
+    """
+
     prompt_result = generate_ai_response(prompt)
+    cleaned_json_string = clean_json_string(prompt_result)
+    cleaned_json_list = ast.literal_eval(cleaned_json_string)
+    updated_coding_problem_page_recommendations.extend(cleaned_json_list)
+
     updated_coding_problem_page_recommendations += clean_json_string(prompt_result)
 
     replace_Recommedations_list_in_json(
