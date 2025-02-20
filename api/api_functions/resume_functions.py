@@ -30,9 +30,46 @@ def clean_json_string(text):
     return text
 
 
+def get_resume_details():
+    file_path = "Database\\Redirection\\User_data.json"
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(base_dir, file_path)
+
+    try:
+        with open(json_file_path, "r") as f:
+            data = json.load(f)
+            if "ResumeDetails" in data:
+                return data["ResumeDetails"]
+            else:
+                print(f"Error: 'ResumeDetails' key not found in {json_file_path}")
+                return None
+    except FileNotFoundError:
+        print(f"Error: File not found at {json_file_path}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {json_file_path}")
+        return None
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return None
+
+
 def generate_ai_response(prompt: str) -> str:
     response = model.generate_content(prompt)
     return response.text
+
+
+def get_coverLetter(filepath: str) -> str:
+    try:
+        with open(filepath, "r", encoding="utf-8") as file:
+            file_content = file.read()
+            return file_content
+    except FileNotFoundError:
+        print(f"Error: File not found at {filepath}")
+        return None
+    except Exception as e:
+        print(f"An error occurred while reading the file: {e}")
+        return None
 
 
 def get_user_career_info(job_description):
@@ -59,7 +96,7 @@ def get_user_career_info(job_description):
 
 
 def analyze_job_match_response(jobDescription):
-    user_career_info = get_user_career_info(jobDescription)
+    user_career_info = get_resume_details()
     print(f"User career info: {user_career_info}")
 
     prompt = f"""
@@ -96,20 +133,103 @@ def analyze_job_match_response(jobDescription):
 
 
 def generate_cover_letter_response(jobDescription):
-    prompt = f""" """
-    prompt_response = generate_ai_response(prompt)
-    return
+    user_career_info = get_resume_details()
+    prompt = f"""Write a compelling and personalized cover letter for the following job description, using the provided career information.  The cover letter should be professional, enthusiastic, and tailored to highlight the skills and experience that best align with the job requirements.  Focus on quantifiable achievements whenever possible.  Keep the tone confident but not arrogant. Aim for a concise and impactful letter, ideally no more than one page.
 
-    # return {
-    #     "coverLetter": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt"
-    # }
+    **Job Description:**
+    ```
+        {jobDescription}
+    ```
+
+    **Career Information:**
+    ```
+        {user_career_info}
+    ```
+
+    **Instructions for the Cover Letter:**
+
+    *   **Opening:**  Start with a strong opening paragraph that immediately grabs the reader's attention and clearly states the position you're applying for.  Mention how you learned about the opportunity.
+    *   **Body Paragraphs:**  Develop 2-3 body paragraphs that highlight your most relevant skills and experiences.  Specifically address the key requirements and responsibilities outlined in the job description.  Provide concrete examples and quantifiable results to demonstrate your capabilities.  Connect your experience to the company's mission or values, if possible.
+    *   **Closing:**  Conclude with a strong closing paragraph that reiterates your interest in the position and expresses your eagerness to learn more.  Mention your availability for an interview and thank the reader for their time and consideration.
+    *   **Format:**  The cover letter should be formatted professionally, as if it were being sent to a real company.  Include a proper salutation (e.g., "Dear [Hiring Manager Name],") and closing (e.g., "Sincerely,").  Use clear and concise language, avoiding jargon or overly technical terms unless specifically relevant to the job.
+    *   **Tailoring:**  The cover letter *must* be tailored specifically to this job description.  Do not generate a generic cover letter.  Reference specific requirements and demonstrate how your skills and experience directly address them.
+    *   **Tone:**  Maintain a professional and enthusiastic tone throughout the letter.  Express your genuine interest in the company and the position.
+    *   **Length:** Aim for a concise and impactful letter, ideally no more than one page.
+
+    **Output the cover letter in plain text format.**
+    """
+    try:
+        prompt_response = generate_ai_response(prompt)
+
+        cover_letter_output_file = os.path.join(
+            "API_Endpoint", "Temp_Static_data", "Chat", "cover_letter.txt"
+        )
+        os.makedirs(os.path.dirname(cover_letter_output_file), exist_ok=True)
+
+        try:
+            with open(cover_letter_output_file, "w") as f:
+                f.write(prompt_response)
+        except Exception as e:
+            print(f"Error writing cover letter to file: {e}")
+            return {"error": "Error writing cover letter to file."}
+
+        return {"coverLetter": cover_letter_output_file}
+
+    except Exception as e:
+        print(f"Error generating cover letter: {e}")
+        return {"error": "Error generating cover letter."}
 
 
 def cover_letter_chat_response(jobDescription, coverLetter, userMessage):
-    prompt = f""" """
-    prompt_response = generate_ai_response(prompt)
-    return
+    user_career_info = get_resume_details()
+    coverLetter_info = get_coverLetter(coverLetter)
 
-    # return {
-    #     "coverLetter": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt"
-    # }
+    prompt = f"""
+    You are a career consultant helping a job seeker tailor their cover letter.  Given the following information, revise the provided cover letter to be more effective.
+
+    **User Message/Request:**
+    {userMessage}
+
+    **Existing Cover Letter:**
+    {coverLetter_info}
+
+    **User Career Information (from resume):**
+    {user_career_info}
+    
+    **Job Description:**
+    {jobDescription}
+
+    **Instructions:**
+
+    1. Carefully analyze the job description, user career information, existing cover letter, and the user's message/request.
+    2. Revise the existing cover letter to:
+        * Highlight the skills and experiences from the user's career information that are most relevant to the job description.
+        * Address any specific requirements or qualifications mentioned in the job description.
+        * Incorporate the user's message/request, which may include specific instructions or areas of focus.
+        * Maintain a professional and concise tone.
+        * Ensure the revised cover letter is well-structured and easy to read.
+    3. Output ONLY the revised cover letter. Do not include any explanations or commentary.  Just the text of the updated cover letter.
+
+    """
+    prompt_response = generate_ai_response(prompt)
+    print(f"Prompt response: {prompt_response}")
+    try:
+        prompt_response = generate_ai_response(prompt)
+
+        cover_letter_output_file = os.path.join(
+            "API_Endpoint", "Temp_Static_data", "Chat", "cover_letter.txt"
+        )
+        os.makedirs(os.path.dirname(cover_letter_output_file), exist_ok=True)
+
+        try:
+            with open(cover_letter_output_file, "w") as f:
+                f.write(prompt_response)
+        except Exception as e:
+            print(f"Error writing cover letter to file: {e}")
+            return {"error": "Error writing cover letter to file."}
+
+        return {"coverLetter": cover_letter_output_file}
+
+    except Exception as e:
+        print(f"Error generating cover letter: {e}")
+        return {"error": "Error generating cover letter."}
