@@ -217,3 +217,58 @@ def side_voice_chat_function(
         "AI": response_text["AI"],
         "conversationHistory": response_text["conversationHistory"],
     }
+
+
+def update_learn_page_database(courseId: str, testResults: Dict[str, Dict[str, str]]):
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_learn_page_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+
+        for course_entry in data:
+            if course_entry["ID"] == courseId:
+                for test in course_entry["Test"]:
+                    test_id = test["id"]
+                    if test_id in testResults:
+                        try:
+                            new_score = int(
+                                testResults[test_id]["score"]
+                            )  # Try converting to int
+                            test["score"] = new_score
+                        except ValueError:
+                            print(
+                                f"Invalid score for test {test_id}. Score must be an integer."
+                            )
+
+                break
+        else:
+            print(f"Course with ID '{courseId}' not found in the database.")
+            return
+
+        with open(file_path, "w") as f:
+            json.dump(data, f, indent=4)
+
+        print(f"Database updated successfully for course '{courseId}'.")
+
+    except FileNotFoundError:
+        print(f"Error: File not found at '{file_path}'.")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in '{file_path}'.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+# TODO: Add AI Part
+def update_learn_page_recommendations():
+    pass
+
+
+def end_course_response(courseId, testResults):
+    update_learn_page_database(courseId, testResults)
+    update_learn_page_recommendations()
+    return {"acknowledgement": True}

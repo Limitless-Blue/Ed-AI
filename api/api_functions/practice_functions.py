@@ -202,3 +202,86 @@ def get_all_coding_problem(problemId: str):
         }
     else:
         return {"error": f"Problem with ID {problemId} not found."}
+
+
+def update_coding_problem_page_database(courseId):
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        if "problems" not in data:
+            data["problems"] = {}
+
+        if courseId in data["problems"]:
+            data["problems"][courseId]["Completed"] = True
+
+        else:
+            print(f"Course ID '{courseId}' not found in the database.")
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+
+        print(f"Database updated for Course ID: {courseId} (Completed set to True)")
+
+    except FileNotFoundError:
+        print(f"Error: JSON file not found at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+# TODO: Add AI Part
+def update_recommendation_coding_problem_page_database():
+    pass
+
+
+def submit_practice_function(courseId, score):
+    update_coding_problem_page_database(courseId)
+    update_recommendation_coding_problem_page_database()
+
+    return {"acknowledgement": True}
+
+
+def update_MCQs_page_database(courseId, score):
+    file_path = "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+
+        if courseId in data:
+            data[courseId]["Score"] = score
+            data[courseId]["Completed"] = True
+
+            with open(file_path, "w") as f:
+                json.dump(data, f, indent=4)
+
+            print(f"Successfully updated data for {courseId}.")
+        else:
+            print(f"Course ID '{courseId}' not found in the database.")
+
+    except FileNotFoundError:
+        print(f"Error: JSON file not found at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+# TODO: Add AI Part
+def update_recommendation_MCQs_page_database():
+    pass
+
+
+def end_practice_function(courseId, score):
+    update_MCQs_page_database(courseId, score)
+    update_recommendation_MCQs_page_database()
+
+    return {"acknowledgement": True}
