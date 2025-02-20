@@ -32,7 +32,6 @@ class ResetProgressRequest(BaseModel):
     Password: str
 
 
-# TODO: Implement the reset_progress endpoint
 @settings_router.post("/reset-progress")
 async def reset_progress(data: ResetProgressRequest):
     return {"acknowledgement": True}

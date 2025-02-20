@@ -7,6 +7,10 @@ from api.api_functions.practice_functions import (
     get_all_mcq_test,
     get_all_coding_problem,
 )
+from api.api_functions.learn_functions import (
+    side_text_chat_function,
+    side_voice_chat_function,
+)
 
 practice_router = APIRouter(prefix="/api/practice", tags=["Practice"])
 
@@ -54,16 +58,11 @@ class MentorHelpTextChatPracticeRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @practice_router.post("/mentor-help/text-chat")
 async def practice_mentor_text_chat(data: MentorHelpTextChatPracticeRequest):
-    return {
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return side_text_chat_function(
+        data.socraticAI, data.additionalInfo, data.user, data.conversationHistory
+    )
 
 
 class MentorHelpVoiceChatPracticeRequest(BaseModel):
@@ -73,17 +72,11 @@ class MentorHelpVoiceChatPracticeRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @practice_router.post("/mentor-help/voice-chat")
 async def practice_mentor_voice_chat(data: MentorHelpVoiceChatPracticeRequest):
-    return {
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return side_voice_chat_function(
+        data.socraticAI, data.additionalInfo, data.audioFile, data.conversationHistory
+    )
 
 
 class EndPracticeRequest(BaseModel):
@@ -104,16 +97,11 @@ class MentorHelpMCQTextChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @practice_router.post("/mentor-help/mcqs/text-chat")
 async def practice_mentor_mcq_text_chat(data: MentorHelpMCQTextChatRequest):
-    return {
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return side_text_chat_function(
+        data.socraticAI, data.additionalInfo, data.user, data.conversationHistory
+    )
 
 
 class MentorHelpMCQVoiceChatRequest(BaseModel):
@@ -123,14 +111,8 @@ class MentorHelpMCQVoiceChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @practice_router.post("/mentor-help/mcqs/voice-chat")
 async def practice_mentor_mcq_voice_chat(data: MentorHelpMCQVoiceChatRequest):
-    return {
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return side_voice_chat_function(
+        data.socraticAI, data.additionalInfo, data.audioFile, data.conversationHistory
+    )

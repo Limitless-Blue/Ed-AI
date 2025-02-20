@@ -5,6 +5,8 @@ from api.api_functions.jobs_functions import (
     get_all_job_tracker_board_data,
     edit_job_event_data,
     delete_job_event_data,
+    jobs_mentor_text_chat_response,
+    jobs_mentor_voice_chat_response,
 )
 
 jobs_router = APIRouter(prefix="/api/jobs", tags=["Jobs"])
@@ -51,16 +53,11 @@ class JobsMentorTextChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @jobs_router.post("/mentor-help/text-chat")
 async def jobs_mentor_text_chat(data: JobsMentorTextChatRequest):
-    return {
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return jobs_mentor_text_chat_response(
+        data.user, data.conversationHistory, data.additionalInfo
+    )
 
 
 class JobsMentorVoiceChatRequest(BaseModel):
@@ -69,14 +66,8 @@ class JobsMentorVoiceChatRequest(BaseModel):
     conversationHistory: List[Dict[str, str]]
 
 
-# TODO: Add AI Part
 @jobs_router.post("/mentor-help/voice-chat")
 async def jobs_mentor_voice_chat(data: JobsMentorVoiceChatRequest):
-    return {
-        "user": "Transcribed user speech",
-        "AI": "AI's text response",
-        "conversationHistory": [
-            {"speaker": "user", "text": "Transcribed user speech"},
-            {"speaker": "AI", "text": "AI's text response"},
-        ],
-    }
+    return jobs_mentor_voice_chat_response(
+        data.audioFile, data.conversationHistory, data.additionalInfo
+    )
