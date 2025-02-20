@@ -274,10 +274,41 @@ def update_learn_page_database(courseId: str, testResults: Dict[str, Dict[str, s
         print(f"An unexpected error occurred: {e}")
 
 
+def get_user_learn_page_progress():
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_learn_page_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return {"error": "File not found."}
+    except json.JSONDecodeError:
+        return {"error": "Invalid JSON format."}
+
+    result = {"NOT COMPLETED BY USER": [], "COMPLETED BY USER": []}
+
+    for item in data:
+        if item["Completed"]:
+            result["COMPLETED BY USER"].append(item)
+        else:
+            not_completed_data = {
+                "ID": item["ID"],
+                "title": item["title"],
+                "level": item["level"],
+            }
+            result["NOT COMPLETED BY USER"].append(not_completed_data)
+
+    return result
+
+
 # TODO: Add AI Part
 def update_learn_page_recommendations():
     updated_learn_page_recommendations = []
     prompt = """ """
+    user_learn_page_progress = get_user_learn_page_progress()
 
     prompt_result = generate_ai_response(prompt)
     updated_learn_page_recommendations += clean_json_string(prompt_result)

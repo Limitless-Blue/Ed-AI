@@ -261,10 +261,69 @@ def update_coding_problem_page_database(courseId):
         print(f"An unexpected error occurred: {e}")
 
 
+def get_user_coding_problem_page_data():
+    file_path = (
+        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(base_dir, file_path)
+    try:
+        with open(json_file_path, "r") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return "File not found."
+    except json.JSONDecodeError:
+        return "Invalid JSON format."
+
+    problems = data.get("problems", {})
+    result = {"NOT COMPLETED BY USER": [], "COMPLETED BY USER": []}
+
+    for problem_id, problem_data in problems.items():
+        if problem_data.get("Completed", False):
+            result["COMPLETED BY USER"].append(problem_data)
+        else:
+            not_completed_data = {
+                "id": problem_id,
+                "title": problem_data.get("title"),
+                "difficulty": problem_data.get("Difficulty"),
+            }
+            result["NOT COMPLETED BY USER"].append(not_completed_data)
+
+    return result
+
+
+def get_user_mcq_data():
+    file_path = "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(base_dir, file_path)
+    try:
+        with open(json_file_path, "r") as f:
+            mcq_data = json.load(f)
+    except FileNotFoundError:
+        return "File not found."
+    except json.JSONDecodeError:
+        return "Invalid JSON format."
+
+    result = {"NOT COMPLETED BY USER": {}, "COMPLETED BY USER": {}}
+
+    for mcq_id, data in mcq_data.items():
+        if data.get("Completed", False):
+            result["COMPLETED BY USER"][mcq_id] = data
+        else:
+            result["NOT COMPLETED BY USER"][mcq_id] = {
+                "ID": mcq_id,
+                "Title": data.get("Title"),
+                "Difficulty": data.get("level"),
+            }
+
+    return result
+
+
 # TODO: Add AI Part
 def update_recommendation_coding_problem_page_database():
     updated_coding_problem_page_recommendations = []
     prompt = """ """
+    User_coding_problem_page_data = get_user_coding_problem_page_data()
 
     prompt_result = generate_ai_response(prompt)
     updated_coding_problem_page_recommendations += clean_json_string(prompt_result)
@@ -283,7 +342,11 @@ def submit_practice_function(courseId, score):
 
 
 def update_MCQs_page_database(courseId, score):
-    file_path = "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
 
     try:
         with open(file_path, "r") as f:
@@ -312,6 +375,7 @@ def update_MCQs_page_database(courseId, score):
 def update_recommendation_MCQs_page_database():
     updated_MCQs_page_recommendations = []
     prompt = """ """
+    user_mcq_data = get_user_mcq_data()
 
     prompt_result = generate_ai_response(prompt)
     updated_MCQs_page_recommendations += clean_json_string(prompt_result)
