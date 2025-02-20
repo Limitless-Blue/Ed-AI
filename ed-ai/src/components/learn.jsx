@@ -56,8 +56,8 @@ function Learn({ isExpanded }) {
     }
   }
 
-  const handleCourseClick = (courseId) => {
-    navigate(`/course/${courseId}`);
+  const handleCourseClick = (courseId, courseName) => {
+    navigate(`/course/${courseId}`, { state: { courseName } });
   };
 
   if (loading) return <p className="loading-text">Loading...</p>;
@@ -76,7 +76,7 @@ function Learn({ isExpanded }) {
         >
           {recommendations.map((rec) => (
             <SwiperSlide key={rec.id} className="recommendation-slide">
-              <div className="recommendation-card" onClick={() => handleCourseClick(rec.id)} style={{ cursor: 'pointer' }}>
+              <div className="recommendation-card" onClick={() => handleCourseClick(rec.id, rec.courseName)} style={{ cursor: 'pointer' }}>
                 <img
                   src={`../src/assets/images/ED AI Static Image Data/THumbnail of materials/Learn Page/Recommendations/${rec.id}.png`}
                   alt={rec.courseName}
@@ -128,7 +128,7 @@ function Learn({ isExpanded }) {
 
       <div className="courses-container">
         {courses.length === 0 ? <p>No courses found</p> : courses.map((course) => (
-          <div key={course.id} className="course-card" onClick={() => handleCourseClick(course.id)} style={{ cursor: 'pointer' }}>
+          <div key={course.id} className="course-card" onClick={() => handleCourseClick(course.id, course.courseName)} style={{ cursor: 'pointer' }}>
             <img
               src={`../src/assets/images/ED AI Static Image Data/THumbnail of materials/Learn Page/All Display/${course.id}.png`}
               alt={course.courseName}

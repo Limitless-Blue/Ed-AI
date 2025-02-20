@@ -9,6 +9,8 @@ import Chat from "./components/chat";
 import ResumeOptimizer from "./components/resumeOptimizer";
 import JobTracker from "./components/jobTracker";
 import CourseContent from './components/courseContent';
+import McqTest from "./components/mcqTest";
+import CodingTest from "./components/codingTest";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -36,6 +38,8 @@ function App() {
                 <Route path="/job-tracker" element={<JobTracker />} />
                 <Route path="/course/:courseId" element={<CourseContent />} />
                 <Route path="/interview" element={<InterviewPage/>}/>
+                <Route path="/mcq-test" element={<McqTest/>}/>
+                <Route path="/coding-test" element={<CodingTest/>}/>
               </Routes>
             </div>
           </div>
