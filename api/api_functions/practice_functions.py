@@ -394,14 +394,32 @@ def update_MCQs_page_database(courseId, score):
         print(f"An unexpected error occurred: {e}")
 
 
-# TODO: Complete writing prompt such a way that results the list I can append
 def update_recommendation_MCQs_page_database():
     updated_MCQs_page_recommendations = []
-    prompt = """ """
     user_mcq_data = get_user_mcq_data()
 
+    prompt = f"""
+    Based on the following user learning progress, recommend a list of MCQ test IDs. Return ONLY a valid JSON array of 5 MCQ test IDs. Do not include any other text or explanations.
+
+    User Learning Progress:
+    ```json
+    {user_mcq_data}
+    ```
+
+    Consider these factors when making recommendations:
+
+    * **Relevance:** The recommended MCQ tests should be relevant to the user's existing progress. Prioritize MCQ tests that build upon or complement what the user has already learned.
+    * **Completion:** Avoid recommending MCQ tests the user has already completed.
+    * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar MCQ tests.
+
+    Example Output (JSON array of MCQ test IDs):
+    ["MCPA_1", "MCPA_2", "MCPA_3", "MCPA_4", "MCPA_5"]
+    """
+
     prompt_result = generate_ai_response(prompt)
-    updated_MCQs_page_recommendations += clean_json_string(prompt_result)
+    cleaned_json_string = clean_json_string(prompt_result)
+    cleaned_json_list = ast.literal_eval(cleaned_json_string)
+    updated_MCQs_page_recommendations.extend(cleaned_json_list)
 
     replace_Recommedations_list_in_json("MCQs_page", updated_MCQs_page_recommendations)
     return {"acknowledgement": True}
