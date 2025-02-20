@@ -1,32 +1,88 @@
 .course-content {
-    padding: 20px;
-  }
-  
-  .course-status {
-    display: flex;
-    gap: 15px;
-    font-size: 16px;
-  }
-  
-  .tabs {
-    margin-top: 20px;
-  }
-  
-  .tabs button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .tabs .active {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .markdown-viewer {
-    border: 1px solid #ccc;
-    padding: 15px;
-    background-color: #f9f9f9;
-    margin-top: 10px;
-  }  
+  color: white;
+  padding: 0.5rem;
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4b4a5b;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.back-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: limegreen;
+}
+
+.next-btn {
+  background: #D8D8D8;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 4rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon-container {
+  background: #00FF00;
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.chat-wrapper .chat-container {
+  height: 25rem;
+}
+
+.tabs {
+  display: flex;
+  background: #4b4a5b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.tabs button {
+  flex: 1;
+  background: #2d2c3b;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tabs .active {
+  background: blue;
+}
+
+.content-area {
+  background: #2d2c3b;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.markdown-viewer {
+  color: white;
+}
