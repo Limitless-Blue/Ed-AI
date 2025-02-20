@@ -1,6 +1,11 @@
 from fastapi import FastAPI, APIRouter, Body, Query, Path
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
+from api.api_functions.resume_functions import (
+    analyze_job_match_response,
+    generate_cover_letter_response,
+    cover_letter_chat_response,
+)
 
 resume_router = APIRouter(prefix="/api/resume", tags=["Resume"])
 
@@ -9,22 +14,14 @@ class ResumeAnalysisRequest(BaseModel):
     jobDescription: str
 
 
-# TODO: Add AI Part
 @resume_router.post("/analysis")
 async def analyze_job_match(data: ResumeAnalysisRequest):
-    return {
-        "match": "Good",
-        "skillGapAnalysis": """Analysis details...""",
-        "salaryInsights": """Insights details...""",
-    }
+    analyze_job_match_response(data.jobDescription)
 
 
-# TODO: Add AI Part
 @resume_router.post("/generate-cover-letter")
 async def generate_cover_letter(data: ResumeAnalysisRequest):
-    return {
-        "coverLetter": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt"
-    }
+    generate_cover_letter_response(data.jobDescription)
 
 
 class CoverLetterChatRequest(BaseModel):
@@ -33,12 +30,9 @@ class CoverLetterChatRequest(BaseModel):
     userMessage: Optional[str] = None
 
 
-# TODO: Add AI Part
 @resume_router.post("/cover-letter-chat")
 async def cover_letter_chat(data: CoverLetterChatRequest):
-    return {
-        "coverLetter": r"API_Endpoint\Temp_Static_data\JobSearchOptimization\CoverLetter.txt"
-    }
+    cover_letter_chat_response(data.jobDescription, data.coverLetter, data.userMessage)
 
 
 class TaloreChatRequest(BaseModel):
