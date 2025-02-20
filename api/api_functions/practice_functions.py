@@ -316,7 +316,6 @@ def get_user_mcq_data():
     return result
 
 
-# TODO: Complete writing prompt such a way that results the list I can append
 def update_recommendation_coding_problem_page_database():
     updated_coding_problem_page_recommendations = []
     User_coding_problem_page_data = get_user_coding_problem_page_data()
@@ -336,9 +335,7 @@ def update_recommendation_coding_problem_page_database():
     * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar Coding Problem.
 
     Example Output (JSON array of Coding Problem IDs):
-    ```json
     ["COPA_1", "COPA_2", "COPA_3", "COPA_4", "COPA_5"]
-    ```
     """
 
     prompt_result = generate_ai_response(prompt)
@@ -346,7 +343,13 @@ def update_recommendation_coding_problem_page_database():
     cleaned_json_list = ast.literal_eval(cleaned_json_string)
     updated_coding_problem_page_recommendations.extend(cleaned_json_list)
 
-    updated_coding_problem_page_recommendations += clean_json_string(prompt_result)
+    print(":::: cleaned_json_list")
+    print(cleaned_json_list)
+    print(type(cleaned_json_list))
+
+    print(":::: updated_coding_problem_page_recommendations")
+    print(updated_coding_problem_page_recommendations)
+    print(type(updated_coding_problem_page_recommendations))
 
     replace_Recommedations_list_in_json(
         "coding_problems_page", updated_coding_problem_page_recommendations

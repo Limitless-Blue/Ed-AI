@@ -1,5 +1,23 @@
 {
-    "Learn_Page": ["LEPA_1", "LEPA_2", "LEPA_3", "LEPA_4", "LEPA_5"],
-    "MCQs_page": ["MCPA_1", "MCPA_2", "MCPA_3", "MCPA_4", "MCPA_5"],
-    "coding_problems_page": ["COPA_1", "COPA_2", "COPA_3", "COPA_4", "COPA_5"]
+    "Learn_Page": [
+        "LEPA_1",
+        "LEPA_2",
+        "LEPA_3",
+        "LEPA_4",
+        "LEPA_5"
+    ],
+    "MCQs_page": [
+        "MCPA_1",
+        "MCPA_2",
+        "MCPA_3",
+        "MCPA_4",
+        "MCPA_5"
+    ],
+    "coding_problems_page": [
+        "COPA_1",
+        "COPA_2",
+        "COPA_6",
+        "COPA_14",
+        "COPA_15"
+    ]
 }
