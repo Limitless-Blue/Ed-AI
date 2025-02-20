@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import ast
 import sys
 from typing import List, Optional, Dict, Any
 import google.generativeai as genai
@@ -19,13 +20,9 @@ from api.api_functions.common_functions import extract_recommendation_list
 
 
 def clean_json_string(text):
-    text = re.sub(
-        r"(^\s*```\s*json?\s*$|\n\s*```\s*$)",
-        "",
-        text,
-        flags=re.IGNORECASE | re.MULTILINE,
-    ).strip()
-    text = text.strip("`")
+    text = text.replace("```json", "")
+    text = text.replace("```", "")
+
     return text
 
 
@@ -304,14 +301,36 @@ def get_user_learn_page_progress():
     return result
 
 
-# TODO: Add AI Part
 def update_learn_page_recommendations():
     updated_learn_page_recommendations = []
-    prompt = """ """
     user_learn_page_progress = get_user_learn_page_progress()
 
+    prompt = f"""
+    Based on the following user learning progress, recommend a list of course IDs. Return ONLY a valid JSON array of 5 course IDs. Do not include any other text or explanations.
+
+    User Learning Progress:
+    ```json
+    {user_learn_page_progress}
+    ```
+
+    Consider these factors when making recommendations:
+
+    * **Relevance:** The recommended courses should be relevant to the user's existing progress. Prioritize courses that build upon or complement what the user has already learned.
+    * **Completion:** Avoid recommending courses the user has already completed.
+    * **Next Steps:** Recommend courses that logically follow the user's current learning path. Think of what the user should learn next to advance their skills.
+    * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar courses.
+
+    Example Output (JSON array of course IDs):
+    ```json
+    ["LEPA_1", "LEPA_2", "LEPA_3", "LEPA_4", "LEPA_5"]
+    ```
+    """
+
     prompt_result = generate_ai_response(prompt)
-    updated_learn_page_recommendations += clean_json_string(prompt_result)
+    cleaned_json_string = clean_json_string(prompt_result)
+    cleaned_json_list = ast.literal_eval(cleaned_json_string)
+
+    updated_learn_page_recommendations.extend(cleaned_json_list)
 
     replace_Recommedations_list_in_json(
         "Learn_Page", updated_learn_page_recommendations

@@ -6,6 +6,7 @@ from api.api_functions.common_functions import replace_Recommedations_list_in_js
 import google.generativeai as genai
 from dotenv import load_dotenv
 import re
+import ast
 
 load_dotenv()
 genai.configure(api_key=os.getenv("Google_API_KEY"))
@@ -16,13 +17,9 @@ from api.api_functions.common_functions import extract_recommendation_list
 
 
 def clean_json_string(text):
-    text = re.sub(
-        r"(^\s*```\s*json?\s*$|\n\s*```\s*$)",
-        "",
-        text,
-        flags=re.IGNORECASE | re.MULTILINE,
-    ).strip()
-    text = text.strip("`")
+    text = text.replace("```json", "")
+    text = text.replace("```", "")
+
     return text
 
 
@@ -319,7 +316,7 @@ def get_user_mcq_data():
     return result
 
 
-# TODO: Add AI Part
+# TODO: Complete writing prompt such a way that results the list I can append
 def update_recommendation_coding_problem_page_database():
     updated_coding_problem_page_recommendations = []
     prompt = """ """
@@ -371,7 +368,7 @@ def update_MCQs_page_database(courseId, score):
         print(f"An unexpected error occurred: {e}")
 
 
-# TODO: Add AI Part
+# TODO: Complete writing prompt such a way that results the list I can append
 def update_recommendation_MCQs_page_database():
     updated_MCQs_page_recommendations = []
     prompt = """ """
