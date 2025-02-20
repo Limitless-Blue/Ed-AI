@@ -151,3 +151,33 @@ def extract_recommendation_list(page_id: str) -> Optional[List[str]]:
     except FileNotFoundError:
         print(f"Error: File not found at {file_path}")
         return None
+
+
+def replace_Recommedations_list_in_json(key_to_replace, new_list):
+    file_path = "Database\\Redirection\\Recommedations_(dynamic_version).json"
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(base_dir, file_path)
+
+    try:
+        with open(json_file_path, "r") as f:
+            data = json.load(f)
+
+        if key_to_replace in data:
+            data[key_to_replace] = new_list
+        else:
+            print(f"Key '{key_to_replace}' not found in JSON data.")
+            return
+
+        with open(json_file_path, "w") as f:
+            json.dump(data, f, indent=4)
+
+        print(
+            f"List for key '{key_to_replace}' replaced successfully in {json_file_path}"
+        )
+
+    except FileNotFoundError:
+        print(f"Error: JSON file not found at {json_file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {json_file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")

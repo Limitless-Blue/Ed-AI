@@ -1,5 +1,7 @@
 import json
 import os
+import re
+import ast
 import sys
 from typing import List, Optional, Dict, Any
 import google.generativeai as genai
@@ -7,6 +9,7 @@ import speech_recognition as sr
 import subprocess
 from pydub import AudioSegment
 from dotenv import load_dotenv
+from api.api_functions.common_functions import replace_Recommedations_list_in_json
 
 load_dotenv()
 genai.configure(api_key=os.getenv("Google_API_KEY"))
@@ -14,6 +17,13 @@ model = genai.GenerativeModel("gemini-2.0-flash-lite-preview-02-05")
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from api.api_functions.common_functions import extract_recommendation_list
+
+
+def clean_json_string(text):
+    text = text.replace("```json", "")
+    text = text.replace("```", "")
+
+    return text
 
 
 def learn_page_recommendations():
@@ -217,3 +227,118 @@ def side_voice_chat_function(
         "AI": response_text["AI"],
         "conversationHistory": response_text["conversationHistory"],
     }
+
+
+def update_learn_page_database(courseId: str, testResults: Dict[str, Dict[str, str]]):
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_learn_page_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+
+        for course_entry in data:
+            if course_entry["ID"] == courseId:
+                for test in course_entry["Test"]:
+                    test_id = test["id"]
+                    if test_id in testResults:
+                        try:
+                            new_score = int(testResults[test_id]["score"])
+                            test["score"] = new_score
+                        except ValueError:
+                            print(
+                                f"Invalid score for test {test_id}. Score must be an integer."
+                            )
+
+                break
+        else:
+            print(f"Course with ID '{courseId}' not found in the database.")
+            return
+
+        with open(file_path, "w") as f:
+            json.dump(data, f, indent=4)
+
+        print(f"Database updated successfully for course '{courseId}'.")
+
+    except FileNotFoundError:
+        print(f"Error: File not found at '{file_path}'.")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in '{file_path}'.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+def get_user_learn_page_progress():
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_learn_page_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return {"error": "File not found."}
+    except json.JSONDecodeError:
+        return {"error": "Invalid JSON format."}
+
+    result = {"NOT COMPLETED BY USER": [], "COMPLETED BY USER": []}
+
+    for item in data:
+        if item["Completed"]:
+            result["COMPLETED BY USER"].append(item)
+        else:
+            not_completed_data = {
+                "ID": item["ID"],
+                "title": item["title"],
+                "level": item["level"],
+            }
+            result["NOT COMPLETED BY USER"].append(not_completed_data)
+
+    return result
+
+
+def update_learn_page_recommendations():
+    updated_learn_page_recommendations = []
+    user_learn_page_progress = get_user_learn_page_progress()
+
+    prompt = f"""
+    Based on the following user learning progress, recommend a list of course IDs. Return ONLY a valid JSON array of 5 course IDs. Do not include any other text or explanations.
+
+    User Learning Progress:
+    ```json
+    {user_learn_page_progress}
+    ```
+
+    Consider these factors when making recommendations:
+
+    * **Relevance:** The recommended courses should be relevant to the user's existing progress. Prioritize courses that build upon or complement what the user has already learned.
+    * **Completion:** Avoid recommending courses the user has already completed.
+    * **Next Steps:** Recommend courses that logically follow the user's current learning path. Think of what the user should learn next to advance their skills.
+    * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar courses.
+
+    Example Output (JSON array of course IDs):
+    ```json
+    ["LEPA_1", "LEPA_2", "LEPA_3", "LEPA_4", "LEPA_5"]
+    ```
+    """
+
+    prompt_result = generate_ai_response(prompt)
+    cleaned_json_string = clean_json_string(prompt_result)
+    cleaned_json_list = ast.literal_eval(cleaned_json_string)
+
+    updated_learn_page_recommendations.extend(cleaned_json_list)
+
+    replace_Recommedations_list_in_json(
+        "Learn_Page", updated_learn_page_recommendations
+    )
+    return {"acknowledgement": True}
+
+
+def end_course_response(courseId, testResults):
+    update_learn_page_database(courseId, testResults)
+    update_learn_page_recommendations()
+    return {"acknowledgement": True}

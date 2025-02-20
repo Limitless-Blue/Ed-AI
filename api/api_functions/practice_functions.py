@@ -2,9 +2,30 @@ import json
 import os
 import sys
 from typing import Optional
+from api.api_functions.common_functions import replace_Recommedations_list_in_json
+import google.generativeai as genai
+from dotenv import load_dotenv
+import re
+import ast
+
+load_dotenv()
+genai.configure(api_key=os.getenv("Google_API_KEY"))
+model = genai.GenerativeModel("gemini-2.0-flash-lite-preview-02-05")
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from api.api_functions.common_functions import extract_recommendation_list
+
+
+def clean_json_string(text):
+    text = text.replace("```json", "")
+    text = text.replace("```", "")
+
+    return text
+
+
+def generate_ai_response(prompt: str) -> str:
+    response = model.generate_content(prompt)
+    return response.text
 
 
 def load_json(file_path):
@@ -202,3 +223,210 @@ def get_all_coding_problem(problemId: str):
         }
     else:
         return {"error": f"Problem with ID {problemId} not found."}
+
+
+def update_coding_problem_page_database(courseId):
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        if "problems" not in data:
+            data["problems"] = {}
+
+        if courseId in data["problems"]:
+            data["problems"][courseId]["Completed"] = True
+
+        else:
+            print(f"Course ID '{courseId}' not found in the database.")
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+
+        print(f"Database updated for Course ID: {courseId} (Completed set to True)")
+
+    except FileNotFoundError:
+        print(f"Error: JSON file not found at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+def get_user_coding_problem_page_data():
+    file_path = (
+        "Database\\Redirection\\Redirecting_Coding_Problem_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(base_dir, file_path)
+    try:
+        with open(json_file_path, "r") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return "File not found."
+    except json.JSONDecodeError:
+        return "Invalid JSON format."
+
+    problems = data.get("problems", {})
+    result = {"NOT COMPLETED BY USER": [], "COMPLETED BY USER": []}
+
+    for problem_id, problem_data in problems.items():
+        if problem_data.get("Completed", False):
+            result["COMPLETED BY USER"].append(problem_data)
+        else:
+            not_completed_data = {
+                "id": problem_id,
+                "title": problem_data.get("title"),
+                "difficulty": problem_data.get("Difficulty"),
+            }
+            result["NOT COMPLETED BY USER"].append(not_completed_data)
+
+    return result
+
+
+def get_user_mcq_data():
+    file_path = "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    json_file_path = os.path.join(base_dir, file_path)
+    try:
+        with open(json_file_path, "r") as f:
+            mcq_data = json.load(f)
+    except FileNotFoundError:
+        return "File not found."
+    except json.JSONDecodeError:
+        return "Invalid JSON format."
+
+    result = {"NOT COMPLETED BY USER": {}, "COMPLETED BY USER": {}}
+
+    for mcq_id, data in mcq_data.items():
+        if data.get("Completed", False):
+            result["COMPLETED BY USER"][mcq_id] = data
+        else:
+            result["NOT COMPLETED BY USER"][mcq_id] = {
+                "ID": mcq_id,
+                "Title": data.get("Title"),
+                "Difficulty": data.get("level"),
+            }
+
+    return result
+
+
+def update_recommendation_coding_problem_page_database():
+    updated_coding_problem_page_recommendations = []
+    User_coding_problem_page_data = get_user_coding_problem_page_data()
+
+    prompt = f"""
+    Based on the following user learning progress, recommend a list of Coding Problem IDs. Return ONLY a valid JSON array of 5 Coding Problem IDs. Do not include any other text or explanations.
+
+    User Learning Progress:
+    ```json
+    {User_coding_problem_page_data}
+    ```
+
+    Consider these factors when making recommendations:
+
+    * **Relevance:** The recommended Coding Problem should be relevant to the user's existing progress. Prioritize Coding Problem that build upon or complement what the user has already learned.
+    * **Completion:** Avoid recommending Coding Problem the user has already completed.
+    * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar Coding Problem.
+
+    Example Output (JSON array of Coding Problem IDs):
+    ["COPA_1", "COPA_2", "COPA_3", "COPA_4", "COPA_5"]
+    """
+
+    prompt_result = generate_ai_response(prompt)
+    cleaned_json_string = clean_json_string(prompt_result)
+    cleaned_json_list = ast.literal_eval(cleaned_json_string)
+    updated_coding_problem_page_recommendations.extend(cleaned_json_list)
+
+    print(":::: cleaned_json_list")
+    print(cleaned_json_list)
+    print(type(cleaned_json_list))
+
+    print(":::: updated_coding_problem_page_recommendations")
+    print(updated_coding_problem_page_recommendations)
+    print(type(updated_coding_problem_page_recommendations))
+
+    replace_Recommedations_list_in_json(
+        "coding_problems_page", updated_coding_problem_page_recommendations
+    )
+    return {"acknowledgement": True}
+
+
+def submit_practice_function(courseId, score):
+    update_coding_problem_page_database(courseId)
+    update_recommendation_coding_problem_page_database()
+
+    return {"acknowledgement": True}
+
+
+def update_MCQs_page_database(courseId, score):
+    json_file_path = (
+        "Database\\Redirection\\Redirecting_MCQ_test_(dynamic_version).json"
+    )
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    file_path = os.path.join(base_dir, json_file_path)
+
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+
+        if courseId in data:
+            data[courseId]["Score"] = score
+            data[courseId]["Completed"] = True
+
+            with open(file_path, "w") as f:
+                json.dump(data, f, indent=4)
+
+            print(f"Successfully updated data for {courseId}.")
+        else:
+            print(f"Course ID '{courseId}' not found in the database.")
+
+    except FileNotFoundError:
+        print(f"Error: JSON file not found at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+def update_recommendation_MCQs_page_database():
+    updated_MCQs_page_recommendations = []
+    user_mcq_data = get_user_mcq_data()
+
+    prompt = f"""
+    Based on the following user learning progress, recommend a list of MCQ test IDs. Return ONLY a valid JSON array of 5 MCQ test IDs. Do not include any other text or explanations.
+
+    User Learning Progress:
+    ```json
+    {user_mcq_data}
+    ```
+
+    Consider these factors when making recommendations:
+
+    * **Relevance:** The recommended MCQ tests should be relevant to the user's existing progress. Prioritize MCQ tests that build upon or complement what the user has already learned.
+    * **Completion:** Avoid recommending MCQ tests the user has already completed.
+    * **Variety (Optional but good):** If possible, introduce some variety. Don't just recommend very similar MCQ tests.
+
+    Example Output (JSON array of MCQ test IDs):
+    ["MCPA_1", "MCPA_2", "MCPA_3", "MCPA_4", "MCPA_5"]
+    """
+
+    prompt_result = generate_ai_response(prompt)
+    cleaned_json_string = clean_json_string(prompt_result)
+    cleaned_json_list = ast.literal_eval(cleaned_json_string)
+    updated_MCQs_page_recommendations.extend(cleaned_json_list)
+
+    replace_Recommedations_list_in_json("MCQs_page", updated_MCQs_page_recommendations)
+    return {"acknowledgement": True}
+
+
+def end_practice_function(courseId, score):
+    update_MCQs_page_database(courseId, score)
+    update_recommendation_MCQs_page_database()
+
+    return {"acknowledgement": True}

@@ -1,0 +1,14 @@
+chromadb
+ffmpeg-python
+google-generativeai
+gtts
+langchain
+langchain-community
+langchain-text-splitters
+pydantic
+pydub
+python-dotenv
+uvicorn
+fastapi
+PyPDF2
+SpeechRecognition

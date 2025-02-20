@@ -7,6 +7,7 @@ from api.api_functions.learn_functions import (
     get_filtered_learn_courses,
     side_voice_chat_function,
     side_text_chat_function,
+    end_course_response,
 )
 
 learn_router = APIRouter(prefix="/api/learn", tags=["Learn"])
@@ -64,10 +65,9 @@ class EndCourseRequest(BaseModel):
     testResults: Dict[str, Dict[str, str]]
 
 
-# TODO: Add AI Part
 @learn_router.post("/end-course")
 async def end_course(data: EndCourseRequest):
-    return {"acknowledgement": True}
+    return end_course_response(data.courseId, data.testResults)
 
 
 class MentorHelpTextChatLearnRequest(BaseModel):

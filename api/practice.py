@@ -6,6 +6,8 @@ from api.api_functions.practice_functions import (
     get_filtered_practice_courses,
     get_all_mcq_test,
     get_all_coding_problem,
+    submit_practice_function,
+    end_practice_function,
 )
 from api.api_functions.learn_functions import (
     side_text_chat_function,
@@ -45,10 +47,9 @@ class SubmitPracticeRequest(BaseModel):
     score: str
 
 
-# TODO: Add AI Part
 @practice_router.post("/submit")
 async def submit_practice(data: SubmitPracticeRequest):
-    return {"acknowledgement": True}
+    return submit_practice_function(data.courseId, data.score)
 
 
 class MentorHelpTextChatPracticeRequest(BaseModel):
@@ -84,10 +85,9 @@ class EndPracticeRequest(BaseModel):
     score: str
 
 
-# TODO: Add AI Part
 @practice_router.post("/end")
 async def end_practice(data: EndPracticeRequest):
-    return {"acknowledgement": True}
+    return end_practice_function(data.courseId, data.score)
 
 
 class MentorHelpMCQTextChatRequest(BaseModel):
