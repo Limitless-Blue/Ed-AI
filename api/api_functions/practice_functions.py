@@ -2,9 +2,33 @@ import json
 import os
 import sys
 from typing import Optional
+from api.api_functions.common_functions import replace_Recommedations_list_in_json
+import google.generativeai as genai
+from dotenv import load_dotenv
+import re
+
+load_dotenv()
+genai.configure(api_key=os.getenv("Google_API_KEY"))
+model = genai.GenerativeModel("gemini-2.0-flash-lite-preview-02-05")
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from api.api_functions.common_functions import extract_recommendation_list
+
+
+def clean_json_string(text):
+    text = re.sub(
+        r"(^\s*```\s*json?\s*$|\n\s*```\s*$)",
+        "",
+        text,
+        flags=re.IGNORECASE | re.MULTILINE,
+    ).strip()
+    text = text.strip("`")
+    return text
+
+
+def generate_ai_response(prompt: str) -> str:
+    response = model.generate_content(prompt)
+    return response.text
 
 
 def load_json(file_path):
@@ -239,7 +263,16 @@ def update_coding_problem_page_database(courseId):
 
 # TODO: Add AI Part
 def update_recommendation_coding_problem_page_database():
-    pass
+    updated_coding_problem_page_recommendations = []
+    prompt = """ """
+
+    prompt_result = generate_ai_response(prompt)
+    updated_coding_problem_page_recommendations += clean_json_string(prompt_result)
+
+    replace_Recommedations_list_in_json(
+        "coding_problems_page", updated_coding_problem_page_recommendations
+    )
+    return {"acknowledgement": True}
 
 
 def submit_practice_function(courseId, score):
@@ -277,7 +310,14 @@ def update_MCQs_page_database(courseId, score):
 
 # TODO: Add AI Part
 def update_recommendation_MCQs_page_database():
-    pass
+    updated_MCQs_page_recommendations = []
+    prompt = """ """
+
+    prompt_result = generate_ai_response(prompt)
+    updated_MCQs_page_recommendations += clean_json_string(prompt_result)
+
+    replace_Recommedations_list_in_json("MCQs_page", updated_MCQs_page_recommendations)
+    return {"acknowledgement": True}
 
 
 def end_practice_function(courseId, score):

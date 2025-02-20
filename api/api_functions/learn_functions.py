@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sys
 from typing import List, Optional, Dict, Any
 import google.generativeai as genai
@@ -7,6 +8,7 @@ import speech_recognition as sr
 import subprocess
 from pydub import AudioSegment
 from dotenv import load_dotenv
+from api.api_functions.common_functions import replace_Recommedations_list_in_json
 
 load_dotenv()
 genai.configure(api_key=os.getenv("Google_API_KEY"))
@@ -14,6 +16,17 @@ model = genai.GenerativeModel("gemini-2.0-flash-lite-preview-02-05")
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from api.api_functions.common_functions import extract_recommendation_list
+
+
+def clean_json_string(text):
+    text = re.sub(
+        r"(^\s*```\s*json?\s*$|\n\s*```\s*$)",
+        "",
+        text,
+        flags=re.IGNORECASE | re.MULTILINE,
+    ).strip()
+    text = text.strip("`")
+    return text
 
 
 def learn_page_recommendations():
@@ -236,9 +249,7 @@ def update_learn_page_database(courseId: str, testResults: Dict[str, Dict[str, s
                     test_id = test["id"]
                     if test_id in testResults:
                         try:
-                            new_score = int(
-                                testResults[test_id]["score"]
-                            )  # Try converting to int
+                            new_score = int(testResults[test_id]["score"])
                             test["score"] = new_score
                         except ValueError:
                             print(
@@ -265,7 +276,16 @@ def update_learn_page_database(courseId: str, testResults: Dict[str, Dict[str, s
 
 # TODO: Add AI Part
 def update_learn_page_recommendations():
-    pass
+    updated_learn_page_recommendations = []
+    prompt = """ """
+
+    prompt_result = generate_ai_response(prompt)
+    updated_learn_page_recommendations += clean_json_string(prompt_result)
+
+    replace_Recommedations_list_in_json(
+        "Learn_Page", updated_learn_page_recommendations
+    )
+    return {"acknowledgement": True}
 
 
 def end_course_response(courseId, testResults):
