@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════════════════════
+   KEYFRAMES
+══════════════════════════════════════════════════════════════ */
+
+/* Background */
+@keyframes gridDrift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 24px 24px; }
+}
+
+/* Panels */
+@keyframes borderGlow {
+  0%, 100% { box-shadow: 4px 4px 0 #2e1065, 0 0  6px rgba(139,92,246,0.15); }
+  50%       { box-shadow: 4px 4px 0 #2e1065, 0 0 22px rgba(139,92,246,0.40); }
+}
+@keyframes borderGlowSm {
+  0%, 100% { box-shadow: 2px 2px 0 #2e1065, 0 0  4px rgba(139,92,246,0.10); }
+  50%       { box-shadow: 2px 2px 0 #2e1065, 0 0 14px rgba(139,92,246,0.30); }
+}
+
+/* Text glow */
+@keyframes titleGlow {
+  0%, 100% { text-shadow: 0 0  8px rgba(139,92,246,0.55); }
+  50%       { text-shadow: 0 0 20px rgba(139,92,246,0.95), 0 0 40px rgba(167,139,250,0.30); }
+}
+
+/* Floating */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Cursor blink */
+@keyframes spinnerBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ── Entrance animations ── */
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes cardEnter {
+  from { opacity: 0; transform: translateY(22px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+@keyframes statEnter {
+  from { opacity: 0; transform: scale(0.4) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+@keyframes msgRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes msgLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Interaction animations ── */
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  15%       { transform: translateX(-7px); }
+  30%       { transform: translateX( 7px); }
+  45%       { transform: translateX(-5px); }
+  60%       { transform: translateX( 5px); }
+  75%       { transform: translateX(-3px); }
+  90%       { transform: translateX( 3px); }
+}
+@keyframes correctPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.05); }
+  70%  { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+@keyframes resultSlideIn {
+  from { opacity: 0; transform: translateY(-8px) scaleY(0.9); transform-origin: top; }
+  to   { opacity: 1; transform: translateY(0)    scaleY(1); }
+}
+
+/* ── Spinner ── */
+@keyframes spinnerRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes spinnerPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.92); }
+}
+
+/* ── Progress bar fill ── */
+@keyframes barFill {
+  from { width: 0%; }
+  to   { width: var(--bar-w, 0%); }
+}
+
+/* ── Logo glitch ── */
+@keyframes glitch {
+  0%, 82%, 100% { transform: none; opacity: 1; }
+  83%  { transform: skewX(-8deg) translateX(3px); opacity: 0.85; }
+  84%  { transform: skewX( 6deg) translateX(-2px); }
+  85%  { transform: none; }
+  86%  { transform: skewX(-4deg); opacity: 0.9; }
+  87%  { transform: none; opacity: 1; }
+}
+
+/* ── Running pulse (code execution) ── */
+@keyframes runPulse {
+  0%, 100% { box-shadow: 0 0  6px rgba(139,92,246,0.3); }
+  50%       { box-shadow: 0 0 20px rgba(139,92,246,0.8), 0 0 40px rgba(139,92,246,0.3); }
+}
+@keyframes runScan {
+  0%   { top: 0; opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ── Nav active bar ── */
+@keyframes navBarPulse {
+  0%, 100% { opacity: 1; box-shadow: -3px 0 10px rgba(139,92,246,0.6); }
+  50%       { opacity: 0.7; box-shadow: -3px 0 20px rgba(167,139,250,0.9); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  body {
+    @apply antialiased;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.75;
+    color: #ede9fe;
+    background-color: #06030e;
+    background-image: radial-gradient(circle, rgba(139,92,246,0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+    animation: gridDrift 20s linear infinite;
+    min-height: 100vh;
+  }
+
+  /* CRT scanline overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent, transparent 3px,
+      rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 4px
+    );
+    pointer-events: none;
+    z-index: 9998;
+  }
+
+  ::-webkit-scrollbar       { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #06030e; }
+  ::-webkit-scrollbar-thumb { background: #2e1065; border-radius: 0; }
+  ::-webkit-scrollbar-thumb:hover { background: #8b5cf6; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PIXEL FONT
+══════════════════════════════════════════════════════════════ */
+
+.pixel { font-family: 'Press Start 2P', monospace; }
+
+/* ══════════════════════════════════════════════════════════════
+   ANIMATION UTILITY CLASSES
+══════════════════════════════════════════════════════════════ */
+
+.float        { animation: float     3.5s ease-in-out infinite; }
+.float-slow   { animation: floatSlow 5s   ease-in-out infinite; }
+.glow-text    { animation: titleGlow 2.5s ease-in-out infinite; }
+.logo-glitch  { animation: glitch    6s   ease-in-out infinite; }
+.blink        { animation: spinnerBlink 1s step-end infinite; }
+
+.page-enter   { animation: pageEnter  0.40s cubic-bezier(0.22,1,0.36,1) both; }
+.card-enter   { animation: cardEnter  0.38s cubic-bezier(0.22,1,0.36,1) both; }
+.stat-enter   { animation: statEnter  0.50s cubic-bezier(0.175,0.885,0.32,1.275) both; }
+.msg-right    { animation: msgRight   0.22s ease-out both; }
+.msg-left     { animation: msgLeft    0.22s ease-out both; }
+.slide-down   { animation: slideDown  0.25s ease-out both; }
+.scale-in     { animation: scaleIn    0.30s cubic-bezier(0.175,0.885,0.32,1.275) both; }
+.fade-in      { animation: fadeIn     0.30s ease-out both; }
+.result-in    { animation: resultSlideIn 0.28s ease-out both; }
+
+.shake        { animation: wrongShake  0.45s ease-in-out; }
+.correct-pop  { animation: correctPop  0.35s ease-out; }
+
+/* Stagger delays */
+.d-50  { animation-delay: 0.05s; }
+.d-100 { animation-delay: 0.10s; }
+.d-150 { animation-delay: 0.15s; }
+.d-200 { animation-delay: 0.20s; }
+.d-250 { animation-delay: 0.25s; }
+.d-300 { animation-delay: 0.30s; }
+.d-350 { animation-delay: 0.35s; }
+.d-400 { animation-delay: 0.40s; }
+.d-450 { animation-delay: 0.45s; }
+.d-500 { animation-delay: 0.50s; }
+.d-600 { animation-delay: 0.60s; }
+.d-700 { animation-delay: 0.70s; }
+
+/* RPG spinners */
+.rpg-spinner {
+  display: inline-block;
+  width: 28px; height: 28px;
+  border: 3px solid #2e1065;
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  animation: spinnerRing 0.75s linear infinite;
+}
+.rpg-spinner-sm {
+  display: inline-block;
+  width: 16px; height: 16px;
+  border: 2px solid #2e1065;
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  animation: spinnerRing 0.75s linear infinite;
+}
+
+/* Running code border */
+.running-border {
+  animation: runPulse 1s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+.running-border::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+  animation: runScan 1.2s ease-in-out infinite;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+══════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+
+  /* ── Panels ── */
+  .glass {
+    background-color: #0d0820;
+    border: 2px solid #7c3aed;
+    border-radius: 2px;
+    box-shadow: 4px 4px 0 #2e1065, 0 0 10px rgba(139,92,246,0.18);
+  }
+  .glass-sm {
+    background-color: #080418;
+    border: 2px solid #4c1d95;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0 #2e1065, 0 0 6px rgba(139,92,246,0.12);
+  }
+  /* Add to a static panel (not a card) when you want the pulsing glow */
+  .glass-pulse { animation: borderGlow 3s ease-in-out infinite; }
+  .glass-dark {
+    background-color: #040210;
+    border-color: #1e0a40;
+  }
+  .glass-input {
+    background-color: #0a0520;
+    border: 2px solid #4c1d95;
+    border-radius: 2px;
+    color: #ede9fe;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .glass-input::placeholder { color: #3b0764; }
+  .glass-input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 14px rgba(139,92,246,0.35);
+    outline: none;
+  }
+
+  /* ── Card hover ── */
+  .card-hover {
+    transition: transform 0.18s cubic-bezier(0.22,1,0.36,1),
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+    will-change: transform;
+  }
+  .card-hover:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: #a78bfa;
+    box-shadow: 6px 6px 0 #2e1065, 0 0 28px rgba(139,92,246,0.35);
+  }
+  .card-hover:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 2px 2px 0 #2e1065;
+    transition-duration: 0.08s;
+  }
+
+  /* ── Buttons ── */
+  .rpg-btn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    background-color: #b45309;
+    color: #fff8e7;
+    border: 2px solid #f59e0b;
+    box-shadow: 3px 3px 0 #78350f, 0 0 10px rgba(245,158,11,0.25);
+    border-radius: 2px;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .rpg-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .rpg-btn:hover {
+    background-color: #d97706;
+    box-shadow: 4px 4px 0 #78350f, 0 0 20px rgba(245,158,11,0.50);
+    transform: translateY(-2px);
+  }
+  .rpg-btn:active  {
+    transform: translateY(3px) scale(0.97);
+    box-shadow: 1px 1px 0 #78350f;
+    transition-duration: 0.06s;
+  }
+  .rpg-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  .rpg-btn-ghost {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    background-color: transparent;
+    color: #a78bfa;
+    border: 2px solid #4c1d95;
+    box-shadow: 2px 2px 0 #2e1065;
+    border-radius: 2px;
+    transition: all 0.12s ease;
+    cursor: pointer;
+  }
+  .rpg-btn-ghost:hover {
+    background-color: rgba(139,92,246,0.10);
+    border-color: #8b5cf6;
+    color: #ede9fe;
+    box-shadow: 3px 3px 0 #2e1065, 0 0 14px rgba(139,92,246,0.30);
+    transform: translateY(-1px);
+  }
+  .rpg-btn-ghost:active { transform: translateY(2px); box-shadow: 1px 1px 0 #2e1065; }
+  .rpg-btn-ghost:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PROSE — markdown rendered via ReactMarkdown
+══════════════════════════════════════════════════════════════ */
+
+.prose-rpg { font-size: 0.95rem; line-height: 1.85; color: #ddd6fe; }
+
+.prose-rpg h1 {
+  font-size: 1.45rem; font-weight: 700; color: #ede9fe;
+  margin-top: 0; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid #4c1d95;
+}
+.prose-rpg h2 {
+  font-size: 1.15rem; font-weight: 700; color: #c4b5fd;
+  margin-top: 2rem; margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem; border-bottom: 1px dashed #3b0764;
+}
+.prose-rpg h3 {
+  font-size: 1rem; font-weight: 600; color: #a78bfa;
+  margin-top: 1.5rem; margin-bottom: 0.5rem;
+}
+.prose-rpg h4, .prose-rpg h5, .prose-rpg h6 {
+  font-size: 0.9rem; font-weight: 600; color: #a78bfa;
+  margin-top: 1.25rem; margin-bottom: 0.4rem;
+}
+.prose-rpg p { margin-bottom: 1rem; }
+.prose-rpg p:last-child { margin-bottom: 0; }
+
+.prose-rpg ul { list-style: none; padding-left: 0; margin-bottom: 1rem; }
+.prose-rpg ul li { padding-left: 1.25rem; position: relative; margin-bottom: 0.35rem; }
+.prose-rpg ul li::before {
+  content: "▸"; position: absolute; left: 0;
+  color: #8b5cf6; font-size: 0.75rem; top: 0.1em;
+}
+.prose-rpg ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-rpg ol li { margin-bottom: 0.35rem; padding-left: 0.25rem; }
+.prose-rpg ol li::marker { color: #8b5cf6; font-weight: 600; }
+.prose-rpg li > ul, .prose-rpg li > ol { margin-top: 0.35rem; margin-bottom: 0; }
+
+.prose-rpg :not(pre) > code {
+  background: #1e0a40; border: 1px solid #4c1d95;
+  color: #a78bfa; padding: 0.1em 0.4em; border-radius: 2px;
+  font-size: 0.875em; font-family: ui-monospace, 'Cascadia Code', monospace;
+  white-space: nowrap;
+}
+.prose-rpg pre {
+  background: #080316; border: 2px solid #4c1d95; border-radius: 2px;
+  padding: 1.1rem 1.25rem; overflow-x: auto; margin: 1.25rem 0;
+  box-shadow: inset 0 0 24px rgba(0,0,0,0.5), 4px 4px 0 #2e1065;
+}
+.prose-rpg pre code {
+  background: none; border: none; padding: 0; color: #e9d5ff;
+  font-size: 0.875rem; font-family: ui-monospace, 'Cascadia Code', monospace;
+  white-space: pre;
+}
+.prose-rpg blockquote {
+  border-left: 3px solid #8b5cf6; background: rgba(139,92,246,0.06);
+  padding: 0.6rem 1rem; margin: 1rem 0; color: #c4b5fd; border-radius: 0 2px 2px 0;
+}
+.prose-rpg blockquote p { margin: 0; }
+.prose-rpg strong { color: #e9d5ff; font-weight: 700; }
+.prose-rpg em { color: #c4b5fd; font-style: italic; }
+.prose-rpg a { color: #a78bfa; text-decoration: underline; text-underline-offset: 2px; transition: color 0.1s; }
+.prose-rpg a:hover { color: #ede9fe; }
+.prose-rpg hr { border: none; border-top: 2px dashed #2e1065; margin: 1.75rem 0; }
+
+.prose-rpg table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.9rem; }
+.prose-rpg thead tr { border-bottom: 2px solid #4c1d95; }
+.prose-rpg th { text-align: left; padding: 0.5rem 0.75rem; color: #c4b5fd; font-weight: 600; }
+.prose-rpg td { padding: 0.45rem 0.75rem; border-bottom: 1px solid #1e0a40; color: #ddd6fe; }
+.prose-rpg tbody tr:hover { background: rgba(139,92,246,0.06); }
+.prose-rpg img { max-width: 100%; border-radius: 2px; border: 2px solid #4c1d95; margin: 1rem 0; }

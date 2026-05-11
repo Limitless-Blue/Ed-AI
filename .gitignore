@@ -1,4 +1,32 @@
+# Secrets
 .env
+Login_Secret.json
+
+# Python
 venv/
 __pycache__/
-Login_Secret.json
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Vector store — large binary files, regenerated via Settings → Re-index
+data/chroma/
+
+# Legacy / experiment archive (old Streamlit codebase, AI memory dumps)
+_legacy/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env
+
+# Claude Code local config
+.claude/
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dev scripts (not for public repo)
+temp_git_debugger.py
