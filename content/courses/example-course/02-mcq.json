@@ -1,0 +1,35 @@
+{
+  "questions": [
+    {
+      "id": "arr-q1",
+      "topic": "arrays",
+      "question": "What is the time complexity of accessing an element in an array by index?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+      "answer": "O(1)",
+      "explanation": "Arrays store elements contiguously in memory. The address of any element is computed as base + index × size, so it's always one step regardless of array length.",
+      "incorrect_explanations": {
+        "O(log n)": "That's binary search — requires the array to be sorted and does repeated halving.",
+        "O(n)": "That's linear scan — you'd need to check every element.",
+        "O(n²)": "That would be something like a nested loop over all pairs."
+      }
+    },
+    {
+      "id": "arr-q2",
+      "topic": "hash maps",
+      "question": "Why does using a hash map reduce Two Sum from O(n²) to O(n)?",
+      "options": [
+        "Because hash maps sort the array automatically",
+        "Because each lookup is O(1), so we do n lookups instead of n² comparisons",
+        "Because hash maps use binary search internally",
+        "Because we only iterate once and skip duplicates"
+      ],
+      "answer": "Because each lookup is O(1), so we do n lookups instead of n² comparisons",
+      "explanation": "With a nested loop you compare every pair — that's n*(n-1)/2 operations. A hash map lets you check 'have I seen the complement?' in O(1), so one pass through n elements gives O(n) total.",
+      "incorrect_explanations": {
+        "Because hash maps sort the array automatically": "Hash maps don't sort — they provide O(1) average lookup by key.",
+        "Because hash maps use binary search internally": "Hash maps use hashing, not binary search. Binary search requires sorted data.",
+        "Because we only iterate once and skip duplicates": "We do iterate once, but skipping duplicates isn't the reason — it's the O(1) lookup."
+      }
+    }
+  ]
+}

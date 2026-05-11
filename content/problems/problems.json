@@ -1,0 +1,537 @@
+[
+  {
+    "id": "prob_arr_00000000001",
+    "title": "Concatenation of Array",
+    "difficulty": "easy",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven an array of integers `nums`, your task is to return the concatenation of the array with itself.\n\nIn other words, if `nums` is `[1,2,3]`, the result should be `[1,2,3,1,2,3]`.\n\n**Example**\n\n**Example 1:**\nInput: `nums = [1,2,1]`  \nOutput: `[1,2,1,1,2,1]`\n\n**Example 2:**\nInput: `nums = [1,3,2,1]`  \nOutput: `[1,3,2,1,1,3,2,1]`\n\n**Constraints**\n\n- `1 <= nums.length <= 1000`\n- `1 <= nums[i] <= 1000`",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "1 2 1",
+        "expected": "[1, 2, 1, 1, 2, 1]"
+      },
+      {
+        "id": 2,
+        "input": "1 3 2 1",
+        "expected": "[1, 3, 2, 1, 1, 3, 2, 1]"
+      },
+      {
+        "id": 3,
+        "input": "5 6",
+        "expected": "[5, 6, 5, 6]"
+      },
+      {
+        "id": 4,
+        "input": "9",
+        "expected": "[9, 9]"
+      }
+    ]
+  },
+  {
+    "id": "prob_arr_00000000002",
+    "title": "Number of Good Pairs",
+    "difficulty": "easy",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\n**Problem Statement:**\nGiven an array of integers `nums`, return the number of good pairs.\n\nA pair `(i, j)` is called good if `nums[i] == nums[j]` and `i < j`.\n\n**Example 1:**\nInput:  \n`nums = [1,2,3,1,1,3]`\n\nOutput:  \n`4`\n\nExplanation:  \nThere are 4 good pairs:  \n- `(0,3)`\n- `(0,4)`\n- `(3,4)`\n- `(2,5)`\n\n**Example 2:**\nInput:  \n`nums = [1,1,1,1]`\n\nOutput:  \n`6`\n\nExplanation:  \nEach pair in the array are good.\n\n**Example 3:**\nInput:  \n`nums = [1,2,3]`\n\nOutput:  \n`0`\n\n**Constraints:**\n- `1 <= nums.length <= 100`\n- `1 <= nums[i] <= 100`\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "1 2 3 1 1 3",
+        "expected": "4"
+      },
+      {
+        "id": 2,
+        "input": "1 1 1 1",
+        "expected": "6"
+      },
+      {
+        "id": 3,
+        "input": "1 2 3",
+        "expected": "0"
+      },
+      {
+        "id": 4,
+        "input": "5 5 5",
+        "expected": "3"
+      },
+      {
+        "id": 5,
+        "input": "100 100 100 100",
+        "expected": "6"
+      }
+    ]
+  },
+  {
+    "id": "prob_arr_00000000003",
+    "title": "Two Sum",
+    "difficulty": "easy",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\nYou may assume that each input would have **exactly one solution**, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n**Example 1:**\n- Input: nums = [2, 7, 11, 15], target = 9\n- Output: [0, 1]\n- Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\n**Example 2:**\n- Input: nums = [3, 2, 4], target = 6\n- Output: [1, 2]\n\n**Example 3:**\n- Input: nums = [3, 3], target = 6\n- Output: [0, 1]\n\n**Constraints:**\n- 2 <= nums.length <= 10^4\n- -10^9 <= nums[i] <= 10^9\n- -10^9 <= target <= 10^9\n- Only one valid answer exists.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "2 7 11 15\n9",
+        "expected": "[0, 1]"
+      },
+      {
+        "id": 2,
+        "input": "3 2 4\n6",
+        "expected": "[1, 2]"
+      },
+      {
+        "id": 3,
+        "input": "3 3\n6",
+        "expected": "[0, 1]"
+      }
+    ]
+  },
+  {
+    "id": "prob_arr_00000000004",
+    "title": "Maximum Subarray Sum",
+    "difficulty": "medium",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\nGiven an array of integers, find the contiguous subarray (containing at least one number) which has the largest sum and return that sum.\n\n**Input Format**\n\n- The first line contains an integer **`n`**, the size of the array.\n- The second line contains **`n`** space-separated integers representing the elements of the array.\n\n**Constraints**\n\n- \\(1 \\leq n \\leq 10^5\\)\n- \\(-10^4 \\leq \\text{array}[i] \\leq 10^4\\)\n\n**Output Format**\n\n- Print a single integer denoting the maximum sum of a contiguous subarray.\n\n**Sample Input**\n\n8 -2 -3 4 -1 -2 1 5 -3\n\n\n**Sample Output**\n7\n\n**Explanation**\n\nThe maximum sum subarray is `[4, -1, -2, 1, 5]` with a sum of `7`.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "8\n-2 -3 4 -1 -2 1 5 -3",
+        "expected": "7"
+      },
+      {
+        "id": 2,
+        "input": "5\n1 2 3 4 5",
+        "expected": "15"
+      },
+      {
+        "id": 3,
+        "input": "5\n-1 -2 -3 -4 -5",
+        "expected": "-1"
+      },
+      {
+        "id": 4,
+        "input": "6\n-2 -3 -1 -4 -6 -5",
+        "expected": "-1"
+      },
+      {
+        "id": 5,
+        "input": "9\n-2 1 -3 4 -1 2 1 -5 4",
+        "expected": "6"
+      }
+    ]
+  },
+  {
+    "id": "prob_arr_00000000005",
+    "title": "Smallest Subarray with Sum >= K",
+    "difficulty": "hard",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\nGiven an array of **N** positive integers and an integer **K**, find the minimum length of a contiguous subarray whose sum is greater than or equal to **K**. If no such subarray exists, output `0`.\n\n**Input Format**\n\n- The first line contains two space-separated integers **N** and **K**.\n- The second line contains **N** space-separated positive integers representing the elements of the array.\n\n**Constraints**\n\n- \\(1 \\leq N \\leq 10^5\\)\n- \\(1 \\leq K \\leq 10^{14}\\)\n- \\(1 \\leq \\text{array}[i] \\leq 10^9\\)\n\n**Output Format**\n\n- Print a single integer denoting the minimum length of a subarray with sum \u2265 **K**. If no such subarray exists, print `0`.\n\n**Sample Input**\n\n10 15 1 2 3 4 5 6 7 8 9 10\n\n\n**Sample Output**\n\n2\n\n\n**Explanation**\n\nThe subarray `[7, 8]` has a sum of `15` and length `2`, which is the minimal possible.\n\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "10 15\n1 2 3 4 5 6 7 8 9 10",
+        "expected": "2"
+      },
+      {
+        "id": 2,
+        "input": "5 100\n1 2 3 4 5",
+        "expected": "0"
+      },
+      {
+        "id": 3,
+        "input": "7 7\n7 1 5 2 3 2 1",
+        "expected": "1"
+      },
+      {
+        "id": 4,
+        "input": "5 11\n1 2 3 4 5",
+        "expected": "3"
+      },
+      {
+        "id": 5,
+        "input": "8 21\n5 1 3 5 10 7 4 9",
+        "expected": "3"
+      }
+    ]
+  },
+  {
+    "id": "prob_arr_00000000006",
+    "title": "Array Sum",
+    "difficulty": "easy",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\n**Problem Statement**\n\nYou are given an array of integers. Your task is to find the sum of all elements in the array.\n\n**Input**\n\n- The first line contains a single integer `n`, the size of the array.\n- The second line contains `n` space-separated integers representing the array elements.\n\n**Output**\n\n- Output a single integer, which is the sum of all the array elements.\n\n**Example**\n\n**Example 1**\nInput: 5 1 2 3 4 5\n\nOutput: 15\n\n\n**Example 2**\nInput: 3 -1 2 3\n\nOutput: 4\n\n\n**Constraints**\n\n- \\(1 \\leq n \\leq 10^3\\)\n- \\( -10^3 \\leq a_i \\leq 10^3\\), where \\(a_i\\) is the ith element of the array.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "5\n1 2 3 4 5",
+        "expected": "15"
+      },
+      {
+        "id": 2,
+        "input": "3\n-1 2 3",
+        "expected": "4"
+      }
+    ]
+  },
+  {
+    "id": "prob_arr_00000000007",
+    "title": "Maximum Sum of Non-Adjacent Elements",
+    "difficulty": "hard",
+    "topics": [
+      "arrays"
+    ],
+    "description": "\n**Problem Statement**\n\nYou are given an array of integers. Your task is to find the maximum sum of elements such that no two elements are adjacent to each other in the array. In other words, you cannot pick two consecutive elements.\n\n**Input**\n\n- A single integer `n` denoting the size of the array.\n- An array `arr` of size `n`, where `arr[i]` is the `i`-th integer of the array.\n\n**Output**\n\n- The maximum sum you can obtain from non-adjacent elements.\n\n**Constraints**\n\n- \\(1 \\leq n \\leq 10^5\\)\n- \\(-10^4 \\leq arr[i] \\leq 10^4\\)\n\n**Example**\n\n**Example 1:**\n**Input:**\n4 3 2 7 10\n\n\n**Output:**\n13\n\n\n**Explanation:** You can pick 3 and 10, which gives the maximum sum of 13.\n\n**Example 2:**\n**Input:**\n5 3 2 5 10 7\n\n\n**Output:**\n15\n\n**Explanation:** You can pick 3, 5, and 7, giving a total of 15.\n\n**Example 3:**\n**Input:**\n3 3 2 7\n\n\n**Output:**\n10\n\n**Explanation:** You can pick 3 and 7, giving a total of 10.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "4\n3 2 7 10",
+        "expected": "13"
+      },
+      {
+        "id": 2,
+        "input": "5\n3 2 5 10 7",
+        "expected": "15"
+      },
+      {
+        "id": 3,
+        "input": "3\n3 2 7",
+        "expected": "10"
+      },
+      {
+        "id": 4,
+        "input": "1\n10",
+        "expected": "10"
+      },
+      {
+        "id": 5,
+        "input": "6\n5 5 10 100 10 5",
+        "expected": "110"
+      }
+    ]
+  },
+  {
+    "id": "prob_str_00000000001",
+    "title": "Longest Palindromic Substring",
+    "difficulty": "medium",
+    "topics": [
+      "strings"
+    ],
+    "description": "\n**Problem Statement:**\nGiven a string `s`, your task is to find the longest palindromic substring in `s`. A palindrome is a string that reads the same backward as forward.\n\n**Input:**\n- A string `s` (1 <= len(s) <= 1000)\n\n**Output:**\n- Return the longest palindromic substring of `s`. If there are multiple such substrings with the same length, return the first one.\n\n**Example:**\n**Example 1:**\n**Input:**\n```\nbabad\n```\n\n**Output:**\n```\nbab\n```\n(Note: \"aba\" is also a valid answer, but \"bab\" occurs first.)\n\n**Example 2:**\n**Input:**\n```\ncbbd\n```\n\n**Output:**\n```\nbb\n```\n\n**Constraints:**\n- The input string will consist of only lowercase English letters.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "babad",
+        "expected": "bab"
+      },
+      {
+        "id": 2,
+        "input": "cbbd",
+        "expected": "bb"
+      },
+      {
+        "id": 3,
+        "input": "a",
+        "expected": "a"
+      },
+      {
+        "id": 4,
+        "input": "ac",
+        "expected": "a"
+      },
+      {
+        "id": 5,
+        "input": "abcdedcba",
+        "expected": "abcdedcba"
+      }
+    ]
+  },
+  {
+    "id": "prob_str_00000000002",
+    "title": "Longest Substring with At Most K Distinct Characters",
+    "difficulty": "hard",
+    "topics": [
+      "strings"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven a string `s` and an integer `k`, find the length of the longest substring that contains at most `k` distinct characters.\n\n**Example**\n\n**Example 1:**\nInput:  \n`s = \"eceba\"`  \n`k = 2`  \nOutput:  \n`3`  \nExplanation: The substring is `\"ece\"` with length 3.\n\n**Example 2:**\nInput:  \n`s = \"aa\"`  \n`k = 1`  \nOutput:  \n`2`  \nExplanation: The entire string consists of 1 distinct character.\n\n**Constraints:**\n\n- `1 <= s.length <= 10^5`\n- `0 <= k <= s.length`\n- `s` consists of English letters.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "eceba 2",
+        "expected": "3"
+      },
+      {
+        "id": 2,
+        "input": "aa 1",
+        "expected": "2"
+      },
+      {
+        "id": 3,
+        "input": "abcabcabc 2",
+        "expected": "2"
+      },
+      {
+        "id": 4,
+        "input": "abaccc 2",
+        "expected": "4"
+      },
+      {
+        "id": 5,
+        "input": "a 1",
+        "expected": "1"
+      },
+      {
+        "id": 6,
+        "input": "aabbcc 3",
+        "expected": "6"
+      },
+      {
+        "id": 7,
+        "input": "xyzzyx 1",
+        "expected": "2"
+      }
+    ]
+  },
+  {
+    "id": "prob_BIM_00000000001",
+    "title": "Single Number II",
+    "difficulty": "medium",
+    "topics": [
+      "bit manipulation"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven an integer array `nums` where every element appears **three times** except for one, which appears exactly once. Find the single element and return it.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.\n\n**Example**\n\n**Example 1:**\nInput:  \n`nums = [2,2,3,2]`  \nOutput:  \n`3`\n\n**Example 2:**\nInput:  \n`nums = [0,1,0,1,0,1,99]`  \nOutput:  \n`99`\n\n**Constraints:**\n- `1 <= nums.length <= 3 * 10^4`\n- `-2^31 <= nums[i] <= 2^31 - 1`\n- Every element in `nums` appears exactly three times except for one element which appears once.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "2 2 3 2",
+        "expected": "3"
+      },
+      {
+        "id": 2,
+        "input": "0 1 0 1 0 1 99",
+        "expected": "99"
+      },
+      {
+        "id": 3,
+        "input": "30000 500 100 30000 100 30000 100",
+        "expected": "500"
+      },
+      {
+        "id": 4,
+        "input": "1 1 1 2",
+        "expected": "2"
+      },
+      {
+        "id": 5,
+        "input": "7 7 7 -10",
+        "expected": "-10"
+      }
+    ]
+  },
+  {
+    "id": "prob_BIM_00000000002",
+    "title": "Missing Number",
+    "difficulty": "medium",
+    "topics": [
+      "bit manipulation"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven an array `nums` containing `n` distinct numbers in the range `[0, n]`, return the only number in the range that is missing from the array.\n\n**Example**\n\n**Example 1:**\nInput:  \n`nums = [3,0,1]`  \nOutput:  \n`2`  \nExplanation: The range is `[0, 3]`, and `2` is the missing number.\n\n**Example 2:**\nInput:  \n`nums = [0,1]`  \nOutput:  \n`2`  \nExplanation: The range is `[0, 2]`, and `2` is the missing number.\n\n**Example 3:**\nInput:  \n`nums = [9,6,4,2,3,5,7,0,1]`  \nOutput:  \n`8`  \nExplanation: The range is `[0, 9]`, and `8` is the missing number.\n\n**Constraints:**\n- `n == nums.length`\n- `1 <= n <= 10^4`\n- `0 <= nums[i] <= n`\n- All the numbers of `nums` are distinct.\n\n**Follow-up:**\nCould you implement a solution using **O(n)** time complexity and **O(1)** extra space complexity?\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "3 0 1",
+        "expected": "2"
+      },
+      {
+        "id": 2,
+        "input": "0 1",
+        "expected": "2"
+      },
+      {
+        "id": 3,
+        "input": "9 6 4 2 3 5 7 0 1",
+        "expected": "8"
+      },
+      {
+        "id": 4,
+        "input": "0",
+        "expected": "1"
+      },
+      {
+        "id": 5,
+        "input": "1",
+        "expected": "0"
+      }
+    ]
+  },
+  {
+    "id": "prob_BIM_00000000003",
+    "title": "Maximum XOR of Two Numbers in an Array",
+    "difficulty": "hard",
+    "topics": [
+      "bit manipulation"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven an integer array `nums`, return the maximum result of `nums[i] XOR nums[j]`, where `0 <= i <= j < n`.\n\n**Example**\n\n**Example 1:**\nInput:  \n`nums = [3, 10, 5, 25, 2, 8]`  \nOutput:  \n`28`  \nExplanation: The maximum result is `5 XOR 25 = 28`.\n\n**Example 2:**\nInput:  \n`nums = [14, 70, 53, 83, 49, 91, 36, 80, 92, 51, 66, 70]`  \nOutput:  \n`127`  \nExplanation: The maximum result is `53 XOR 83 = 127`.\n\n**Constraints:**\n- `1 <= nums.length <= 2 * 10^5`\n- `0 <= nums[i] <= 2^31 - 1`\n\n**Follow-up:**\nCan you find an `O(n)` solution?\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "3 10 5 25 2 8",
+        "expected": "28"
+      },
+      {
+        "id": 2,
+        "input": "14 70 53 83 49 91 36 80 92 51 66 70",
+        "expected": "127"
+      },
+      {
+        "id": 3,
+        "input": "0 0 0 0",
+        "expected": "0"
+      },
+      {
+        "id": 4,
+        "input": "1 2",
+        "expected": "3"
+      },
+      {
+        "id": 5,
+        "input": "8 1 2 12 7 6",
+        "expected": "15"
+      }
+    ]
+  },
+  {
+    "id": "prob_BIM_00000000004",
+    "title": "Counting Bits",
+    "difficulty": "medium",
+    "topics": [
+      "bit manipulation"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven an integer `n`, return an array `ans` of length `n + 1` such that for each `i` (`0 <= i <= n`), `ans[i]` is the number of `1`'s in the binary representation of `i`.\n\n**Example**\n\n**Example 1:**\nInput:  \n`n = 2`  \nOutput:  \n`[0, 1, 1]`  \nExplanation:  \n- 0 -> 0 has 0 one-bits.  \n- 1 -> 1 has 1 one-bit.  \n- 2 -> 10 has 1 one-bit.\n\n**Example 2:**\nInput:  \n`n = 5`  \nOutput:  \n`[0, 1, 1, 2, 1, 2]`  \nExplanation:  \n- 0 -> 0 has 0 one-bits.  \n- 1 -> 1 has 1 one-bit.  \n- 2 -> 10 has 1 one-bit.  \n- 3 -> 11 has 2 one-bits.  \n- 4 -> 100 has 1 one-bit.  \n- 5 -> 101 has 2 one-bits.\n\n**Constraints:**\n- `0 <= n <= 10^5`\n\n**Follow-up:**\n- It is very important to optimize the solution to run in **O(n)** time.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "2",
+        "expected": "[0, 1, 1]"
+      },
+      {
+        "id": 2,
+        "input": "5",
+        "expected": "[0, 1, 1, 2, 1, 2]"
+      },
+      {
+        "id": 3,
+        "input": "10",
+        "expected": "[0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2]"
+      },
+      {
+        "id": 4,
+        "input": "0",
+        "expected": "[0]"
+      },
+      {
+        "id": 5,
+        "input": "1",
+        "expected": "[0, 1]"
+      }
+    ]
+  },
+  {
+    "id": "prob_BIM_00000000005",
+    "title": "Single Number",
+    "difficulty": "easy",
+    "topics": [
+      "bit manipulation"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven a **non-empty** array of integers `nums`, every element appears **twice** except for one. Find that single one.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.\n\n**Example**\n\n**Example 1:**\nInput:  \n`nums = [2, 2, 1]`  \nOutput:  \n`1`\n\n**Example 2:**\nInput:  \n`nums = [4, 1, 2, 1, 2]`  \nOutput:  \n`4`\n\n**Example 3:**\nInput:  \n`nums = [1]`  \nOutput:  \n`1`\n\n**Constraints:**\n- `1 <= nums.length <= 3 * 10^4`\n- `-3 * 10^4 <= nums[i] <= 3 * 10^4`\n- Each element in the array appears twice except for one element which appears only once.\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "2 2 1",
+        "expected": "1"
+      },
+      {
+        "id": 2,
+        "input": "4 1 2 1 2",
+        "expected": "4"
+      },
+      {
+        "id": 3,
+        "input": "1",
+        "expected": "1"
+      },
+      {
+        "id": 4,
+        "input": "7 7 8",
+        "expected": "8"
+      },
+      {
+        "id": 5,
+        "input": "5 5 9 9 10",
+        "expected": "10"
+      }
+    ]
+  },
+  {
+    "id": "prob_str_00000000003",
+    "title": "Valid Anagram",
+    "difficulty": "easy",
+    "topics": [
+      "strings"
+    ],
+    "description": "\n**Problem Statement**\n\nGiven two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.\n\nAn **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.\n\n**Example**\n\n**Example 1:**\nInput:  \n`s = \"anagram\", t = \"nagaram\"`  \nOutput:  \n`true`\n\n**Example 2:**\nInput:  \n`s = \"rat\", t = \"car\"`  \nOutput:  \n`false`\n\n**Constraints:**\n- `1 <= s.length, t.length <= 5 * 10^4`\n- `s` and `t` consist of lowercase English letters.\n\n**Follow-up:**\n- What if the inputs contain Unicode characters? How would you adapt your solution to solve this problem?\n",
+    "starter_code": "# Write your solution here\n",
+    "test_cases": [
+      {
+        "id": 1,
+        "input": "anagram nagaram",
+        "expected": "True"
+      },
+      {
+        "id": 2,
+        "input": "rat car",
+        "expected": "False"
+      },
+      {
+        "id": 3,
+        "input": "listen silent",
+        "expected": "True"
+      },
+      {
+        "id": 4,
+        "input": "a a",
+        "expected": "True"
+      },
+      {
+        "id": 5,
+        "input": "ab ba",
+        "expected": "True"
+      }
+    ]
+  }
+]

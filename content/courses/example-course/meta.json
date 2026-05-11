@@ -1,0 +1,6 @@
+{
+  "title": "Arrays & Hashing",
+  "description": "Core array manipulation techniques and hash map patterns used in interviews.",
+  "difficulty": "beginner",
+  "topics": ["arrays", "hash maps", "two pointers"]
+}
