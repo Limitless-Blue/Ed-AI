@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#0d0820"/>
+  <!-- Violet border -->
+  <rect x="1.5" y="1.5" width="29" height="29" rx="2" fill="none" stroke="#8b5cf6" stroke-width="1.5"/>
+
+  <!-- Neural network nodes -->
+  <circle cx="16" cy="16" r="3.5" fill="#8b5cf6"/>
+  <circle cx="7"  cy="9"  r="2"   fill="#6d28d9"/>
+  <circle cx="25" cy="9"  r="2"   fill="#6d28d9"/>
+  <circle cx="7"  cy="23" r="2"   fill="#6d28d9"/>
+  <circle cx="25" cy="23" r="2"   fill="#6d28d9"/>
+  <circle cx="4"  cy="16" r="1.5" fill="#4c1d95"/>
+  <circle cx="28" cy="16" r="1.5" fill="#4c1d95"/>
+
+  <!-- Connections -->
+  <line x1="7"  y1="9"  x2="16" y2="16" stroke="#4c1d95" stroke-width="1.2"/>
+  <line x1="25" y1="9"  x2="16" y2="16" stroke="#4c1d95" stroke-width="1.2"/>
+  <line x1="7"  y1="23" x2="16" y2="16" stroke="#4c1d95" stroke-width="1.2"/>
+  <line x1="25" y1="23" x2="16" y2="16" stroke="#4c1d95" stroke-width="1.2"/>
+  <line x1="4"  y1="16" x2="16" y2="16" stroke="#3b0764" stroke-width="1"/>
+  <line x1="28" y1="16" x2="16" y2="16" stroke="#3b0764" stroke-width="1"/>
+  <line x1="7"  y1="9"  x2="7"  y2="23" stroke="#3b0764" stroke-width="0.8"/>
+  <line x1="25" y1="9"  x2="25" y2="23" stroke="#3b0764" stroke-width="0.8"/>
+
+  <!-- Center bright -->
+  <circle cx="16" cy="16" r="2" fill="#c4b5fd"/>
+
+  <!-- Amber top-right spark -->
+  <circle cx="26.5" cy="5.5" r="2.5" fill="#f59e0b"/>
+  <circle cx="26.5" cy="5.5" r="1.2" fill="#fef3c7"/>
+</svg>
