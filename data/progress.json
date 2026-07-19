@@ -3,6 +3,16 @@
   "completed_courses": [],
   "completed_problems": [],
   "completed_mcqs": [],
-  "course_progress": {},
-  "daily_activity": {}
+  "course_progress": {
+    "array": {
+      "0": true
+    }
+  },
+  "daily_activity": {
+    "2026-07-19": {
+      "problems": 0,
+      "mcqs": 0,
+      "messages": 2
+    }
+  }
 }

@@ -1,372 +1,362 @@
-# Ed-AI
+# 🧠 Ed-AI
 
-An AI-powered technical education platform. Learn DSA and programming through structured courses, solve coding problems in a sandboxed editor, practise MCQ tests with spaced repetition, and sharpen interview skills with a streaming AI interviewer — all guided by a Socratic tutor that knows exactly what you are working on.
+<div align="center">
+
+<!-- HERO BANNER — Replace with a real screenshot of the app dashboard -->
+<!-- Recommended: 1280×640px or wider, PNG or WebP -->
+<img src="https://res.cloudinary.com/dwco7vfgp/image/upload/v1784465662/3_v6wh1m.png" alt="Ed-AI — AI-Powered Technical Education Platform" width="100%" />
+
+<br/>
+</div>
+
+> *Your AI-Powered Technical Education Companion* Master DSA & programming through structured courses, a sandboxed code editor, spaced-repetition quizzes, and a streaming AI mock interviewer - all guided by a Socratic tutor that knows exactly what you're working on.
+
+<br/>
+<div align="center">
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+</div>
+
+<br/>
+
+---
+## 📖 Table of Contents
+- [Get Started](#-quick-start)
+- [Features](#-features)
+- [Docs](#-documentation)
 
 ---
 
-## Table of Contents
+## 📸 See it in Action
 
-1. [Tech Stack](#tech-stack)
-2. [Project Structure](#project-structure)
-3. [Prerequisites](#prerequisites)
-4. [Setup](#setup)
-5. [Running the App](#running-the-app)
-6. [Feature Guide](#feature-guide)
-   - [Learn](#learn)
-   - [Practice — Coding Problems](#practice--coding-problems)
-   - [Practice — MCQ Tests](#practice--mcq-tests)
-   - [Practice — Spaced Repetition Review](#practice--spaced-repetition-review)
-   - [Mock Interview](#mock-interview)
-   - [Dashboard](#dashboard)
-   - [AI Tutor Sidebar](#ai-tutor-sidebar)
-   - [Search](#search)
-   - [Settings](#settings)
-7. [Keyboard Shortcuts](#keyboard-shortcuts)
-8. [Adding Your Own Content](#adding-your-own-content)
-9. [API Reference](#api-reference)
-10. [How the AI Tutor Works](#how-the-ai-tutor-works)
-11. [Troubleshooting](#troubleshooting)
+<div align="center">
+
+<!-- Replace each src with your real screenshot path -->
+
+| | |
+|:---:|:---:|
+| ![Dashboard](https://res.cloudinary.com/dwco7vfgp/image/upload/v1784471530/2_tnblyl.png) | ![Learn Page](https://res.cloudinary.com/dwco7vfgp/image/upload/v1784471530/3_mi7fy0.png) |
+| **📊 Dashboard** — Streak tracking, achievement badges, topic accuracy charts, and personalised recommendations | **📖 Learn** — Structured courses with progress bars, markdown lessons, and auto-saving notes |
+| ![Code Editor](https://res.cloudinary.com/dwco7vfgp/image/upload/v1784471530/5_prrnbk.png) | ![AI Tutor](https://res.cloudinary.com/dwco7vfgp/image/upload/v1784471531/7_xdtsrz.png) |
+| **⚡ Code Editor** — Monaco-powered split-pane editor with sandbox execution and test results | **🧠 AI Tutor** — Context-aware Socratic sidebar that knows your code, your progress, and your weak spots |
+| ![Mock Interview](https://res.cloudinary.com/dwco7vfgp/image/upload/v1784471530/4_eagt3u.png) | ![MCQ Quiz](https://res.cloudinary.com/dwco7vfgp/image/upload/v1784471530/6_qfza2i.png) |
+| **🎯 Mock Interview** — Streaming AI interviewer with voice input and structured debrief | **📝 MCQ Tests** — Topic-based quiz banks with explanations and spaced-repetition scheduling |
+
+</div>
+
+<br/>
 
 ---
 
-## Tech Stack
 
-| Layer       | Technology                                          |
-|-------------|-----------------------------------------------------|
-| Frontend    | React 18 · TypeScript · Vite · Tailwind CSS         |
-| Code editor | Monaco Editor (VS Code engine)                      |
-| Backend     | FastAPI · Python 3.11+                              |
-| AI          | Google Gemini 2.0 Flash (`google-genai` SDK)        |
-| RAG         | Chroma · Gemini `embedding-001`                     |
-| Storage     | Flat JSON files in `data/` — no database required   |
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 📖 Structured Learning
+- **14 courses** covering programming fundamentals through advanced DSA
+- Markdown lessons with interactive MCQ checkpoints
+- Auto-saving per-lesson notes with export support
+- Progress tracking with visual completion indicators
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ Coding Practice
+- **Monaco Editor** — the same engine that powers VS Code
+- Python 3 sandbox with 5-second timeout and import restrictions
+- Test case runner with pass/fail indicators and diff output
+- Problems organised by difficulty and topic
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🧠 Socratic AI Tutor
+- **Context-aware** — knows your current page, code, failed tests, and progress
+- **RAG-powered** — retrieves relevant course material via Chroma embeddings
+- **Two modes**: _Guide Me_ (Socratic questioning) or _Direct_ (clear answers)
+- Streams responses in real-time via SSE
+
+</td>
+<td width="50%" valign="top">
+
+### 🎯 Mock Interviews
+- **4 types**: Technical · System Design · HR · Behavioral
+- **3 difficulty levels**: Easy · Medium · Hard
+- Voice input with automatic transcription
+- Structured AI debrief with score, strengths, and improvement areas
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📝 MCQ & Spaced Repetition
+- **11 topic-based test banks** with detailed explanations
+- **SM-2 algorithm** schedules review cards automatically
+- Per-option incorrect explanations for deeper understanding
+- Daily review queue with badge notifications
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 Analytics Dashboard
+- **Achievement badges** — 9 milestones from first day to 30-day legend
+- **7-day activity chart** with animated count-up stats
+- **Topic accuracy** — horizontal bars with strength/weakness breakdown
+- **Smart recommendations** — problems and courses ranked by your weakest areas
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔍 Command Palette Search
+- **⌘K / Ctrl+K** from anywhere in the app
+- Searches courses, problems, and MCQ tests simultaneously
+- Keyboard navigable with instant page navigation
+- Results ranked by title match, then content match
+
+</td>
+<td width="50%" valign="top">
+
+### 🎮 Retro RPG Design
+- Dark-mode pixel-art aesthetic with CRT scanline overlay
+- Glassmorphism panels with animated border glows
+- Sound effects, micro-animations, and smooth page transitions
+- Fully responsive — works on desktop and mobile
+
+</td>
+</tr>
+</table>
+
+<br/>
 
 ---
 
-## Project Structure
 
+## 🏗️ Architecture
+
+```mermaid
+graph TB
+    subgraph Frontend["🖥️ Frontend — React 18 + TypeScript + Vite"]
+        Learn["📖 Learn"]
+        Practice["⚡ Practice"]
+        Interview["🎯 Interview"]
+        Dashboard["📊 Dashboard"]
+        Settings["⚙️ Settings"]
+
+        Learn & Practice & Interview & Dashboard & Settings --> Store["Zustand Store + SSE Parser"]
+        Store --> Tutor["🧠 TutorSidebar — Context-Aware AI"]
+    end
+
+    Store -- "HTTP + SSE" --> API
+
+    subgraph Backend["⚙️ Backend — FastAPI + Python 3.11+"]
+        API["API Router"]
+        API --> TutorRoute["/tutor — SSE Stream"]
+        API --> CoursesRoute["/courses"]
+        API --> PracticeRoute["/practice"]
+        API --> InterviewRoute["/interview"]
+        API --> ProgressRoute["/progress + /notes + /search"]
+
+        TutorRoute --> RAG["RAG Service — Chroma + Embeddings"]
+        PracticeRoute --> Executor["Sandbox Executor — subprocess, 5s timeout"]
+        
+        TutorRoute & InterviewRoute --> Gemini["✨ Google Gemini 2.0 Flash"]
+        RAG --> Gemini
+    end
+
+    subgraph Storage["💾 Storage — No Database Required"]
+        JSON["Flat JSON files in data/"]
+        Chroma["Chroma vector store"]
+    end
+
+    Backend --> Storage
 ```
-Ed-AI/
-├── backend/
-│   └── app/
-│       ├── main.py              Entry point, CORS, router registration
-│       ├── config.py            Reads root .env; exposes paths
-│       ├── routes/
-│       │   ├── tutor.py         POST /tutor/message  (SSE stream)
-│       │   ├── courses.py       GET /courses, progress tracking
-│       │   ├── practice.py      Problems, MCQ, spaced repetition
-│       │   ├── interview.py     Streaming interview + transcription + debrief
-│       │   ├── progress.py      Stats, recommendations, activity
-│       │   ├── notes.py         Per-lesson notes, export
-│       │   ├── search.py        Full-text search across all content
-│       │   └── settings.py      Platform status, reindex, data resets
-│       └── services/
-│           ├── tutor.py         Prompt assembly, RAG retrieval, streaming
-│           ├── rag.py           Chroma store + Gemini embeddings wrapper
-│           └── executor.py      Sandboxed Python code runner
-│
-├── frontend/
-│   └── src/
-│       ├── pages/
-│       │   ├── LearnPage.tsx         Courses, progress bars, notes
-│       │   ├── PracticePage.tsx      Problems + MCQ + Review tabs
-│       │   ├── InterviewPage.tsx     Chat + audio + debrief
-│       │   ├── DashboardPage.tsx     Stats, badges, recommendations
-│       │   └── SettingsPage.tsx      Status, reindex, resets, export
-│       ├── components/
-│       │   ├── TutorSidebar/         Streaming AI chat panel
-│       │   ├── CodeEditor/           Monaco editor + test runner
-│       │   ├── MCQQuiz/              Quiz engine + SR tracking
-│       │   ├── SearchModal/          ⌘K command palette
-│       │   ├── OnboardingModal/      First-run walkthrough
-│       │   └── KeyboardShortcutsModal/
-│       ├── sounds.ts                 Web Audio API sound effects (no files needed)
-│       ├── store.ts                  Zustand — tutor context + mode
-│       └── api.ts                    fetch helpers, SSE parser
-│
-├── content/
-│   ├── courses/      One folder per course (markdown lessons + MCQ JSON)
-│   ├── mcq/          Standalone MCQ test banks
-│   └── problems/
-│       └── problems.json
-│
-├── data/             Auto-created at runtime — gitignored except .gitkeep
-│   ├── .gitkeep          Ensures this directory exists on fresh clones
-│   ├── progress.json     User progress (gitignored)
-│   ├── notes.json        Lesson notes (gitignored)
-│   ├── sr.json           Spaced repetition cards (gitignored)
-│   ├── interview_history.json  (gitignored)
-│   └── chroma/           RAG vector store (gitignored)
-│
-├── .env              Your API key — copy from .env.example (gitignored)
-├── .env.example      Template — safe to commit
-└── backend/requirements.txt
-```
+
+<br/>
+
+### Tech Stack
+
+| Layer | Technology |
+|:------|:-----------|
+| **Frontend** | React 18 · TypeScript · Vite · Tailwind CSS |
+| **Code Editor** | Monaco Editor (VS Code engine) |
+| **Backend** | FastAPI · Python 3.11+ |
+| **AI** | Google Gemini 2.0 Flash (`google-genai` SDK) |
+| **RAG** | Chroma · Gemini `embedding-001` |
+| **Storage** | Flat JSON files in `data/` — no database required |
+
+<br/>
 
 ---
 
-## Prerequisites
 
-| Tool | Version | Download |
-|------|---------|----------|
-| Python | 3.11 or newer | [python.org](https://www.python.org/downloads/) |
-| Node.js | 20 or newer | [nodejs.org](https://nodejs.org/) |
-| Gemini API key | Free tier available | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+## 🚀 Quick Start
 
----
+### Prerequisites
 
-## Setup
+| Tool | Version | Link |
+|:-----|:--------|:-----|
+| Python | 3.11+ | [python.org](https://www.python.org/downloads/) |
+| Node.js | 20+ | [nodejs.org](https://nodejs.org/) |
+| Gemini API Key | Free tier works | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 
-### 1 — Clone the repo
+### 1. Clone & configure
 
 ```bash
-git clone https://github.com/pvchaitanya8/Ed-AI.git
 cd Ed-AI
 ```
 
-### 2 — Add your Gemini API key
-
 ```bash
-# Windows
-copy .env.example .env
-
-# macOS / Linux
-cp .env.example .env
+# Copy the env template
+cp .env.example .env        # macOS / Linux
+copy .env.example .env       # Windows
 ```
 
-Open `.env` and fill in your key:
+Open `.env` and add your key:
 
-```
+```env
 GOOGLE_API_KEY=AIzaSy...your-key-here...
 ```
 
-Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). The free tier is sufficient for development.
-
-### 3 — Install backend dependencies
+### 2. Install dependencies
 
 ```bash
+# Backend
 python -m venv venv
-
-# Activate — Windows
-venv\Scripts\activate
-
-# Activate — macOS / Linux
-source venv/bin/activate
-
+source venv/bin/activate      # macOS / Linux
+venv\Scripts\activate          # Windows
 pip install -r backend/requirements.txt
-```
 
-### 4 — Install frontend dependencies
-
-```bash
+# Frontend
 cd frontend
 npm install
 cd ..
 ```
 
-That's it. No database setup, no migrations, no Docker required. The `data/` directory already exists in the repo (via `.gitkeep`) and all runtime JSON files are created automatically on first use.
+### 3. Run
 
----
-
-## Running the App
-
-You need **two terminals** running simultaneously.
-
-**Terminal 1 — Backend:**
+Open **two terminals**:
 
 ```bash
-# Make sure your venv is active first
-venv\Scripts\activate          # Windows
-# source venv/bin/activate     # macOS / Linux
-
+# Terminal 1 — Backend
 cd backend
 uvicorn app.main:app --reload --port 8000
 ```
 
-Expected output:
-```
-INFO:     Uvicorn running on http://127.0.0.1:8000
-INFO:     Application startup complete.
-```
-
-**Terminal 2 — Frontend:**
-
 ```bash
+# Terminal 2 — Frontend
 cd frontend
 npm run dev
 ```
 
-Expected output:
+Open **[http://localhost:5173](http://localhost:5173)** and you're in! 🎉
+
+> **First-time setup:** Go to **Settings → Re-index** to build the RAG index so the AI tutor can reference your course content. The tutor works without it, but responses will be more generic.
+
+<br/>
+
+---
+
+
+## 📂 Project Structure
+
 ```
-  VITE v5.x  ready in ...ms
-  ➜  Local:   http://localhost:5173/
+Ed-AI/
+├── backend/
+│   └── app/
+│       ├── main.py              # FastAPI entry point, CORS, router registration
+│       ├── config.py            # Reads .env, exposes paths
+│       ├── routes/
+│       │   ├── tutor.py         # POST /tutor/message  (SSE stream)
+│       │   ├── courses.py       # GET /courses, progress tracking
+│       │   ├── practice.py      # Problems, MCQ, spaced repetition
+│       │   ├── interview.py     # Streaming interview + transcription + debrief
+│       │   ├── progress.py      # Stats, recommendations, activity
+│       │   ├── notes.py         # Per-lesson notes, export
+│       │   ├── search.py        # Full-text search across all content
+│       │   └── settings.py      # Platform status, reindex, data resets
+│       └── services/
+│           ├── tutor.py         # Prompt assembly, RAG retrieval, streaming
+│           ├── rag.py           # Chroma store + Gemini embeddings wrapper
+│           └── executor.py      # Sandboxed Python code runner
+│
+├── frontend/
+│   └── src/
+│       ├── pages/               # LearnPage, PracticePage, InterviewPage, etc.
+│       ├── components/          # TutorSidebar, CodeEditor, MCQQuiz, SearchModal, etc.
+│       ├── sounds.ts            # Web Audio API sound effects (no files needed)
+│       ├── store.ts             # Zustand — tutor context + mode
+│       └── api.ts               # fetch helpers, SSE parser
+│
+├── content/
+│   ├── courses/                 # 14 courses (markdown lessons + MCQ JSON)
+│   ├── mcq/                     # 11 standalone MCQ test banks
+│   └── problems/                # Coding problem definitions
+│       └── problems.json
+│
+├── data/                        # Auto-created at runtime (gitignored)
+│   ├── progress.json            # Learning progress
+│   ├── notes.json               # Lesson notes
+│   ├── sr.json                  # Spaced repetition cards
+│   ├── interview_history.json   # Interview sessions
+│   └── chroma/                  # RAG vector store
+│
+├── .env.example                 # Template — safe to commit
+└── backend/requirements.txt
 ```
 
-Open **[http://localhost:5173](http://localhost:5173)** in your browser.
-
-On first launch you will see a short onboarding walkthrough. Press **Skip** or click through it to reach the app.
-
-### First-time: Index content for the AI Tutor
-
-The AI tutor uses RAG to pull relevant course material into context. Trigger indexing once after setup:
-
-1. Go to **Settings** (left nav)
-2. Click **Re-index** under "Content & RAG"
-3. Indexing runs in the background — a few minutes depending on API quota
-
-The tutor still works without indexing; it just won't reference specific course content.
+<br/>
 
 ---
 
-## Feature Guide
 
-### Learn
+## 🧠 How the AI Tutor Works
 
-Navigate to **Learn** in the left sidebar.
+Every tutor request assembles a **three-part context package** before calling Gemini:
 
-- Browse all available courses — each card shows difficulty, topics, and a **progress bar** (modules completed / total).
-- Click a course to open it. Use the **module tabs** at the top to jump between lessons and quizzes. Completed modules show a ✓ checkmark.
-- At the bottom of each lesson is a **Notes** panel. Notes save automatically with an 800 ms debounce. A "Saved" indicator confirms persistence.
-- Use **Previous / Next Module** to move through the course, or click **Complete Course** on the last module.
+```
+┌──────────────────────────────────────────────────────────┐
+│  1. CURRENT TASK                                         │
+│     Page, course, lesson, problem title + description,   │
+│     user's current code, failed test cases, active MCQ   │
+├──────────────────────────────────────────────────────────┤
+│  2. LEARNER PROFILE                                      │
+│     Topic accuracy scores, weak topics (< 60%),          │
+│     strong topics (≥ 80%), completed courses & problems   │
+├──────────────────────────────────────────────────────────┤
+│  3. RAG CHUNKS                                           │
+│     Top 4 relevant passages retrieved from Chroma        │
+│     (built from your course markdown files)              │
+└──────────────────────────────────────────────────────────┘
+```
 
-**Tip:** Use **⌘K** (or **Ctrl+K**) to search for a specific course by name and jump straight into it.
+| Mode | Behaviour |
+|:-----|:----------|
+| **🎓 Guide Me** (Socratic) | Responds with exactly **one targeted question** per turn, nudging you toward the answer without giving it away |
+| **💡 Direct** | Answers clearly and concisely, still using full context so responses reference your specific code or problem |
 
----
-
-### Practice — Coding Problems
-
-Navigate to **Practice → Coding** tab.
-
-- Browse all problems in the table. Filter visually by difficulty colour: green = easy, yellow = medium, red = hard.
-- Click a problem to open the split-panel editor:
-  - **Left panel** — problem description with constraints and examples.
-  - **Right panel** — Monaco editor (full VS Code engine) with syntax highlighting and tab support. Language is Python 3.
-- Write your solution and click **Run Code**.
-- The test runner shows each test case: passed (green) or failed (red) with expected vs actual output.
-- Passing all tests marks the problem as solved and updates your topic accuracy on the Dashboard.
-
-**Sandbox safety:** Code runs in an isolated subprocess. Imports of `os`, `subprocess`, `socket`, `pathlib`, `ctypes`, and similar modules are blocked. Execution is killed after 5 seconds.
-
----
-
-### Practice — MCQ Tests
-
-Navigate to **Practice → MCQ Tests** tab.
-
-- Browse test banks by topic (Arrays, Linked Lists, Trees, Sorting, etc.).
-- Click a test bank to start a quiz.
-- Each question shows 4 options. After answering, you see the explanation (and per-option explanations for wrong answers where available).
-- Results are recorded to your topic accuracy profile on the Dashboard.
-- Every question answered is scheduled for spaced-repetition review automatically.
+<br/>
 
 ---
 
-### Practice — Spaced Repetition Review
 
-Navigate to **Practice → Review** tab.
-
-- The red badge on the tab shows how many questions are due today.
-- Click **Start Review Session** to work through due questions.
-- The SM-2 algorithm adjusts each card's next review date based on correctness:
-  - Correct → interval grows (1 → 6 → increasing multiplier days)
-  - Wrong → resets to 1-day review
-- Come back daily to maintain your streak and keep recall sharp.
-
----
-
-### Mock Interview
-
-Navigate to **Interview** in the left sidebar.
-
-**Setup:**
-1. Choose an interview type: **Technical** · **System Design** · **HR** · **Behavioral**
-2. Choose a difficulty level: Easy / Medium / Hard
-3. Click **Start Interview**
-
-**During the interview:**
-- Type your answer and press **Enter** or click **Send**
-- Or hold the **🎙 microphone button** to record a voice answer — release to transcribe automatically
-- The AI interviewer streams its response in real time
-- The session is saved to disk — if the server restarts, the conversation is preserved
-
-**Ending the interview:**
-- Click **End & Get Debrief** (available after at least one exchange)
-- Gemini generates a structured debrief with: Overall Performance · Strengths · Areas to Improve · Topics to Study · Score (out of 10)
-- Click **↓ Download as Markdown** to save locally
-- Click **← New Interview** to reset and start fresh
-
----
-
-### Dashboard
-
-Navigate to **Dashboard** in the left sidebar.
-
-- **Achievements** — 9 milestone badges (First day, 3-day streak, Week warrior, 30-day legend, First problem, Problem solver, Course complete, Avid learner, MCQ master)
-- **Summary stats** — animated count-up for: Day streak · Courses done · Problems solved · MCQs answered
-- **7-day activity chart** — bar chart of daily actions; today highlighted in violet
-- **Recommended for you** — problems and courses ranked by your weakest topics
-- **Topic accuracy** — horizontal bars showing correct/seen ratio per topic
-- **Focus areas** — topics below 60% accuracy
-- **Strengths** — topics above 80% accuracy
-
----
-
-### AI Tutor Sidebar
-
-The tutor panel is visible on the right side of every page. It knows what you are currently doing — which course, which lesson, which problem, your current code, your failed tests — and tailors every response to that context.
-
-**Two modes:**
-- **Guide me (Socratic)** — the tutor responds with exactly one targeted question per message, nudging you toward the answer without giving it away. Best for deep learning.
-- **Direct** — the tutor answers clearly and concisely. Best when you are stuck and need to move forward.
-
-Toggle using the **Guide Me / Direct** buttons at the top of the sidebar.
-
-**Show / hide:** Click **AI Tutor** in the left nav, or use **⌘\\** / **Ctrl+\\**. On mobile, use the **TUTOR / HIDE** button in the top bar.
-
-**Rate limits:** If you hit the Gemini free-tier quota, the tutor displays a warning card instead of crashing.
-
----
-
-### Search
-
-Press **⌘K** (Mac) or **Ctrl+K** (Windows / Linux) from anywhere in the app.
-
-- Type at least 2 characters to search across courses, coding problems, and MCQ tests simultaneously
-- Results are ranked by title match first, then content match
-- Navigate results with **↑ ↓**, select with **Enter**, or click
-- Selecting a result navigates to the correct page and automatically opens that item
-- Press **Esc** to close
-
----
-
-### Settings
-
-Navigate to **Settings** in the left sidebar.
-
-**Platform Status** — shows current AI model, whether RAG is indexed, and content counts.
-
-**Content & RAG:**
-- **Re-index** — rebuilds embeddings for all course content. Run this after adding new courses.
-- **Export all notes** — downloads every lesson note as a single Markdown file (`my-notes.md`).
-
-**Tutor Preference** — set your default tutor mode.
-
-**Data Management** — each reset requires a confirmation click:
-
-| Action | What it clears |
-|--------|----------------|
-| Reset learning progress | Topic scores, completed courses & problems, activity history |
-| Clear interview history | Saved interview conversation |
-| Reset spaced repetition | All SM-2 review cards |
-| Delete all notes | Every lesson note |
-| Reset everything | All of the above at once |
-
----
-
-## Keyboard Shortcuts
+## ⌨️ Keyboard Shortcuts
 
 | Shortcut | Action |
-|----------|--------|
-| `⌘K` / `Ctrl+K` | Open search |
+|:---------|:-------|
+| `⌘K` / `Ctrl+K` | Open command palette search |
 | `⌘\` / `Ctrl+\` | Toggle AI tutor sidebar |
 | `?` | Open keyboard shortcuts panel |
 | `Esc` | Close any open modal |
@@ -378,15 +368,58 @@ Navigate to **Settings** in the left sidebar.
 
 > `G` shortcuts do not trigger inside text inputs or textareas.
 
+<br/>
+
 ---
 
-## Adding Your Own Content
 
-### Add a course
+## 📖 Documentation
 
-1. Create a folder in `content/courses/`. The folder name is the course ID (lowercase with hyphens, e.g. `my-course`).
+<details>
+<summary><strong>📡 API Reference</strong></summary>
 
-2. Add `meta.json`:
+<br/>
+
+Interactive docs available at **`http://localhost:8000/docs`** while the backend is running.
+
+| Method | Route | Description |
+|:-------|:------|:------------|
+| `POST` | `/tutor/message` | Streaming SSE tutor response |
+| `GET` | `/courses` | List all courses with module counts |
+| `GET` | `/courses/{id}` | Full course content |
+| `POST` | `/courses/{id}/progress` | Mark a module complete |
+| `GET` | `/practice/problems` | List coding problems |
+| `GET` | `/practice/problems/{id}` | Single problem with test cases |
+| `POST` | `/practice/submit` | Run code in sandbox |
+| `GET` | `/practice/mcq` | List MCQ test banks |
+| `GET` | `/practice/mcq/review` | SM-2 review queue for today |
+| `POST` | `/practice/mcq/result` | Record answer, update SR card |
+| `POST` | `/interview/message` | Streaming interview turn |
+| `POST` | `/interview/transcribe` | Audio blob → transcript |
+| `POST` | `/interview/debrief` | Generate structured debrief |
+| `POST` | `/interview/reset` | Clear interview session |
+| `GET` | `/progress/stats` | Streak, 7-day chart, topic summary |
+| `GET` | `/progress/recommendations` | Personalised problems + courses |
+| `GET` | `/notes/{course}/{module}` | Get a lesson note |
+| `POST` | `/notes/{course}/{module}` | Save a lesson note |
+| `GET` | `/notes/export` | All notes as Markdown |
+| `GET` | `/search?q=...` | Search all content |
+| `GET` | `/settings/status` | Platform status |
+| `POST` | `/settings/reindex` | Trigger RAG re-indexing |
+| `POST` | `/settings/reset/{type}` | Reset data (`progress` / `interview` / `spaced-repetition` / `notes` / `all`) |
+
+</details>
+
+<details>
+<summary><strong>📚 Adding Your Own Content</strong></summary>
+
+<br/>
+
+#### Add a course
+
+1. Create a folder in `content/courses/` (e.g., `content/courses/my-course/`).
+
+2. Add a `meta.json`:
 ```json
 {
   "title": "My Course",
@@ -395,16 +428,16 @@ Navigate to **Settings** in the left sidebar.
   "topics": ["arrays", "loops"]
 }
 ```
-Valid difficulty values: `beginner`, `intermediate`, `advanced`.
+> Valid difficulty values: `beginner`, `intermediate`, `advanced`
 
-3. Add lesson files as Markdown (`.md`) and quiz files as JSON (`.json`, excluding `meta.json`). Files are served in alphabetical order — use a numeric prefix to control order:
+3. Add lesson files (`.md`) and quiz files (`.json`, excluding `meta.json`). Use numeric prefixes to control order:
 ```
 01-introduction.md
 02-arrays-in-depth.md
 03-quiz.json
 ```
 
-**Quiz JSON format:**
+4. **Quiz JSON format:**
 ```json
 {
   "questions": [
@@ -425,13 +458,13 @@ Valid difficulty values: `beginner`, `intermediate`, `advanced`.
 }
 ```
 
-4. After adding content, go to **Settings → Re-index** so the AI tutor picks it up.
+5. Go to **Settings → Re-index** so the AI tutor picks up the new content.
 
 ---
 
-### Add a standalone MCQ test bank
+#### Add a standalone MCQ test bank
 
-Create a JSON file in `content/mcq/` (e.g. `content/mcq/my-topic.json`):
+Create a JSON file in `content/mcq/` (e.g., `content/mcq/my-topic.json`):
 
 ```json
 {
@@ -453,7 +486,7 @@ Create a JSON file in `content/mcq/` (e.g. `content/mcq/my-topic.json`):
 
 ---
 
-### Add a coding problem
+#### Add a coding problem
 
 Append an entry to `content/problems/problems.json`:
 
@@ -473,99 +506,79 @@ Append an entry to `content/problems/problems.json`:
 }
 ```
 
-Valid difficulty values: `easy`, `medium`, `hard`.
+> Valid difficulty values: `easy`, `medium`, `hard`.
+>
+> **Test case format:** `input` is fed via stdin. Your script reads from `sys.stdin` and prints the result. `expected` must exactly match the printed output (whitespace-stripped).
 
-**Test case format:** `input` is fed to your solution via stdin. Your script should read from `sys.stdin` and print the result. `expected` must exactly match the printed output (stripped of whitespace).
+</details>
 
----
+<details>
+<summary><strong>⚙️ Settings & Data Management</strong></summary>
 
-## API Reference
+<br/>
 
-Interactive documentation is available at **`http://localhost:8000/docs`** while the backend is running.
+Navigate to **Settings** in the left sidebar.
 
-| Method | Route | Description |
-|--------|-------|-------------|
-| `POST` | `/tutor/message` | Streaming SSE tutor response |
-| `GET`  | `/courses` | List all courses with module counts |
-| `GET`  | `/courses/{id}` | Full course content |
-| `POST` | `/courses/{id}/progress` | Mark a module complete |
-| `GET`  | `/practice/problems` | List coding problems |
-| `GET`  | `/practice/problems/{id}` | Single problem with test cases |
-| `POST` | `/practice/submit` | Run code in sandbox |
-| `GET`  | `/practice/mcq` | List MCQ test banks |
-| `GET`  | `/practice/mcq/review` | SM-2 review queue for today |
-| `POST` | `/practice/mcq/result` | Record answer, update SR card |
-| `POST` | `/interview/message` | Streaming interview turn |
-| `POST` | `/interview/transcribe` | Audio blob → transcript |
-| `POST` | `/interview/debrief` | Generate structured debrief |
-| `POST` | `/interview/reset` | Clear interview session |
-| `GET`  | `/progress/stats` | Streak, 7-day chart, topic summary |
-| `GET`  | `/progress/recommendations` | Personalised problems + courses |
-| `GET`  | `/notes/{course}/{module}` | Get a lesson note |
-| `POST` | `/notes/{course}/{module}` | Save a lesson note |
-| `GET`  | `/notes/export` | All notes as Markdown |
-| `GET`  | `/search?q=...` | Search all content |
-| `GET`  | `/settings/status` | Platform status |
-| `POST` | `/settings/reindex` | Trigger RAG re-indexing |
-| `POST` | `/settings/reset/{type}` | Reset data (`progress` / `interview` / `spaced-repetition` / `notes` / `all`) |
+**Platform Status** — shows current AI model, RAG index state, and content counts.
 
----
+**Content & RAG:**
+- **Re-index** — rebuilds embeddings for all course content. Run after adding new courses.
+- **Export all notes** — downloads every lesson note as `my-notes.md`.
 
-## How the AI Tutor Works
+**Tutor Preference** — set your default tutor mode (Socratic or Direct).
 
-Every tutor request assembles a **three-part context package** before calling Gemini:
+**Data Management** — each reset requires a confirmation click:
 
-```
-1. Current task     — page, course, lesson, problem title + description,
-                      user's current code, failed test cases, active MCQ question
+| Action | What it clears |
+|:-------|:---------------|
+| Reset learning progress | Topic scores, completed courses & problems, activity history |
+| Clear interview history | Saved interview conversation |
+| Reset spaced repetition | All SM-2 review cards |
+| Delete all notes | Every lesson note |
+| Reset everything | All of the above at once |
 
-2. Learner profile  — topic accuracy scores from progress.json,
-                      weak topics (< 60%), strong topics (≥ 80%),
-                      completed courses and problems
+</details>
 
-3. RAG chunks       — top 4 relevant passages retrieved from Chroma
-                      (built from your course markdown files)
-```
+<details>
+<summary><strong>🔧 Troubleshooting: Common issues and solutions</strong></summary>
 
-**Socratic mode** instructs the model to respond with exactly one question per turn, chosen to move the learner one step closer to the answer.
+<br/>
 
-**Direct mode** instructs the model to answer clearly and concisely, still using the full context so the answer references the learner's specific code or problem.
+| Problem | Solution |
+|:--------|:---------|
+| **Backend won't start — `ModuleNotFoundError`** | Ensure your virtual environment is activated and run `pip install -r backend/requirements.txt` |
+| **`GOOGLE_API_KEY not found`** | Check that `.env` exists in the **project root** (not `backend/`) with `GOOGLE_API_KEY=...` — no extra spaces or quotes |
+| **429 / RESOURCE_EXHAUSTED** | Gemini free-tier rate limit hit. Wait a minute. The tutor shows a warning card instead of crashing |
+| **Tutor gives generic answers** | RAG index not built. Go to **Settings → Re-index** |
+| **Code submissions time out** | Sandbox kills after 5 seconds. Check for infinite loops — optimisation _is_ the exercise |
+| **Audio transcription fails** | Grant microphone access in browser. Verify API key and remaining quota |
+| **Blank page / Network Error** | Ensure backend runs on port 8000 before opening frontend. Both servers must be running |
+| **Course not found after adding content** | Verify `meta.json` exists in the course folder. Run **Settings → Re-index** |
+| **Errors on first request after fresh clone** | `data/` exists via `.gitkeep`. JSON files are auto-created on first use. Check write permissions |
 
-The interview endpoint uses a separate history list (persisted to `data/interview_history.json`) and a different system prompt — it does not share the tutor's RAG pipeline.
+</details>
+
+<br/>
 
 ---
 
-## Troubleshooting
 
-**Backend won't start — "ModuleNotFoundError"**
-Make sure your virtual environment is activated and you ran `pip install -r backend/requirements.txt`.
+## 💖 Support
 
-**"GOOGLE_API_KEY not found" error**
-Check that `.env` exists in the **project root** (not inside `backend/`) and contains `GOOGLE_API_KEY=...` with no extra spaces or quotes around the value.
+Consider supporting by:
 
-**429 / RESOURCE_EXHAUSTED in the tutor chat**
-You have hit the Gemini free-tier rate limit. Wait a minute and try again. The tutor displays a warning card rather than crashing. Heavy use (indexing + many queries) can exhaust the daily quota — consider upgrading your API plan.
+<p align="center">
+  <a href="https://patreon.com/Chaitanya888"><img src="https://img.shields.io/badge/Patreon-FF424D?style=for-the-badge&logo=patreon&logoColor=white" alt="Patreon" /></a>
+  &nbsp;
+  <a href="https://buymeacoffee.com/chaitanya888"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
+</p>
 
-**Tutor gives generic answers and ignores course content**
-The RAG index has not been built yet. Go to **Settings → Re-index**. After indexing completes, the tutor will reference specific course material.
-
-**Code submissions always time out**
-The sandbox kills processes after 5 seconds. Check for infinite loops. If your algorithm is intentionally slow, optimise it — that is the point of the problem.
-
-**Audio transcription fails**
-Microphone access must be granted in the browser. Check the browser console for specific errors and confirm your API key is valid with remaining quota.
-
-**Frontend shows a blank page or "Network Error"**
-Make sure the backend is running on port 8000 before opening the frontend. The Vite dev server proxies all `/api` calls to `http://localhost:8000` — both servers must be running.
-
-**"Course not found" after adding new content**
-Verify the folder contains a `meta.json` file. The courses endpoint only lists folders that have `meta.json`. Also run **Settings → Re-index** so the tutor picks up the new content.
-
-**Fresh clone — backend errors on first request**
-The `data/` directory is included in the repo via `data/.gitkeep`, so it will exist after cloning. All JSON data files are created automatically by the backend on first use. If you see a write error, check that you have write permissions in the project directory.
+<br/>
 
 ---
 
-## License
 
-Apache 2.0 — see [LICENSE](LICENSE).
+## 📜 License
+Distributed under the Apache-2.0 License. See [LICENSE](./LICENSE) for more information.
+
+---
